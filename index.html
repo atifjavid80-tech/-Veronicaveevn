@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alianzas de Marketing | Rifas + Modelos</title>
+    <title>Alianzas Pro | Raffle Marketing Agency</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -61,6 +61,13 @@
             -webkit-text-fill-color: #fff;
         }
 
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
         .nav-links {
             display: flex;
             gap: 30px;
@@ -87,6 +94,30 @@
         .btn-cta-nav:hover {
             background: #fff;
             color: #000 !important;
+        }
+
+        /* Language Toggle Button */
+        .lang-toggle {
+            background: #1f1f28;
+            border: 1px solid #333;
+            color: #ccc;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.3s;
+            letter-spacing: 1px;
+        }
+        .lang-toggle:hover {
+            background: #f7c948;
+            color: #0b0b0e;
+            border-color: #f7c948;
+        }
+        .lang-toggle.active {
+            background: #f7c948;
+            color: #0b0b0e;
+            border-color: #f7c948;
         }
 
         /* ---------- BUTTONS ---------- */
@@ -119,6 +150,8 @@
             border-radius: 50px;
             text-decoration: none;
             transition: 0.3s;
+            background: transparent;
+            cursor: pointer;
         }
         .btn-outline:hover {
             background: #f7c948;
@@ -303,6 +336,7 @@
         }
         .package-card.popular::after {
             content: "MÁS POPULAR";
+            font-family: 'Inter', sans-serif;
             position: absolute;
             top: -12px;
             right: 20px;
@@ -340,7 +374,7 @@
             margin-right: 12px;
             width: 18px;
         }
-        .package-card .btn-outline, 
+        .package-card .btn-outline,
         .package-card .btn-primary {
             align-self: center;
             width: 100%;
@@ -364,6 +398,12 @@
             max-width: 600px;
             margin: 0 auto 40px;
             font-size: 1.2rem;
+        }
+        .cta-big .btn-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         /* ---------- FOOTER ---------- */
@@ -398,6 +438,11 @@
                 flex-direction: column;
                 gap: 15px;
             }
+            .nav-right {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
             .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
@@ -412,6 +457,12 @@
             .stats-item h3 {
                 font-size: 1.4rem;
             }
+            .package-card.popular::after {
+                content: "POPULAR";
+                right: 10px;
+                font-size: 0.6rem;
+                padding: 2px 12px;
+            }
         }
     </style>
 </head>
@@ -421,78 +472,81 @@
     <header>
         <div class="container nav">
             <div class="logo">ALIANZAS <span>PRO</span></div>
-            <ul class="nav-links">
-                <li><a href="#que-recibes">Servicios</a></li>
-                <li><a href="#como-funciona">Cómo funciona</a></li>
-                <li><a href="#paquetes">Paquetes</a></li>
-                <li><a href="#contacto" class="btn-cta-nav">Contáctanos</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#que-recibes" data-i18n="nav-services">Servicios</a></li>
+                    <li><a href="#como-funciona" data-i18n="nav-how">Cómo funciona</a></li>
+                    <li><a href="#paquetes" data-i18n="nav-packages">Paquetes</a></li>
+                    <li><a href="#contacto" class="btn-cta-nav" data-i18n="nav-contact">Contáctanos</a></li>
+                </ul>
+                <button id="lang-toggle" class="lang-toggle">EN</button>
+            </div>
         </div>
     </header>
 
     <!-- ========== HERO ========== -->
     <section class="hero container">
-        <div class="sub-badge"><i class="fas fa-bolt" style="margin-right: 8px;"></i> ALIANZAS DE ALTO IMPACTO</div>
+        <div class="sub-badge" data-i18n="hero-badge"><i class="fas fa-bolt" style="margin-right: 8px;"></i> ALIANZAS DE ALTO IMPACTO</div>
         <h1>
-            ELEVA TU MARCA CON <br>
-            <span class="highlight">MARKETING DE ALTO IMPACTO</span>
+            <span data-i18n="hero-title-1">ELEVA TU MARCA CON</span> <br>
+            <span class="highlight" data-i18n="hero-title-2">MARKETING DE ALTO IMPACTO</span>
         </h1>
-        <p>
+        <p data-i18n="hero-desc">
             Combina la emoción de rifas exclusivas con la influencia de modelos embajadoras 
             profesionales para poner tus productos frente a miles de clientes potenciales.
         </p>
-        <a href="#contacto" class="btn-primary"><i class="fas fa-rocket" style="margin-right: 10px;"></i> QUIERO CRECER</a>
+        <a href="#contacto" class="btn-primary" data-i18n="hero-cta"><i class="fas fa-rocket" style="margin-right: 10px;"></i> QUIERO CRECER</a>
 
         <!-- Stats -->
         <div class="stats">
             <div class="stats-item">
                 <i class="fas fa-users"></i>
-                <h3>Más Seguidores</h3>
-                <p>Audiencia real</p>
+                <h3 data-i18n="stat-1-title">Más Seguidores</h3>
+                <p data-i18n="stat-1-desc">Audiencia real</p>
             </div>
             <div class="stats-item">
                 <i class="fas fa-heart"></i>
-                <h3>Mayor Engagement</h3>
-                <p>Interacción genuina</p>
+                <h3 data-i18n="stat-2-title">Mayor Engagement</h3>
+                <p data-i18n="stat-2-desc">Interacción genuina</p>
             </div>
             <div class="stats-item">
                 <i class="fas fa-chart-line"></i>
-                <h3>Más Ventas</h3>
-                <p>Resultados reales</p>
+                <h3 data-i18n="stat-3-title">Más Ventas</h3>
+                <p data-i18n="stat-3-desc">Resultados reales</p>
             </div>
         </div>
     </section>
 
     <!-- ========== QUÉ RECIBES (FEATURES) ========== -->
     <section id="que-recibes" class="container">
-        <h2 class="section-title">🟡 ¿Qué recibes?</h2>
-        <p class="section-sub">Todo lo que necesitas para disparar tus ventas y hacer viral tu marca.</p>
+        <h2 class="section-title" data-i18n="features-title">🟡 ¿Qué recibes?</h2>
+        <p class="section-sub" data-i18n="features-sub">Todo lo que necesitas para disparar tus ventas y hacer viral tu marca.</p>
 
         <div class="features-grid">
             <div class="feature-card">
                 <i class="fas fa-gift"></i>
-                <h3>Rifas Virales</h3>
-                <p>Tus productos como premios principales que generan emoción y participación masiva.</p>
+                <h3 data-i18n="feature-1-title">Rifas Virales</h3>
+                <p data-i18n="feature-1-desc">Tus productos como premios principales que generan emoción y participación masiva.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-user-tie"></i>
-                <h3>Modelos Embajadoras</h3>
-                <p>Contenido lifestyle premium que conecta y enamora a tu audiencia objetivo.</p>
+                <h3 data-i18n="feature-2-title">Modelos Embajadoras</h3>
+                <p data-i18n="feature-2-desc">Contenido lifestyle premium que conecta y enamora a tu audiencia objetivo.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-share-alt"></i>
-                <h3>Alto Impacto en Redes</h3>
-                <p>Instagram, TikTok y Facebook para maximizar alcance e interacción.</p>
+                <h3 data-i18n="feature-3-title">Alto Impacto en Redes</h3>
+                <p data-i18n="feature-3-desc">Instagram, TikTok y Facebook para maximizar alcance e interacción.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-user-plus"></i>
-                <h3>Generación de Leads</h3>
-                <p>Audiencias comprometidas y con normativas de protección de datos.</p>
+                <h3 data-i18n="feature-4-title">Generación de Leads</h3>
+                <p data-i18n="feature-4-desc">Audiencias comprometidas y con normativas de protección de datos.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-photo-video"></i>
-                <h3>Biblioteca de Contenido</h3>
-                <p>Recibe fotos y videos HD para usar en tus propias campañas.</p>
+                <h3 data-i18n="feature-5-title">Biblioteca de Contenido</h3>
+                <p data-i18n="feature-5-desc">Recibe fotos y videos HD para usar en tus propias campañas.</p>
             </div>
         </div>
     </section>
@@ -500,25 +554,25 @@
     <!-- ========== CÓMO FUNCIONA ========== -->
     <section id="como-funciona" style="background: #0f0f13;">
         <div class="container">
-            <h2 class="section-title">⚡ ¿Cómo funciona?</h2>
-            <p class="section-sub">4 pasos sencillos para transformar tu producto en una campaña viral.</p>
+            <h2 class="section-title" data-i18n="how-title">⚡ ¿Cómo funciona?</h2>
+            <p class="section-sub" data-i18n="how-sub">4 pasos sencillos para transformar tu producto en una campaña viral.</p>
 
             <div class="steps">
                 <div class="step-item">
-                    <h4>Selección del Producto</h4>
-                    <p>Elige un producto o paquete de servicios que atraiga a tu audiencia.</p>
+                    <h4 data-i18n="step-1-title">Selección del Producto</h4>
+                    <p data-i18n="step-1-desc">Elige un producto o paquete de servicios que atraiga a tu audiencia.</p>
                 </div>
                 <div class="step-item">
-                    <h4>Creación de Contenido</h4>
-                    <p>Nuestras embajadoras producen fotos y videos promocionales premium.</p>
+                    <h4 data-i18n="step-2-title">Creación de Contenido</h4>
+                    <p data-i18n="step-2-desc">Nuestras embajadoras producen fotos y videos promocionales premium.</p>
                 </div>
                 <div class="step-item">
-                    <h4>Lanzamiento de la Rifa</h4>
-                    <p>Rifa atractiva que invita a seguir tus redes e interactuar.</p>
+                    <h4 data-i18n="step-3-title">Lanzamiento de la Rifa</h4>
+                    <p data-i18n="step-3-desc">Rifa atractiva que invita a seguir tus redes e interactuar.</p>
                 </div>
                 <div class="step-item">
-                    <h4>Resultados y Crecimiento</h4>
-                    <p>Más visibilidad, audiencia, activos de marketing y ventas.</p>
+                    <h4 data-i18n="step-4-title">Resultados y Crecimiento</h4>
+                    <p data-i18n="step-4-desc">Más visibilidad, audiencia, activos de marketing y ventas.</p>
                 </div>
             </div>
         </div>
@@ -526,47 +580,47 @@
 
     <!-- ========== PAQUETES ========== -->
     <section id="paquetes" class="container">
-        <h2 class="section-title">🏆 Paquetes de Alianza</h2>
-        <p class="section-sub">Elige el plan que mejor se adapte a tus objetivos y presupuesto.</p>
+        <h2 class="section-title" data-i18n="packages-title">🏆 Paquetes de Alianza</h2>
+        <p class="section-sub" data-i18n="packages-sub">Elige el plan que mejor se adapte a tus objetivos y presupuesto.</p>
 
         <div class="packages">
             <!-- Launch Partner -->
             <div class="package-card">
-                <h3>LAUNCH</h3>
-                <div class="price-tag">Ideal para empezar</div>
+                <h3 data-i18n="pack-1-name">LAUNCH</h3>
+                <div class="price-tag" data-i18n="pack-1-tag">Ideal para empezar</div>
                 <ul>
-                    <li><i class="fas fa-check"></i> Campañas de un solo producto</li>
-                    <li><i class="fas fa-check"></i> Promoción en redes sociales</li>
-                    <li><i class="fas fa-check"></i> Exposición localizada</li>
-                    <li><i class="fas fa-check"></i> 1 modelo embajadora</li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pack-1-li-1">Campañas de un solo producto</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pack-1-li-2">Promoción en redes sociales</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pack-1-li-3">Exposición localizada</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pack-1-li-4">1 modelo embajadora</span></li>
                 </ul>
-                <a href="#contacto" class="btn-outline">Elegir este</a>
+                <a href="#contacto" class="btn-outline" data-i18n="pack-1-btn">Elegir este</a>
             </div>
 
             <!-- Growth Partner -->
             <div class="package-card popular">
-                <h3>GROWTH</h3>
-                <div class="price-tag">Más alcance e impacto</div>
+                <h3 data-i18n="pack-2-name">GROWTH</h3>
+                <div class="price-tag" data-i18n="pack-2-tag">Más alcance e impacto</div>
                 <ul>
-                    <li><i class="fas fa-check"></i> Múltiples modelos embajadoras</li>
-                    <li><i class="fas fa-check"></i> Reels de video profesionales</li>
-                    <li><i class="fas fa-check"></i> Páginas de aterrizaje co-marcadas</li>
-                    <li><i class="fas fa-check"></i> Alcance de audiencia expandido</li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pack-2-li-1">Múltiples modelos embajadoras</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pack-2-li-2">Reels de video profesionales</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pack-2-li-3">Páginas de aterrizaje co-marcadas</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pack-2-li-4">Alcance de audiencia expandido</span></li>
                 </ul>
-                <a href="#contacto" class="btn-primary">Elegir este</a>
+                <a href="#contacto" class="btn-primary" data-i18n="pack-2-btn">Elegir este</a>
             </div>
 
             <!-- Premier Elite -->
             <div class="package-card">
-                <h3>PREMIER ELITE</h3>
-                <div class="price-tag">Alianza anual premium</div>
+                <h3 data-i18n="pack-3-name">PREMIER ELITE</h3>
+                <div class="price-tag" data-i18n="pack-3-tag">Alianza anual premium</div>
                 <ul>
-                    <li><i class="fas fa-check"></i> Campañas mensuales recurrentes</li>
-                    <li><i class="fas fa-check"></i> Programación prioritaria</li>
-                    <li><i class="fas fa-check"></i> Exclusividad por categoría</li>
-                    <li><i class="fas fa-check"></i> Reportes premium detallados</li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pack-3-li-1">Campañas mensuales recurrentes</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pack-3-li-2">Programación prioritaria</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pack-3-li-3">Exclusividad por categoría</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="pack-3-li-4">Reportes premium detallados</span></li>
                 </ul>
-                <a href="#contacto" class="btn-outline">Elegir este</a>
+                <a href="#contacto" class="btn-outline" data-i18n="pack-3-btn">Elegir este</a>
             </div>
         </div>
     </section>
@@ -574,17 +628,15 @@
     <!-- ========== CTA FINAL ========== -->
     <section id="contacto" class="cta-big">
         <div class="container">
-            <h2>¿Listo para <span style="color: #f7c948;">hacer crecer</span> tu marca?</h2>
-            <p>
+            <h2 data-i18n="cta-title">¿Listo para <span style="color: #f7c948;">hacer crecer</span> tu marca?</h2>
+            <p data-i18n="cta-desc">
                 Transformemos tus productos en campañas irresistibles que generen emoción, 
                 aumenten la visibilidad y eleven tu reconocimiento de marca.
             </p>
-            <a href="#" class="btn-primary" style="margin-right: 15px; margin-bottom: 10px;">
-                <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Contáctanos hoy
-            </a>
-            <a href="#" class="btn-outline">
-                <i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Agenda una reunión
-            </a>
+            <div class="btn-group">
+                <a href="#" class="btn-primary" data-i18n="cta-btn-1"><i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Contáctanos hoy</a>
+                <a href="#" class="btn-outline" data-i18n="cta-btn-2"><i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Agenda una reunión</a>
+            </div>
         </div>
     </section>
 
@@ -601,21 +653,247 @@
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
-            <p style="font-size: 0.85rem;">© 2026 Alianzas Pro · Tu marca. Nuestra plataforma. Resultados reales.</p>
+            <p style="font-size: 0.85rem;" data-i18n="footer-text">© 2026 Alianzas Pro · Tu marca. Nuestra plataforma. Resultados reales.</p>
         </div>
     </footer>
 
-    <!-- Smooth scroll for anchor links -->
+    <!-- ========== LANGUAGE TOGGLE JAVASCRIPT ========== -->
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        (function() {
+            // ---- Translation Dictionary ----
+            const translations = {
+                es: {
+                    // Nav
+                    "nav-services": "Servicios",
+                    "nav-how": "Cómo funciona",
+                    "nav-packages": "Paquetes",
+                    "nav-contact": "Contáctanos",
+                    // Hero
+                    "hero-badge": "ALIANZAS DE ALTO IMPACTO",
+                    "hero-title-1": "ELEVA TU MARCA CON",
+                    "hero-title-2": "MARKETING DE ALTO IMPACTO",
+                    "hero-desc": "Combina la emoción de rifas exclusivas con la influencia de modelos embajadoras profesionales para poner tus productos frente a miles de clientes potenciales.",
+                    "hero-cta": "QUIERO CRECER",
+                    // Stats
+                    "stat-1-title": "Más Seguidores",
+                    "stat-1-desc": "Audiencia real",
+                    "stat-2-title": "Mayor Engagement",
+                    "stat-2-desc": "Interacción genuina",
+                    "stat-3-title": "Más Ventas",
+                    "stat-3-desc": "Resultados reales",
+                    // Features
+                    "features-title": "🟡 ¿Qué recibes?",
+                    "features-sub": "Todo lo que necesitas para disparar tus ventas y hacer viral tu marca.",
+                    "feature-1-title": "Rifas Virales",
+                    "feature-1-desc": "Tus productos como premios principales que generan emoción y participación masiva.",
+                    "feature-2-title": "Modelos Embajadoras",
+                    "feature-2-desc": "Contenido lifestyle premium que conecta y enamora a tu audiencia objetivo.",
+                    "feature-3-title": "Alto Impacto en Redes",
+                    "feature-3-desc": "Instagram, TikTok y Facebook para maximizar alcance e interacción.",
+                    "feature-4-title": "Generación de Leads",
+                    "feature-4-desc": "Audiencias comprometidas y con normativas de protección de datos.",
+                    "feature-5-title": "Biblioteca de Contenido",
+                    "feature-5-desc": "Recibe fotos y videos HD para usar en tus propias campañas.",
+                    // How it works
+                    "how-title": "⚡ ¿Cómo funciona?",
+                    "how-sub": "4 pasos sencillos para transformar tu producto en una campaña viral.",
+                    "step-1-title": "Selección del Producto",
+                    "step-1-desc": "Elige un producto o paquete de servicios que atraiga a tu audiencia.",
+                    "step-2-title": "Creación de Contenido",
+                    "step-2-desc": "Nuestras embajadoras producen fotos y videos promocionales premium.",
+                    "step-3-title": "Lanzamiento de la Rifa",
+                    "step-3-desc": "Rifa atractiva que invita a seguir tus redes e interactuar.",
+                    "step-4-title": "Resultados y Crecimiento",
+                    "step-4-desc": "Más visibilidad, audiencia, activos de marketing y ventas.",
+                    // Packages
+                    "packages-title": "🏆 Paquetes de Alianza",
+                    "packages-sub": "Elige el plan que mejor se adapte a tus objetivos y presupuesto.",
+                    "pack-1-name": "LAUNCH",
+                    "pack-1-tag": "Ideal para empezar",
+                    "pack-1-li-1": "Campañas de un solo producto",
+                    "pack-1-li-2": "Promoción en redes sociales",
+                    "pack-1-li-3": "Exposición localizada",
+                    "pack-1-li-4": "1 modelo embajadora",
+                    "pack-1-btn": "Elegir este",
+                    "pack-2-name": "GROWTH",
+                    "pack-2-tag": "Más alcance e impacto",
+                    "pack-2-li-1": "Múltiples modelos embajadoras",
+                    "pack-2-li-2": "Reels de video profesionales",
+                    "pack-2-li-3": "Páginas de aterrizaje co-marcadas",
+                    "pack-2-li-4": "Alcance de audiencia expandido",
+                    "pack-2-btn": "Elegir este",
+                    "pack-3-name": "PREMIER ELITE",
+                    "pack-3-tag": "Alianza anual premium",
+                    "pack-3-li-1": "Campañas mensuales recurrentes",
+                    "pack-3-li-2": "Programación prioritaria",
+                    "pack-3-li-3": "Exclusividad por categoría",
+                    "pack-3-li-4": "Reportes premium detallados",
+                    "pack-3-btn": "Elegir este",
+                    // CTA
+                    "cta-title": "¿Listo para hacer crecer tu marca?",
+                    "cta-desc": "Transformemos tus productos en campañas irresistibles que generen emoción, aumenten la visibilidad y eleven tu reconocimiento de marca.",
+                    "cta-btn-1": "Contáctanos hoy",
+                    "cta-btn-2": "Agenda una reunión",
+                    // Footer
+                    "footer-text": "© 2026 Alianzas Pro · Tu marca. Nuestra plataforma. Resultados reales."
+                },
+                en: {
+                    // Nav
+                    "nav-services": "Services",
+                    "nav-how": "How it works",
+                    "nav-packages": "Packages",
+                    "nav-contact": "Contact Us",
+                    // Hero
+                    "hero-badge": "HIGH-IMPACT PARTNERSHIPS",
+                    "hero-title-1": "ELEVATE YOUR BRAND WITH",
+                    "hero-title-2": "HIGH-IMPACT MARKETING",
+                    "hero-desc": "Combine the excitement of exclusive raffles with the influence of professional brand ambassador models to put your products in front of thousands of highly engaged potential customers.",
+                    "hero-cta": "I WANT TO GROW",
+                    // Stats
+                    "stat-1-title": "More Followers",
+                    "stat-1-desc": "Real audience",
+                    "stat-2-title": "More Engagement",
+                    "stat-2-desc": "Genuine interaction",
+                    "stat-3-title": "More Sales",
+                    "stat-3-desc": "Real results",
+                    // Features
+                    "features-title": "🟡 What you get",
+                    "features-sub": "Everything you need to boost your sales and make your brand go viral.",
+                    "feature-1-title": "Viral Raffles",
+                    "feature-1-desc": "Your products as main prizes that generate excitement and massive participation.",
+                    "feature-2-title": "Ambassador Models",
+                    "feature-2-desc": "Premium lifestyle content that connects and captivates your target audience.",
+                    "feature-3-title": "High Social Impact",
+                    "feature-3-desc": "Instagram, TikTok and Facebook to maximize reach and interaction.",
+                    "feature-4-title": "Lead Generation",
+                    "feature-4-desc": "Engaged audiences that comply with data protection regulations, interested in your products.",
+                    "feature-5-title": "Content Library",
+                    "feature-5-desc": "Receive high-quality photos and videos to use in your own campaigns and channels.",
+                    // How it works
+                    "how-title": "⚡ How it works",
+                    "how-sub": "4 simple steps to turn your product into a viral campaign.",
+                    "step-1-title": "Product Selection",
+                    "step-1-desc": "Choose a product or service package that attracts your target audience.",
+                    "step-2-title": "Content Creation",
+                    "step-2-desc": "Our professional ambassadors produce premium promotional photos and videos.",
+                    "step-3-title": "Campaign Launch",
+                    "step-3-desc": "Launch an attractive raffle that invites participants to follow your social media and interact.",
+                    "step-4-title": "Results & Growth",
+                    "step-4-desc": "More visibility, audience growth, valuable marketing assets, and measurable metrics.",
+                    // Packages
+                    "packages-title": "🏆 Partnership Packages",
+                    "packages-sub": "Choose the plan that best fits your goals and budget.",
+                    "pack-1-name": "LAUNCH",
+                    "pack-1-tag": "Ideal to start",
+                    "pack-1-li-1": "Single product campaigns",
+                    "pack-1-li-2": "Social media promotion",
+                    "pack-1-li-3": "Localized exposure",
+                    "pack-1-li-4": "1 ambassador model",
+                    "pack-1-btn": "Choose this",
+                    "pack-2-name": "GROWTH",
+                    "pack-2-tag": "More reach & impact",
+                    "pack-2-li-1": "Multiple ambassador models",
+                    "pack-2-li-2": "Professional video reels",
+                    "pack-2-li-3": "Co-branded landing pages",
+                    "pack-2-li-4": "Expanded audience reach",
+                    "pack-2-btn": "Choose this",
+                    "pack-3-name": "PREMIER ELITE",
+                    "pack-3-tag": "Premium annual partnership",
+                    "pack-3-li-1": "Recurring monthly campaigns",
+                    "pack-3-li-2": "Priority scheduling",
+                    "pack-3-li-3": "Category exclusivity",
+                    "pack-3-li-4": "Detailed premium reports",
+                    "pack-3-btn": "Choose this",
+                    // CTA
+                    "cta-title": "Ready to grow your brand?",
+                    "cta-desc": "Let's transform your products into irresistible campaigns that generate excitement, increase visibility, elevate brand recognition, and take your business to the next level.",
+                    "cta-btn-1": "Contact us today",
+                    "cta-btn-2": "Schedule a meeting",
+                    // Footer
+                    "footer-text": "© 2026 Alianzas Pro · Your brand. Our platform. Real results."
                 }
+            };
+
+            // ---- DOM Elements ----
+            const toggleBtn = document.getElementById('lang-toggle');
+            const elements = document.querySelectorAll('[data-i18n]');
+            
+            // ---- Set Language Function ----
+            function setLanguage(lang) {
+                // Update button text
+                if (lang === 'en') {
+                    toggleBtn.textContent = 'ES';
+                    toggleBtn.classList.add('active');
+                } else {
+                    toggleBtn.textContent = 'EN';
+                    toggleBtn.classList.remove('active');
+                }
+
+                // Update all elements with data-i18n
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        // If the element has child nodes, we only change text content 
+                        // but preserve inner HTML if it contains nested tags like <span>
+                        // We'll check if there is a <span> or similar inside.
+                        // For simplicity, we replace inner HTML if the translation contains HTML?
+                        // But our translations are plain text except for the highlight in CTA.
+                        // To handle the CTA with <span style="...">, we'll use innerHTML for that specific case.
+                        if (key === 'cta-title') {
+                            // Special case: CTA title has a span inside
+                            if (lang === 'en') {
+                                el.innerHTML = 'Ready to <span style="color: #f7c948;">grow</span> your brand?';
+                            } else {
+                                el.innerHTML = '¿Listo para <span style="color: #f7c948;">hacer crecer</span> tu marca?';
+                            }
+                        } else {
+                            el.textContent = translations[lang][key];
+                        }
+                    }
+                });
+
+                // Update the "popular" badge text dynamically (package card pseudo-element is CSS, we need to change it via JS or CSS variable).
+                // Since it's a pseudo-element, we can't directly change it via JS easily. 
+                // We'll change it via a data attribute or by toggling a class.
+                const popularCards = document.querySelectorAll('.package-card.popular');
+                popularCards.forEach(card => {
+                    if (lang === 'en') {
+                        card.style.setProperty('--popular-text', '"POPULAR"');
+                        // Better: change via pseudo content using css variable.
+                        // We'll add a style rule dynamically.
+                    } else {
+                        card.style.setProperty('--popular-text', '"MÁS POPULAR"');
+                    }
+                });
+                // Update the CSS variable for the pseudo-element
+                // We already defined the pseudo content in CSS with a fixed string. 
+                // Let's override it by injecting a style.
+                let styleTag = document.getElementById('dynamic-popular-style');
+                if (!styleTag) {
+                    styleTag = document.createElement('style');
+                    styleTag.id = 'dynamic-popular-style';
+                    document.head.appendChild(styleTag);
+                }
+                if (lang === 'en') {
+                    styleTag.textContent = `.package-card.popular::after { content: "POPULAR"; }`;
+                } else {
+                    styleTag.textContent = `.package-card.popular::after { content: "MÁS POPULAR"; }`;
+                }
+
+                // Store language preference
+                localStorage.setItem('preferred-lang', lang);
+            }
+
+            // ---- Toggle Handler ----
+            toggleBtn.addEventListener('click', function() {
+                const currentLang = this.textContent === 'EN' ? 'es' : 'en';
+                setLanguage(currentLang);
             });
-        });
+
+            // ---- Load saved language or default to 'es' ----
+            const savedLang = localStorage.getItem('preferred-lang') || 'es';
+            setLanguage(savedLang);
+        })();
     </script>
 
 </body>
