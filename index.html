@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alianzas de Marketing | Rifas + Modelos</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0b0e;
+            color: #f5f5f7;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ---------- HEADER / NAV ---------- */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            background: rgba(11, 11, 14, 0.9);
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f7c948, #d4a020);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+        .logo span {
+            font-weight: 400;
+            color: #fff;
+            -webkit-text-fill-color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            font-weight: 600;
+        }
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover {
+            color: #f7c948;
+        }
+
+        .btn-cta-nav {
+            background: #f7c948;
+            color: #0b0b0e !important;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+        }
+        .btn-cta-nav:hover {
+            background: #fff;
+            color: #000 !important;
+        }
+
+        /* ---------- BUTTONS ---------- */
+        .btn-primary {
+            display: inline-block;
+            background: #f7c948;
+            color: #0b0b0e;
+            font-weight: 700;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(247, 201, 72, 0.3);
+        }
+        .btn-primary:hover {
+            background: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(247, 201, 72, 0.5);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            border: 2px solid #f7c948;
+            color: #f7c948;
+            font-weight: 700;
+            padding: 14px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn-outline:hover {
+            background: #f7c948;
+            color: #0b0b0e;
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #f7c948, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            color: #aaa;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        .hero .sub-badge {
+            display: inline-block;
+            background: rgba(247, 201, 72, 0.15);
+            border: 1px solid rgba(247, 201, 72, 0.3);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: #f7c948;
+            margin-bottom: 30px;
+        }
+
+        /* ---------- STATS BANNER ---------- */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 50px 0 20px;
+        }
+        .stats-item {
+            text-align: center;
+        }
+        .stats-item i {
+            font-size: 2rem;
+            color: #f7c948;
+        }
+        .stats-item h3 {
+            font-size: 1.8rem;
+            margin: 5px 0;
+        }
+        .stats-item p {
+            color: #888;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* ---------- SECTIONS GENERAL ---------- */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .section-sub {
+            text-align: center;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+        }
+
+        /* ---------- FEATURES (QUÉ RECIBES) ---------- */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background: #15151b;
+            padding: 35px 25px;
+            border-radius: 20px;
+            border: 1px solid #26262e;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .feature-card:hover {
+            border-color: #f7c948;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .feature-card i {
+            font-size: 2.8rem;
+            color: #f7c948;
+            margin-bottom: 20px;
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            color: #999;
+            font-size: 0.95rem;
+        }
+
+        /* ---------- HOW IT WORKS ---------- */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            counter-reset: step-counter;
+            margin-top: 20px;
+        }
+        .step-item {
+            background: #15151b;
+            padding: 30px 20px;
+            border-radius: 20px;
+            border: 1px solid #26262e;
+            text-align: center;
+            position: relative;
+        }
+        .step-item::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            background: #f7c948;
+            color: #0b0b0e;
+            font-weight: 900;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .step-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .step-item p {
+            color: #999;
+            font-size: 0.95rem;
+        }
+
+        /* ---------- PACKAGES ---------- */
+        .packages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .package-card {
+            background: #15151b;
+            padding: 40px 25px;
+            border-radius: 24px;
+            border: 1px solid #26262e;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .package-card:hover {
+            border-color: #f7c948;
+        }
+        .package-card.popular {
+            border-color: #f7c948;
+            background: #1a1a22;
+            position: relative;
+        }
+        .package-card.popular::after {
+            content: "MÁS POPULAR";
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #f7c948;
+            color: #0b0b0e;
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        .package-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+        }
+        .package-card .price-tag {
+            color: #f7c948;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .package-card ul {
+            list-style: none;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        .package-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #26262e;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+        .package-card ul li i {
+            color: #f7c948;
+            margin-right: 12px;
+            width: 18px;
+        }
+        .package-card .btn-outline, 
+        .package-card .btn-primary {
+            align-self: center;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* ---------- CTA FINAL ---------- */
+        .cta-big {
+            background: linear-gradient(145deg, #15151b, #0f0f13);
+            border-top: 1px solid #26262e;
+            border-bottom: 1px solid #26262e;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .cta-big h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 20px;
+        }
+        .cta-big p {
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 1.2rem;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #1a1a22;
+            text-align: center;
+        }
+        footer .socials {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        footer .socials a {
+            color: #aaa;
+            font-size: 1.8rem;
+            transition: 0.3s;
+        }
+        footer .socials a:hover {
+            color: #f7c948;
+            transform: scale(1.1);
+        }
+        footer p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .hero {
+                padding: 40px 0;
+            }
+            .stats {
+                gap: 20px;
+            }
+            .stats-item h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div class="container nav">
+            <div class="logo">ALIANZAS <span>PRO</span></div>
+            <ul class="nav-links">
+                <li><a href="#que-recibes">Servicios</a></li>
+                <li><a href="#como-funciona">Cómo funciona</a></li>
+                <li><a href="#paquetes">Paquetes</a></li>
+                <li><a href="#contacto" class="btn-cta-nav">Contáctanos</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero container">
+        <div class="sub-badge"><i class="fas fa-bolt" style="margin-right: 8px;"></i> ALIANZAS DE ALTO IMPACTO</div>
+        <h1>
+            ELEVA TU MARCA CON <br>
+            <span class="highlight">MARKETING DE ALTO IMPACTO</span>
+        </h1>
+        <p>
+            Combina la emoción de rifas exclusivas con la influencia de modelos embajadoras 
+            profesionales para poner tus productos frente a miles de clientes potenciales.
+        </p>
+        <a href="#contacto" class="btn-primary"><i class="fas fa-rocket" style="margin-right: 10px;"></i> QUIERO CRECER</a>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stats-item">
+                <i class="fas fa-users"></i>
+                <h3>Más Seguidores</h3>
+                <p>Audiencia real</p>
+            </div>
+            <div class="stats-item">
+                <i class="fas fa-heart"></i>
+                <h3>Mayor Engagement</h3>
+                <p>Interacción genuina</p>
+            </div>
+            <div class="stats-item">
+                <i class="fas fa-chart-line"></i>
+                <h3>Más Ventas</h3>
+                <p>Resultados reales</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== QUÉ RECIBES (FEATURES) ========== -->
+    <section id="que-recibes" class="container">
+        <h2 class="section-title">🟡 ¿Qué recibes?</h2>
+        <p class="section-sub">Todo lo que necesitas para disparar tus ventas y hacer viral tu marca.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-gift"></i>
+                <h3>Rifas Virales</h3>
+                <p>Tus productos como premios principales que generan emoción y participación masiva.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-user-tie"></i>
+                <h3>Modelos Embajadoras</h3>
+                <p>Contenido lifestyle premium que conecta y enamora a tu audiencia objetivo.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-share-alt"></i>
+                <h3>Alto Impacto en Redes</h3>
+                <p>Instagram, TikTok y Facebook para maximizar alcance e interacción.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-user-plus"></i>
+                <h3>Generación de Leads</h3>
+                <p>Audiencias comprometidas y con normativas de protección de datos.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-photo-video"></i>
+                <h3>Biblioteca de Contenido</h3>
+                <p>Recibe fotos y videos HD para usar en tus propias campañas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CÓMO FUNCIONA ========== -->
+    <section id="como-funciona" style="background: #0f0f13;">
+        <div class="container">
+            <h2 class="section-title">⚡ ¿Cómo funciona?</h2>
+            <p class="section-sub">4 pasos sencillos para transformar tu producto en una campaña viral.</p>
+
+            <div class="steps">
+                <div class="step-item">
+                    <h4>Selección del Producto</h4>
+                    <p>Elige un producto o paquete de servicios que atraiga a tu audiencia.</p>
+                </div>
+                <div class="step-item">
+                    <h4>Creación de Contenido</h4>
+                    <p>Nuestras embajadoras producen fotos y videos promocionales premium.</p>
+                </div>
+                <div class="step-item">
+                    <h4>Lanzamiento de la Rifa</h4>
+                    <p>Rifa atractiva que invita a seguir tus redes e interactuar.</p>
+                </div>
+                <div class="step-item">
+                    <h4>Resultados y Crecimiento</h4>
+                    <p>Más visibilidad, audiencia, activos de marketing y ventas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PAQUETES ========== -->
+    <section id="paquetes" class="container">
+        <h2 class="section-title">🏆 Paquetes de Alianza</h2>
+        <p class="section-sub">Elige el plan que mejor se adapte a tus objetivos y presupuesto.</p>
+
+        <div class="packages">
+            <!-- Launch Partner -->
+            <div class="package-card">
+                <h3>LAUNCH</h3>
+                <div class="price-tag">Ideal para empezar</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Campañas de un solo producto</li>
+                    <li><i class="fas fa-check"></i> Promoción en redes sociales</li>
+                    <li><i class="fas fa-check"></i> Exposición localizada</li>
+                    <li><i class="fas fa-check"></i> 1 modelo embajadora</li>
+                </ul>
+                <a href="#contacto" class="btn-outline">Elegir este</a>
+            </div>
+
+            <!-- Growth Partner -->
+            <div class="package-card popular">
+                <h3>GROWTH</h3>
+                <div class="price-tag">Más alcance e impacto</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Múltiples modelos embajadoras</li>
+                    <li><i class="fas fa-check"></i> Reels de video profesionales</li>
+                    <li><i class="fas fa-check"></i> Páginas de aterrizaje co-marcadas</li>
+                    <li><i class="fas fa-check"></i> Alcance de audiencia expandido</li>
+                </ul>
+                <a href="#contacto" class="btn-primary">Elegir este</a>
+            </div>
+
+            <!-- Premier Elite -->
+            <div class="package-card">
+                <h3>PREMIER ELITE</h3>
+                <div class="price-tag">Alianza anual premium</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Campañas mensuales recurrentes</li>
+                    <li><i class="fas fa-check"></i> Programación prioritaria</li>
+                    <li><i class="fas fa-check"></i> Exclusividad por categoría</li>
+                    <li><i class="fas fa-check"></i> Reportes premium detallados</li>
+                </ul>
+                <a href="#contacto" class="btn-outline">Elegir este</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA FINAL ========== -->
+    <section id="contacto" class="cta-big">
+        <div class="container">
+            <h2>¿Listo para <span style="color: #f7c948;">hacer crecer</span> tu marca?</h2>
+            <p>
+                Transformemos tus productos en campañas irresistibles que generen emoción, 
+                aumenten la visibilidad y eleven tu reconocimiento de marca.
+            </p>
+            <a href="#" class="btn-primary" style="margin-right: 15px; margin-bottom: 10px;">
+                <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Contáctanos hoy
+            </a>
+            <a href="#" class="btn-outline">
+                <i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Agenda una reunión
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="logo" style="font-size: 2.2rem;">ALIANZAS <span>PRO</span></div>
+            <p style="color: #aaa; margin-bottom: 5px;">
+                <i class="fas fa-map-pin" style="color: #f7c948;"></i> Maracaibo, Venezuela & Maicao, Colombia
+            </p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p style="font-size: 0.85rem;">© 2026 Alianzas Pro · Tu marca. Nuestra plataforma. Resultados reales.</p>
+        </div>
+    </footer>
+
+    <!-- Smooth scroll for anchor links -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
