@@ -13,58 +13,70 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
 
-    <!-- Google Fonts: Lato + Oswald (exactly like VeronicaVee) -->
+    <!-- Google Fonts: Lato + Oswald -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ===== VERONICA VEE STYLE - EXACT COPY ===== */
-        :root {
-            --gold: #f7c948;
-            --gold-dark: #d4a020;
-            --bg-dark: #0b0b0e;
-            --card-bg: #15151b;
-            --border-color: #26262e;
-        }
-
+        /* ===== VERONICA VEE EXACT STYLE ===== */
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            outline: none;
         }
 
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: var(--bg-dark);
-            color: #f5f5f7;
-            line-height: 1.6;
+        html {
             scroll-behavior: smooth;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Oswald', sans-serif;
-            font-weight: 600;
+        body {
+            font-family: 'Lato', sans-serif !important;
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.6;
         }
 
         .font-Oswald {
-            font-family: 'Oswald', sans-serif;
+            font-family: "Oswald", sans-serif;
         }
 
-        /* ===== HEADER - EXACT LIKE VERONICA VEE ===== */
-        header {
-            background: rgba(11, 11, 14, 0.92);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid rgba(255, 215, 0, 0.15);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 12px 0;
+        .mt-90, .my-90 {
+            margin-top: 90px;
+        }
+        .mb-90, .my-90 {
+            margin-bottom: 90px;
         }
 
-        #logo img {
-            max-height: 50px;
-            width: auto;
+        a {
+            text-decoration: none;
+            transition: 300ms;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        input, select, textarea {
+            box-shadow: none !important;
+            border-radius: 20px !important;
+        }
+
+        .fs-12 {
+            font-size: 12px;
+        }
+        .fs-14 {
+            font-size: 14px;
+        }
+        .fs-18 {
+            font-size: 18px;
+        }
+
+        .top-unset {
+            top: unset;
+        }
+
+        /* ===== HEADER - EXACT VERONICA VEE ===== */
+        #header2 {
+            background: #313234;
+            background: radial-gradient(circle, rgba(49, 50, 52, 1) 0%, rgba(0, 0, 0, 1) 100%);
         }
 
         .filterWhite {
@@ -73,59 +85,61 @@
 
         /* ===== NAVIGATION ===== */
         .nav-link-custom {
-            color: #ccc !important;
+            color: #fff !important;
+            font-size: 14px;
+            border-radius: 50px;
+            padding: 10px 20px !important;
+            text-decoration: none;
+            transition: 300ms;
             font-weight: 600;
-            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            transition: 0.3s;
-            padding: 8px 16px !important;
         }
         .nav-link-custom:hover {
-            color: var(--gold) !important;
+            background: rgba(255, 255, 255, 0.1);
         }
         .nav-link-custom.active {
-            color: var(--gold) !important;
+            color: #fff !important;
+            background: #000;
         }
 
-        .btn-gold {
-            background: var(--gold);
-            color: #0b0b0e;
+        .btn-black {
+            background: #000;
+            color: #fff;
             font-weight: 700;
             padding: 10px 28px;
             border-radius: 50px;
             text-decoration: none;
-            transition: 0.3s;
+            transition: 300ms;
             border: none;
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             display: inline-block;
         }
-        .btn-gold:hover {
-            background: #fff;
-            color: #000;
+        .btn-black:hover {
+            background: #333;
+            color: #fff;
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(247, 201, 72, 0.4);
         }
 
-        .btn-outline-gold {
-            border: 2px solid var(--gold);
-            color: var(--gold);
+        .btn-outline-white {
+            border: 2px solid #fff;
+            color: #fff;
             font-weight: 700;
             padding: 10px 28px;
             border-radius: 50px;
             text-decoration: none;
-            transition: 0.3s;
+            transition: 300ms;
             background: transparent;
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             display: inline-block;
         }
-        .btn-outline-gold:hover {
-            background: var(--gold);
-            color: #0b0b0e;
+        .btn-outline-white:hover {
+            background: #fff;
+            color: #000;
         }
 
         /* ===== LANGUAGE DROPDOWN ===== */
@@ -136,16 +150,16 @@
             font-size: 0.8rem;
             text-decoration: none;
             padding: 6px 12px;
-            border: 1px solid #333;
+            border: 1px solid #444;
             border-radius: 50px;
             transition: 0.3s;
         }
         .lang-dropdown .dropdown-toggle:hover {
-            border-color: var(--gold);
-            color: var(--gold);
+            border-color: #fff;
+            color: #fff;
         }
         .lang-dropdown .dropdown-menu {
-            background: #1a1a22;
+            background: #1a1a1a;
             border: 1px solid #333;
             border-radius: 12px;
             min-width: 100px;
@@ -158,12 +172,12 @@
             border-radius: 8px;
         }
         .lang-dropdown .dropdown-item:hover {
-            background: var(--gold);
-            color: #0b0b0e;
+            background: #333;
+            color: #fff;
         }
         .lang-dropdown .dropdown-item.active {
-            background: var(--gold);
-            color: #0b0b0e;
+            background: #000;
+            color: #fff;
         }
 
         /* ===== SOCIAL ICONS ===== */
@@ -174,17 +188,17 @@
             margin-left: 12px;
         }
         .social-icons-header a:hover {
-            color: var(--gold);
+            color: #fff;
         }
 
-        /* ===== BANNER / CAROUSEL - EXACT LIKE VERONICA VEE ===== */
+        /* ===== BANNER / HERO ===== */
         .banner-carousel {
             min-height: 60vh;
-            background: linear-gradient(180deg, #0b0b0e 0%, #12121a 100%);
+            background: #000000;
             display: flex;
             align-items: center;
             text-align: center;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid #222;
         }
         .banner-carousel h1 {
             font-size: clamp(2.8rem, 8vw, 5rem);
@@ -193,19 +207,16 @@
             text-transform: uppercase;
         }
         .banner-carousel h1 .highlight {
-            background: linear-gradient(135deg, var(--gold), #ff8c00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #fff;
         }
         .banner-carousel .sub-badge {
             display: inline-block;
-            background: rgba(247, 201, 72, 0.12);
-            border: 1px solid rgba(247, 201, 72, 0.25);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 6px 20px;
             border-radius: 50px;
             font-size: 0.8rem;
-            color: var(--gold);
+            color: #aaa;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-weight: 600;
@@ -220,7 +231,7 @@
         /* ===== STATS ===== */
         .stats-row .stat-item i {
             font-size: 2.2rem;
-            color: var(--gold);
+            color: #fff;
         }
         .stats-row .stat-item h3 {
             font-size: 1.6rem;
@@ -258,27 +269,27 @@
         }
 
         .section-dark {
-            background: #0f0f13;
+            background: #0a0a0a;
         }
 
         /* ===== FEATURE CARDS ===== */
         .feature-card {
-            background: var(--card-bg);
+            background: #111;
             padding: 35px 25px;
             border-radius: 20px;
-            border: 1px solid var(--border-color);
+            border: 1px solid #222;
             transition: 0.4s;
             text-align: center;
             height: 100%;
         }
         .feature-card:hover {
-            border-color: var(--gold);
+            border-color: #555;
             transform: translateY(-8px);
             box-shadow: 0 20px 50px rgba(0,0,0,0.6);
         }
         .feature-card i {
             font-size: 2.8rem;
-            color: var(--gold);
+            color: #fff;
             margin-bottom: 18px;
         }
         .feature-card h4 {
@@ -295,20 +306,20 @@
 
         /* ===== STEPS (HOW IT WORKS) ===== */
         .step-card {
-            background: var(--card-bg);
+            background: #111;
             padding: 30px 20px;
             border-radius: 20px;
-            border: 1px solid var(--border-color);
+            border: 1px solid #222;
             text-align: center;
             height: 100%;
             transition: 0.3s;
         }
         .step-card:hover {
-            border-color: var(--gold);
+            border-color: #555;
         }
         .step-number {
-            background: var(--gold);
-            color: #0b0b0e;
+            background: #333;
+            color: #fff;
             font-family: 'Oswald', sans-serif;
             font-weight: 700;
             font-size: 1.6rem;
@@ -334,10 +345,10 @@
 
         /* ===== PACKAGES ===== */
         .package-card {
-            background: var(--card-bg);
+            background: #111;
             padding: 40px 28px;
             border-radius: 24px;
-            border: 1px solid var(--border-color);
+            border: 1px solid #222;
             transition: 0.4s;
             display: flex;
             flex-direction: column;
@@ -345,19 +356,19 @@
             position: relative;
         }
         .package-card:hover {
-            border-color: var(--gold);
+            border-color: #555;
             transform: translateY(-5px);
         }
         .package-card.popular {
-            border-color: var(--gold);
-            background: #1a1a24;
+            border-color: #555;
+            background: #1a1a1a;
         }
         .package-card.popular .popular-badge {
             position: absolute;
             top: -12px;
             right: 20px;
-            background: var(--gold);
-            color: #0b0b0e;
+            background: #333;
+            color: #fff;
             padding: 4px 18px;
             border-radius: 50px;
             font-size: 0.7rem;
@@ -374,7 +385,7 @@
             margin-bottom: 2px;
         }
         .package-card .price-tag {
-            color: var(--gold);
+            color: #aaa;
             font-weight: 600;
             font-size: 0.9rem;
             margin-bottom: 20px;
@@ -389,20 +400,20 @@
         }
         .package-card ul li {
             padding: 8px 0;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid #222;
             color: #ccc;
             font-size: 0.95rem;
         }
         .package-card ul li i {
-            color: var(--gold);
+            color: #fff;
             margin-right: 12px;
         }
 
-        /* ===== CTA SECTION - EXACT LIKE VERONICA VEE ===== */
+        /* ===== CTA SECTION ===== */
         .cta-section {
-            background: linear-gradient(145deg, #12121a, #0a0a0e);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
+            background: #0a0a0a;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
             padding: 80px 20px;
             text-align: center;
         }
@@ -413,7 +424,7 @@
             text-transform: uppercase;
         }
         .cta-section h2 .highlight {
-            color: var(--gold);
+            color: #fff;
         }
         .cta-section p {
             color: #aaa;
@@ -428,7 +439,7 @@
             gap: 15px;
         }
 
-        /* ===== MODELS GALLERY - EXACT LIKE VERONICA VEE ===== */
+        /* ===== MODELS GALLERY ===== */
         .model-card {
             border-radius: 20px;
             overflow: hidden;
@@ -452,7 +463,8 @@
             left: 0;
             right: 0;
             padding: 30px 20px 20px;
-            background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%);
+            background: #000;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
             border-radius: 0 0 20px 20px;
         }
         .model-card .overlay h5 {
@@ -467,9 +479,9 @@
             font-size: 0.85rem;
             margin-bottom: 10px;
         }
-        .model-card .overlay .btn-sm-gold {
-            background: var(--gold);
-            color: #0b0b0e;
+        .model-card .overlay .btn-sm-white {
+            background: #fff;
+            color: #000;
             font-weight: 700;
             font-size: 0.8rem;
             padding: 6px 20px;
@@ -479,31 +491,55 @@
             letter-spacing: 0.5px;
             transition: 0.3s;
             display: inline-block;
+            border: none;
         }
-        .model-card .overlay .btn-sm-gold:hover {
-            background: #fff;
+        .model-card .overlay .btn-sm-white:hover {
+            background: #ccc;
         }
 
-        /* ===== FOOTER - EXACT LIKE VERONICA VEE ===== */
+        /* ===== CTA CARD (Application) ===== */
+        .card-cta {
+            background: #000 url("https://veronicavee.com/assets/images/banner.jpg") center no-repeat;
+            background-size: cover;
+            letter-spacing: 5px;
+            border: none;
+            border-radius: 0;
+            text-align: center;
+            text-decoration: none;
+            transition: 300ms;
+        }
+        .card-cta:hover {
+            opacity: 0.8;
+            text-decoration: none;
+        }
+        .card-cta .card-body {
+            padding: 80px 20px;
+        }
+        .card-cta h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #fff;
+            margin: 0;
+        }
+
+        /* ===== FOOTER ===== */
         footer {
             padding: 40px 0 30px;
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid #222;
             text-align: center;
         }
         footer .logo-text {
             font-family: 'Oswald', sans-serif;
             font-size: 2rem;
             font-weight: 700;
-            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #fff;
             text-decoration: none;
         }
         footer .logo-text span {
             font-weight: 300;
-            color: #fff;
-            -webkit-text-fill-color: #fff;
+            color: #888;
         }
         footer .socials-footer a {
             color: #888;
@@ -512,7 +548,7 @@
             margin: 0 10px;
         }
         footer .socials-footer a:hover {
-            color: var(--gold);
+            color: #fff;
             transform: scale(1.1);
         }
         footer p {
@@ -525,12 +561,12 @@
             font-size: 0.95rem;
         }
         footer .location i {
-            color: var(--gold);
+            color: #fff;
         }
 
         /* ===== OFF CANVAS ===== */
         .offcanvas {
-            background: #0b0b0e !important;
+            background: #000 !important;
         }
         .offcanvas .nav-link {
             color: #ccc !important;
@@ -540,7 +576,7 @@
             padding: 12px 0;
         }
         .offcanvas .nav-link:hover {
-            color: var(--gold) !important;
+            color: #fff !important;
         }
 
         /* ===== RESPONSIVE ===== */
@@ -566,6 +602,9 @@
                 padding: 3px 12px;
                 right: 10px;
             }
+            .card-cta .card-body {
+                padding: 50px 20px;
+            }
         }
         @media (max-width: 576px) {
             #logo img {
@@ -573,6 +612,18 @@
             }
             .stats-row .stat-item h3 {
                 font-size: 1.2rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .container-fluid {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+        }
+        @media (min-width: 1400px) {
+            .container-fluid {
+                padding-left: 8% !important;
+                padding-right: 8% !important;
             }
         }
     </style>
@@ -609,7 +660,7 @@
                         <li class="nav-item"><a href="#how-it-works" class="nav-link nav-link-custom" data-i18n="nav-how">How It Works</a></li>
                         <li class="nav-item"><a href="#packages" class="nav-link nav-link-custom" data-i18n="nav-packages">Packages</a></li>
                         <li class="nav-item"><a href="#models" class="nav-link nav-link-custom" data-i18n="nav-models">Models</a></li>
-                        <li class="nav-item"><a href="#contact" class="btn-gold ms-2" data-i18n="nav-contact">Contact</a></li>
+                        <li class="nav-item"><a href="#contact" class="btn-black ms-2" data-i18n="nav-contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -684,7 +735,7 @@
         <p data-i18n="hero-desc">
             Combine the excitement of exclusive raffles with the influence of professional brand ambassador models to put your products in front of thousands of highly engaged potential customers.
         </p>
-        <a href="#contact" class="btn-gold" data-i18n="hero-cta">
+        <a href="#contact" class="btn-black" data-i18n="hero-cta">
             <i class="bi bi-rocket-takeoff me-2"></i> I WANT TO GROW
         </a>
 
@@ -729,7 +780,7 @@
 <!-- ============================== -->
 <section id="services">
     <div class="container">
-        <h2 class="section-title" data-i18n="services-title">🟡 What You Get</h2>
+        <h2 class="section-title" data-i18n="services-title">What You Get</h2>
         <p class="section-sub" data-i18n="services-sub">Everything you need to boost your sales and make your brand go viral.</p>
 
         <div class="row g-4">
@@ -785,7 +836,7 @@
 <!-- ============================== -->
 <section class="section-dark" id="how-it-works">
     <div class="container">
-        <h2 class="section-title" data-i18n="how-title">⚡ How It Works</h2>
+        <h2 class="section-title" data-i18n="how-title">How It Works</h2>
         <p class="section-sub" data-i18n="how-sub">4 simple steps to turn your product into a viral campaign.</p>
 
         <div class="row g-4">
@@ -827,7 +878,7 @@
 <!-- ============================== -->
 <section id="packages">
     <div class="container">
-        <h2 class="section-title" data-i18n="packages-title">🏆 Partnership Packages</h2>
+        <h2 class="section-title" data-i18n="packages-title">Partnership Packages</h2>
         <p class="section-sub" data-i18n="packages-sub">Choose the plan that best fits your goals and budget.</p>
 
         <div class="row g-4">
@@ -842,7 +893,7 @@
                         <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">Localized exposure</span></li>
                         <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-4">1 ambassador model</span></li>
                     </ul>
-                    <a href="#contact" class="btn-outline-gold" data-i18n="pack-1-btn">Choose This</a>
+                    <a href="#contact" class="btn-outline-white" data-i18n="pack-1-btn">Choose This</a>
                 </div>
             </div>
 
@@ -858,7 +909,7 @@
                         <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Co-branded landing pages</span></li>
                         <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-4">Expanded audience reach</span></li>
                     </ul>
-                    <a href="#contact" class="btn-gold" data-i18n="pack-2-btn">Choose This</a>
+                    <a href="#contact" class="btn-black" data-i18n="pack-2-btn">Choose This</a>
                 </div>
             </div>
 
@@ -873,7 +924,7 @@
                         <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Category exclusivity</span></li>
                         <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-4">Detailed premium reports</span></li>
                     </ul>
-                    <a href="#contact" class="btn-outline-gold" data-i18n="pack-3-btn">Choose This</a>
+                    <a href="#contact" class="btn-outline-white" data-i18n="pack-3-btn">Choose This</a>
                 </div>
             </div>
         </div>
@@ -887,7 +938,7 @@
 <section class="section-dark" id="models">
     <div class="container-fluid">
         <div class="text-center mb-4">
-            <h2 class="fw-bold" data-i18n="models-title">👩‍💼 Our Ambassador Models</h2>
+            <h2 class="fw-bold" data-i18n="models-title">Our Ambassador Models</h2>
             <p class="text-muted" data-i18n="models-sub">Professional models ready to represent your brand and create premium content.</p>
         </div>
         <div class="row g-sm-4 g-3">
@@ -900,7 +951,7 @@
                         <h5 class="mb-1 fw-bold">Veronica Vee</h5>
                         <p class="fs-14 mb-2">20 yrs • Female</p>
                         <p class="fs-14 mb-3 d-sm-block d-none"><i class="bi bi-geo-alt-fill me-1"></i>Maicoa, Colombia</p>
-                        <a href="#" class="btn btn-primary w-100 rounded-pill fw-semibold btn-hover-shadow" style="background:var(--gold);border-color:var(--gold);color:#0b0b0e;" data-i18n="models-view">View Profile</a>
+                        <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
                     </div>
                 </div>
             </div>
@@ -913,7 +964,7 @@
                         <h5 class="mb-1 fw-bold">Veronica Vee</h5>
                         <p class="fs-14 mb-2">26 yrs • Female</p>
                         <p class="fs-14 mb-3 d-sm-block d-none"><i class="bi bi-geo-alt-fill me-1"></i>Content Model Only</p>
-                        <a href="#" class="btn btn-primary w-100 rounded-pill fw-semibold btn-hover-shadow" style="background:var(--gold);border-color:var(--gold);color:#0b0b0e;" data-i18n="models-view">View Profile</a>
+                        <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
                     </div>
                 </div>
             </div>
@@ -926,7 +977,7 @@
                         <h5 class="mb-1 fw-bold">Veronica Vee</h5>
                         <p class="fs-14 mb-2">24 yrs • Female</p>
                         <p class="fs-14 mb-3 d-sm-block d-none"><i class="bi bi-geo-alt-fill me-1"></i>Maracaibo, Venezuela</p>
-                        <a href="#" class="btn btn-primary w-100 rounded-pill fw-semibold btn-hover-shadow" style="background:var(--gold);border-color:var(--gold);color:#0b0b0e;" data-i18n="models-view">View Profile</a>
+                        <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
                     </div>
                 </div>
             </div>
@@ -939,14 +990,14 @@
                         <h5 class="mb-1 fw-bold">Veronica Vee</h5>
                         <p class="fs-14 mb-2">22 yrs • Female</p>
                         <p class="fs-14 mb-3 d-sm-block d-none"><i class="bi bi-geo-alt-fill me-1"></i>Maicoa, Colombia</p>
-                        <a href="#" class="btn btn-primary w-100 rounded-pill fw-semibold btn-hover-shadow" style="background:var(--gold);border-color:var(--gold);color:#0b0b0e;" data-i18n="models-view">View Profile</a>
+                        <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
                     </div>
                 </div>
             </div>
 
         </div>
         <div class="text-center mt-4">
-            <a href="#" class="btn-outline-gold" data-i18n="models-see-all">See All Models <i class="bi bi-arrow-right ms-1"></i></a>
+            <a href="#" class="btn-outline-white" data-i18n="models-see-all">See All Models <i class="bi bi-arrow-right ms-1"></i></a>
         </div>
     </div>
 </section>
@@ -957,7 +1008,7 @@
 <!-- ============================== -->
 <section class="mt-5" id="cta">
     <div class="container-fluid">
-        <a href="#contact" class="card card-cta border-0 rounded-0 text-center text-white text-decoration-none" style="background:linear-gradient(145deg,#12121a,#0a0a0e);">
+        <a href="#contact" class="card card-cta border-0 rounded-0 text-center text-white text-decoration-none">
             <div class="card-body py-5">
                 <h2 class="font-Oswald text-uppercase fw-lighter display-3 mb-0" data-i18n="cta-application">
                     Application
@@ -978,10 +1029,10 @@
             Let's transform your products into irresistible campaigns that generate excitement, increase visibility, elevate brand recognition, and take your business to the next level.
         </p>
         <div class="btn-group-custom">
-            <a href="#" class="btn-gold" data-i18n="cta-btn-1">
+            <a href="#" class="btn-black" data-i18n="cta-btn-1">
                 <i class="bi bi-whatsapp me-2"></i> Contact Us Today
             </a>
-            <a href="#" class="btn-outline-gold" data-i18n="cta-btn-2">
+            <a href="#" class="btn-outline-white" data-i18n="cta-btn-2">
                 <i class="bi bi-calendar3 me-2"></i> Schedule a Meeting
             </a>
         </div>
@@ -1039,7 +1090,7 @@
             "stat-2-desc": "Interacción Genuina",
             "stat-3": "Más Ventas",
             "stat-3-desc": "Resultados Reales",
-            "services-title": "🟡 ¿Qué Recibes?",
+            "services-title": "¿Qué Recibes?",
             "services-sub": "Todo lo que necesitas para disparar tus ventas y hacer viral tu marca.",
             "feature-1-title": "Rifas Virales",
             "feature-1-desc": "Tus productos como premios principales que generan emoción y participación masiva.",
@@ -1053,7 +1104,7 @@
             "feature-5-desc": "Recibe fotos y videos HD para usar en tus propias campañas.",
             "feature-6-title": "Resultados Medibles",
             "feature-6-desc": "Sigue tu crecimiento con análisis detallados y reportes de rendimiento.",
-            "how-title": "⚡ ¿Cómo Funciona?",
+            "how-title": "¿Cómo Funciona?",
             "how-sub": "4 pasos sencillos para transformar tu producto en una campaña viral.",
             "step-1-title": "Selección del Producto",
             "step-1-desc": "Elige un producto o paquete de servicios que atraiga a tu audiencia.",
@@ -1063,7 +1114,7 @@
             "step-3-desc": "Lanzamos una rifa atractiva que invita a los participantes a seguir tus redes e interactuar.",
             "step-4-title": "Resultados y Crecimiento",
             "step-4-desc": "Más visibilidad, crecimiento de audiencia, activos de marketing valiosos y ventas.",
-            "packages-title": "🏆 Paquetes de Alianza",
+            "packages-title": "Paquetes de Alianza",
             "packages-sub": "Elige el plan que mejor se adapte a tus objetivos y presupuesto.",
             "pack-popular": "Más Popular",
             "pack-1-name": "LAUNCH",
@@ -1087,7 +1138,7 @@
             "pack-3-li-3": "Exclusividad por categoría",
             "pack-3-li-4": "Reportes premium detallados",
             "pack-3-btn": "Elegir este",
-            "models-title": "👩‍💼 Nuestras Modelos Embajadoras",
+            "models-title": "Nuestras Modelos Embajadoras",
             "models-sub": "Modelos profesionales listas para representar tu marca y crear contenido premium.",
             "models-view": "Ver Perfil",
             "models-see-all": "Ver Todas las Modelos",
@@ -1116,7 +1167,7 @@
             "stat-2-desc": "Genuine Interaction",
             "stat-3": "More Sales",
             "stat-3-desc": "Real Results",
-            "services-title": "🟡 What You Get",
+            "services-title": "What You Get",
             "services-sub": "Everything you need to boost your sales and make your brand go viral.",
             "feature-1-title": "Viral Raffles",
             "feature-1-desc": "Your products as main prizes that generate excitement and massive participation.",
@@ -1130,7 +1181,7 @@
             "feature-5-desc": "Receive high-quality photos and videos to use in your own campaigns.",
             "feature-6-title": "Measurable Results",
             "feature-6-desc": "Track your growth with detailed analytics and performance reports.",
-            "how-title": "⚡ How It Works",
+            "how-title": "How It Works",
             "how-sub": "4 simple steps to turn your product into a viral campaign.",
             "step-1-title": "Product Selection",
             "step-1-desc": "Choose a product or service package that attracts your target audience.",
@@ -1140,7 +1191,7 @@
             "step-3-desc": "Launch an attractive raffle that invites participants to follow your social media and interact.",
             "step-4-title": "Results & Growth",
             "step-4-desc": "More visibility, audience growth, valuable marketing assets, and sales.",
-            "packages-title": "🏆 Partnership Packages",
+            "packages-title": "Partnership Packages",
             "packages-sub": "Choose the plan that best fits your goals and budget.",
             "pack-popular": "Most Popular",
             "pack-1-name": "LAUNCH",
@@ -1164,7 +1215,7 @@
             "pack-3-li-3": "Category exclusivity",
             "pack-3-li-4": "Detailed premium reports",
             "pack-3-btn": "Choose This",
-            "models-title": "👩‍💼 Our Ambassador Models",
+            "models-title": "Our Ambassador Models",
             "models-sub": "Professional models ready to represent your brand and create premium content.",
             "models-view": "View Profile",
             "models-see-all": "See All Models",
