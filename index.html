@@ -3,55 +3,39 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alianzas Pro | Buy Raffle Tickets</title>
+    <title>Alianzas Pro | Boletos de Rifa</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Lato + Oswald -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            outline: none;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
+        /* ===== ESTILOS (igual que la versión anterior) ===== */
+        * { outline: none; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Lato', sans-serif !important;
             background: #000000;
             color: #ffffff;
             line-height: 1.6;
         }
-        .font-Oswald {
-            font-family: "Oswald", sans-serif;
-        }
-        a {
-            text-decoration: none;
-            transition: 300ms;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .fs-14 {
-            font-size: 14px;
-        }
-        .top-unset {
-            top: unset;
-        }
+        .font-Oswald { font-family: "Oswald", sans-serif; }
+        a { text-decoration: none; transition: 300ms; }
+        a:hover { text-decoration: underline; }
+        .fs-14 { font-size: 14px; }
+        .top-unset { top: unset; }
 
         /* HEADER */
         #header2 {
             background: #313234;
-            background: radial-gradient(circle, rgba(49, 50, 52, 1) 0%, rgba(0, 0, 0, 1) 100%);
+            background: radial-gradient(circle, rgba(49,50,52,1) 0%, rgba(0,0,0,1) 100%);
         }
-        .filterWhite {
-            filter: brightness(0) invert(1);
-        }
+        .filterWhite { filter: brightness(0) invert(1); }
         .nav-link-custom {
             color: #fff !important;
             font-size: 14px;
@@ -61,196 +45,88 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        .nav-link-custom:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        .nav-link-custom.active {
-            background: #000;
-        }
+        .nav-link-custom:hover { background: rgba(255,255,255,0.1); }
+        .nav-link-custom.active { background: #000; }
 
-        /* Buttons */
+        /* BUTTONS */
         .btn-black {
-            background: #000;
-            color: #fff;
-            font-weight: 700;
-            padding: 10px 28px;
-            border-radius: 50px;
-            border: none;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            background: #000; color: #fff; font-weight: 700;
+            padding: 10px 28px; border-radius: 50px; border: none;
+            font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;
             display: inline-block;
         }
-        .btn-black:hover {
-            background: #333;
-            color: #fff;
-            transform: translateY(-2px);
-        }
+        .btn-black:hover { background: #333; color: #fff; transform: translateY(-2px); }
         .btn-outline-white {
-            border: 2px solid #fff;
-            color: #fff;
-            font-weight: 700;
-            padding: 10px 28px;
-            border-radius: 50px;
-            background: transparent;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            border: 2px solid #fff; color: #fff; font-weight: 700;
+            padding: 10px 28px; border-radius: 50px; background: transparent;
+            font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;
             display: inline-block;
         }
-        .btn-outline-white:hover {
-            background: #fff;
-            color: #000;
-        }
+        .btn-outline-white:hover { background: #fff; color: #000; }
         .btn-white {
-            background: #fff;
-            color: #000;
-            font-weight: 700;
-            padding: 10px 28px;
-            border-radius: 50px;
-            border: none;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            background: #fff; color: #000; font-weight: 700;
+            padding: 10px 28px; border-radius: 50px; border: none;
+            font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;
             display: inline-block;
         }
-        .btn-white:hover {
-            background: #ccc;
-            color: #000;
-            transform: translateY(-2px);
-        }
+        .btn-white:hover { background: #ccc; color: #000; transform: translateY(-2px); }
         .btn-yellow {
-            background: #f7c948;
-            color: #000;
-            font-weight: 700;
-            padding: 12px 32px;
-            border-radius: 50px;
-            border: none;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            background: #f7c948; color: #000; font-weight: 700;
+            padding: 12px 32px; border-radius: 50px; border: none;
+            font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;
             display: inline-block;
         }
-        .btn-yellow:hover {
-            background: #fff;
-            color: #000;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(247, 201, 72, 0.3);
-        }
+        .btn-yellow:hover { background: #fff; color: #000; transform: translateY(-3px); box-shadow: 0 10px 30px rgba(247,201,72,0.3); }
         .btn-whatsapp {
-            background: #25D366;
-            color: #fff;
-            font-weight: 700;
-            padding: 10px 24px;
-            border-radius: 50px;
-            border: none;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            background: #25D366; color: #fff; font-weight: 700;
+            padding: 10px 24px; border-radius: 50px; border: none;
+            font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;
             display: inline-block;
         }
-        .btn-whatsapp:hover {
-            background: #1da851;
-            color: #fff;
-            transform: translateY(-2px);
-        }
+        .btn-whatsapp:hover { background: #1da851; color: #fff; transform: translateY(-2px); }
 
-        /* Floating Buy Button */
+        /* Floating Buy */
         .floating-buy {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
-            background: #f7c948;
-            color: #000;
-            font-weight: 900;
-            padding: 14px 28px;
-            border-radius: 50px;
-            box-shadow: 0 8px 30px rgba(247, 201, 72, 0.4);
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            border: none;
-            transition: 300ms;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            position: fixed; bottom: 20px; right: 20px; z-index: 9999;
+            background: #f7c948; color: #000; font-weight: 900;
+            padding: 14px 28px; border-radius: 50px;
+            box-shadow: 0 8px 30px rgba(247,201,72,0.4);
+            text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;
+            border: none; transition: 300ms; display: flex; align-items: center; gap: 8px;
         }
-        .floating-buy:hover {
-            background: #fff;
-            color: #000;
-            transform: scale(1.05);
-        }
+        .floating-buy:hover { background: #fff; color: #000; transform: scale(1.05); }
         @media (max-width: 576px) {
-            .floating-buy {
-                padding: 10px 16px;
-                font-size: 0.7rem;
-                bottom: 10px;
-                right: 10px;
-            }
+            .floating-buy { padding: 10px 16px; font-size: 0.7rem; bottom: 10px; right: 10px; }
         }
 
         /* Language Dropdown */
         .lang-dropdown .dropdown-toggle {
-            color: #ccc;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 0.8rem;
-            padding: 6px 12px;
-            border: 1px solid #444;
-            border-radius: 50px;
-            transition: 0.3s;
+            color: #ccc; text-transform: uppercase; font-weight: 700; font-size: 0.8rem;
+            padding: 6px 12px; border: 1px solid #444; border-radius: 50px; transition: 0.3s;
         }
-        .lang-dropdown .dropdown-toggle:hover {
-            border-color: #fff;
-            color: #fff;
-        }
+        .lang-dropdown .dropdown-toggle:hover { border-color: #fff; color: #fff; }
         .lang-dropdown .dropdown-menu {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 12px;
-            min-width: 100px;
+            background: #1a1a1a; border: 1px solid #333; border-radius: 12px; min-width: 100px;
         }
         .lang-dropdown .dropdown-item {
-            color: #ccc;
-            font-weight: 600;
-            font-size: 0.85rem;
-            padding: 8px 16px;
-            border-radius: 8px;
+            color: #ccc; font-weight: 600; font-size: 0.85rem; padding: 8px 16px; border-radius: 8px;
         }
-        .lang-dropdown .dropdown-item:hover {
-            background: #333;
-            color: #fff;
-        }
-        .lang-dropdown .dropdown-item.active {
-            background: #000;
-            color: #fff;
-        }
+        .lang-dropdown .dropdown-item:hover { background: #333; color: #fff; }
+        .lang-dropdown .dropdown-item.active { background: #000; color: #fff; }
 
         .social-icons-header a {
-            color: #888;
-            font-size: 1.1rem;
-            transition: 0.3s;
-            margin-left: 12px;
+            color: #888; font-size: 1.1rem; transition: 0.3s; margin-left: 12px;
         }
-        .social-icons-header a:hover {
-            color: #fff;
-        }
+        .social-icons-header a:hover { color: #fff; }
 
         /* HERO */
         .banner-carousel {
-            min-height: 60vh;
-            background: #000000;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            border-bottom: 1px solid #222;
+            min-height: 60vh; background: #000000; display: flex; align-items: center;
+            text-align: center; border-bottom: 1px solid #222;
         }
         .banner-carousel h1 {
             font-size: clamp(2.8rem, 8vw, 5rem);
-            font-weight: 700;
-            line-height: 1.1;
-            text-transform: uppercase;
+            font-weight: 700; line-height: 1.1; text-transform: uppercase;
         }
         .banner-carousel h1 .highlight {
             background: linear-gradient(135deg, #f7c948, #ff8c00);
@@ -260,598 +136,243 @@
         }
         .banner-carousel .sub-badge {
             display: inline-block;
-            background: rgba(247, 201, 72, 0.15);
-            border: 1px solid rgba(247, 201, 72, 0.3);
-            padding: 6px 20px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            color: #f7c948;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 600;
+            background: rgba(247,201,72,0.15);
+            border: 1px solid rgba(247,201,72,0.3);
+            padding: 6px 20px; border-radius: 50px;
+            font-size: 0.8rem; color: #f7c948; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;
         }
         .banner-carousel p {
-            font-size: 1.2rem;
-            color: #aaa;
-            max-width: 700px;
-            margin: 0 auto 35px;
+            font-size: 1.2rem; color: #aaa; max-width: 700px; margin: 0 auto 35px;
         }
         .banner-carousel .cta-group {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;
         }
 
         /* URGENCY BAR */
         .urgency-bar {
-            background: #1a1a1a;
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-            padding: 15px 0;
-            text-align: center;
+            background: #1a1a1a; border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; text-align: center;
         }
         .urgency-bar .urgency-text {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #f7c948;
-            letter-spacing: 1px;
+            font-size: 1.1rem; font-weight: 700; color: #f7c948; letter-spacing: 1px;
         }
-        .urgency-bar .urgency-text i {
-            margin-right: 10px;
-        }
+        .urgency-bar .urgency-text i { margin-right: 10px; }
         .urgency-bar .countdown-big {
-            font-size: 1.3rem;
-            font-weight: 900;
-            color: #fff;
-            margin-left: 15px;
+            font-size: 1.3rem; font-weight: 900; color: #fff; margin-left: 15px;
         }
 
         /* STATS */
-        .stats-row .stat-item i {
-            font-size: 2.2rem;
-            color: #f7c948;
-        }
+        .stats-row .stat-item i { font-size: 2.2rem; color: #f7c948; }
         .stats-row .stat-item h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin: 5px 0 0;
-            font-family: 'Oswald', sans-serif;
+            font-size: 1.6rem; font-weight: 700; margin: 5px 0 0; font-family: 'Oswald', sans-serif;
         }
         .stats-row .stat-item p {
-            color: #888;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
+            color: #888; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;
         }
 
         /* SECTIONS */
-        section {
-            padding: 70px 0;
-        }
+        section { padding: 70px 0; }
         .section-title {
             font-family: 'Oswald', sans-serif;
             font-size: clamp(2rem, 4.5vw, 2.8rem);
-            font-weight: 700;
-            text-transform: uppercase;
-            text-align: center;
-            margin-bottom: 10px;
+            font-weight: 700; text-transform: uppercase; text-align: center; margin-bottom: 10px;
         }
         .section-sub {
-            text-align: center;
-            color: #999;
-            max-width: 600px;
-            margin: 0 auto 45px;
-            font-size: 1.05rem;
+            text-align: center; color: #999; max-width: 600px; margin: 0 auto 45px; font-size: 1.05rem;
         }
-        .section-dark {
-            background: #0a0a0a;
-        }
+        .section-dark { background: #0a0a0a; }
 
-        /* RAFFLE CARDS (Primary) */
+        /* RAFFLE CARDS */
         .raffle-card {
-            background: #111;
-            border-radius: 24px;
-            border: 1px solid #222;
-            overflow: hidden;
-            transition: 0.4s;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+            background: #111; border-radius: 24px; border: 1px solid #222; overflow: hidden;
+            transition: 0.4s; height: 100%; display: flex; flex-direction: column; position: relative;
         }
-        .raffle-card:hover {
-            border-color: #f7c948;
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(247, 201, 72, 0.05);
-        }
+        .raffle-card:hover { border-color: #f7c948; transform: translateY(-8px); box-shadow: 0 20px 50px rgba(247,201,72,0.05); }
         .raffle-card .raffle-img {
-            height: 220px;
-            width: 100%;
-            object-fit: cover;
-            background: #1a1a1a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: #f7c948;
+            height: 220px; width: 100%; object-fit: cover; background: #1a1a1a;
+            display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #f7c948;
             border-bottom: 1px solid #222;
         }
-        .raffle-card .raffle-body {
-            padding: 25px 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
+        .raffle-card .raffle-body { padding: 25px 20px; flex-grow: 1; display: flex; flex-direction: column; }
         .raffle-card .raffle-body h3 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 5px;
+            font-family: 'Oswald', sans-serif; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; margin-bottom: 5px;
         }
-        .raffle-card .raffle-body .prize-value {
-            color: #f7c948;
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-        .raffle-card .raffle-body p {
-            color: #aaa;
-            font-size: 0.95rem;
-            margin: 10px 0 15px;
-            flex-grow: 1;
-        }
+        .raffle-card .raffle-body .prize-value { color: #f7c948; font-weight: 700; font-size: 0.9rem; }
+        .raffle-card .raffle-body p { color: #aaa; font-size: 0.95rem; margin: 10px 0 15px; flex-grow: 1; }
         .raffle-card .raffle-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid #222;
-            padding-top: 15px;
-            margin-top: 5px;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: flex; justify-content: space-between; align-items: center;
+            border-top: 1px solid #222; padding-top: 15px; margin-top: 5px; flex-wrap: wrap; gap: 10px;
         }
         .raffle-card .raffle-footer .ticket-price {
-            font-size: 1.8rem;
-            font-weight: 900;
-            font-family: 'Oswald', sans-serif;
-            color: #fff;
+            font-size: 1.8rem; font-weight: 900; font-family: 'Oswald', sans-serif; color: #fff;
         }
-        .raffle-card .raffle-footer .ticket-price small {
-            font-size: 0.8rem;
-            color: #888;
-        }
-        .raffle-card .raffle-footer .tickets-left {
-            color: #ff4444;
-            font-weight: 700;
-            font-size: 0.85rem;
-        }
-        .raffle-card .raffle-footer .btn-yellow {
-            padding: 8px 24px;
-            font-size: 0.8rem;
-        }
+        .raffle-card .raffle-footer .ticket-price small { font-size: 0.8rem; color: #888; }
+        .raffle-card .raffle-footer .tickets-left { color: #ff4444; font-weight: 700; font-size: 0.85rem; }
+        .raffle-card .raffle-footer .btn-yellow { padding: 8px 24px; font-size: 0.8rem; }
         .raffle-card .badge-hot {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #ff4444;
-            color: #fff;
-            padding: 4px 14px;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            position: absolute; top: 15px; right: 15px; background: #ff4444; color: #fff;
+            padding: 4px 14px; border-radius: 50px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;
             font-family: 'Oswald', sans-serif;
         }
         .raffle-card .badge-soon {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #f7c948;
-            color: #000;
-            padding: 4px 14px;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            position: absolute; top: 15px; right: 15px; background: #f7c948; color: #000;
+            padding: 4px 14px; border-radius: 50px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;
             font-family: 'Oswald', sans-serif;
         }
 
-        /* SOCIAL MEDIA POSTS (Model Promo Videos) */
+        /* SOCIAL POSTS */
         .social-post {
-            background: #111;
-            border-radius: 20px;
-            border: 1px solid #222;
-            overflow: hidden;
-            transition: 0.3s;
-            height: 100%;
+            background: #111; border-radius: 20px; border: 1px solid #222; overflow: hidden; transition: 0.3s; height: 100%;
         }
-        .social-post:hover {
-            border-color: #555;
-            transform: scale(1.02);
-        }
+        .social-post:hover { border-color: #555; transform: scale(1.02); }
         .social-post .post-header {
-            display: flex;
-            align-items: center;
-            padding: 12px 16px;
-            gap: 12px;
-            border-bottom: 1px solid #222;
+            display: flex; align-items: center; padding: 12px 16px; gap: 12px; border-bottom: 1px solid #222;
         }
         .social-post .post-header .avatar {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: #f7c948;
-            font-size: 1rem;
+            width: 36px; height: 36px; border-radius: 50%; background: #333;
+            display: flex; align-items: center; justify-content: center; font-weight: 700; color: #f7c948; font-size: 1rem;
         }
-        .social-post .post-header .username {
-            font-weight: 700;
-            color: #fff;
-            font-size: 0.95rem;
-        }
-        .social-post .post-header .platform {
-            margin-left: auto;
-            color: #888;
-            font-size: 1.2rem;
-        }
+        .social-post .post-header .username { font-weight: 700; color: #fff; font-size: 0.95rem; }
+        .social-post .post-header .platform { margin-left: auto; color: #888; font-size: 1.2rem; }
         .social-post .post-media {
-            height: 240px;
-            background: #1a1a1a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3.5rem;
-            color: #f7c948;
-            position: relative;
+            height: 240px; background: #1a1a1a; display: flex; align-items: center; justify-content: center;
+            font-size: 3.5rem; color: #f7c948; position: relative;
         }
         .social-post .post-media .play-btn {
-            position: absolute;
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            font-size: 3rem;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: absolute; background: rgba(0,0,0,0.6); color: #fff; font-size: 3rem;
+            width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
             border: 2px solid #fff;
         }
-        .social-post .post-caption {
-            padding: 12px 16px;
-            color: #ccc;
-            font-size: 0.9rem;
-            border-bottom: 1px solid #222;
-        }
-        .social-post .post-caption strong {
-            color: #fff;
-        }
-        .social-post .post-actions {
-            padding: 10px 16px;
-            display: flex;
-            gap: 20px;
-            color: #888;
-            font-size: 0.9rem;
-        }
-        .social-post .post-actions i {
-            font-size: 1.2rem;
-            margin-right: 5px;
-        }
+        .social-post .post-caption { padding: 12px 16px; color: #ccc; font-size: 0.9rem; border-bottom: 1px solid #222; }
+        .social-post .post-caption strong { color: #fff; }
+        .social-post .post-actions { padding: 10px 16px; display: flex; gap: 20px; color: #888; font-size: 0.9rem; }
+        .social-post .post-actions i { font-size: 1.2rem; margin-right: 5px; }
 
-        /* MODELS GALLERY */
+        /* MODELS */
         .model-card {
-            border-radius: 20px;
-            overflow: hidden;
-            border: none;
-            background: transparent;
-            position: relative;
-            transition: 0.4s;
+            border-radius: 20px; overflow: hidden; border: none; background: transparent; position: relative; transition: 0.4s;
         }
-        .model-card:hover {
-            transform: scale(1.02);
-        }
+        .model-card:hover { transform: scale(1.02); }
         .model-card img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 20px;
+            width: 100%; height: 320px; object-fit: cover; border-radius: 20px;
         }
         .model-card .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            position: absolute; bottom: 0; left: 0; right: 0;
             padding: 30px 20px 20px;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
             border-radius: 0 0 20px 20px;
         }
         .model-card .overlay h5 {
-            font-family: 'Oswald', sans-serif;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 2px;
-            color: #fff;
+            font-family: 'Oswald', sans-serif; font-weight: 600; text-transform: uppercase; margin-bottom: 2px; color: #fff;
         }
-        .model-card .overlay p {
-            color: #ccc;
-            font-size: 0.85rem;
-            margin-bottom: 10px;
-        }
+        .model-card .overlay p { color: #ccc; font-size: 0.85rem; margin-bottom: 10px; }
         .model-card .overlay .btn-sm-white {
-            background: #fff;
-            color: #000;
-            font-weight: 700;
-            font-size: 0.8rem;
-            padding: 6px 20px;
-            border-radius: 50px;
-            border: none;
-            transition: 0.3s;
-            display: inline-block;
+            background: #fff; color: #000; font-weight: 700; font-size: 0.8rem;
+            padding: 6px 20px; border-radius: 50px; border: none; transition: 0.3s; display: inline-block;
         }
-        .model-card .overlay .btn-sm-white:hover {
-            background: #ccc;
-        }
+        .model-card .overlay .btn-sm-white:hover { background: #ccc; }
         .model-card .badge-ambassador {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: #f7c948;
-            color: #000;
-            font-weight: 800;
-            font-size: 0.65rem;
-            padding: 4px 14px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: 'Oswald', sans-serif;
+            position: absolute; top: 15px; left: 15px; background: #f7c948; color: #000;
+            font-weight: 800; font-size: 0.65rem; padding: 4px 14px; border-radius: 50px; text-transform: uppercase;
+            letter-spacing: 1px; font-family: 'Oswald', sans-serif;
         }
 
-        /* PARTNERSHIP (B2B - Secondary) */
+        /* PARTNER (B2B) */
         .partner-card {
-            background: #111;
-            padding: 35px 25px;
-            border-radius: 20px;
-            border: 1px solid #222;
-            transition: 0.4s;
-            text-align: center;
-            height: 100%;
+            background: #111; padding: 35px 25px; border-radius: 20px; border: 1px solid #222;
+            transition: 0.4s; text-align: center; height: 100%;
         }
-        .partner-card:hover {
-            border-color: #555;
-            transform: translateY(-8px);
-        }
-        .partner-card i {
-            font-size: 2.8rem;
-            color: #f7c948;
-            margin-bottom: 18px;
-        }
+        .partner-card:hover { border-color: #555; transform: translateY(-8px); }
+        .partner-card i { font-size: 2.8rem; color: #f7c948; margin-bottom: 18px; }
         .partner-card h4 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 8px;
+            font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; margin-bottom: 8px;
         }
-        .partner-card p {
-            color: #999;
-            font-size: 0.95rem;
-        }
+        .partner-card p { color: #999; font-size: 0.95rem; }
 
-        /* PACKAGE CARDS (B2B) */
+        /* PACKAGES (B2B) */
         .package-card {
-            background: #111;
-            padding: 40px 28px;
-            border-radius: 24px;
-            border: 1px solid #222;
-            transition: 0.4s;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            position: relative;
+            background: #111; padding: 40px 28px; border-radius: 24px; border: 1px solid #222;
+            transition: 0.4s; display: flex; flex-direction: column; height: 100%; position: relative;
         }
-        .package-card:hover {
-            border-color: #555;
-            transform: translateY(-5px);
-        }
-        .package-card.popular {
-            border-color: #f7c948;
-            background: #1a1a1a;
-        }
+        .package-card:hover { border-color: #555; transform: translateY(-5px); }
+        .package-card.popular { border-color: #f7c948; background: #1a1a1a; }
         .package-card.popular .popular-badge {
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: #f7c948;
-            color: #000;
-            padding: 4px 18px;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
+            position: absolute; top: -12px; right: 20px; background: #f7c948; color: #000;
+            padding: 4px 18px; border-radius: 50px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
             font-family: 'Oswald', sans-serif;
         }
         .package-card h3 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 2px;
+            font-family: 'Oswald', sans-serif; font-size: 1.6rem; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;
         }
         .package-card .price-tag {
-            color: #aaa;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: #aaa; font-weight: 600; font-size: 0.9rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;
         }
-        .package-card ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-            flex-grow: 1;
-        }
-        .package-card ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid #222;
-            color: #ccc;
-            font-size: 0.95rem;
-        }
-        .package-card ul li i {
-            color: #f7c948;
-            margin-right: 12px;
-        }
+        .package-card ul { list-style: none; padding: 0; margin-bottom: 30px; flex-grow: 1; }
+        .package-card ul li { padding: 8px 0; border-bottom: 1px solid #222; color: #ccc; font-size: 0.95rem; }
+        .package-card ul li i { color: #f7c948; margin-right: 12px; }
 
         /* LEAD FORM */
         .lead-form-card {
-            background: #111;
-            padding: 40px 30px;
-            border-radius: 24px;
-            border: 1px solid #222;
-            max-width: 600px;
-            margin: 0 auto;
+            background: #111; padding: 40px 30px; border-radius: 24px; border: 1px solid #222;
+            max-width: 600px; margin: 0 auto;
         }
         .lead-form-card .form-control {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            color: #fff;
-            border-radius: 50px;
-            padding: 14px 20px;
+            background: #1a1a1a; border: 1px solid #333; color: #fff; border-radius: 50px; padding: 14px 20px;
         }
-        .lead-form-card .form-control::placeholder {
-            color: #666;
-        }
-        .lead-form-card .form-control:focus {
-            border-color: #f7c948;
-            background: #222;
-        }
+        .lead-form-card .form-control::placeholder { color: #666; }
+        .lead-form-card .form-control:focus { border-color: #f7c948; background: #222; }
         .lead-form-card .form-select {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            color: #fff;
-            border-radius: 50px;
-            padding: 14px 20px;
+            background: #1a1a1a; border: 1px solid #333; color: #fff; border-radius: 50px; padding: 14px 20px;
         }
-        .lead-form-card .form-select option {
-            background: #111;
-        }
+        .lead-form-card .form-select option { background: #111; }
 
         /* FOOTER */
         footer {
-            padding: 40px 0 30px;
-            border-top: 1px solid #222;
-            text-align: center;
+            padding: 40px 0 30px; border-top: 1px solid #222; text-align: center;
         }
         footer .logo-text {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #fff;
+            font-family: 'Oswald', sans-serif; font-size: 2rem; font-weight: 700; color: #fff;
         }
-        footer .logo-text span {
-            font-weight: 300;
-            color: #888;
-        }
+        footer .logo-text span { font-weight: 300; color: #888; }
         footer .socials-footer a {
-            color: #888;
-            font-size: 1.6rem;
-            transition: 0.3s;
-            margin: 0 10px;
+            color: #888; font-size: 1.6rem; transition: 0.3s; margin: 0 10px;
         }
-        footer .socials-footer a:hover {
-            color: #f7c948;
-            transform: scale(1.1);
-        }
-        footer p {
-            color: #666;
-            font-size: 0.85rem;
-            margin-top: 15px;
-        }
-        footer .location {
-            color: #aaa;
-            font-size: 0.95rem;
-        }
-        footer .location i {
-            color: #f7c948;
-        }
+        footer .socials-footer a:hover { color: #f7c948; transform: scale(1.1); }
+        footer p { color: #666; font-size: 0.85rem; margin-top: 15px; }
+        footer .location { color: #aaa; font-size: 0.95rem; }
+        footer .location i { color: #f7c948; }
 
         /* OFF CANVAS */
-        .offcanvas {
-            background: #000 !important;
-        }
+        .offcanvas { background: #000 !important; }
         .offcanvas .nav-link {
-            color: #ccc !important;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 1rem;
-            padding: 12px 0;
+            color: #ccc !important; font-weight: 600; text-transform: uppercase; font-size: 1rem; padding: 12px 0;
         }
-        .offcanvas .nav-link:hover {
-            color: #f7c948 !important;
-        }
+        .offcanvas .nav-link:hover { color: #f7c948 !important; }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .banner-carousel {
-                min-height: 40vh;
-                padding: 50px 0 40px;
-            }
-            .banner-carousel h1 {
-                font-size: 2.2rem;
-            }
-            .social-icons-header {
-                display: none;
-            }
-            .model-card img {
-                height: 250px;
-            }
-            section {
-                padding: 50px 0;
-            }
-            .raffle-card .raffle-img {
-                height: 160px;
-            }
-            .social-post .post-media {
-                height: 180px;
-            }
+            .banner-carousel { min-height: 40vh; padding: 50px 0 40px; }
+            .banner-carousel h1 { font-size: 2.2rem; }
+            .social-icons-header { display: none; }
+            .model-card img { height: 250px; }
+            section { padding: 50px 0; }
+            .raffle-card .raffle-img { height: 160px; }
+            .social-post .post-media { height: 180px; }
         }
         @media (max-width: 576px) {
-            #logo img {
-                max-height: 40px;
-            }
-            .stats-row .stat-item h3 {
-                font-size: 1.2rem;
-            }
-            .raffle-card .raffle-footer .ticket-price {
-                font-size: 1.4rem;
-            }
+            #logo img { max-height: 40px; }
+            .stats-row .stat-item h3 { font-size: 1.2rem; }
+            .raffle-card .raffle-footer .ticket-price { font-size: 1.4rem; }
         }
-        @media (min-width: 768px) {
-            .container-fluid {
-                padding-left: 60px;
-                padding-right: 60px;
-            }
-        }
-        @media (min-width: 1400px) {
-            .container-fluid {
-                padding-left: 8% !important;
-                padding-right: 8% !important;
-            }
-        }
+        @media (min-width: 768px) { .container-fluid { padding-left: 60px; padding-right: 60px; } }
+        @media (min-width: 1400px) { .container-fluid { padding-left: 8% !important; padding-right: 8% !important; } }
     </style>
 </head>
 <body>
 
     <!-- ===== FLOATING BUY BUTTON ===== -->
     <a href="#raffles" class="floating-buy" data-i18n="floating-buy">
-        <i class="bi bi-ticket-perforated"></i> <span>Buy Tickets</span>
+        <i class="bi bi-ticket-perforated"></i> <span>Comprar Boletos</span>
     </a>
 
     <!-- ===== HEADER ===== -->
@@ -871,13 +392,13 @@
                 <div class="col-auto d-none d-lg-block">
                     <nav class="navbar navbar-expand-lg py-0">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a href="#banner" class="nav-link nav-link-custom active" data-i18n="nav-home">Home</a></li>
-                            <li class="nav-item"><a href="#raffles" class="nav-link nav-link-custom" data-i18n="nav-raffles">Raffles</a></li>
+                            <li class="nav-item"><a href="#banner" class="nav-link nav-link-custom active" data-i18n="nav-home">Inicio</a></li>
+                            <li class="nav-item"><a href="#raffles" class="nav-link nav-link-custom" data-i18n="nav-raffles">Rifas</a></li>
                             <li class="nav-item"><a href="#social" class="nav-link nav-link-custom" data-i18n="nav-social">Promos</a></li>
-                            <li class="nav-item"><a href="#models" class="nav-link nav-link-custom" data-i18n="nav-models">Models</a></li>
-                            <li class="nav-item"><a href="#partner" class="nav-link nav-link-custom" data-i18n="nav-partner">Partner</a></li>
-                            <li class="nav-item"><a href="#packages" class="nav-link nav-link-custom" data-i18n="nav-packages">Packages</a></li>
-                            <li class="nav-item"><a href="#contact" class="btn-black ms-2" data-i18n="nav-contact">Contact</a></li>
+                            <li class="nav-item"><a href="#models" class="nav-link nav-link-custom" data-i18n="nav-models">Modelos</a></li>
+                            <li class="nav-item"><a href="#partner" class="nav-link nav-link-custom" data-i18n="nav-partner">Asociarse</a></li>
+                            <li class="nav-item"><a href="#packages" class="nav-link nav-link-custom" data-i18n="nav-packages">Paquetes</a></li>
+                            <li class="nav-item"><a href="#contact" class="btn-black ms-2" data-i18n="nav-contact">Contacto</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -913,13 +434,13 @@
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav fw-bold">
-                <li class="nav-item"><a class="nav-link nav-link-custom active" href="#banner" data-i18n="nav-home">Home</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-custom" href="#raffles" data-i18n="nav-raffles">Raffles</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom active" href="#banner" data-i18n="nav-home">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#raffles" data-i18n="nav-raffles">Rifas</a></li>
                 <li class="nav-item"><a class="nav-link nav-link-custom" href="#social" data-i18n="nav-social">Promos</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-custom" href="#models" data-i18n="nav-models">Models</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-custom" href="#partner" data-i18n="nav-partner">Partner</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-custom" href="#packages" data-i18n="nav-packages">Packages</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact" data-i18n="nav-contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#models" data-i18n="nav-models">Modelos</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#partner" data-i18n="nav-partner">Asociarse</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#packages" data-i18n="nav-packages">Paquetes</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact" data-i18n="nav-contact">Contacto</a></li>
             </ul>
             <div class="border-top border-secondary pt-3 mt-3">
                 <div class="d-flex gap-3">
@@ -937,7 +458,7 @@
     <div class="urgency-bar">
         <div class="container">
             <span class="urgency-text" data-i18n="urgency-text">
-                <i class="bi bi-fire"></i> Limited Tickets Available!
+                <i class="bi bi-fire"></i> ¡Boletos Limitados Disponibles!
             </span>
             <span class="countdown-big" id="countdown-timer">⏳ 24:00:00</span>
         </div>
@@ -948,22 +469,22 @@
     <section class="banner-carousel" id="banner">
         <div class="container text-center">
             <div class="sub-badge" data-i18n="hero-badge">
-                <i class="bi bi-ticket-perforated me-1"></i> Raffle Tickets on Sale Now
+                <i class="bi bi-ticket-perforated me-1"></i> Rifas a la Venta
             </div>
             <h1>
-                <span data-i18n="hero-title-1">WIN BIG PRIZES</span><br>
-                <span class="highlight" data-i18n="hero-title-2">BUY RAFFLE TICKETS</span>
+                <span data-i18n="hero-title-1">GANA GRANDES PREMIOS</span><br>
+                <span class="highlight" data-i18n="hero-title-2">COMPRA BOLETOS</span>
             </h1>
             <p data-i18n="hero-desc">
-                Enter our exclusive raffles for a chance to win amazing prizes. <br>
-                <span class="text-white-50" data-i18n="hero-sub">Each ticket = 1 entry. Multiple winners every month!</span>
+                Participa en nuestras rifas exclusivas y gana premios increíbles. <br>
+                <span class="text-white-50" data-i18n="hero-sub">Cada boleto = 1 entrada. ¡Múltiples ganadores cada mes!</span>
             </p>
             <div class="cta-group">
                 <a href="#raffles" class="btn-yellow" data-i18n="hero-cta-buy">
-                    <i class="bi bi-ticket-perforated me-2"></i> Buy Tickets Now
+                    <i class="bi bi-ticket-perforated me-2"></i> Comprar Boletos
                 </a>
                 <a href="#social" class="btn-outline-white" data-i18n="hero-cta-promo">
-                    <i class="bi bi-play-circle me-2"></i> See Model Promos
+                    <i class="bi bi-play-circle me-2"></i> Ver Promos
                 </a>
             </div>
 
@@ -972,47 +493,45 @@
                 <div class="col-4 stat-item">
                     <i class="bi bi-people-fill"></i>
                     <h3 data-i18n="stat-1">500+</h3>
-                    <p data-i18n="stat-1-desc">Tickets Sold</p>
+                    <p data-i18n="stat-1-desc">Boletos Vendidos</p>
                 </div>
                 <div class="col-4 stat-item">
                     <i class="bi bi-gift-fill"></i>
                     <h3 data-i18n="stat-2">12</h3>
-                    <p data-i18n="stat-2-desc">Prizes Given</p>
+                    <p data-i18n="stat-2-desc">Premios Entregados</p>
                 </div>
                 <div class="col-4 stat-item">
                     <i class="bi bi-star-fill"></i>
                     <h3 data-i18n="stat-3">4.9★</h3>
-                    <p data-i18n="stat-3-desc">Rating</p>
+                    <p data-i18n="stat-3-desc">Calificación</p>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <!-- ===== SECTION 1: CURRENT RAFFLES & PRIZES (PRIMARY) ===== -->
+    <!-- ===== SECTION 1: CURRENT RAFFLES ===== -->
     <section class="section-dark" id="raffles">
         <div class="container">
-            <h2 class="section-title" data-i18n="raffles-title">🎟️ Current Raffles & Prizes</h2>
-            <p class="section-sub" data-i18n="raffles-sub">Grab your tickets now before they run out!</p>
+            <h2 class="section-title" data-i18n="raffles-title">🎟️ Rifas y Premios Actuales</h2>
+            <p class="section-sub" data-i18n="raffles-sub">¡Compra tus boletos antes de que se agoten!</p>
 
             <div class="row g-4">
                 <!-- Raffle 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="raffle-card position-relative">
-                        <span class="badge-hot" data-i18n="badge-hot">🔥 Hot</span>
-                        <div class="raffle-img">
-                            <i class="bi bi-phone"></i>
-                        </div>
+                        <span class="badge-hot" data-i18n="badge-hot">🔥 Popular</span>
+                        <div class="raffle-img"><i class="bi bi-phone"></i></div>
                         <div class="raffle-body">
                             <h3 data-i18n="raffle-1-title">iPhone 15 Pro</h3>
-                            <div class="prize-value" data-i18n="raffle-1-value">💰 Prize Value: $1,200</div>
-                            <p data-i18n="raffle-1-desc">Win the latest iPhone 15 Pro. 256GB, Deep Purple. Includes 1-year warranty.</p>
+                            <div class="prize-value" data-i18n="raffle-1-value">💰 Valor: $1,200</div>
+                            <p data-i18n="raffle-1-desc">Gana el nuevo iPhone 15 Pro. 256GB, morado profundo. Incluye garantía.</p>
                             <div class="raffle-footer">
                                 <div>
                                     <div class="ticket-price" data-i18n="raffle-1-price">$10 <small>USD</small></div>
-                                    <div class="tickets-left" data-i18n="raffle-1-left">🔥 Only 47 left</div>
+                                    <div class="tickets-left" data-i18n="raffle-1-left">🔥 Solo 47 disponibles</div>
                                 </div>
-                                <a href="#contact" class="btn-yellow" data-i18n="raffle-1-btn">Buy Ticket</a>
+                                <a href="#contact" class="btn-yellow" data-i18n="raffle-1-btn">Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -1021,20 +540,18 @@
                 <!-- Raffle 2 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="raffle-card position-relative">
-                        <span class="badge-soon" data-i18n="badge-soon">⭐ Trending</span>
-                        <div class="raffle-img">
-                            <i class="bi bi-laptop"></i>
-                        </div>
+                        <span class="badge-soon" data-i18n="badge-soon">⭐ Tendencias</span>
+                        <div class="raffle-img"><i class="bi bi-laptop"></i></div>
                         <div class="raffle-body">
                             <h3 data-i18n="raffle-2-title">MacBook Air M3</h3>
-                            <div class="prize-value" data-i18n="raffle-2-value">💰 Prize Value: $1,500</div>
-                            <p data-i18n="raffle-2-desc">Brand new MacBook Air M3. 16GB RAM, 512GB SSD. Perfect for work and creativity.</p>
+                            <div class="prize-value" data-i18n="raffle-2-value">💰 Valor: $1,500</div>
+                            <p data-i18n="raffle-2-desc">MacBook Air M3 nueva. 16GB RAM, 512GB SSD. Perfecta para trabajo.</p>
                             <div class="raffle-footer">
                                 <div>
                                     <div class="ticket-price" data-i18n="raffle-2-price">$15 <small>USD</small></div>
-                                    <div class="tickets-left" data-i18n="raffle-2-left">🔥 Only 32 left</div>
+                                    <div class="tickets-left" data-i18n="raffle-2-left">🔥 Solo 32 disponibles</div>
                                 </div>
-                                <a href="#contact" class="btn-yellow" data-i18n="raffle-2-btn">Buy Ticket</a>
+                                <a href="#contact" class="btn-yellow" data-i18n="raffle-2-btn">Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -1043,19 +560,17 @@
                 <!-- Raffle 3 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="raffle-card position-relative">
-                        <div class="raffle-img">
-                            <i class="bi bi-gem"></i>
-                        </div>
+                        <div class="raffle-img"><i class="bi bi-gem"></i></div>
                         <div class="raffle-body">
-                            <h3 data-i18n="raffle-3-title">$500 Cash Prize</h3>
-                            <div class="prize-value" data-i18n="raffle-3-value">💰 Prize Value: $500</div>
-                            <p data-i18n="raffle-3-desc">Win $500 cash – no strings attached. Spend it however you want!</p>
+                            <h3 data-i18n="raffle-3-title">$500 en Efectivo</h3>
+                            <div class="prize-value" data-i18n="raffle-3-value">💰 Valor: $500</div>
+                            <p data-i18n="raffle-3-desc">Gana $500 en efectivo – sin condiciones.</p>
                             <div class="raffle-footer">
                                 <div>
                                     <div class="ticket-price" data-i18n="raffle-3-price">$5 <small>USD</small></div>
-                                    <div class="tickets-left" data-i18n="raffle-3-left">🔥 Only 89 left</div>
+                                    <div class="tickets-left" data-i18n="raffle-3-left">🔥 Solo 89 disponibles</div>
                                 </div>
-                                <a href="#contact" class="btn-yellow" data-i18n="raffle-3-btn">Buy Ticket</a>
+                                <a href="#contact" class="btn-yellow" data-i18n="raffle-3-btn">Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -1064,18 +579,18 @@
 
             <div class="text-center mt-5">
                 <a href="#contact" class="btn-white" data-i18n="raffles-cta">
-                    <i class="bi bi-ticket-perforated me-2"></i> View All Raffles
+                    <i class="bi bi-ticket-perforated me-2"></i> Ver Todas las Rifas
                 </a>
             </div>
         </div>
     </section>
 
 
-    <!-- ===== SECTION 2: SOCIAL MEDIA & MODEL PROMO VIDEOS ===== -->
+    <!-- ===== SECTION 2: SOCIAL MEDIA & MODEL PROMOS ===== -->
     <section id="social">
         <div class="container">
-            <h2 class="section-title" data-i18n="social-title">📱 Model Promo Videos</h2>
-            <p class="section-sub" data-i18n="social-sub">See our ambassadors unboxing and promoting the prizes on social media!</p>
+            <h2 class="section-title" data-i18n="social-title">📱 Videos Promocionales</h2>
+            <p class="section-sub" data-i18n="social-sub">¡Mira a nuestras modelos presentando los premios!</p>
 
             <div class="row g-4">
                 <!-- Post 1 -->
@@ -1091,7 +606,7 @@
                             <div class="play-btn"><i class="bi bi-play-fill"></i></div>
                         </div>
                         <div class="post-caption" data-i18n="post-1-caption">
-                            <strong>🔥 iPhone 15 Pro Giveaway!</strong> Get your tickets now – link in bio! #Raffle #Giveaway #iPhone
+                            <strong>🔥 ¡Sorteo iPhone 15 Pro!</strong> Compra tus boletos ahora – link en bio. #Rifa #Giveaway
                         </div>
                         <div class="post-actions">
                             <span><i class="bi bi-heart-fill" style="color:#ff4444;"></i> 1.2K</span>
@@ -1114,7 +629,7 @@
                             <div class="play-btn"><i class="bi bi-play-fill"></i></div>
                         </div>
                         <div class="post-caption" data-i18n="post-2-caption">
-                            <strong>💻 MacBook Air M3 Unboxing!</strong> This could be YOURS. Tickets are selling fast! #MacBook #Raffle
+                            <strong>💻 ¡Unboxing MacBook Air M3!</strong> Este podría ser TUYO. ¡Boletos volando! #MacBook #Rifa
                         </div>
                         <div class="post-actions">
                             <span><i class="bi bi-heart-fill" style="color:#ff4444;"></i> 845</span>
@@ -1137,7 +652,7 @@
                             <div class="play-btn"><i class="bi bi-play-fill"></i></div>
                         </div>
                         <div class="post-caption" data-i18n="post-3-caption">
-                            <strong>💰 Win $500 Cash!</strong> Just 5 days left. Don't miss out – grab your ticket today! #CashGiveaway
+                            <strong>💰 ¡Gana $500 en efectivo!</strong> Solo 5 días. ¡No te lo pierdas! #Efectivo #Rifa
                         </div>
                         <div class="post-actions">
                             <span><i class="bi bi-heart-fill" style="color:#ff4444;"></i> 2.1K</span>
@@ -1150,40 +665,40 @@
 
             <div class="text-center mt-4">
                 <a href="#" class="btn-outline-white" data-i18n="social-cta">
-                    <i class="bi bi-instagram me-2"></i> Follow Us for More
+                    <i class="bi bi-instagram me-2"></i> Síguenos para más
                 </a>
             </div>
         </div>
     </section>
 
 
-    <!-- ===== SECTION 3: OUR AMBASSADOR MODELS ===== -->
+    <!-- ===== SECTION 3: AMBASSADOR MODELS ===== -->
     <section class="section-dark" id="models">
         <div class="container-fluid">
             <div class="text-center mb-4">
-                <h2 class="fw-bold" data-i18n="models-title">👩‍💼 Our Ambassador Models</h2>
-                <p class="text-muted" data-i18n="models-sub">The faces behind our raffle promos – check out their content!</p>
+                <h2 class="fw-bold" data-i18n="models-title">👩‍💼 Nuestras Modelos Embajadoras</h2>
+                <p class="text-muted" data-i18n="models-sub">Las caras detrás de nuestras rifas – ¡conoce su contenido!</p>
             </div>
             <div class="row g-sm-4 g-3">
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3">
                     <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
-                        <span class="badge-ambassador" data-i18n="models-badge">⭐ Ambassador</span>
+                        <span class="badge-ambassador" data-i18n="models-badge">⭐ Embajadora</span>
                         <img src="https://veronicavee.com/storage/avatars/V8s82JJTS2hi0HUlVUumkvh5TDa2fPHdn5Z0mJSM.jpg" alt="Model" class="card-img h-100 model-img object-fit-cover">
                         <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
                             <h5 class="mb-1 fw-bold">Veronica Vee</h5>
                             <p class="fs-14 mb-2">20 yrs • Maicoa, Colombia</p>
-                            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
+                            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">Ver Perfil</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3">
                     <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
-                        <span class="badge-ambassador" data-i18n="models-badge">⭐ Ambassador</span>
+                        <span class="badge-ambassador" data-i18n="models-badge">⭐ Embajadora</span>
                         <img src="https://veronicavee.com/storage/avatars/19.jpeg" alt="Model" class="card-img h-100 model-img object-fit-cover">
                         <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
                             <h5 class="mb-1 fw-bold">Maria Gomez</h5>
                             <p class="fs-14 mb-2">24 yrs • Maracaibo, Venezuela</p>
-                            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
+                            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">Ver Perfil</a>
                         </div>
                     </div>
                 </div>
@@ -1193,7 +708,7 @@
                         <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
                             <h5 class="mb-1 fw-bold">Ana Rodriguez</h5>
                             <p class="fs-14 mb-2">22 yrs • Maicoa, Colombia</p>
-                            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
+                            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">Ver Perfil</a>
                         </div>
                     </div>
                 </div>
@@ -1203,109 +718,109 @@
                         <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
                             <h5 class="mb-1 fw-bold">Lucia Perez</h5>
                             <p class="fs-14 mb-2">26 yrs • Maracaibo, Venezuela</p>
-                            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
+                            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">Ver Perfil</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-4">
-                <a href="#" class="btn-outline-white" data-i18n="models-see-all">See All Models <i class="bi bi-arrow-right ms-1"></i></a>
+                <a href="#" class="btn-outline-white" data-i18n="models-see-all">Ver Todas <i class="bi bi-arrow-right ms-1"></i></a>
             </div>
         </div>
     </section>
 
 
-    <!-- ===== SECTION 4: ELEVATE YOUR BRAND (B2B - SECONDARY) ===== -->
+    <!-- ===== SECTION 4: ELEVATE YOUR BRAND (B2B) ===== -->
     <section id="partner">
         <div class="container">
-            <h2 class="section-title" data-i18n="partner-title">🚀 Elevate Your Brand</h2>
-            <p class="section-sub" data-i18n="partner-sub">Partner with us to promote your products through our viral raffle campaigns and model ambassadors.</p>
+            <h2 class="section-title" data-i18n="partner-title">🚀 Eleva Tu Marca</h2>
+            <p class="section-sub" data-i18n="partner-sub">Asóciate con nosotros para promocionar tus productos a través de rifas virales y modelos embajadoras.</p>
 
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <div class="partner-card">
                         <i class="bi bi-gift-fill"></i>
-                        <h4 data-i18n="partner-feat-1">Viral Raffles</h4>
-                        <p data-i18n="partner-feat-1-desc">Your products as grand prizes – generate massive buzz.</p>
+                        <h4 data-i18n="partner-feat-1">Rifas Virales</h4>
+                        <p data-i18n="partner-feat-1-desc">Tus productos como grandes premios – generan buzz masivo.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="partner-card">
                         <i class="bi bi-person-fill"></i>
-                        <h4 data-i18n="partner-feat-2">Model Ambassadors</h4>
-                        <p data-i18n="partner-feat-2-desc">Handpicked models create premium content for your brand.</p>
+                        <h4 data-i18n="partner-feat-2">Modelos Embajadoras</h4>
+                        <p data-i18n="partner-feat-2-desc">Modelos seleccionadas para tu marca, crean contenido premium.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="partner-card">
                         <i class="bi bi-share-fill"></i>
-                        <h4 data-i18n="partner-feat-3">Social Exposure</h4>
-                        <p data-i18n="partner-feat-3-desc">Instagram, TikTok & Facebook – reach thousands.</p>
+                        <h4 data-i18n="partner-feat-3">Exposición en Redes</h4>
+                        <p data-i18n="partner-feat-3-desc">Instagram, TikTok y Facebook – alcance masivo.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="partner-card" style="border-color: #555;">
                         <i class="bi bi-star-fill"></i>
-                        <h4 data-i18n="partner-feat-4">Curated Matching</h4>
-                        <p data-i18n="partner-feat-4-desc">Only a few select models are chosen as brand ambassadors for your business.</p>
+                        <h4 data-i18n="partner-feat-4">Emparejamiento Curado</h4>
+                        <p data-i18n="partner-feat-4-desc">Solo unas pocas modelos seleccionadas son elegidas para tu negocio.</p>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-4">
                 <a href="#packages" class="btn-outline-white" data-i18n="partner-cta">
-                    <i class="bi bi-briefcase me-2"></i> View Partnership Packages
+                    <i class="bi bi-briefcase me-2"></i> Ver Paquetes de Asociación
                 </a>
             </div>
         </div>
     </section>
 
 
-    <!-- ===== SECTION 5: PARTNERSHIP PACKAGES (B2B) ===== -->
+    <!-- ===== SECTION 5: PARTNERSHIP PACKAGES ===== -->
     <section class="section-dark" id="packages">
         <div class="container">
-            <h2 class="section-title" data-i18n="packages-title">📦 Partnership Packages</h2>
-            <p class="section-sub" data-i18n="packages-sub">Choose the plan that fits your brand's goals.</p>
+            <h2 class="section-title" data-i18n="packages-title">📦 Paquetes de Asociación</h2>
+            <p class="section-sub" data-i18n="packages-sub">Elige el plan que mejor se adapte a tu marca.</p>
 
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="package-card">
-                        <h3 data-i18n="pack-1-name">LAUNCH</h3>
-                        <div class="price-tag" data-i18n="pack-1-tag">Ideal to Start</div>
+                        <h3 data-i18n="pack-1-name">LANZAMIENTO</h3>
+                        <div class="price-tag" data-i18n="pack-1-tag">Ideal para empezar</div>
                         <ul>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-1">Single product campaign</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-2">Social media promotion</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">1 ambassador model</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-4">Localized exposure</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-1">Campaña de un producto</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-2">Promoción en redes</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">1 modelo embajadora</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-4">Exposición local</span></li>
                         </ul>
-                        <a href="#contact" class="btn-outline-white" data-i18n="pack-1-btn">Choose This</a>
+                        <a href="#contact" class="btn-outline-white" data-i18n="pack-1-btn">Elegir</a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="package-card popular">
-                        <div class="popular-badge" data-i18n="pack-popular">Most Popular</div>
-                        <h3 data-i18n="pack-2-name">GROWTH</h3>
-                        <div class="price-tag" data-i18n="pack-2-tag">More Reach & Impact</div>
+                        <div class="popular-badge" data-i18n="pack-popular">Más Popular</div>
+                        <h3 data-i18n="pack-2-name">CRECIMIENTO</h3>
+                        <div class="price-tag" data-i18n="pack-2-tag">Más alcance</div>
                         <ul>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-1">Multiple ambassador models</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-2">Professional video reels</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Co-branded landing pages</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-4">Expanded audience reach</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-1">Múltiples modelos</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-2">Reels profesionales</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Páginas co-marcadas</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-4">Audiencia expandida</span></li>
                         </ul>
-                        <a href="#contact" class="btn-black" style="background:#f7c948;color:#000;" data-i18n="pack-2-btn">Choose This</a>
+                        <a href="#contact" class="btn-black" style="background:#f7c948;color:#000;" data-i18n="pack-2-btn">Elegir</a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="package-card">
-                        <h3 data-i18n="pack-3-name">PREMIER ELITE</h3>
-                        <div class="price-tag" data-i18n="pack-3-tag">Annual Partnership</div>
+                        <h3 data-i18n="pack-3-name">PREMIER ÉLITE</h3>
+                        <div class="price-tag" data-i18n="pack-3-tag">Alianza anual</div>
                         <ul>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-1">Recurring monthly campaigns</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-2">Priority scheduling</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Category exclusivity</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-4">Detailed premium reports</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-1">Campañas mensuales</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-2">Programación prioritaria</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Exclusividad</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-4">Reportes premium</span></li>
                         </ul>
-                        <a href="#contact" class="btn-outline-white" data-i18n="pack-3-btn">Choose This</a>
+                        <a href="#contact" class="btn-outline-white" data-i18n="pack-3-btn">Elegir</a>
                     </div>
                 </div>
             </div>
@@ -1313,33 +828,33 @@
     </section>
 
 
-    <!-- ===== CONTACT / LEAD FORM ===== -->
+    <!-- ===== CONTACT FORM ===== -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title" data-i18n="contact-title">📩 Get Your Tickets or Partner With Us</h2>
-            <p class="section-sub" data-i18n="contact-sub">Fill in your details and we'll reach out to you within 24 hours.</p>
+            <h2 class="section-title" data-i18n="contact-title">📩 Consigue tus Boletos o Asóciate</h2>
+            <p class="section-sub" data-i18n="contact-sub">Completa tus datos y te contactaremos en 24 horas.</p>
 
             <div class="lead-form-card">
                 <form>
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Your Name" data-i18n="form-name" required>
+                        <input type="text" class="form-control" placeholder="Tu Nombre" data-i18n="form-name" required>
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Email or Phone" data-i18n="form-contact" required>
+                        <input type="text" class="form-control" placeholder="Email o Teléfono" data-i18n="form-contact" required>
                     </div>
                     <div class="mb-3">
                         <select class="form-select" style="background:#1a1a1a;border:1px solid #333;color:#fff;border-radius:50px;padding:14px 20px;">
-                            <option value="" data-i18n="form-select-placeholder">I am interested in...</option>
-                            <option value="tickets" data-i18n="form-select-1">Buying raffle tickets</option>
-                            <option value="partner" data-i18n="form-select-2">Partnering my business</option>
-                            <option value="both" data-i18n="form-select-3">Both</option>
+                            <option value="" data-i18n="form-select-placeholder">Estoy interesado en...</option>
+                            <option value="tickets" data-i18n="form-select-1">Comprar boletos</option>
+                            <option value="partner" data-i18n="form-select-2">Asociar mi negocio</option>
+                            <option value="both" data-i18n="form-select-3">Ambos</option>
                         </select>
                     </div>
                     <button type="submit" class="btn-yellow w-100" data-i18n="form-submit">
-                        <i class="bi bi-send me-2"></i> Submit
+                        <i class="bi bi-send me-2"></i> Enviar
                     </button>
                 </form>
-                <p class="text-muted text-center mt-3 small" data-i18n="form-note">We'll respond within 24 hours via WhatsApp or email.</p>
+                <p class="text-muted text-center mt-3 small" data-i18n="form-note">Te responderemos en 24 horas por WhatsApp o email.</p>
             </div>
         </div>
     </section>
@@ -1358,32 +873,28 @@
                 <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
                 <a href="#" target="_blank"><i class="bi bi-whatsapp"></i></a>
             </div>
-            <p data-i18n="footer-text">© 2026 Alianzas Pro · Raffle tickets first, brand elevation second.</p>
+            <p data-i18n="footer-text">© 2026 Alianzas Pro · Rifas primero, elevación de marca segundo.</p>
         </div>
     </footer>
 
 
     <!-- ===== BOOTSTRAP JS ===== -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- ===== COUNTDOWN TIMER ===== -->
     <script>
         function startCountdown() {
-            let hours = 24,
-                minutes = 0,
-                seconds = 0;
+            let hours = 24, minutes = 0, seconds = 0;
             const timer = document.getElementById('countdown-timer');
 
             function update() {
                 if (hours === 0 && minutes === 0 && seconds === 0) {
-                    timer.textContent = '⏳ SOLD OUT!';
+                    timer.textContent = '⏳ ¡AGOTADO!';
                     return;
                 }
                 if (seconds === 0) {
                     if (minutes === 0) {
-                        if (hours > 0) { hours--; minutes = 59;
-                            seconds = 59; }
+                        if (hours > 0) { hours--; minutes = 59; seconds = 59; }
                     } else { minutes--; seconds = 59; }
                 } else { seconds--; }
                 const h = String(hours).padStart(2, '0');
@@ -1402,7 +913,7 @@
             es: {
                 "nav-home": "Inicio",
                 "nav-raffles": "Rifas",
-                "nav-social": "Promociones",
+                "nav-social": "Promos",
                 "nav-models": "Modelos",
                 "nav-partner": "Asociarse",
                 "nav-packages": "Paquetes",
@@ -1415,7 +926,7 @@
                 "hero-desc": "Participa en nuestras rifas exclusivas y gana premios increíbles.",
                 "hero-sub": "Cada boleto = 1 entrada. ¡Múltiples ganadores cada mes!",
                 "hero-cta-buy": "Comprar Boletos",
-                "hero-cta-promo": "Ver Promociones",
+                "hero-cta-promo": "Ver Promos",
                 "stat-1": "500+",
                 "stat-1-desc": "Boletos Vendidos",
                 "stat-2": "12",
@@ -1451,21 +962,21 @@
                 "post-2-caption": "💻 ¡Unboxing MacBook Air M3! Este podría ser TUYO. ¡Boletos volando! #MacBook #Rifa",
                 "post-3-caption": "💰 ¡Gana $500 en efectivo! Solo 5 días. ¡No te lo pierdas! #Efectivo #Rifa",
                 "social-cta": "Síguenos para Más",
-                "models-title": "👩‍💼 Nuestras Modelos",
+                "models-title": "👩‍💼 Nuestras Modelos Embajadoras",
                 "models-sub": "Las caras detrás de nuestras rifas – ¡conoce su contenido!",
-                "models-badge": "⭐ Modelo",
+                "models-badge": "⭐ Embajadora",
                 "models-view": "Ver Perfil",
                 "models-see-all": "Ver Todas",
                 "partner-title": "🚀 Eleva Tu Marca",
                 "partner-sub": "Asóciate con nosotros para promocionar tus productos a través de rifas virales y modelos.",
                 "partner-feat-1": "Rifas Virales",
-                "partner-feat-1-desc": "Tus productos como grandes premios – generan buzz.",
+                "partner-feat-1-desc": "Tus productos como grandes premios – generan buzz masivo.",
                 "partner-feat-2": "Modelos Embajadoras",
-                "partner-feat-2-desc": "Modelos seleccionadas para tu marca.",
+                "partner-feat-2-desc": "Modelos seleccionadas para tu marca, crean contenido premium.",
                 "partner-feat-3": "Exposición en Redes",
                 "partner-feat-3-desc": "Instagram, TikTok y Facebook – alcance masivo.",
                 "partner-feat-4": "Emparejamiento Curado",
-                "partner-feat-4-desc": "Solo unas pocas modelos son elegidas para tu negocio.",
+                "partner-feat-4-desc": "Solo unas pocas modelos seleccionadas son elegidas para tu negocio.",
                 "partner-cta": "Ver Paquetes de Asociación",
                 "packages-title": "📦 Paquetes de Asociación",
                 "packages-sub": "Elige el plan que mejor se adapte a tu marca.",
@@ -1519,7 +1030,7 @@
                 "hero-desc": "Enter our exclusive raffles for a chance to win amazing prizes.",
                 "hero-sub": "Each ticket = 1 entry. Multiple winners every month!",
                 "hero-cta-buy": "Buy Tickets Now",
-                "hero-cta-promo": "See Model Promos",
+                "hero-cta-promo": "See Promos",
                 "stat-1": "500+",
                 "stat-1-desc": "Tickets Sold",
                 "stat-2": "12",
@@ -1551,7 +1062,7 @@
                 "raffles-cta": "View All Raffles",
                 "social-title": "📱 Model Promo Videos",
                 "social-sub": "See our ambassadors unboxing and promoting the prizes!",
-                "post-1-caption": "🔥 iPhone 15 Pro Giveaway! Get your tickets now – link in bio! #Raffle #Giveaway",
+                "post-1-caption": "🔥 iPhone 15 Pro Giveaway! Get your tickets now – link in bio. #Raffle #Giveaway",
                 "post-2-caption": "💻 MacBook Air M3 Unboxing! This could be YOURS. Tickets are selling fast! #MacBook #Raffle",
                 "post-3-caption": "💰 Win $500 Cash! Just 5 days left. Don't miss out! #CashGiveaway",
                 "social-cta": "Follow Us for More",
@@ -1565,7 +1076,7 @@
                 "partner-feat-1": "Viral Raffles",
                 "partner-feat-1-desc": "Your products as grand prizes – generate massive buzz.",
                 "partner-feat-2": "Model Ambassadors",
-                "partner-feat-2-desc": "Handpicked models for your brand.",
+                "partner-feat-2-desc": "Handpicked models for your brand, create premium content.",
                 "partner-feat-3": "Social Exposure",
                 "partner-feat-3-desc": "Instagram, TikTok & Facebook – massive reach.",
                 "partner-feat-4": "Curated Matching",
