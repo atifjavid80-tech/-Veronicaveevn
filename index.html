@@ -3,40 +3,33 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="wC3PZoBGqaYhBgRGOgLBFUinMZjwj8SdBj3uPZSC">
-
-    <title>Alianzas Pro | Raffle Tickets & Business Partnerships</title>
+    <title>Alianzas Pro | Brand Ambassador Agency</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
 
-    <!-- Google Fonts: Lato + Oswald -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ===== VERONICA VEE EXACT STYLE ===== */
         * {
             outline: none;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family: 'Lato', sans-serif !important;
             background: #000000;
             color: #ffffff;
             line-height: 1.6;
         }
-
         .font-Oswald {
             font-family: "Oswald", sans-serif;
         }
-
         a {
             text-decoration: none;
             transition: 300ms;
@@ -44,7 +37,6 @@
         a:hover {
             text-decoration: underline;
         }
-
         .fs-14 {
             font-size: 14px;
         }
@@ -52,23 +44,19 @@
             top: unset;
         }
 
-        /* ===== HEADER ===== */
+        /* HEADER */
         #header2 {
             background: #313234;
             background: radial-gradient(circle, rgba(49, 50, 52, 1) 0%, rgba(0, 0, 0, 1) 100%);
         }
-
         .filterWhite {
             filter: brightness(0) invert(1);
         }
-
         .nav-link-custom {
             color: #fff !important;
             font-size: 14px;
             border-radius: 50px;
             padding: 10px 20px !important;
-            text-decoration: none;
-            transition: 300ms;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -77,18 +65,16 @@
             background: rgba(255, 255, 255, 0.1);
         }
         .nav-link-custom.active {
-            color: #fff !important;
             background: #000;
         }
 
+        /* Buttons */
         .btn-black {
             background: #000;
             color: #fff;
             font-weight: 700;
             padding: 10px 28px;
             border-radius: 50px;
-            text-decoration: none;
-            transition: 300ms;
             border: none;
             font-size: 0.85rem;
             text-transform: uppercase;
@@ -100,15 +86,12 @@
             color: #fff;
             transform: translateY(-2px);
         }
-
         .btn-outline-white {
             border: 2px solid #fff;
             color: #fff;
             font-weight: 700;
             padding: 10px 28px;
             border-radius: 50px;
-            text-decoration: none;
-            transition: 300ms;
             background: transparent;
             font-size: 0.85rem;
             text-transform: uppercase;
@@ -119,15 +102,12 @@
             background: #fff;
             color: #000;
         }
-
         .btn-white {
             background: #fff;
             color: #000;
             font-weight: 700;
             padding: 10px 28px;
             border-radius: 50px;
-            text-decoration: none;
-            transition: 300ms;
             border: none;
             font-size: 0.85rem;
             text-transform: uppercase;
@@ -139,39 +119,55 @@
             color: #000;
             transform: translateY(-2px);
         }
-
-        /* Floating Buy Button (for consumers) */
-        .floating-buy-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
-            background: #fff;
-            color: #000;
-            font-weight: 900;
-            padding: 14px 30px;
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+            font-weight: 700;
+            padding: 12px 32px;
             border-radius: 50px;
-            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
             border: none;
-            transition: 300ms;
-            text-decoration: none;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             display: inline-block;
         }
-        .floating-buy-btn:hover {
-            background: #ccc;
-            color: #000;
+        .btn-whatsapp:hover {
+            background: #1da851;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Floating WhatsApp */
+        .floating-wa {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            background: #25D366;
+            color: #fff;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            border: none;
+            transition: 300ms;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .floating-wa:hover {
+            background: #1da851;
+            color: #fff;
             transform: scale(1.05);
-            text-decoration: none;
         }
         @media (max-width: 576px) {
-            .floating-buy-btn {
-                padding: 10px 20px;
+            .floating-wa {
+                padding: 10px 16px;
                 font-size: 0.75rem;
                 bottom: 10px;
-                right: 10px;
+                left: 10px;
             }
         }
 
@@ -181,7 +177,6 @@
             text-transform: uppercase;
             font-weight: 700;
             font-size: 0.8rem;
-            text-decoration: none;
             padding: 6px 12px;
             border: 1px solid #444;
             border-radius: 50px;
@@ -223,7 +218,7 @@
             color: #fff;
         }
 
-        /* ===== BANNER / HERO ===== */
+        /* HERO */
         .banner-carousel {
             min-height: 60vh;
             background: #000000;
@@ -285,7 +280,7 @@
             font-weight: 600;
         }
 
-        /* ===== SECTIONS ===== */
+        /* SECTIONS */
         section {
             padding: 70px 0;
         }
@@ -307,12 +302,8 @@
         .section-dark {
             background: #0a0a0a;
         }
-        .section-light-border {
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-        }
 
-        /* ===== FEATURE CARDS (for services) ===== */
+        /* FEATURE CARDS */
         .feature-card {
             background: #111;
             padding: 35px 25px;
@@ -325,7 +316,6 @@
         .feature-card:hover {
             border-color: #555;
             transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
         }
         .feature-card i {
             font-size: 2.8rem;
@@ -343,96 +333,8 @@
             color: #999;
             font-size: 0.95rem;
         }
-        .feature-card .badge-curated {
-            display: inline-block;
-            background: #333;
-            color: #fff;
-            font-size: 0.7rem;
-            padding: 4px 14px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 10px;
-        }
 
-        /* ===== TICKET CARDS ===== */
-        .ticket-card {
-            background: #111;
-            padding: 40px 28px;
-            border-radius: 24px;
-            border: 2px solid #222;
-            transition: 0.4s;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            text-align: center;
-            position: relative;
-        }
-        .ticket-card:hover {
-            border-color: #fff;
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(255, 255, 255, 0.05);
-        }
-        .ticket-card.best-value {
-            border-color: #fff;
-            background: #1a1a1a;
-        }
-        .ticket-card.best-value .badge-best {
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: #fff;
-            color: #000;
-            padding: 4px 18px;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: 'Oswald', sans-serif;
-        }
-        .ticket-card .ticket-price {
-            font-size: 3rem;
-            font-weight: 900;
-            font-family: 'Oswald', sans-serif;
-            color: #fff;
-            margin: 15px 0;
-        }
-        .ticket-card .ticket-price small {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #888;
-        }
-        .ticket-card .ticket-features {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0 30px;
-            flex-grow: 1;
-        }
-        .ticket-card .ticket-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid #222;
-            color: #ccc;
-            font-size: 0.95rem;
-        }
-        .ticket-card .ticket-features li i {
-            color: #fff;
-            margin-right: 12px;
-        }
-        .ticket-urgency {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-        .ticket-urgency .badge {
-            font-size: 0.9rem;
-            padding: 8px 20px;
-            border-radius: 50px;
-        }
-
-        /* ===== PACKAGE CARDS (for businesses) ===== */
+        /* PACKAGE CARDS */
         .package-card {
             background: #111;
             padding: 40px 28px;
@@ -463,7 +365,6 @@
             font-size: 0.7rem;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1px;
             font-family: 'Oswald', sans-serif;
         }
         .package-card h3 {
@@ -498,7 +399,7 @@
             margin-right: 12px;
         }
 
-        /* ===== MODELS GALLERY ===== */
+        /* MODELS GALLERY */
         .model-card {
             border-radius: 20px;
             overflow: hidden;
@@ -544,12 +445,9 @@
             font-size: 0.8rem;
             padding: 6px 20px;
             border-radius: 50px;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            border: none;
             transition: 0.3s;
             display: inline-block;
-            border: none;
         }
         .model-card .overlay .btn-sm-white:hover {
             background: #ccc;
@@ -566,11 +464,86 @@
             border-radius: 50px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            z-index: 2;
             font-family: 'Oswald', sans-serif;
         }
 
-        /* ===== CTA CARD (Application) ===== */
+        /* LEAD FORM */
+        .lead-form-card {
+            background: #111;
+            padding: 40px 30px;
+            border-radius: 24px;
+            border: 1px solid #222;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .lead-form-card .form-control {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 50px;
+            padding: 14px 20px;
+        }
+        .lead-form-card .form-control::placeholder {
+            color: #666;
+        }
+        .lead-form-card .form-control:focus {
+            border-color: #fff;
+            background: #222;
+        }
+
+        /* TICKETS (SECONDARY) */
+        .ticket-card {
+            background: #111;
+            padding: 30px 20px;
+            border-radius: 20px;
+            border: 1px solid #222;
+            transition: 0.3s;
+            text-align: center;
+            height: 100%;
+        }
+        .ticket-card:hover {
+            border-color: #555;
+        }
+        .ticket-card .ticket-price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+            margin: 10px 0;
+        }
+        .ticket-card .ticket-price small {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #888;
+        }
+        .ticket-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 25px;
+        }
+        .ticket-card ul li {
+            padding: 6px 0;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        .ticket-card ul li i {
+            color: #fff;
+            margin-right: 10px;
+        }
+        .ticket-urgency {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .ticket-urgency .badge {
+            font-size: 0.85rem;
+            padding: 8px 18px;
+            border-radius: 50px;
+        }
+
+        /* CTA CARD */
         .card-cta {
             background: #000 url("https://veronicavee.com/assets/images/banner.jpg") center no-repeat;
             background-size: cover;
@@ -578,12 +551,10 @@
             border: none;
             border-radius: 0;
             text-align: center;
-            text-decoration: none;
             transition: 300ms;
         }
         .card-cta:hover {
             opacity: 0.8;
-            text-decoration: none;
         }
         .card-cta .card-body {
             padding: 80px 20px;
@@ -597,7 +568,7 @@
             margin: 0;
         }
 
-        /* ===== FOOTER ===== */
+        /* FOOTER */
         footer {
             padding: 40px 0 30px;
             border-top: 1px solid #222;
@@ -608,7 +579,6 @@
             font-size: 2rem;
             font-weight: 700;
             color: #fff;
-            text-decoration: none;
         }
         footer .logo-text span {
             font-weight: 300;
@@ -637,7 +607,7 @@
             color: #fff;
         }
 
-        /* ===== OFF CANVAS ===== */
+        /* OFF CANVAS */
         .offcanvas {
             background: #000 !important;
         }
@@ -652,7 +622,7 @@
             color: #fff !important;
         }
 
-        /* ===== RESPONSIVE ===== */
+        /* RESPONSIVE */
         @media (max-width: 768px) {
             .banner-carousel {
                 min-height: 40vh;
@@ -670,12 +640,6 @@
             section {
                 padding: 50px 0;
             }
-            .package-card.popular .popular-badge,
-            .ticket-card.best-value .badge-best {
-                font-size: 0.6rem;
-                padding: 3px 12px;
-                right: 10px;
-            }
             .card-cta .card-body {
                 padding: 50px 20px;
             }
@@ -686,9 +650,6 @@
             }
             .stats-row .stat-item h3 {
                 font-size: 1.2rem;
-            }
-            .ticket-card .ticket-price {
-                font-size: 2.2rem;
             }
         }
         @media (min-width: 768px) {
@@ -707,57 +668,46 @@
 </head>
 <body>
 
-    <!-- ===== FLOATING BUY BUTTON (for consumers) ===== -->
-    <a href="#tickets" class="floating-buy-btn" data-i18n="floating-cta">
-        <i class="bi bi-ticket-perforated me-2"></i> Buy Tickets
+    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+    <a href="https://wa.me/34XXXXXXXXX" target="_blank" class="floating-wa" data-i18n="floating-wa">
+        <i class="bi bi-whatsapp fs-5"></i> <span>Partner Now</span>
     </a>
 
-    <!-- ============================== -->
-    <!-- ========== HEADER ============ -->
-    <!-- ============================== -->
+    <!-- ===== HEADER ===== -->
     <header class="py-3" id="header2">
         <div class="container">
             <div class="row align-items-center">
-
-                <!-- Logo -->
                 <div class="col-sm-auto col-5 me-auto" id="logo">
                     <a href="#">
                         <img src="https://veronicavee.com/assets/images/logo.png" alt="Alianzas Pro" class="img-fluid filterWhite" width="150">
                     </a>
                 </div>
-
-                <!-- Mobile Toggle -->
                 <div class="col-auto d-lg-none">
                     <button class="btn btn-link text-white p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                         <i class="bi bi-list fs-2"></i>
                     </button>
                 </div>
-
-                <!-- Desktop Nav -->
                 <div class="col-auto d-none d-lg-block">
-                    <nav class="navbar navbar-expand-lg py-0" id="mainMenu">
+                    <nav class="navbar navbar-expand-lg py-0">
                         <ul class="navbar-nav">
                             <li class="nav-item"><a href="#banner" class="nav-link nav-link-custom active" data-i18n="nav-home">Home</a></li>
-                            <li class="nav-item"><a href="#tickets" class="nav-link nav-link-custom" data-i18n="nav-tickets">Tickets</a></li>
                             <li class="nav-item"><a href="#partnership" class="nav-link nav-link-custom" data-i18n="nav-partner">Partner</a></li>
-                            <li class="nav-item"><a href="#models" class="nav-link nav-link-custom" data-i18n="nav-models">Models</a></li>
                             <li class="nav-item"><a href="#packages" class="nav-link nav-link-custom" data-i18n="nav-packages">Packages</a></li>
+                            <li class="nav-item"><a href="#models" class="nav-link nav-link-custom" data-i18n="nav-models">Models</a></li>
+                            <li class="nav-item"><a href="#tickets" class="nav-link nav-link-custom" data-i18n="nav-tickets">Tickets</a></li>
                             <li class="nav-item"><a href="#contact" class="btn-black ms-2" data-i18n="nav-contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
-
-                <!-- Right: Social + Language -->
                 <div class="col-auto d-none d-sm-block">
                     <div class="d-flex align-items-center">
                         <div class="social-icons-header">
                             <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
                             <a href="#" target="_blank"><i class="bi bi-tiktok"></i></a>
                             <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="#" target="_blank"><i class="bi bi-telegram"></i></a>
                         </div>
                         <div class="lang-dropdown ms-3">
-                            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="langToggle">
+                            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                 <span id="currentLangLabel">ES</span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
@@ -767,12 +717,11 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </header>
 
-    <!-- ===== OFF CANVAS MOBILE MENU ===== -->
+    <!-- ===== OFF CANVAS ===== -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
         <div class="offcanvas-header border-bottom border-secondary">
             <a href="#" class="text-decoration-none">
@@ -783,10 +732,10 @@
         <div class="offcanvas-body">
             <ul class="navbar-nav fw-bold">
                 <li class="nav-item"><a class="nav-link nav-link-custom active" href="#banner" data-i18n="nav-home">Home</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-custom" href="#tickets" data-i18n="nav-tickets">Tickets</a></li>
                 <li class="nav-item"><a class="nav-link nav-link-custom" href="#partnership" data-i18n="nav-partner">Partner</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-custom" href="#models" data-i18n="nav-models">Models</a></li>
                 <li class="nav-item"><a class="nav-link nav-link-custom" href="#packages" data-i18n="nav-packages">Packages</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#models" data-i18n="nav-models">Models</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#tickets" data-i18n="nav-tickets">Tickets</a></li>
                 <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact" data-i18n="nav-contact">Contact</a></li>
             </ul>
             <div class="border-top border-secondary pt-3 mt-3">
@@ -794,7 +743,6 @@
                     <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
                     <a href="#" class="text-white"><i class="bi bi-tiktok fs-4"></i></a>
                     <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
-                    <a href="#" class="text-white"><i class="bi bi-telegram fs-4"></i></a>
                 </div>
                 <p class="text-secondary mt-3 small">© 2026 Alianzas Pro</p>
             </div>
@@ -802,27 +750,26 @@
     </div>
 
 
-    <!-- ============================== -->
-    <!-- ====== BANNER / HERO ========= -->
-    <!-- ============================== -->
+    <!-- ===== HERO ===== -->
     <section class="banner-carousel" id="banner">
         <div class="container text-center">
             <div class="sub-badge" data-i18n="hero-badge">
-                <i class="bi bi-lightning-fill me-1"></i> Two Ways to Win
+                <i class="bi bi-star-fill me-1"></i> Brand Ambassador Agency
             </div>
             <h1>
                 <span data-i18n="hero-title-1">ELEVATE YOUR BRAND</span><br>
-                <span class="highlight" data-i18n="hero-title-2">OR WIN BIG PRIZES</span>
+                <span class="highlight" data-i18n="hero-title-2">WITH AMBASSADOR MODELS</span>
             </h1>
             <p data-i18n="hero-desc">
-                <strong data-i18n="hero-b2c-tag">🎟️ Buy Tickets → Win amazing prizes</strong> &nbsp;|&nbsp; <strong data-i18n="hero-b2b-tag">🤝 Partner with us → Grow your business</strong>
+                Promote your products with viral raffles and handpicked models.<br>
+                <span class="text-white-50" data-i18n="hero-sub">Only a few select models are chosen as brand ambassadors.</span>
             </p>
             <div class="cta-group">
-                <a href="#tickets" class="btn-white" data-i18n="hero-cta-tickets">
-                    <i class="bi bi-ticket-perforated me-2"></i> Buy Tickets
-                </a>
-                <a href="#partnership" class="btn-outline-white" data-i18n="hero-cta-partner">
+                <a href="#partnership" class="btn-white" data-i18n="hero-cta-partner">
                     <i class="bi bi-briefcase me-2"></i> Partner Your Business
+                </a>
+                <a href="#contact" class="btn-outline-white" data-i18n="hero-cta-wa">
+                    <i class="bi bi-whatsapp me-2"></i> Contact on WhatsApp
                 </a>
             </div>
 
@@ -848,75 +795,11 @@
     </section>
 
 
-    <!-- ============================== -->
-    <!-- ====== SECTION: TICKETS (B2C) -->
-    <!-- ============================== -->
-    <section class="section-dark" id="tickets">
+    <!-- ===== PARTNERSHIP (B2B) - PRIMARY ===== -->
+    <section class="section-dark" id="partnership">
         <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="section-title" data-i18n="tickets-title">🎟️ Buy Raffle Tickets</h2>
-                <p class="section-sub" data-i18n="tickets-sub">Choose your ticket tier and secure your chance to win amazing prizes!</p>
-                <div class="ticket-urgency">
-                    <span class="badge bg-white text-black" data-i18n="tickets-left">🔥 Only 47 tickets left!</span>
-                    <span class="badge bg-danger" id="countdown-timer" data-i18n="tickets-timer">⏳ 24:00:00</span>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <!-- Tier 1 -->
-                <div class="col-md-4">
-                    <div class="ticket-card">
-                        <h3 data-i18n="tier-1-name">Basic</h3>
-                        <div class="ticket-price" data-i18n="tier-1-price">$10 <small>USD</small></div>
-                        <ul class="ticket-features">
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-1-feat-1">1 Raffle Entry</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-1-feat-2">Standard Prize Pool</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-1-feat-3">Email Notification</span></li>
-                        </ul>
-                        <a href="#contact" class="btn-outline-white w-100 text-center" data-i18n="tier-1-btn">Buy Basic</a>
-                    </div>
-                </div>
-                <!-- Tier 2 (Best Value) -->
-                <div class="col-md-4">
-                    <div class="ticket-card best-value">
-                        <div class="badge-best" data-i18n="tier-2-badge">Best Value</div>
-                        <h3 data-i18n="tier-2-name">Premium</h3>
-                        <div class="ticket-price" data-i18n="tier-2-price">$35 <small>USD</small></div>
-                        <ul class="ticket-features">
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-2-feat-1">5 Raffle Entries</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-2-feat-2">Premium Prize Pool</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-2-feat-3">SMS + Email Alerts</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-2-feat-4">Bonus Entry (Limited)</span></li>
-                        </ul>
-                        <a href="#contact" class="btn-white w-100 text-center" data-i18n="tier-2-btn">Buy Premium</a>
-                    </div>
-                </div>
-                <!-- Tier 3 -->
-                <div class="col-md-4">
-                    <div class="ticket-card">
-                        <h3 data-i18n="tier-3-name">VIP</h3>
-                        <div class="ticket-price" data-i18n="tier-3-price">$60 <small>USD</small></div>
-                        <ul class="ticket-features">
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-3-feat-1">20 Raffle Entries</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-3-feat-2">VIP Prize Pool</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-3-feat-3">Priority Support</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-3-feat-4">Exclusive Bonus Gift</span></li>
-                        </ul>
-                        <a href="#contact" class="btn-outline-white w-100 text-center" data-i18n="tier-3-btn">Buy VIP</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ============================== -->
-    <!-- ====== SECTION: PARTNERSHIP (B2B) -->
-    <!-- ============================== -->
-    <section id="partnership">
-        <div class="container">
-            <h2 class="section-title" data-i18n="partner-title">🤝 Partner Your Business</h2>
-            <p class="section-sub" data-i18n="partner-sub">Promote your products with our viral raffle campaigns and professional ambassador models.</p>
+            <h2 class="section-title" data-i18n="partner-title">🤝 Why Partner With Us?</h2>
+            <p class="section-sub" data-i18n="partner-sub">Get your products in front of thousands of engaged customers with viral raffles and professional ambassador models.</p>
 
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
@@ -944,7 +827,7 @@
                     <div class="feature-card">
                         <i class="bi bi-person-plus-fill"></i>
                         <h4 data-i18n="partner-feat-4">Lead Generation</h4>
-                        <p data-i18n="partner-feat-4-desc">Collect engaged leads that are interested in your products.</p>
+                        <p data-i18n="partner-feat-4-desc">Collect engaged leads interested in your products.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -955,74 +838,62 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="feature-card">
-                        <i class="bi bi-bar-chart-fill"></i>
-                        <h4 data-i18n="partner-feat-6">Measurable ROI</h4>
-                        <p data-i18n="partner-feat-6-desc">Detailed analytics and performance reports to track your growth.</p>
-                    </div>
-                </div>
-                <!-- NEW: Curated Model Matching -->
-                <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4">
                     <div class="feature-card" style="border-color: #555;">
                         <i class="bi bi-star-fill"></i>
-                        <h4 data-i18n="partner-feat-7">Curated Model Matching</h4>
-                        <p data-i18n="partner-feat-7-desc">Only a few select models are chosen as brand ambassadors for each business – we find the perfect fit for your brand.</p>
-                        <span class="badge-curated" data-i18n="partner-feat-7-badge">Exclusive Selection</span>
+                        <h4 data-i18n="partner-feat-6">Curated Model Matching</h4>
+                        <p data-i18n="partner-feat-6-desc">Only a few select models are chosen as brand ambassadors – we find the perfect fit for your brand.</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="text-center mt-4">
-                <a href="#packages" class="btn-white" data-i18n="partner-cta">
-                    <i class="bi bi-briefcase me-2"></i> View Partnership Packages
-                </a>
             </div>
         </div>
     </section>
 
 
-    <!-- ============================== -->
-    <!-- ====== HOW IT WORKS ========== -->
-    <!-- ============================== -->
-    <section class="section-dark" id="how-it-works">
+    <!-- ===== PACKAGES (B2B) ===== -->
+    <section id="packages">
         <div class="container">
-            <h2 class="section-title" data-i18n="how-title">How It Works</h2>
-            <p class="section-sub" data-i18n="how-sub">5 simple steps to turn your product into a viral campaign.</p>
+            <h2 class="section-title" data-i18n="packages-title">📦 Partnership Packages</h2>
+            <p class="section-sub" data-i18n="packages-sub">Choose the plan that fits your goals and budget.</p>
 
             <div class="row g-4">
-                <div class="col-md-2 col-6">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h4 data-i18n="step-1-title">Product Selection</h4>
-                        <p data-i18n="step-1-desc">Choose a product or service package.</p>
+                <div class="col-md-4">
+                    <div class="package-card">
+                        <h3 data-i18n="pack-1-name">LAUNCH</h3>
+                        <div class="price-tag" data-i18n="pack-1-tag">Ideal to Start</div>
+                        <ul>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-1">Single product campaign</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-2">Social media promotion</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">Localized exposure</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-4">1 ambassador model</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-outline-white" data-i18n="pack-1-btn">Choose This</a>
                     </div>
                 </div>
-                <div class="col-md-2 col-6">
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h4 data-i18n="step-2-title">Content Creation</h4>
-                        <p data-i18n="step-2-desc">Models produce premium photos & videos.</p>
+                <div class="col-md-4">
+                    <div class="package-card popular">
+                        <div class="popular-badge" data-i18n="pack-popular">Most Popular</div>
+                        <h3 data-i18n="pack-2-name">GROWTH</h3>
+                        <div class="price-tag" data-i18n="pack-2-tag">More Reach & Impact</div>
+                        <ul>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-1">Multiple ambassador models</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-2">Professional video reels</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Co-branded landing pages</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-4">Expanded audience reach</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-black" data-i18n="pack-2-btn">Choose This</a>
                     </div>
                 </div>
-                <div class="col-md-2 col-6">
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h4 data-i18n="step-3-title">Curated Matching</h4>
-                        <p data-i18n="step-3-desc">We handpick the perfect model for your brand.</p>
-                    </div>
-                </div>
-                <div class="col-md-2 col-6">
-                    <div class="step-card">
-                        <div class="step-number">4</div>
-                        <h4 data-i18n="step-4-title">Campaign Launch</h4>
-                        <p data-i18n="step-4-desc">Raffle goes live on social media.</p>
-                    </div>
-                </div>
-                <div class="col-md-2 col-6 offset-md-1">
-                    <div class="step-card">
-                        <div class="step-number">5</div>
-                        <h4 data-i18n="step-5-title">Results & Growth</h4>
-                        <p data-i18n="step-5-desc">More visibility, audience, and sales.</p>
+                <div class="col-md-4">
+                    <div class="package-card">
+                        <h3 data-i18n="pack-3-name">PREMIER ELITE</h3>
+                        <div class="price-tag" data-i18n="pack-3-tag">Annual Partnership</div>
+                        <ul>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-1">Recurring monthly campaigns</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-2">Priority scheduling</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Category exclusivity</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-4">Detailed premium reports</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-outline-white" data-i18n="pack-3-btn">Choose This</a>
                     </div>
                 </div>
             </div>
@@ -1030,20 +901,18 @@
     </section>
 
 
-    <!-- ============================== -->
-    <!-- ====== MODELS GALLERY ======== -->
-    <!-- ============================== -->
-    <section id="models">
+    <!-- ===== MODELS GALLERY ===== -->
+    <section class="section-dark" id="models">
         <div class="container-fluid">
             <div class="text-center mb-4">
-                <h2 class="fw-bold" data-i18n="models-title">Our Ambassador Models</h2>
-                <p class="text-muted" data-i18n="models-sub">Professional models ready to represent your brand – only a few are selected as brand ambassadors.</p>
+                <h2 class="fw-bold" data-i18n="models-title">👩‍💼 Our Select Ambassador Models</h2>
+                <p class="text-muted" data-i18n="models-sub">Only a few are chosen as brand ambassadors – each one handpicked for your brand.</p>
             </div>
             <div class="row g-sm-4 g-3">
-                <!-- Model 1 - Brand Ambassador -->
+                <!-- Model 1 - Ambassador -->
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3">
                     <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
-                        <span class="badge-ambassador" data-i18n="models-badge-ambassador">⭐ Brand Ambassador</span>
+                        <span class="badge-ambassador" data-i18n="models-badge">⭐ Brand Ambassador</span>
                         <img src="https://veronicavee.com/storage/avatars/V8s82JJTS2hi0HUlVUumkvh5TDa2fPHdn5Z0mJSM.jpg" alt="Model" class="card-img h-100 model-img object-fit-cover">
                         <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
                             <h5 class="mb-1 fw-bold">Veronica Vee</h5>
@@ -1053,10 +922,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Model 2 - Brand Ambassador -->
+                <!-- Model 2 - Ambassador -->
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3">
                     <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
-                        <span class="badge-ambassador" data-i18n="models-badge-ambassador">⭐ Brand Ambassador</span>
+                        <span class="badge-ambassador" data-i18n="models-badge">⭐ Brand Ambassador</span>
                         <img src="https://veronicavee.com/storage/avatars/19.jpeg" alt="Model" class="card-img h-100 model-img object-fit-cover">
                         <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
                             <h5 class="mb-1 fw-bold">Veronica Vee</h5>
@@ -1098,58 +967,87 @@
     </section>
 
 
-    <!-- ============================== -->
-    <!-- ====== PACKAGES (Business) === -->
-    <!-- ============================== -->
-    <section class="section-dark" id="packages">
+    <!-- ===== LEAD FORM (B2B - Bulletproof) ===== -->
+    <section id="contact">
         <div class="container">
-            <h2 class="section-title" data-i18n="packages-title">Partnership Packages</h2>
-            <p class="section-sub" data-i18n="packages-sub">Choose the plan that best fits your goals and budget.</p>
+            <h2 class="section-title" data-i18n="contact-title">📩 Partner With Us Today</h2>
+            <p class="section-sub" data-i18n="contact-sub">Fill in your details and we'll personally reach out within 24 hours to discuss your brand.</p>
+
+            <div class="lead-form-card">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name" data-i18n="form-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Business Name" data-i18n="form-business" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control" placeholder="WhatsApp Number (with country code)" data-i18n="form-wa" required>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" style="background:#1a1a1a;border:1px solid #333;color:#fff;border-radius:50px;padding:14px 20px;">
+                            <option value="" data-i18n="form-select-placeholder">What is your main goal?</option>
+                            <option value="raffle" data-i18n="form-select-1">Run a raffle campaign</option>
+                            <option value="models" data-i18n="form-select-2">Book ambassador models</option>
+                            <option value="both" data-i18n="form-select-3">Both</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-whatsapp w-100" data-i18n="form-submit">
+                        <i class="bi bi-whatsapp me-2"></i> Submit & Get a Call
+                    </button>
+                </form>
+                <p class="text-muted text-center mt-3 small" data-i18n="form-note">We'll contact you on WhatsApp within 24 hours.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== TICKETS (SECONDARY) ===== -->
+    <section class="section-dark" id="tickets">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="section-title" data-i18n="tickets-title">🎟️ Buy Raffle Tickets (Optional)</h2>
+                <p class="section-sub" data-i18n="tickets-sub">Win amazing prizes – this is a secondary feature. Business partnerships are our primary focus.</p>
+                <div class="ticket-urgency">
+                    <span class="badge bg-white text-black" data-i18n="tickets-left">🔥 Only 47 tickets left!</span>
+                    <span class="badge bg-danger" id="countdown-timer" data-i18n="tickets-timer">⏳ 24:00:00</span>
+                </div>
+            </div>
 
             <div class="row g-4">
-                <!-- LAUNCH -->
                 <div class="col-md-4">
-                    <div class="package-card">
-                        <h3 data-i18n="pack-1-name">LAUNCH</h3>
-                        <div class="price-tag" data-i18n="pack-1-tag">Ideal to Start</div>
+                    <div class="ticket-card">
+                        <h3 data-i18n="tier-1-name">Basic</h3>
+                        <div class="ticket-price">$10 <small>USD</small></div>
                         <ul>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-1">Single product campaigns</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-2">Social media promotion</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">Localized exposure</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-4">1 ambassador model</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-1-feat-1">1 Entry</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-1-feat-2">Standard Prize</span></li>
                         </ul>
-                        <a href="#contact" class="btn-outline-white" data-i18n="pack-1-btn">Choose This</a>
+                        <a href="#" class="btn-outline-white w-100" data-i18n="tier-1-btn">Buy Basic</a>
                     </div>
                 </div>
-
-                <!-- GROWTH -->
                 <div class="col-md-4">
-                    <div class="package-card popular">
-                        <div class="popular-badge" data-i18n="pack-popular">Most Popular</div>
-                        <h3 data-i18n="pack-2-name">GROWTH</h3>
-                        <div class="price-tag" data-i18n="pack-2-tag">More Reach & Impact</div>
+                    <div class="ticket-card" style="border-color:#fff;background:#1a1a1a;">
+                        <h3 data-i18n="tier-2-name">Premium</h3>
+                        <div class="ticket-price">$35 <small>USD</small></div>
                         <ul>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-1">Multiple ambassador models</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-2">Professional video reels</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Co-branded landing pages</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-4">Expanded audience reach</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-2-feat-1">5 Entries</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-2-feat-2">Premium Prize</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-2-feat-3">SMS Alerts</span></li>
                         </ul>
-                        <a href="#contact" class="btn-black" data-i18n="pack-2-btn">Choose This</a>
+                        <a href="#" class="btn-white w-100" data-i18n="tier-2-btn">Buy Premium</a>
                     </div>
                 </div>
-
-                <!-- PREMIER ELITE -->
                 <div class="col-md-4">
-                    <div class="package-card">
-                        <h3 data-i18n="pack-3-name">PREMIER ELITE</h3>
-                        <div class="price-tag" data-i18n="pack-3-tag">Premium Annual Partnership</div>
+                    <div class="ticket-card">
+                        <h3 data-i18n="tier-3-name">VIP</h3>
+                        <div class="ticket-price">$60 <small>USD</small></div>
                         <ul>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-1">Recurring monthly campaigns</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-2">Priority scheduling</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Category exclusivity</span></li>
-                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-4">Detailed premium reports</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-3-feat-1">20 Entries</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-3-feat-2">VIP Prize</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-3-feat-3">Priority Support</span></li>
                         </ul>
-                        <a href="#contact" class="btn-outline-white" data-i18n="pack-3-btn">Choose This</a>
+                        <a href="#" class="btn-outline-white w-100" data-i18n="tier-3-btn">Buy VIP</a>
                     </div>
                 </div>
             </div>
@@ -1157,15 +1055,13 @@
     </section>
 
 
-    <!-- ============================== -->
-    <!-- ====== CTA / APPLICATION ===== -->
-    <!-- ============================== -->
-    <section class="mt-5" id="cta">
+    <!-- ===== CTA APPLICATION ===== -->
+    <section class="mt-5">
         <div class="container-fluid">
             <a href="#contact" class="card card-cta border-0 rounded-0 text-center text-white text-decoration-none">
                 <div class="card-body py-5">
                     <h2 class="font-Oswald text-uppercase fw-lighter display-3 mb-0" data-i18n="cta-application">
-                        Application
+                        Apply Now
                     </h2>
                 </div>
             </a>
@@ -1173,31 +1069,7 @@
     </section>
 
 
-    <!-- ============================== -->
-    <!-- ====== CONTACT / CTA ========= -->
-    <!-- ============================== -->
-    <section class="cta-section" id="contact">
-        <div class="container">
-            <h2 data-i18n="cta-title">Ready to <span class="highlight">Sell Tickets</span> or <span class="highlight">Partner</span>?</h2>
-            <p data-i18n="cta-desc">
-                Whether you want to win amazing prizes or grow your business – we've got you covered.
-                <strong data-i18n="cta-ticket-focus">Tickets first. Everything else second.</strong>
-            </p>
-            <div class="btn-group-custom">
-                <a href="#tickets" class="btn-white" data-i18n="cta-btn-tickets">
-                    <i class="bi bi-ticket-perforated me-2"></i> Buy Tickets
-                </a>
-                <a href="#partnership" class="btn-outline-white" data-i18n="cta-btn-partner">
-                    <i class="bi bi-briefcase me-2"></i> Partner Your Business
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ============================== -->
-    <!-- ========== FOOTER ============ -->
-    <!-- ============================== -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             <a href="#" class="logo-text">ALIANZAS <span>PRO</span></a>
@@ -1208,30 +1080,27 @@
                 <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
                 <a href="#" target="_blank"><i class="bi bi-tiktok"></i></a>
                 <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="#" target="_blank"><i class="bi bi-telegram"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-whatsapp"></i></a>
             </div>
-            <p data-i18n="footer-text">© 2026 Alianzas Pro · Two ways to win: Buy tickets or partner with us.</p>
+            <p data-i18n="footer-text">© 2026 Alianzas Pro · Partner with us or buy tickets – your choice.</p>
         </div>
     </footer>
 
 
-    <!-- ============================== -->
-    <!-- ====== BOOTSTRAP JS ========== -->
-    <!-- ============================== -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <!-- ===== BOOTSTRAP JS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- ====== COUNTDOWN TIMER ======= -->
+    <!-- ===== COUNTDOWN TIMER ===== -->
     <script>
         function startCountdown() {
             let hours = 24,
                 minutes = 0,
                 seconds = 0;
-            const timerElement = document.getElementById('countdown-timer');
+            const timer = document.getElementById('countdown-timer');
 
-            function updateTimer() {
+            function update() {
                 if (hours === 0 && minutes === 0 && seconds === 0) {
-                    timerElement.textContent = '⏳ 00:00:00 - SOLD OUT!';
+                    timer.textContent = '⏳ SOLD OUT!';
                     return;
                 }
                 if (seconds === 0) {
@@ -1240,79 +1109,42 @@
                             seconds = 59; }
                     } else { minutes--; seconds = 59; }
                 } else { seconds--; }
-                const hStr = String(hours).padStart(2, '0');
-                const mStr = String(minutes).padStart(2, '0');
-                const sStr = String(seconds).padStart(2, '0');
-                timerElement.textContent = `⏳ ${hStr}:${mStr}:${sStr}`;
+                const h = String(hours).padStart(2, '0');
+                const m = String(minutes).padStart(2, '0');
+                const s = String(seconds).padStart(2, '0');
+                timer.textContent = `⏳ ${h}:${m}:${s}`;
             }
-            setInterval(updateTimer, 1000);
+            setInterval(update, 1000);
         }
         document.addEventListener('DOMContentLoaded', startCountdown);
     </script>
 
-
-    <!-- ====== LANGUAGE TOGGLE ======= -->
+    <!-- ===== LANGUAGE TOGGLE ===== -->
     <script>
-        // ---- Translation Dictionary ----
         const translations = {
             es: {
-                // Navigation
                 "nav-home": "Inicio",
-                "nav-tickets": "Boletos",
                 "nav-partner": "Asociarse",
-                "nav-models": "Modelos",
                 "nav-packages": "Paquetes",
+                "nav-models": "Modelos",
+                "nav-tickets": "Boletos",
                 "nav-contact": "Contacto",
-                "floating-cta": "Comprar Boletos",
-
-                // Hero
-                "hero-badge": "Dos Formas de Ganar",
+                "floating-wa": "Asociarse Ahora",
+                "hero-badge": "Agencia de Modelos Embajadoras",
                 "hero-title-1": "ELEVA TU MARCA",
-                "hero-title-2": "O GANA GRANDES PREMIOS",
-                "hero-desc": "🎟️ Compra boletos → Gana premios increíbles | 🤝 Asóciate con nosotros → Haz crecer tu negocio",
-                "hero-b2c-tag": "🎟️ Compra boletos → Gana premios increíbles",
-                "hero-b2b-tag": "🤝 Asóciate con nosotros → Haz crecer tu negocio",
-                "hero-cta-tickets": "Comprar Boletos",
+                "hero-title-2": "CON MODELOS EMBJADORAS",
+                "hero-desc": "Promociona tus productos con rifas virales y modelos seleccionadas.",
+                "hero-sub": "Solo unas pocas modelos son elegidas como embajadoras de marca.",
                 "hero-cta-partner": "Asociar Mi Negocio",
-
-                // Stats
+                "hero-cta-wa": "Contactar por WhatsApp",
                 "stat-1": "Más Seguidores",
                 "stat-1-desc": "Audiencia Real",
                 "stat-2": "Mayor Engagement",
                 "stat-2-desc": "Interacción Genuina",
                 "stat-3": "Más Ventas",
                 "stat-3-desc": "Resultados Reales",
-
-                // Tickets
-                "tickets-title": "🎟️ Compra Boletos",
-                "tickets-sub": "Elige tu nivel y asegura tu oportunidad de ganar premios increíbles.",
-                "tickets-left": "🔥 ¡Solo quedan 47 boletos!",
-                "tickets-timer": "⏳ 24:00:00",
-                "tier-1-name": "Básico",
-                "tier-1-price": "$10 USD",
-                "tier-1-feat-1": "1 Entrada",
-                "tier-1-feat-2": "Premios Estándar",
-                "tier-1-feat-3": "Notificación por Email",
-                "tier-1-btn": "Comprar Básico",
-                "tier-2-name": "Premium",
-                "tier-2-badge": "Mejor Valor",
-                "tier-2-price": "$35 USD",
-                "tier-2-feat-1": "5 Entradas",
-                "tier-2-feat-2": "Premios Premium",
-                "tier-2-feat-3": "Alertas SMS + Email",
-                "tier-2-feat-4": "Bono Extra (Limitado)",
-                "tier-2-btn": "Comprar Premium",
-                "tier-3-name": "VIP",
-                "tier-3-price": "$60 USD",
-                "tier-3-feat-1": "20 Entradas",
-                "tier-3-feat-2": "Premios VIP",
-                "tier-3-feat-3": "Soporte Prioritario",
-                "tier-3-feat-4": "Regalo Exclusivo",
-                "tier-3-btn": "Comprar VIP",
-
-                // Partnership
-                "partner-title": "🤝 Asocia Tu Negocio",
-                "partner-sub": "Promociona tus productos con nuestras rifas virales y modelos embajadoras.",
+                "partner-title": "🤝 ¿Por Qué Asociarte Con Nosotros?",
+                "partner-sub": "Lleva tus productos a miles de clientes con rifas virales y modelos profesionales.",
                 "partner-feat-1": "Rifas Virales",
                 "partner-feat-1-desc": "Tus productos como grandes premios – generan buzz masivo.",
                 "partner-feat-2": "Modelos Embajadoras",
@@ -1323,44 +1155,17 @@
                 "partner-feat-4-desc": "Captura leads interesados en tus productos.",
                 "partner-feat-5": "Biblioteca de Contenido",
                 "partner-feat-5-desc": "Fotos y videos HD para tu marketing.",
-                "partner-feat-6": "ROI Medible",
-                "partner-feat-6-desc": "Reportes detallados de rendimiento.",
-                "partner-feat-7": "Emparejamiento Curado",
-                "partner-feat-7-desc": "Solo unas pocas modelos seleccionadas son elegidas como embajadoras de marca para cada negocio – encontramos el ajuste perfecto para tu marca.",
-                "partner-feat-7-badge": "Selección Exclusiva",
-                "partner-cta": "Ver Paquetes de Asociación",
-
-                // How It Works (now 5 steps)
-                "how-title": "¿Cómo Funciona?",
-                "how-sub": "5 pasos sencillos para transformar tu producto en una campaña viral.",
-                "step-1-title": "Selección del Producto",
-                "step-1-desc": "Elige tu producto o servicio.",
-                "step-2-title": "Creación de Contenido",
-                "step-2-desc": "Las modelos producen fotos y videos premium.",
-                "step-3-title": "Emparejamiento Curado",
-                "step-3-desc": "Elegimos la modelo perfecta para tu marca.",
-                "step-4-title": "Lanzamiento de la Campaña",
-                "step-4-desc": "La rifa se lanza en redes sociales.",
-                "step-5-title": "Resultados y Crecimiento",
-                "step-5-desc": "Más visibilidad, audiencia y ventas.",
-
-                // Models
-                "models-title": "Nuestras Modelos Embajadoras",
-                "models-sub": "Modelos profesionales listas para tu marca – solo unas pocas son seleccionadas como embajadoras.",
-                "models-badge-ambassador": "⭐ Embajadora",
-                "models-view": "Ver Perfil",
-                "models-see-all": "Ver Todas",
-
-                // Packages
-                "packages-title": "Paquetes de Asociación",
-                "packages-sub": "Elige tu plan.",
+                "partner-feat-6": "Emparejamiento Curado",
+                "partner-feat-6-desc": "Solo unas pocas modelos seleccionadas son elegidas como embajadoras – el ajuste perfecto para tu marca.",
+                "packages-title": "📦 Paquetes de Asociación",
+                "packages-sub": "Elige el plan que mejor se adapte a ti.",
                 "pack-popular": "Más Popular",
                 "pack-1-name": "LANZAMIENTO",
                 "pack-1-tag": "Ideal para empezar",
                 "pack-1-li-1": "Campaña de un producto",
                 "pack-1-li-2": "Promoción en redes",
                 "pack-1-li-3": "Exposición local",
-                "pack-1-li-4": "1 modelo",
+                "pack-1-li-4": "1 modelo embajadora",
                 "pack-1-btn": "Elegir",
                 "pack-2-name": "CRECIMIENTO",
                 "pack-2-tag": "Más alcance",
@@ -1376,76 +1181,66 @@
                 "pack-3-li-3": "Exclusividad",
                 "pack-3-li-4": "Reportes premium",
                 "pack-3-btn": "Elegir",
-
-                // CTA
-                "cta-application": "Aplicación",
-                "cta-title": "¿Listo para Vender Boletos o Asociarte?",
-                "cta-desc": "Ya sea que quieras ganar premios increíbles o hacer crecer tu negocio – nosotros te cubrimos.",
-                "cta-ticket-focus": "Boletos primero. Todo lo demás después.",
-                "cta-btn-tickets": "Comprar Boletos",
-                "cta-btn-partner": "Asociar Mi Negocio",
-
-                // Footer
-                "footer-text": "© 2026 Alianzas Pro · Dos formas de ganar: Compra boletos o asóciate con nosotros."
+                "models-title": "👩‍💼 Nuestras Modelos Embajadoras",
+                "models-sub": "Solo unas pocas son elegidas como embajadoras – cada una seleccionada para tu marca.",
+                "models-badge": "⭐ Embajadora",
+                "models-view": "Ver Perfil",
+                "models-see-all": "Ver Todas",
+                "contact-title": "📩 Asóciate Hoy",
+                "contact-sub": "Completa tus datos y te contactaremos en 24 horas.",
+                "form-name": "Tu Nombre",
+                "form-business": "Nombre del Negocio",
+                "form-wa": "WhatsApp (con código de país)",
+                "form-select-placeholder": "¿Cuál es tu objetivo?",
+                "form-select-1": "Hacer una rifa",
+                "form-select-2": "Contratar modelos",
+                "form-select-3": "Ambos",
+                "form-submit": "Enviar y Recibir Llamada",
+                "form-note": "Te contactaremos por WhatsApp en 24 horas.",
+                "tickets-title": "🎟️ Compra Boletos (Opcional)",
+                "tickets-sub": "Gana premios increíbles – esta es una función secundaria. Las alianzas comerciales son nuestro enfoque principal.",
+                "tickets-left": "🔥 ¡Solo quedan 47 boletos!",
+                "tickets-timer": "⏳ 24:00:00",
+                "tier-1-name": "Básico",
+                "tier-1-feat-1": "1 Entrada",
+                "tier-1-feat-2": "Premio Estándar",
+                "tier-1-btn": "Comprar Básico",
+                "tier-2-name": "Premium",
+                "tier-2-feat-1": "5 Entradas",
+                "tier-2-feat-2": "Premio Premium",
+                "tier-2-feat-3": "Alertas SMS",
+                "tier-2-btn": "Comprar Premium",
+                "tier-3-name": "VIP",
+                "tier-3-feat-1": "20 Entradas",
+                "tier-3-feat-2": "Premio VIP",
+                "tier-3-feat-3": "Soporte Prioritario",
+                "tier-3-btn": "Comprar VIP",
+                "cta-application": "Aplicar Ahora",
+                "footer-text": "© 2026 Alianzas Pro · Asóciate con nosotros o compra boletos – tu elección."
             },
             en: {
-                // Navigation
                 "nav-home": "Home",
-                "nav-tickets": "Tickets",
                 "nav-partner": "Partner",
-                "nav-models": "Models",
                 "nav-packages": "Packages",
+                "nav-models": "Models",
+                "nav-tickets": "Tickets",
                 "nav-contact": "Contact",
-                "floating-cta": "Buy Tickets",
-
-                // Hero
-                "hero-badge": "Two Ways to Win",
+                "floating-wa": "Partner Now",
+                "hero-badge": "Brand Ambassador Agency",
                 "hero-title-1": "ELEVATE YOUR BRAND",
-                "hero-title-2": "OR WIN BIG PRIZES",
-                "hero-desc": "🎟️ Buy Tickets → Win amazing prizes | 🤝 Partner with us → Grow your business",
-                "hero-b2c-tag": "🎟️ Buy Tickets → Win amazing prizes",
-                "hero-b2b-tag": "🤝 Partner with us → Grow your business",
-                "hero-cta-tickets": "Buy Tickets",
+                "hero-title-2": "WITH AMBASSADOR MODELS",
+                "hero-desc": "Promote your products with viral raffles and handpicked models.",
+                "hero-sub": "Only a few select models are chosen as brand ambassadors.",
                 "hero-cta-partner": "Partner Your Business",
-
-                // Stats
+                "hero-cta-wa": "Contact on WhatsApp",
                 "stat-1": "More Followers",
                 "stat-1-desc": "Real Audience",
                 "stat-2": "More Engagement",
                 "stat-2-desc": "Genuine Interaction",
                 "stat-3": "More Sales",
                 "stat-3-desc": "Real Results",
-
-                // Tickets
-                "tickets-title": "🎟️ Buy Raffle Tickets",
-                "tickets-sub": "Choose your tier and secure your chance to win amazing prizes.",
-                "tickets-left": "🔥 Only 47 tickets left!",
-                "tickets-timer": "⏳ 24:00:00",
-                "tier-1-name": "Basic",
-                "tier-1-price": "$10 USD",
-                "tier-1-feat-1": "1 Raffle Entry",
-                "tier-1-feat-2": "Standard Prize Pool",
-                "tier-1-feat-3": "Email Notification",
-                "tier-1-btn": "Buy Basic",
-                "tier-2-name": "Premium",
-                "tier-2-badge": "Best Value",
-                "tier-2-price": "$35 USD",
-                "tier-2-feat-1": "5 Raffle Entries",
-                "tier-2-feat-2": "Premium Prize Pool",
-                "tier-2-feat-3": "SMS + Email Alerts",
-                "tier-2-feat-4": "Bonus Entry (Limited)",
-                "tier-2-btn": "Buy Premium",
-                "tier-3-name": "VIP",
-                "tier-3-price": "$60 USD",
-                "tier-3-feat-1": "20 Raffle Entries",
-                "tier-3-feat-2": "VIP Prize Pool",
-                "tier-3-feat-3": "Priority Support",
-                "tier-3-feat-4": "Exclusive Bonus Gift",
-                "tier-3-btn": "Buy VIP",
-
-                // Partnership
-                "partner-title": "🤝 Partner Your Business",
-                "partner-sub": "Promote your products with our viral raffle campaigns and professional ambassador models.",
+                "partner-title": "🤝 Why Partner With Us?",
+                "partner-sub": "Get your products in front of thousands of engaged customers with viral raffles and professional models.",
                 "partner-feat-1": "Viral Raffles",
                 "partner-feat-1-desc": "Your products as grand prizes – generate massive buzz.",
                 "partner-feat-2": "Ambassador Models",
@@ -1456,37 +1251,10 @@
                 "partner-feat-4-desc": "Capture leads interested in your products.",
                 "partner-feat-5": "Content Library",
                 "partner-feat-5-desc": "HD photos and videos for your marketing.",
-                "partner-feat-6": "Measurable ROI",
-                "partner-feat-6-desc": "Detailed performance reports.",
-                "partner-feat-7": "Curated Model Matching",
-                "partner-feat-7-desc": "Only a few select models are chosen as brand ambassadors for each business – we find the perfect fit for your brand.",
-                "partner-feat-7-badge": "Exclusive Selection",
-                "partner-cta": "View Partnership Packages",
-
-                // How It Works (now 5 steps)
-                "how-title": "How It Works",
-                "how-sub": "5 simple steps to turn your product into a viral campaign.",
-                "step-1-title": "Product Selection",
-                "step-1-desc": "Choose your product or service.",
-                "step-2-title": "Content Creation",
-                "step-2-desc": "Models produce premium photos & videos.",
-                "step-3-title": "Curated Matching",
-                "step-3-desc": "We handpick the perfect model for your brand.",
-                "step-4-title": "Campaign Launch",
-                "step-4-desc": "Raffle goes live on social media.",
-                "step-5-title": "Results & Growth",
-                "step-5-desc": "More visibility, audience, and sales.",
-
-                // Models
-                "models-title": "Our Ambassador Models",
-                "models-sub": "Professional models ready for your brand – only a few are selected as ambassadors.",
-                "models-badge-ambassador": "⭐ Brand Ambassador",
-                "models-view": "View Profile",
-                "models-see-all": "See All Models",
-
-                // Packages
-                "packages-title": "Partnership Packages",
-                "packages-sub": "Choose your plan.",
+                "partner-feat-6": "Curated Model Matching",
+                "partner-feat-6-desc": "Only a few select models are chosen as brand ambassadors – we find the perfect fit for your brand.",
+                "packages-title": "📦 Partnership Packages",
+                "packages-sub": "Choose the plan that fits your goals.",
                 "pack-popular": "Most Popular",
                 "pack-1-name": "LAUNCH",
                 "pack-1-tag": "Ideal to Start",
@@ -1509,17 +1277,42 @@
                 "pack-3-li-3": "Category exclusivity",
                 "pack-3-li-4": "Detailed premium reports",
                 "pack-3-btn": "Choose This",
-
-                // CTA
-                "cta-application": "Application",
-                "cta-title": "Ready to Sell Tickets or Partner?",
-                "cta-desc": "Whether you want to win amazing prizes or grow your business – we've got you covered.",
-                "cta-ticket-focus": "Tickets first. Everything else second.",
-                "cta-btn-tickets": "Buy Tickets",
-                "cta-btn-partner": "Partner Your Business",
-
-                // Footer
-                "footer-text": "© 2026 Alianzas Pro · Two ways to win: Buy tickets or partner with us."
+                "models-title": "👩‍💼 Our Ambassador Models",
+                "models-sub": "Only a few are chosen as brand ambassadors – each one handpicked for your brand.",
+                "models-badge": "⭐ Brand Ambassador",
+                "models-view": "View Profile",
+                "models-see-all": "See All Models",
+                "contact-title": "📩 Partner With Us Today",
+                "contact-sub": "Fill in your details and we'll contact you within 24 hours.",
+                "form-name": "Your Name",
+                "form-business": "Business Name",
+                "form-wa": "WhatsApp Number (with country code)",
+                "form-select-placeholder": "What is your main goal?",
+                "form-select-1": "Run a raffle campaign",
+                "form-select-2": "Book ambassador models",
+                "form-select-3": "Both",
+                "form-submit": "Submit & Get a Call",
+                "form-note": "We'll contact you on WhatsApp within 24 hours.",
+                "tickets-title": "🎟️ Buy Raffle Tickets (Optional)",
+                "tickets-sub": "Win amazing prizes – this is a secondary feature. Business partnerships are our primary focus.",
+                "tickets-left": "🔥 Only 47 tickets left!",
+                "tickets-timer": "⏳ 24:00:00",
+                "tier-1-name": "Basic",
+                "tier-1-feat-1": "1 Entry",
+                "tier-1-feat-2": "Standard Prize",
+                "tier-1-btn": "Buy Basic",
+                "tier-2-name": "Premium",
+                "tier-2-feat-1": "5 Entries",
+                "tier-2-feat-2": "Premium Prize",
+                "tier-2-feat-3": "SMS Alerts",
+                "tier-2-btn": "Buy Premium",
+                "tier-3-name": "VIP",
+                "tier-3-feat-1": "20 Entries",
+                "tier-3-feat-2": "VIP Prize",
+                "tier-3-feat-3": "Priority Support",
+                "tier-3-btn": "Buy VIP",
+                "cta-application": "Apply Now",
+                "footer-text": "© 2026 Alianzas Pro · Partner with us or buy tickets – your choice."
             }
         };
 
