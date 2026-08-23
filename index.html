@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="wC3PZoBGqaYhBgRGOgLBFUinMZjwj8SdBj3uPZSC">
 
-    <title>Alianzas Pro | Raffle Marketing Agency</title>
+    <title>Alianzas Pro | Raffle Tickets</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
 
     <!-- Google Fonts: Lato + Oswald -->
@@ -39,10 +37,12 @@
             font-family: "Oswald", sans-serif;
         }
 
-        .mt-90, .my-90 {
+        .mt-90,
+        .my-90 {
             margin-top: 90px;
         }
-        .mb-90, .my-90 {
+        .mb-90,
+        .my-90 {
             margin-bottom: 90px;
         }
 
@@ -54,7 +54,9 @@
             text-decoration: underline;
         }
 
-        input, select, textarea {
+        input,
+        select,
+        textarea {
             box-shadow: none !important;
             border-radius: 20px !important;
         }
@@ -73,7 +75,7 @@
             top: unset;
         }
 
-        /* ===== HEADER - EXACT VERONICA VEE ===== */
+        /* ===== HEADER ===== */
         #header2 {
             background: #313234;
             background: radial-gradient(circle, rgba(49, 50, 52, 1) 0%, rgba(0, 0, 0, 1) 100%);
@@ -140,6 +142,62 @@
         .btn-outline-white:hover {
             background: #fff;
             color: #000;
+        }
+
+        .btn-white {
+            background: #fff;
+            color: #000;
+            font-weight: 700;
+            padding: 10px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 300ms;
+            border: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+        }
+        .btn-white:hover {
+            background: #ccc;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        /* ===== FLOATING BUY BUTTON (Sticky) ===== */
+        .floating-buy-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: #fff;
+            color: #000;
+            font-weight: 900;
+            padding: 14px 30px;
+            border-radius: 50px;
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border: none;
+            transition: 300ms;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .floating-buy-btn:hover {
+            background: #ccc;
+            color: #000;
+            transform: scale(1.05);
+            text-decoration: none;
+        }
+
+        @media (max-width: 576px) {
+            .floating-buy-btn {
+                padding: 10px 20px;
+                font-size: 0.75rem;
+                bottom: 10px;
+                right: 10px;
+            }
         }
 
         /* ===== LANGUAGE DROPDOWN ===== */
@@ -221,6 +279,29 @@
             letter-spacing: 1.5px;
             font-weight: 600;
         }
+        .banner-carousel .urgency-badge {
+            display: inline-block;
+            background: #ff0000;
+            color: #fff;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.4;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
         .banner-carousel p {
             font-size: 1.2rem;
             color: #aaa;
@@ -285,7 +366,7 @@
         .feature-card:hover {
             border-color: #555;
             transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
         }
         .feature-card i {
             font-size: 2.8rem;
@@ -343,7 +424,72 @@
             font-size: 0.95rem;
         }
 
-        /* ===== PACKAGES ===== */
+        /* ===== TICKET SECTION (NEW) ===== */
+        .ticket-card {
+            background: #111;
+            padding: 40px 28px;
+            border-radius: 24px;
+            border: 2px solid #222;
+            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            text-align: center;
+            position: relative;
+        }
+        .ticket-card:hover {
+            border-color: #fff;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(255, 255, 255, 0.05);
+        }
+        .ticket-card.best-value {
+            border-color: #fff;
+            background: #1a1a1a;
+        }
+        .ticket-card.best-value .badge-best {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #fff;
+            color: #000;
+            padding: 4px 18px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Oswald', sans-serif;
+        }
+        .ticket-card .ticket-price {
+            font-size: 3rem;
+            font-weight: 900;
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+            margin: 15px 0;
+        }
+        .ticket-card .ticket-price small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #888;
+        }
+        .ticket-card .ticket-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 30px;
+            flex-grow: 1;
+        }
+        .ticket-card .ticket-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #222;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+        .ticket-card .ticket-features li i {
+            color: #fff;
+            margin-right: 12px;
+        }
+
+        /* ===== PACKAGES (Business) ===== */
         .package-card {
             background: #111;
             padding: 40px 28px;
@@ -597,7 +743,8 @@
             section {
                 padding: 50px 0;
             }
-            .package-card.popular .popular-badge {
+            .package-card.popular .popular-badge,
+            .ticket-card.best-value .badge-best {
                 font-size: 0.6rem;
                 padding: 3px 12px;
                 right: 10px;
@@ -612,6 +759,9 @@
             }
             .stats-row .stat-item h3 {
                 font-size: 1.2rem;
+            }
+            .ticket-card .ticket-price {
+                font-size: 2.2rem;
             }
         }
         @media (min-width: 768px) {
@@ -630,635 +780,831 @@
 </head>
 <body>
 
-<!-- ============================== -->
-<!-- ========== HEADER ============ -->
-<!-- ============================== -->
-<header class="py-3" id="header2">
-    <div class="container">
-        <div class="row align-items-center">
+    <!-- ===== FLOATING BUY BUTTON (Sticky) ===== -->
+    <a href="#tickets" class="floating-buy-btn" data-i18n="floating-cta">
+        <i class="bi bi-ticket-perforated me-2"></i> Buy Tickets
+    </a>
 
-            <!-- Logo -->
-            <div class="col-sm-auto col-5 me-auto" id="logo">
-                <a href="#">
-                    <img src="https://veronicavee.com/assets/images/logo.png" alt="Alianzas Pro" class="img-fluid filterWhite" width="150">
+    <!-- ============================== -->
+    <!-- ========== HEADER ============ -->
+    <!-- ============================== -->
+    <header class="py-3" id="header2">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Logo -->
+                <div class="col-sm-auto col-5 me-auto" id="logo">
+                    <a href="#">
+                        <img src="https://veronicavee.com/assets/images/logo.png" alt="Alianzas Pro" class="img-fluid filterWhite" width="150">
+                    </a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <div class="col-auto d-lg-none">
+                    <button class="btn btn-link text-white p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                        <i class="bi bi-list fs-2"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="col-auto d-none d-lg-block">
+                    <nav class="navbar navbar-expand-lg py-0" id="mainMenu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#banner" class="nav-link nav-link-custom active" data-i18n="nav-home">Home</a></li>
+                            <li class="nav-item"><a href="#services" class="nav-link nav-link-custom" data-i18n="nav-services">Services</a></li>
+                            <li class="nav-item"><a href="#tickets" class="nav-link nav-link-custom" data-i18n="nav-tickets">Tickets</a></li>
+                            <li class="nav-item"><a href="#models" class="nav-link nav-link-custom" data-i18n="nav-models">Models</a></li>
+                            <li class="nav-item"><a href="#packages" class="nav-link nav-link-custom" data-i18n="nav-packages">Packages</a></li>
+                            <li class="nav-item"><a href="#contact" class="btn-black ms-2" data-i18n="nav-contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Right: Social + Language -->
+                <div class="col-auto d-none d-sm-block">
+                    <div class="d-flex align-items-center">
+                        <div class="social-icons-header">
+                            <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="bi bi-tiktok"></i></a>
+                            <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="bi bi-telegram"></i></a>
+                        </div>
+                        <div class="lang-dropdown ms-3">
+                            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="langToggle">
+                                <span id="currentLangLabel">ES</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item active" href="#" data-lang="es" onclick="setLanguage('es'); return false;">Español</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="en" onclick="setLanguage('en'); return false;">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== OFF CANVAS MOBILE MENU ===== -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <a href="#" class="text-decoration-none">
+                <img src="https://veronicavee.com/assets/images/logo.png" alt="Alianzas Pro" class="img-fluid filterWhite" width="120">
+            </a>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav fw-bold">
+                <li class="nav-item"><a class="nav-link nav-link-custom active" href="#banner" data-i18n="nav-home">Home</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#services" data-i18n="nav-services">Services</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#tickets" data-i18n="nav-tickets">Tickets</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#models" data-i18n="nav-models">Models</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#packages" data-i18n="nav-packages">Packages</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+            <div class="border-top border-secondary pt-3 mt-3">
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-tiktok fs-4"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-telegram fs-4"></i></a>
+                </div>
+                <p class="text-secondary mt-3 small">© 2026 Alianzas Pro</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================== -->
+    <!-- ====== BANNER / HERO ========= -->
+    <!-- ============================== -->
+    <section class="banner-carousel" id="banner">
+        <div class="container text-center">
+            <div class="sub-badge" data-i18n="hero-badge">
+                <i class="bi bi-lightning-fill me-1"></i> High-Impact Raffles
+            </div>
+
+            <!-- Urgency Badge -->
+            <div class="urgency-badge mt-3 mb-3" data-i18n="hero-urgency">
+                ⚡ Limited Tickets Available!
+            </div>
+
+            <h1>
+                <span data-i18n="hero-title-1">ELEVATE YOUR BRAND WITH</span><br>
+                <span class="highlight" data-i18n="hero-title-2">HIGH-IMPACT RAFFLES</span>
+            </h1>
+            <p data-i18n="hero-desc">
+                Combine the excitement of exclusive raffles with the influence of professional brand ambassador models to put your products in front of thousands of highly engaged potential customers. <strong data-i18n="hero-ticket-focus">Selling tickets is the key!</strong>
+            </p>
+            <a href="#tickets" class="btn-white" data-i18n="hero-cta">
+                <i class="bi bi-ticket-perforated me-2"></i> Buy Tickets Now
+            </a>
+
+            <!-- Stats -->
+            <div class="row stats-row mt-5 g-4">
+                <div class="col-4 stat-item">
+                    <i class="bi bi-people-fill"></i>
+                    <h3 data-i18n="stat-1">More Followers</h3>
+                    <p data-i18n="stat-1-desc">Real Audience</p>
+                </div>
+                <div class="col-4 stat-item">
+                    <i class="bi bi-heart-fill"></i>
+                    <h3 data-i18n="stat-2">More Engagement</h3>
+                    <p data-i18n="stat-2-desc">Genuine Interaction</p>
+                </div>
+                <div class="col-4 stat-item">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <h3 data-i18n="stat-3">More Sales</h3>
+                    <p data-i18n="stat-3-desc">Real Results</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================== -->
+    <!-- ====== TICKETS SECTION ======= -->
+    <!-- ============================== -->
+    <section class="section-dark" id="tickets">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="section-title" data-i18n="tickets-title">🎟️ Get Your Tickets Now</h2>
+                <p class="section-sub" data-i18n="tickets-sub">Choose your ticket tier and secure your chance to win amazing prizes!</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <span class="badge bg-white text-black px-4 py-2 rounded-pill" data-i18n="tickets-left">🔥 Only 47 tickets left!</span>
+                    <span class="badge bg-danger px-4 py-2 rounded-pill" id="countdown-timer" data-i18n="tickets-timer">⏳ 24:00:00</span>
+                </div>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Ticket Tier 1 -->
+                <div class="col-md-4">
+                    <div class="ticket-card">
+                        <h3 data-i18n="tier-1-name">Basic</h3>
+                        <div class="ticket-price" data-i18n="tier-1-price">$10 <small>USD</small></div>
+                        <ul class="ticket-features">
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-1-feat-1">1 Raffle Entry</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-1-feat-2">Standard Prize Pool</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-1-feat-3">Email Notification</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-outline-white w-100 text-center" data-i18n="tier-1-btn">Buy Basic</a>
+                    </div>
+                </div>
+
+                <!-- Ticket Tier 2 (Best Value) -->
+                <div class="col-md-4">
+                    <div class="ticket-card best-value">
+                        <div class="badge-best" data-i18n="tier-2-badge">Best Value</div>
+                        <h3 data-i18n="tier-2-name">Premium</h3>
+                        <div class="ticket-price" data-i18n="tier-2-price">$35 <small>USD</small></div>
+                        <ul class="ticket-features">
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-2-feat-1">5 Raffle Entries</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-2-feat-2">Premium Prize Pool</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-2-feat-3">SMS + Email Alerts</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-2-feat-4">Bonus Entry (Limited)</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-white w-100 text-center" data-i18n="tier-2-btn">Buy Premium</a>
+                    </div>
+                </div>
+
+                <!-- Ticket Tier 3 -->
+                <div class="col-md-4">
+                    <div class="ticket-card">
+                        <h3 data-i18n="tier-3-name">VIP</h3>
+                        <div class="ticket-price" data-i18n="tier-3-price">$60 <small>USD</small></div>
+                        <ul class="ticket-features">
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-3-feat-1">20 Raffle Entries</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-3-feat-2">VIP Prize Pool</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-3-feat-3">Priority Support</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="tier-3-feat-4">Exclusive Bonus Gift</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-outline-white w-100 text-center" data-i18n="tier-3-btn">Buy VIP</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================== -->
+    <!-- ====== SERVICES ============== -->
+    <!-- ============================== -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title" data-i18n="services-title">What You Get</h2>
+            <p class="section-sub" data-i18n="services-sub">Everything you need to boost your sales and make your brand go viral.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <i class="bi bi-gift-fill"></i>
+                        <h4 data-i18n="feature-1-title">Viral Raffles</h4>
+                        <p data-i18n="feature-1-desc">Your products as main prizes that generate excitement and massive participation.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <i class="bi bi-person-fill"></i>
+                        <h4 data-i18n="feature-2-title">Ambassador Models</h4>
+                        <p data-i18n="feature-2-desc">Premium lifestyle content that connects and captivates your target audience.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <i class="bi bi-share-fill"></i>
+                        <h4 data-i18n="feature-3-title">High Social Impact</h4>
+                        <p data-i18n="feature-3-desc">Instagram, TikTok and Facebook to maximize reach and interaction.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <i class="bi bi-person-plus-fill"></i>
+                        <h4 data-i18n="feature-4-title">Lead Generation</h4>
+                        <p data-i18n="feature-4-desc">Engaged audiences that comply with data protection regulations.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <i class="bi bi-images"></i>
+                        <h4 data-i18n="feature-5-title">Content Library</h4>
+                        <p data-i18n="feature-5-desc">Receive high-quality photos and videos to use in your own campaigns.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <i class="bi bi-bar-chart-fill"></i>
+                        <h4 data-i18n="feature-6-title">Measurable Results</h4>
+                        <p data-i18n="feature-6-desc">Track your growth with detailed analytics and performance reports.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================== -->
+    <!-- ====== HOW IT WORKS ========== -->
+    <!-- ============================== -->
+    <section class="section-dark" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title" data-i18n="how-title">How It Works</h2>
+            <p class="section-sub" data-i18n="how-sub">4 simple steps to turn your product into a viral campaign.</p>
+
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4 data-i18n="step-1-title">Product Selection</h4>
+                        <p data-i18n="step-1-desc">Choose a product or service package that attracts your target audience.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h4 data-i18n="step-2-title">Content Creation</h4>
+                        <p data-i18n="step-2-desc">Our professional ambassadors produce premium promotional photos and videos.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4 data-i18n="step-3-title">Campaign Launch</h4>
+                        <p data-i18n="step-3-desc">Launch an attractive raffle that invites participants to follow and interact.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h4 data-i18n="step-4-title">Results & Growth</h4>
+                        <p data-i18n="step-4-desc">More visibility, audience growth, valuable marketing assets, and sales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================== -->
+    <!-- ====== MODELS GALLERY ======== -->
+    <!-- ============================== -->
+    <section id="models">
+        <div class="container-fluid">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold" data-i18n="models-title">Our Ambassador Models</h2>
+                <p class="text-muted" data-i18n="models-sub">Professional models ready to represent your brand and create premium content.</p>
+            </div>
+            <div class="row g-sm-4 g-3">
+
+                <!-- Model 1 -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
+                        <img src="https://veronicavee.com/storage/avatars/V8s82JJTS2hi0HUlVUumkvh5TDa2fPHdn5Z0mJSM.jpg" alt="Model" class="card-img h-100 model-img object-fit-cover">
+                        <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
+                            <h5 class="mb-1 fw-bold">Veronica Vee</h5>
+                            <p class="fs-14 mb-2">20 yrs • Female</p>
+                            <p class="fs-14 mb-3 d-sm-block d-none"><i class="bi bi-geo-alt-fill me-1"></i>Maicoa, Colombia</p>
+                            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 2 -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
+                        <img src="https://veronicavee.com/storage/avatars/19.jpeg" alt="Model" class="card-img h-100 model-img object-fit-cover">
+                        <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
+                            <h5 class="mb-1 fw-bold">Veronica Vee</h5>
+                            <p class="fs-14 mb-2">26 yrs • Female</p>
+                            <p class="fs-14 mb-3 d-sm-block d-none"><i class="bi bi-geo-alt-fill me-1"></i>Content Model Only</p>
+                            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 3 -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
+                        <img src="https://veronicavee.com/storage/models/avatars/WzXsM2zlbJ3wXxmeQkCTGOa8Jb29OV4Ap75Xmusd.png" alt="Model" class="card-img h-100 model-img object-fit-cover">
+                        <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
+                            <h5 class="mb-1 fw-bold">Veronica Vee</h5>
+                            <p class="fs-14 mb-2">24 yrs • Female</p>
+                            <p class="fs-14 mb-3 d-sm-block d-none"><i class="bi bi-geo-alt-fill me-1"></i>Maracaibo, Venezuela</p>
+                            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 4 -->
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
+                        <img src="https://veronicavee.com/storage/models/avatars/Yno7Y5RUDd3nDJEigvMJ4Nbo8SyljJQ4odeGQoHg.jpg" alt="Model" class="card-img h-100 model-img object-fit-cover">
+                        <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
+                            <h5 class="mb-1 fw-bold">Veronica Vee</h5>
+                            <p class="fs-14 mb-2">22 yrs • Female</p>
+                            <p class="fs-14 mb-3 d-sm-block d-none"><i class="bi bi-geo-alt-fill me-1"></i>Maicoa, Colombia</p>
+                            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn-outline-white" data-i18n="models-see-all">See All Models <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================== -->
+    <!-- ====== PACKAGES (Business) === -->
+    <!-- ============================== -->
+    <section class="section-dark" id="packages">
+        <div class="container">
+            <h2 class="section-title" data-i18n="packages-title">Partnership Packages</h2>
+            <p class="section-sub" data-i18n="packages-sub">Choose the plan that best fits your goals and budget.</p>
+
+            <div class="row g-4">
+                <!-- LAUNCH -->
+                <div class="col-md-4">
+                    <div class="package-card">
+                        <h3 data-i18n="pack-1-name">LAUNCH</h3>
+                        <div class="price-tag" data-i18n="pack-1-tag">Ideal to Start</div>
+                        <ul>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-1">Single product campaigns</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-2">Social media promotion</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">Localized exposure</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-4">1 ambassador model</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-outline-white" data-i18n="pack-1-btn">Choose This</a>
+                    </div>
+                </div>
+
+                <!-- GROWTH (POPULAR) -->
+                <div class="col-md-4">
+                    <div class="package-card popular">
+                        <div class="popular-badge" data-i18n="pack-popular">Most Popular</div>
+                        <h3 data-i18n="pack-2-name">GROWTH</h3>
+                        <div class="price-tag" data-i18n="pack-2-tag">More Reach & Impact</div>
+                        <ul>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-1">Multiple ambassador models</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-2">Professional video reels</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Co-branded landing pages</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-4">Expanded audience reach</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-black" data-i18n="pack-2-btn">Choose This</a>
+                    </div>
+                </div>
+
+                <!-- PREMIER ELITE -->
+                <div class="col-md-4">
+                    <div class="package-card">
+                        <h3 data-i18n="pack-3-name">PREMIER ELITE</h3>
+                        <div class="price-tag" data-i18n="pack-3-tag">Premium Annual Partnership</div>
+                        <ul>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-1">Recurring monthly campaigns</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-2">Priority scheduling</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Category exclusivity</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-4">Detailed premium reports</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-outline-white" data-i18n="pack-3-btn">Choose This</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================== -->
+    <!-- ====== CTA / APPLICATION ===== -->
+    <!-- ============================== -->
+    <section class="mt-5" id="cta">
+        <div class="container-fluid">
+            <a href="#contact" class="card card-cta border-0 rounded-0 text-center text-white text-decoration-none">
+                <div class="card-body py-5">
+                    <h2 class="font-Oswald text-uppercase fw-lighter display-3 mb-0" data-i18n="cta-application">
+                        Application
+                    </h2>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- ============================== -->
+    <!-- ====== CONTACT / CTA ========= -->
+    <!-- ============================== -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2 data-i18n="cta-title">Ready to <span class="highlight">Sell Tickets</span> & Grow?</h2>
+            <p data-i18n="cta-desc">
+                Let's transform your products into irresistible campaigns that generate excitement, increase visibility, elevate brand recognition, and take your business to the next level. <strong data-i18n="cta-ticket-focus">Tickets first. Everything else second.</strong>
+            </p>
+            <div class="btn-group-custom">
+                <a href="#tickets" class="btn-white" data-i18n="cta-btn-1">
+                    <i class="bi bi-ticket-perforated me-2"></i> Buy Tickets Now
+                </a>
+                <a href="#" class="btn-outline-white" data-i18n="cta-btn-2">
+                    <i class="bi bi-calendar3 me-2"></i> Schedule a Meeting
                 </a>
             </div>
-
-            <!-- Mobile Toggle -->
-            <div class="col-auto d-lg-none">
-                <button class="btn btn-link text-white p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-                    <i class="bi bi-list fs-2"></i>
-                </button>
-            </div>
-
-            <!-- Desktop Nav -->
-            <div class="col-auto d-none d-lg-block">
-                <nav class="navbar navbar-expand-lg py-0" id="mainMenu">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a href="#banner" class="nav-link nav-link-custom active" data-i18n="nav-home">Home</a></li>
-                        <li class="nav-item"><a href="#services" class="nav-link nav-link-custom" data-i18n="nav-services">Services</a></li>
-                        <li class="nav-item"><a href="#how-it-works" class="nav-link nav-link-custom" data-i18n="nav-how">How It Works</a></li>
-                        <li class="nav-item"><a href="#packages" class="nav-link nav-link-custom" data-i18n="nav-packages">Packages</a></li>
-                        <li class="nav-item"><a href="#models" class="nav-link nav-link-custom" data-i18n="nav-models">Models</a></li>
-                        <li class="nav-item"><a href="#contact" class="btn-black ms-2" data-i18n="nav-contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <!-- Right: Social + Language -->
-            <div class="col-auto d-none d-sm-block">
-                <div class="d-flex align-items-center">
-                    <div class="social-icons-header">
-                        <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="bi bi-tiktok"></i></a>
-                        <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
-                        <a href="#" target="_blank"><i class="bi bi-telegram"></i></a>
-                    </div>
-                    <div class="lang-dropdown ms-3">
-                        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="langToggle">
-                            <span id="currentLangLabel">ES</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item active" href="#" data-lang="es" onclick="setLanguage('es'); return false;">Español</a></li>
-                            <li><a class="dropdown-item" href="#" data-lang="en" onclick="setLanguage('en'); return false;">English</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
-</header>
+    </section>
 
-<!-- ===== OFF CANVAS MOBILE MENU ===== -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
-    <div class="offcanvas-header border-bottom border-secondary">
-        <a href="#" class="text-decoration-none">
-            <img src="https://veronicavee.com/assets/images/logo.png" alt="Alianzas Pro" class="img-fluid filterWhite" width="120">
-        </a>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <ul class="navbar-nav fw-bold">
-            <li class="nav-item"><a class="nav-link nav-link-custom active" href="#banner" data-i18n="nav-home">Home</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="#services" data-i18n="nav-services">Services</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="#how-it-works" data-i18n="nav-how">How It Works</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="#packages" data-i18n="nav-packages">Packages</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="#models" data-i18n="nav-models">Models</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact" data-i18n="nav-contact">Contact</a></li>
-        </ul>
-        <div class="border-top border-secondary pt-3 mt-3">
-            <div class="d-flex gap-3">
-                <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
-                <a href="#" class="text-white"><i class="bi bi-tiktok fs-4"></i></a>
-                <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
-                <a href="#" class="text-white"><i class="bi bi-telegram fs-4"></i></a>
+
+    <!-- ============================== -->
+    <!-- ========== FOOTER ============ -->
+    <!-- ============================== -->
+    <footer>
+        <div class="container">
+            <a href="#" class="logo-text">ALIANZAS <span>PRO</span></a>
+            <p class="location mt-2">
+                <i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela & Maicao, Colombia
+            </p>
+            <div class="socials-footer">
+                <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-tiktok"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-telegram"></i></a>
             </div>
-            <p class="text-secondary mt-3 small">© 2026 Alianzas Pro</p>
+            <p data-i18n="footer-text">© 2026 Alianzas Pro · Your brand. Our platform. Real results.</p>
         </div>
-    </div>
-</div>
+    </footer>
 
 
-<!-- ============================== -->
-<!-- ====== BANNER / HERO ========= -->
-<!-- ============================== -->
-<section class="banner-carousel" id="banner">
-    <div class="container text-center">
-        <div class="sub-badge" data-i18n="hero-badge">
-            <i class="bi bi-lightning-fill me-1"></i> High-Impact Partnerships
-        </div>
-        <h1>
-            <span data-i18n="hero-title-1">ELEVATE YOUR BRAND WITH</span><br>
-            <span class="highlight" data-i18n="hero-title-2">HIGH-IMPACT MARKETING</span>
-        </h1>
-        <p data-i18n="hero-desc">
-            Combine the excitement of exclusive raffles with the influence of professional brand ambassador models to put your products in front of thousands of highly engaged potential customers.
-        </p>
-        <a href="#contact" class="btn-black" data-i18n="hero-cta">
-            <i class="bi bi-rocket-takeoff me-2"></i> I WANT TO GROW
-        </a>
-
-        <!-- Stats -->
-        <div class="row stats-row mt-5 g-4">
-            <div class="col-4 stat-item">
-                <i class="bi bi-people-fill"></i>
-                <h3 data-i18n="stat-1">More Followers</h3>
-                <p data-i18n="stat-1-desc">Real Audience</p>
-            </div>
-            <div class="col-4 stat-item">
-                <i class="bi bi-heart-fill"></i>
-                <h3 data-i18n="stat-2">More Engagement</h3>
-                <p data-i18n="stat-2-desc">Genuine Interaction</p>
-            </div>
-            <div class="col-4 stat-item">
-                <i class="bi bi-graph-up-arrow"></i>
-                <h3 data-i18n="stat-3">More Sales</h3>
-                <p data-i18n="stat-3-desc">Real Results</p>
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- ============================== -->
+    <!-- ====== BOOTSTRAP JS ========== -->
+    <!-- ============================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 
-<!-- ============================== -->
-<!-- ====== ABOUT (Logo) ========== -->
-<!-- ============================== -->
-<section class="mt-5" id="about">
-    <div class="container">
-        <div class="row align-items-center text-center g-4 flex-md-row-reverse">
-            <div class="col-md-12">
-                <img src="https://veronicavee.com/assets/images/logo.png" alt="Alianzas Pro" class="img-fluid filterWhite" style="max-width: 300px;">
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- ============================== -->
+    <!-- ====== COUNTDOWN TIMER ======= -->
+    <!-- ============================== -->
+    <script>
+        // Countdown timer (24 hours from page load)
+        function startCountdown() {
+            let hours = 24;
+            let minutes = 0;
+            let seconds = 0;
 
+            const timerElement = document.getElementById('countdown-timer');
 
-<!-- ============================== -->
-<!-- ====== SERVICES ============== -->
-<!-- ============================== -->
-<section id="services">
-    <div class="container">
-        <h2 class="section-title" data-i18n="services-title">What You Get</h2>
-        <p class="section-sub" data-i18n="services-sub">Everything you need to boost your sales and make your brand go viral.</p>
+            function updateTimer() {
+                if (hours === 0 && minutes === 0 && seconds === 0) {
+                    timerElement.textContent = '⏳ 00:00:00 - SOLD OUT!';
+                    return;
+                }
 
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-card">
-                    <i class="bi bi-gift-fill"></i>
-                    <h4 data-i18n="feature-1-title">Viral Raffles</h4>
-                    <p data-i18n="feature-1-desc">Your products as main prizes that generate excitement and massive participation.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-card">
-                    <i class="bi bi-person-fill"></i>
-                    <h4 data-i18n="feature-2-title">Ambassador Models</h4>
-                    <p data-i18n="feature-2-desc">Premium lifestyle content that connects and captivates your target audience.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-card">
-                    <i class="bi bi-share-fill"></i>
-                    <h4 data-i18n="feature-3-title">High Social Impact</h4>
-                    <p data-i18n="feature-3-desc">Instagram, TikTok and Facebook to maximize reach and interaction.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-card">
-                    <i class="bi bi-person-plus-fill"></i>
-                    <h4 data-i18n="feature-4-title">Lead Generation</h4>
-                    <p data-i18n="feature-4-desc">Engaged audiences that comply with data protection regulations.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-card">
-                    <i class="bi bi-images"></i>
-                    <h4 data-i18n="feature-5-title">Content Library</h4>
-                    <p data-i18n="feature-5-desc">Receive high-quality photos and videos to use in your own campaigns.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="feature-card">
-                    <i class="bi bi-bar-chart-fill"></i>
-                    <h4 data-i18n="feature-6-title">Measurable Results</h4>
-                    <p data-i18n="feature-6-desc">Track your growth with detailed analytics and performance reports.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                if (seconds === 0) {
+                    if (minutes === 0) {
+                        if (hours > 0) {
+                            hours--;
+                            minutes = 59;
+                            seconds = 59;
+                        }
+                    } else {
+                        minutes--;
+                        seconds = 59;
+                    }
+                } else {
+                    seconds--;
+                }
 
+                const hStr = String(hours).padStart(2, '0');
+                const mStr = String(minutes).padStart(2, '0');
+                const sStr = String(seconds).padStart(2, '0');
+                timerElement.textContent = `⏳ ${hStr}:${mStr}:${sStr}`;
+            }
 
-<!-- ============================== -->
-<!-- ====== HOW IT WORKS ========== -->
-<!-- ============================== -->
-<section class="section-dark" id="how-it-works">
-    <div class="container">
-        <h2 class="section-title" data-i18n="how-title">How It Works</h2>
-        <p class="section-sub" data-i18n="how-sub">4 simple steps to turn your product into a viral campaign.</p>
-
-        <div class="row g-4">
-            <div class="col-md-3 col-sm-6">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h4 data-i18n="step-1-title">Product Selection</h4>
-                    <p data-i18n="step-1-desc">Choose a product or service package that attracts your target audience.</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h4 data-i18n="step-2-title">Content Creation</h4>
-                    <p data-i18n="step-2-desc">Our professional ambassadors produce premium promotional photos and videos.</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h4 data-i18n="step-3-title">Campaign Launch</h4>
-                    <p data-i18n="step-3-desc">Launch an attractive raffle that invites participants to follow and interact.</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h4 data-i18n="step-4-title">Results & Growth</h4>
-                    <p data-i18n="step-4-desc">More visibility, audience growth, valuable marketing assets, and sales.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- ============================== -->
-<!-- ====== PACKAGES ============== -->
-<!-- ============================== -->
-<section id="packages">
-    <div class="container">
-        <h2 class="section-title" data-i18n="packages-title">Partnership Packages</h2>
-        <p class="section-sub" data-i18n="packages-sub">Choose the plan that best fits your goals and budget.</p>
-
-        <div class="row g-4">
-            <!-- LAUNCH -->
-            <div class="col-md-4">
-                <div class="package-card">
-                    <h3 data-i18n="pack-1-name">LAUNCH</h3>
-                    <div class="price-tag" data-i18n="pack-1-tag">Ideal to Start</div>
-                    <ul>
-                        <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-1">Single product campaigns</span></li>
-                        <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-2">Social media promotion</span></li>
-                        <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">Localized exposure</span></li>
-                        <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-4">1 ambassador model</span></li>
-                    </ul>
-                    <a href="#contact" class="btn-outline-white" data-i18n="pack-1-btn">Choose This</a>
-                </div>
-            </div>
-
-            <!-- GROWTH (POPULAR) -->
-            <div class="col-md-4">
-                <div class="package-card popular">
-                    <div class="popular-badge" data-i18n="pack-popular">Most Popular</div>
-                    <h3 data-i18n="pack-2-name">GROWTH</h3>
-                    <div class="price-tag" data-i18n="pack-2-tag">More Reach & Impact</div>
-                    <ul>
-                        <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-1">Multiple ambassador models</span></li>
-                        <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-2">Professional video reels</span></li>
-                        <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Co-branded landing pages</span></li>
-                        <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-4">Expanded audience reach</span></li>
-                    </ul>
-                    <a href="#contact" class="btn-black" data-i18n="pack-2-btn">Choose This</a>
-                </div>
-            </div>
-
-            <!-- PREMIER ELITE -->
-            <div class="col-md-4">
-                <div class="package-card">
-                    <h3 data-i18n="pack-3-name">PREMIER ELITE</h3>
-                    <div class="price-tag" data-i18n="pack-3-tag">Premium Annual Partnership</div>
-                    <ul>
-                        <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-1">Recurring monthly campaigns</span></li>
-                        <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-2">Priority scheduling</span></li>
-                        <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Category exclusivity</span></li>
-                        <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-4">Detailed premium reports</span></li>
-                    </ul>
-                    <a href="#contact" class="btn-outline-white" data-i18n="pack-3-btn">Choose This</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- ============================== -->
-<!-- ====== MODELS GALLERY ======== -->
-<!-- ============================== -->
-<section class="section-dark" id="models">
-    <div class="container-fluid">
-        <div class="text-center mb-4">
-            <h2 class="fw-bold" data-i18n="models-title">Our Ambassador Models</h2>
-            <p class="text-muted" data-i18n="models-sub">Professional models ready to represent your brand and create premium content.</p>
-        </div>
-        <div class="row g-sm-4 g-3">
-
-            <!-- Model 1 -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-3">
-                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
-                    <img src="https://veronicavee.com/storage/avatars/V8s82JJTS2hi0HUlVUumkvh5TDa2fPHdn5Z0mJSM.jpg" alt="Model" class="card-img h-100 model-img object-fit-cover">
-                    <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
-                        <h5 class="mb-1 fw-bold">Veronica Vee</h5>
-                        <p class="fs-14 mb-2">20 yrs • Female</p>
-                        <p class="fs-14 mb-3 d-sm-block d-none"><i class="bi bi-geo-alt-fill me-1"></i>Maicoa, Colombia</p>
-                        <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Model 2 -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-3">
-                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
-                    <img src="https://veronicavee.com/storage/avatars/19.jpeg" alt="Model" class="card-img h-100 model-img object-fit-cover">
-                    <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
-                        <h5 class="mb-1 fw-bold">Veronica Vee</h5>
-                        <p class="fs-14 mb-2">26 yrs • Female</p>
-                        <p class="fs-14 mb-3 d-sm-block d-none"><i class="bi bi-geo-alt-fill me-1"></i>Content Model Only</p>
-                        <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Model 3 -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-3">
-                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
-                    <img src="https://veronicavee.com/storage/models/avatars/WzXsM2zlbJ3wXxmeQkCTGOa8Jb29OV4Ap75Xmusd.png" alt="Model" class="card-img h-100 model-img object-fit-cover">
-                    <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
-                        <h5 class="mb-1 fw-bold">Veronica Vee</h5>
-                        <p class="fs-14 mb-2">24 yrs • Female</p>
-                        <p class="fs-14 mb-3 d-sm-block d-none"><i class="bi bi-geo-alt-fill me-1"></i>Maracaibo, Venezuela</p>
-                        <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Model 4 -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-3">
-                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
-                    <img src="https://veronicavee.com/storage/models/avatars/Yno7Y5RUDd3nDJEigvMJ4Nbo8SyljJQ4odeGQoHg.jpg" alt="Model" class="card-img h-100 model-img object-fit-cover">
-                    <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
-                        <h5 class="mb-1 fw-bold">Veronica Vee</h5>
-                        <p class="fs-14 mb-2">22 yrs • Female</p>
-                        <p class="fs-14 mb-3 d-sm-block d-none"><i class="bi bi-geo-alt-fill me-1"></i>Maicoa, Colombia</p>
-                        <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold" style="background:#fff;color:#000;border:none;" data-i18n="models-view">View Profile</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="text-center mt-4">
-            <a href="#" class="btn-outline-white" data-i18n="models-see-all">See All Models <i class="bi bi-arrow-right ms-1"></i></a>
-        </div>
-    </div>
-</section>
-
-
-<!-- ============================== -->
-<!-- ====== CTA / APPLICATION ===== -->
-<!-- ============================== -->
-<section class="mt-5" id="cta">
-    <div class="container-fluid">
-        <a href="#contact" class="card card-cta border-0 rounded-0 text-center text-white text-decoration-none">
-            <div class="card-body py-5">
-                <h2 class="font-Oswald text-uppercase fw-lighter display-3 mb-0" data-i18n="cta-application">
-                    Application
-                </h2>
-            </div>
-        </a>
-    </div>
-</section>
-
-
-<!-- ============================== -->
-<!-- ====== CONTACT / CTA ========= -->
-<!-- ============================== -->
-<section class="cta-section" id="contact">
-    <div class="container">
-        <h2 data-i18n="cta-title">Ready to <span class="highlight">Grow</span> Your Brand?</h2>
-        <p data-i18n="cta-desc">
-            Let's transform your products into irresistible campaigns that generate excitement, increase visibility, elevate brand recognition, and take your business to the next level.
-        </p>
-        <div class="btn-group-custom">
-            <a href="#" class="btn-black" data-i18n="cta-btn-1">
-                <i class="bi bi-whatsapp me-2"></i> Contact Us Today
-            </a>
-            <a href="#" class="btn-outline-white" data-i18n="cta-btn-2">
-                <i class="bi bi-calendar3 me-2"></i> Schedule a Meeting
-            </a>
-        </div>
-    </div>
-</section>
-
-
-<!-- ============================== -->
-<!-- ========== FOOTER ============ -->
-<!-- ============================== -->
-<footer>
-    <div class="container">
-        <a href="#" class="logo-text">ALIANZAS <span>PRO</span></a>
-        <p class="location mt-2">
-            <i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela & Maicao, Colombia
-        </p>
-        <div class="socials-footer">
-            <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="#" target="_blank"><i class="bi bi-tiktok"></i></a>
-            <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="#" target="_blank"><i class="bi bi-telegram"></i></a>
-        </div>
-        <p data-i18n="footer-text">© 2026 Alianzas Pro · Your brand. Our platform. Real results.</p>
-    </div>
-</footer>
-
-
-<!-- ============================== -->
-<!-- ====== BOOTSTRAP JS ========== -->
-<!-- ============================== -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-<!-- ============================== -->
-<!-- ====== LANGUAGE TOGGLE ======= -->
-<!-- ============================== -->
-<script>
-    // ---- Translation Dictionary ----
-    const translations = {
-        es: {
-            "nav-home": "Inicio",
-            "nav-services": "Servicios",
-            "nav-how": "Cómo Funciona",
-            "nav-packages": "Paquetes",
-            "nav-models": "Modelos",
-            "nav-contact": "Contacto",
-            "hero-badge": "Alianzas de Alto Impacto",
-            "hero-title-1": "ELEVA TU MARCA CON",
-            "hero-title-2": "MARKETING DE ALTO IMPACTO",
-            "hero-desc": "Combina la emoción de rifas exclusivas con la influencia de modelos embajadoras profesionales para poner tus productos frente a miles de clientes potenciales altamente comprometidos.",
-            "hero-cta": "Quiero Crecer",
-            "stat-1": "Más Seguidores",
-            "stat-1-desc": "Audiencia Real",
-            "stat-2": "Mayor Engagement",
-            "stat-2-desc": "Interacción Genuina",
-            "stat-3": "Más Ventas",
-            "stat-3-desc": "Resultados Reales",
-            "services-title": "¿Qué Recibes?",
-            "services-sub": "Todo lo que necesitas para disparar tus ventas y hacer viral tu marca.",
-            "feature-1-title": "Rifas Virales",
-            "feature-1-desc": "Tus productos como premios principales que generan emoción y participación masiva.",
-            "feature-2-title": "Modelos Embajadoras",
-            "feature-2-desc": "Contenido lifestyle premium que conecta y enamora a tu audiencia objetivo.",
-            "feature-3-title": "Alto Impacto en Redes",
-            "feature-3-desc": "Instagram, TikTok y Facebook para maximizar alcance e interacción.",
-            "feature-4-title": "Generación de Leads",
-            "feature-4-desc": "Audiencias comprometidas y con normativas de protección de datos.",
-            "feature-5-title": "Biblioteca de Contenido",
-            "feature-5-desc": "Recibe fotos y videos HD para usar en tus propias campañas.",
-            "feature-6-title": "Resultados Medibles",
-            "feature-6-desc": "Sigue tu crecimiento con análisis detallados y reportes de rendimiento.",
-            "how-title": "¿Cómo Funciona?",
-            "how-sub": "4 pasos sencillos para transformar tu producto en una campaña viral.",
-            "step-1-title": "Selección del Producto",
-            "step-1-desc": "Elige un producto o paquete de servicios que atraiga a tu audiencia.",
-            "step-2-title": "Creación de Contenido",
-            "step-2-desc": "Nuestras embajadoras producen fotos y videos promocionales premium.",
-            "step-3-title": "Lanzamiento de la Rifa",
-            "step-3-desc": "Lanzamos una rifa atractiva que invita a los participantes a seguir tus redes e interactuar.",
-            "step-4-title": "Resultados y Crecimiento",
-            "step-4-desc": "Más visibilidad, crecimiento de audiencia, activos de marketing valiosos y ventas.",
-            "packages-title": "Paquetes de Alianza",
-            "packages-sub": "Elige el plan que mejor se adapte a tus objetivos y presupuesto.",
-            "pack-popular": "Más Popular",
-            "pack-1-name": "LAUNCH",
-            "pack-1-tag": "Ideal para empezar",
-            "pack-1-li-1": "Campañas de un solo producto",
-            "pack-1-li-2": "Promoción en redes sociales",
-            "pack-1-li-3": "Exposición localizada",
-            "pack-1-li-4": "1 modelo embajadora",
-            "pack-1-btn": "Elegir este",
-            "pack-2-name": "GROWTH",
-            "pack-2-tag": "Más alcance e impacto",
-            "pack-2-li-1": "Múltiples modelos embajadoras",
-            "pack-2-li-2": "Reels de video profesionales",
-            "pack-2-li-3": "Páginas de aterrizaje co-marcadas",
-            "pack-2-li-4": "Alcance de audiencia expandido",
-            "pack-2-btn": "Elegir este",
-            "pack-3-name": "PREMIER ELITE",
-            "pack-3-tag": "Alianza anual premium",
-            "pack-3-li-1": "Campañas mensuales recurrentes",
-            "pack-3-li-2": "Programación prioritaria",
-            "pack-3-li-3": "Exclusividad por categoría",
-            "pack-3-li-4": "Reportes premium detallados",
-            "pack-3-btn": "Elegir este",
-            "models-title": "Nuestras Modelos Embajadoras",
-            "models-sub": "Modelos profesionales listas para representar tu marca y crear contenido premium.",
-            "models-view": "Ver Perfil",
-            "models-see-all": "Ver Todas las Modelos",
-            "cta-application": "Aplicación",
-            "cta-title": "¿Listo para hacer crecer tu marca?",
-            "cta-desc": "Transformemos tus productos en campañas irresistibles que generen emoción, aumenten la visibilidad, eleven el reconocimiento de tu marca y lleven tu negocio al siguiente nivel.",
-            "cta-btn-1": "Contáctanos Hoy",
-            "cta-btn-2": "Agenda una Reunión",
-            "footer-text": "© 2026 Alianzas Pro · Tu marca. Nuestra plataforma. Resultados reales."
-        },
-        en: {
-            "nav-home": "Home",
-            "nav-services": "Services",
-            "nav-how": "How It Works",
-            "nav-packages": "Packages",
-            "nav-models": "Models",
-            "nav-contact": "Contact",
-            "hero-badge": "High-Impact Partnerships",
-            "hero-title-1": "ELEVATE YOUR BRAND WITH",
-            "hero-title-2": "HIGH-IMPACT MARKETING",
-            "hero-desc": "Combine the excitement of exclusive raffles with the influence of professional brand ambassador models to put your products in front of thousands of highly engaged potential customers.",
-            "hero-cta": "I Want to Grow",
-            "stat-1": "More Followers",
-            "stat-1-desc": "Real Audience",
-            "stat-2": "More Engagement",
-            "stat-2-desc": "Genuine Interaction",
-            "stat-3": "More Sales",
-            "stat-3-desc": "Real Results",
-            "services-title": "What You Get",
-            "services-sub": "Everything you need to boost your sales and make your brand go viral.",
-            "feature-1-title": "Viral Raffles",
-            "feature-1-desc": "Your products as main prizes that generate excitement and massive participation.",
-            "feature-2-title": "Ambassador Models",
-            "feature-2-desc": "Premium lifestyle content that connects and captivates your target audience.",
-            "feature-3-title": "High Social Impact",
-            "feature-3-desc": "Instagram, TikTok and Facebook to maximize reach and interaction.",
-            "feature-4-title": "Lead Generation",
-            "feature-4-desc": "Engaged audiences that comply with data protection regulations.",
-            "feature-5-title": "Content Library",
-            "feature-5-desc": "Receive high-quality photos and videos to use in your own campaigns.",
-            "feature-6-title": "Measurable Results",
-            "feature-6-desc": "Track your growth with detailed analytics and performance reports.",
-            "how-title": "How It Works",
-            "how-sub": "4 simple steps to turn your product into a viral campaign.",
-            "step-1-title": "Product Selection",
-            "step-1-desc": "Choose a product or service package that attracts your target audience.",
-            "step-2-title": "Content Creation",
-            "step-2-desc": "Our professional ambassadors produce premium promotional photos and videos.",
-            "step-3-title": "Campaign Launch",
-            "step-3-desc": "Launch an attractive raffle that invites participants to follow your social media and interact.",
-            "step-4-title": "Results & Growth",
-            "step-4-desc": "More visibility, audience growth, valuable marketing assets, and sales.",
-            "packages-title": "Partnership Packages",
-            "packages-sub": "Choose the plan that best fits your goals and budget.",
-            "pack-popular": "Most Popular",
-            "pack-1-name": "LAUNCH",
-            "pack-1-tag": "Ideal to Start",
-            "pack-1-li-1": "Single product campaigns",
-            "pack-1-li-2": "Social media promotion",
-            "pack-1-li-3": "Localized exposure",
-            "pack-1-li-4": "1 ambassador model",
-            "pack-1-btn": "Choose This",
-            "pack-2-name": "GROWTH",
-            "pack-2-tag": "More Reach & Impact",
-            "pack-2-li-1": "Multiple ambassador models",
-            "pack-2-li-2": "Professional video reels",
-            "pack-2-li-3": "Co-branded landing pages",
-            "pack-2-li-4": "Expanded audience reach",
-            "pack-2-btn": "Choose This",
-            "pack-3-name": "PREMIER ELITE",
-            "pack-3-tag": "Premium Annual Partnership",
-            "pack-3-li-1": "Recurring monthly campaigns",
-            "pack-3-li-2": "Priority scheduling",
-            "pack-3-li-3": "Category exclusivity",
-            "pack-3-li-4": "Detailed premium reports",
-            "pack-3-btn": "Choose This",
-            "models-title": "Our Ambassador Models",
-            "models-sub": "Professional models ready to represent your brand and create premium content.",
-            "models-view": "View Profile",
-            "models-see-all": "See All Models",
-            "cta-application": "Application",
-            "cta-title": "Ready to Grow Your Brand?",
-            "cta-desc": "Let's transform your products into irresistible campaigns that generate excitement, increase visibility, elevate brand recognition, and take your business to the next level.",
-            "cta-btn-1": "Contact Us Today",
-            "cta-btn-2": "Schedule a Meeting",
-            "footer-text": "© 2026 Alianzas Pro · Your brand. Our platform. Real results."
+            setInterval(updateTimer, 1000);
         }
-    };
 
-    let currentLang = 'es';
+        document.addEventListener('DOMContentLoaded', startCountdown);
+    </script>
 
-    function setLanguage(lang) {
-        currentLang = lang;
-        document.getElementById('currentLangLabel').textContent = lang.toUpperCase();
 
-        document.querySelectorAll('.lang-dropdown .dropdown-item').forEach(item => {
-            item.classList.toggle('active', item.dataset.lang === lang);
-        });
+    <!-- ============================== -->
+    <!-- ====== LANGUAGE TOGGLE ======= -->
+    <!-- ============================== -->
+    <script>
+        // ---- Translation Dictionary ----
+        const translations = {
+            es: {
+                // Nav
+                "nav-home": "Inicio",
+                "nav-services": "Servicios",
+                "nav-tickets": "Boletos",
+                "nav-models": "Modelos",
+                "nav-packages": "Paquetes",
+                "nav-contact": "Contacto",
+                // Floating
+                "floating-cta": "Comprar Boletos",
+                // Hero
+                "hero-badge": "Rifas de Alto Impacto",
+                "hero-urgency": "⚡ ¡Boletos Limitados Disponibles!",
+                "hero-title-1": "ELEVA TU MARCA CON",
+                "hero-title-2": "RIFAS DE ALTO IMPACTO",
+                "hero-desc": "Combina la emoción de rifas exclusivas con la influencia de modelos embajadoras profesionales. ¡Vender boletos es la clave!",
+                "hero-ticket-focus": "¡Vender boletos es la clave!",
+                "hero-cta": "Comprar Boletos Ahora",
+                // Stats
+                "stat-1": "Más Seguidores",
+                "stat-1-desc": "Audiencia Real",
+                "stat-2": "Mayor Engagement",
+                "stat-2-desc": "Interacción Genuina",
+                "stat-3": "Más Ventas",
+                "stat-3-desc": "Resultados Reales",
+                // Tickets
+                "tickets-title": "🎟️ Obtén Tus Boletos Ahora",
+                "tickets-sub": "Elige tu nivel y asegura tu oportunidad de ganar premios increíbles.",
+                "tickets-left": "🔥 ¡Solo quedan 47 boletos!",
+                "tickets-timer": "⏳ 24:00:00",
+                "tier-1-name": "Básico",
+                "tier-1-price": "$10 USD",
+                "tier-1-feat-1": "1 Entrada",
+                "tier-1-feat-2": "Premios Estándar",
+                "tier-1-feat-3": "Notificación por Email",
+                "tier-1-btn": "Comprar Básico",
+                "tier-2-name": "Premium",
+                "tier-2-badge": "Mejor Valor",
+                "tier-2-price": "$35 USD",
+                "tier-2-feat-1": "5 Entradas",
+                "tier-2-feat-2": "Premios Premium",
+                "tier-2-feat-3": "Alertas SMS + Email",
+                "tier-2-feat-4": "Bono Extra (Limitado)",
+                "tier-2-btn": "Comprar Premium",
+                "tier-3-name": "VIP",
+                "tier-3-price": "$60 USD",
+                "tier-3-feat-1": "20 Entradas",
+                "tier-3-feat-2": "Premios VIP",
+                "tier-3-feat-3": "Soporte Prioritario",
+                "tier-3-feat-4": "Regalo Exclusivo",
+                "tier-3-btn": "Comprar VIP",
+                // Services
+                "services-title": "¿Qué Recibes?",
+                "services-sub": "Todo lo que necesitas para disparar tus ventas.",
+                "feature-1-title": "Rifas Virales",
+                "feature-1-desc": "Tus productos como premios principales.",
+                "feature-2-title": "Modelos Embajadoras",
+                "feature-2-desc": "Contenido premium para tu audiencia.",
+                "feature-3-title": "Alto Impacto en Redes",
+                "feature-3-desc": "Instagram, TikTok y Facebook.",
+                "feature-4-title": "Generación de Leads",
+                "feature-4-desc": "Audiencias comprometidas.",
+                "feature-5-title": "Biblioteca de Contenido",
+                "feature-5-desc": "Fotos y videos HD.",
+                "feature-6-title": "Resultados Medibles",
+                "feature-6-desc": "Reportes detallados.",
+                // How
+                "how-title": "¿Cómo Funciona?",
+                "how-sub": "4 pasos sencillos.",
+                "step-1-title": "Selección del Producto",
+                "step-1-desc": "Elige tu producto.",
+                "step-2-title": "Creación de Contenido",
+                "step-2-desc": "Fotos y videos premium.",
+                "step-3-title": "Lanzamiento",
+                "step-3-desc": "Rifa atractiva.",
+                "step-4-title": "Resultados",
+                "step-4-desc": "Visibilidad y ventas.",
+                // Models
+                "models-title": "Nuestras Modelos",
+                "models-sub": "Modelos listas para tu marca.",
+                "models-view": "Ver Perfil",
+                "models-see-all": "Ver Todas",
+                // Packages
+                "packages-title": "Paquetes",
+                "packages-sub": "Elige tu plan.",
+                "pack-popular": "Más Popular",
+                "pack-1-name": "LAUNCH",
+                "pack-1-tag": "Ideal para empezar",
+                "pack-1-li-1": "Campaña de un producto",
+                "pack-1-li-2": "Promoción en redes",
+                "pack-1-li-3": "Exposición local",
+                "pack-1-li-4": "1 modelo",
+                "pack-1-btn": "Elegir",
+                "pack-2-name": "GROWTH",
+                "pack-2-tag": "Más alcance",
+                "pack-2-li-1": "Múltiples modelos",
+                "pack-2-li-2": "Reels profesionales",
+                "pack-2-li-3": "Páginas co-marcadas",
+                "pack-2-li-4": "Audiencia expandida",
+                "pack-2-btn": "Elegir",
+                "pack-3-name": "PREMIER",
+                "pack-3-tag": "Alianza anual",
+                "pack-3-li-1": "Campañas mensuales",
+                "pack-3-li-2": "Programación prioritaria",
+                "pack-3-li-3": "Exclusividad",
+                "pack-3-li-4": "Reportes premium",
+                "pack-3-btn": "Elegir",
+                // CTA
+                "cta-application": "Aplicación",
+                "cta-title": "¿Listo para Vender Boletos?",
+                "cta-desc": "Transformemos tus productos en campañas irresistibles. ¡Los boletos son lo primero!",
+                "cta-ticket-focus": "Boletos primero. Todo lo demás después.",
+                "cta-btn-1": "Comprar Boletos",
+                "cta-btn-2": "Agendar Reunión",
+                // Footer
+                "footer-text": "© 2026 Alianzas Pro · Tu marca. Nuestra plataforma."
+            },
+            en: {
+                // Nav
+                "nav-home": "Home",
+                "nav-services": "Services",
+                "nav-tickets": "Tickets",
+                "nav-models": "Models",
+                "nav-packages": "Packages",
+                "nav-contact": "Contact",
+                // Floating
+                "floating-cta": "Buy Tickets",
+                // Hero
+                "hero-badge": "High-Impact Raffles",
+                "hero-urgency": "⚡ Limited Tickets Available!",
+                "hero-title-1": "ELEVATE YOUR BRAND WITH",
+                "hero-title-2": "HIGH-IMPACT RAFFLES",
+                "hero-desc": "Combine the excitement of exclusive raffles with the influence of professional brand ambassador models. Selling tickets is the key!",
+                "hero-ticket-focus": "Selling tickets is the key!",
+                "hero-cta": "Buy Tickets Now",
+                // Stats
+                "stat-1": "More Followers",
+                "stat-1-desc": "Real Audience",
+                "stat-2": "More Engagement",
+                "stat-2-desc": "Genuine Interaction",
+                "stat-3": "More Sales",
+                "stat-3-desc": "Real Results",
+                // Tickets
+                "tickets-title": "🎟️ Get Your Tickets Now",
+                "tickets-sub": "Choose your tier and secure your chance to win amazing prizes.",
+                "tickets-left": "🔥 Only 47 tickets left!",
+                "tickets-timer": "⏳ 24:00:00",
+                "tier-1-name": "Basic",
+                "tier-1-price": "$10 USD",
+                "tier-1-feat-1": "1 Raffle Entry",
+                "tier-1-feat-2": "Standard Prize Pool",
+                "tier-1-feat-3": "Email Notification",
+                "tier-1-btn": "Buy Basic",
+                "tier-2-name": "Premium",
+                "tier-2-badge": "Best Value",
+                "tier-2-price": "$35 USD",
+                "tier-2-feat-1": "5 Raffle Entries",
+                "tier-2-feat-2": "Premium Prize Pool",
+                "tier-2-feat-3": "SMS + Email Alerts",
+                "tier-2-feat-4": "Bonus Entry (Limited)",
+                "tier-2-btn": "Buy Premium",
+                "tier-3-name": "VIP",
+                "tier-3-price": "$60 USD",
+                "tier-3-feat-1": "20 Raffle Entries",
+                "tier-3-feat-2": "VIP Prize Pool",
+                "tier-3-feat-3": "Priority Support",
+                "tier-3-feat-4": "Exclusive Bonus Gift",
+                "tier-3-btn": "Buy VIP",
+                // Services
+                "services-title": "What You Get",
+                "services-sub": "Everything you need to boost your sales.",
+                "feature-1-title": "Viral Raffles",
+                "feature-1-desc": "Your products as main prizes.",
+                "feature-2-title": "Ambassador Models",
+                "feature-2-desc": "Premium content for your audience.",
+                "feature-3-title": "High Social Impact",
+                "feature-3-desc": "Instagram, TikTok & Facebook.",
+                "feature-4-title": "Lead Generation",
+                "feature-4-desc": "Engaged audiences.",
+                "feature-5-title": "Content Library",
+                "feature-5-desc": "HD photos & videos.",
+                "feature-6-title": "Measurable Results",
+                "feature-6-desc": "Detailed reports.",
+                // How
+                "how-title": "How It Works",
+                "how-sub": "4 simple steps.",
+                "step-1-title": "Product Selection",
+                "step-1-desc": "Choose your product.",
+                "step-2-title": "Content Creation",
+                "step-2-desc": "Premium photos & videos.",
+                "step-3-title": "Campaign Launch",
+                "step-3-desc": "Attractive raffle.",
+                "step-4-title": "Results & Growth",
+                "step-4-desc": "Visibility & sales.",
+                // Models
+                "models-title": "Our Ambassador Models",
+                "models-sub": "Models ready for your brand.",
+                "models-view": "View Profile",
+                "models-see-all": "See All Models",
+                // Packages
+                "packages-title": "Partnership Packages",
+                "packages-sub": "Choose your plan.",
+                "pack-popular": "Most Popular",
+                "pack-1-name": "LAUNCH",
+                "pack-1-tag": "Ideal to Start",
+                "pack-1-li-1": "Single product campaign",
+                "pack-1-li-2": "Social media promotion",
+                "pack-1-li-3": "Localized exposure",
+                "pack-1-li-4": "1 ambassador model",
+                "pack-1-btn": "Choose This",
+                "pack-2-name": "GROWTH",
+                "pack-2-tag": "More Reach & Impact",
+                "pack-2-li-1": "Multiple ambassador models",
+                "pack-2-li-2": "Professional video reels",
+                "pack-2-li-3": "Co-branded landing pages",
+                "pack-2-li-4": "Expanded audience reach",
+                "pack-2-btn": "Choose This",
+                "pack-3-name": "PREMIER",
+                "pack-3-tag": "Annual Partnership",
+                "pack-3-li-1": "Recurring monthly campaigns",
+                "pack-3-li-2": "Priority scheduling",
+                "pack-3-li-3": "Category exclusivity",
+                "pack-3-li-4": "Detailed premium reports",
+                "pack-3-btn": "Choose This",
+                // CTA
+                "cta-application": "Application",
+                "cta-title": "Ready to Sell Tickets & Grow?",
+                "cta-desc": "Let's transform your products into irresistible campaigns. Tickets first!",
+                "cta-ticket-focus": "Tickets first. Everything else second.",
+                "cta-btn-1": "Buy Tickets Now",
+                "cta-btn-2": "Schedule a Meeting",
+                // Footer
+                "footer-text": "© 2026 Alianzas Pro · Your brand. Our platform."
+            }
+        };
 
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
-                el.textContent = translations[lang][key];
+        let currentLang = 'es';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.getElementById('currentLangLabel').textContent = lang.toUpperCase();
+
+            document.querySelectorAll('.lang-dropdown .dropdown-item').forEach(item => {
+                item.classList.toggle('active', item.dataset.lang === lang);
+            });
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            // Special handling for countdown text (keep timer, only update label if needed)
+            const timerEl = document.getElementById('countdown-timer');
+            if (timerEl && !timerEl.textContent.includes(':')) {
+                // If not showing time, reset it based on translation
+            }
+
+            localStorage.setItem('preferred-lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const saved = localStorage.getItem('preferred-lang');
+            if (saved && (saved === 'es' || saved === 'en')) {
+                setLanguage(saved);
+            } else {
+                const browserLang = navigator.language || navigator.languages?.[0] || 'es';
+                const lang = browserLang.startsWith('es') ? 'es' : 'en';
+                setLanguage(lang);
             }
         });
-
-        localStorage.setItem('preferred-lang', lang);
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const saved = localStorage.getItem('preferred-lang');
-        if (saved && (saved === 'es' || saved === 'en')) {
-            setLanguage(saved);
-        } else {
-            const browserLang = navigator.language || navigator.languages?.[0] || 'es';
-            const lang = browserLang.startsWith('es') ? 'es' : 'en';
-            setLanguage(lang);
-        }
-    });
-</script>
+    </script>
 
 </body>
 </html>
