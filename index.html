@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rifa Maracaibo | Aire Acondicionado Toshiba</title>
+    <title>Rifa Maracaibo | Modelos Embajadoras y Alianzas</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,21 +25,23 @@
         }
         .font-Oswald { font-family: "Oswald", sans-serif; }
         a { text-decoration: none; transition: 300ms; }
-        a:hover { text-decoration: underline; }
+        a:hover { text-decoration: none; }
+        .fs-14 { font-size: 14px; }
+        .top-unset { top: unset; }
 
         /* ===== HEADER ===== */
         #header2 {
             background: #313234;
             background: radial-gradient(circle, rgba(49,50,52,1) 0%, rgba(0,0,0,1) 100%);
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(255,215,0,0.15);
+            border-bottom: 1px solid rgba(247,201,72,0.15);
+            padding: 12px 0;
         }
         .logo-text {
             font-family: 'Oswald', sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
-            color: #fff;
             letter-spacing: 1px;
+            color: #fff;
             text-decoration: none;
         }
         .logo-text span {
@@ -48,37 +50,62 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+        .nav-link-custom {
+            color: #fff !important;
+            font-size: 13px;
+            border-radius: 50px;
+            padding: 8px 16px !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .nav-link-custom:hover { background: rgba(255,255,255,0.1); }
+        .nav-link-custom.active { background: #000; }
 
         /* Language Switcher */
-        .lang-switch {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+        .lang-switch { display: flex; gap: 8px; }
         .lang-switch a {
             color: #ccc;
             font-weight: 700;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 50px;
             border: 1px solid #444;
             transition: 0.3s;
             text-decoration: none;
         }
-        .lang-switch a:hover {
-            border-color: #f7c948;
-            color: #f7c948;
+        .lang-switch a:hover { border-color: #f7c948; color: #f7c948; }
+        .lang-switch a.active-lang { background: #f7c948; border-color: #f7c948; color: #000; }
+
+        /* ===== BUTTONS ===== */
+        .btn-yellow {
+            background: #f7c948; color: #000; font-weight: 700;
+            padding: 12px 30px; border-radius: 50px; border: none;
+            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;
+            display: inline-block; transition: 0.3s;
         }
-        .lang-switch a.active-lang {
-            background: #f7c948;
-            border-color: #f7c948;
-            color: #000;
+        .btn-yellow:hover { background: #fff; color: #000; transform: translateY(-3px); box-shadow: 0 10px 30px rgba(247,201,72,0.3); }
+
+        .btn-outline-white {
+            border: 2px solid #fff; color: #fff; font-weight: 700;
+            padding: 12px 30px; border-radius: 50px; background: transparent;
+            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;
+            display: inline-block; transition: 0.3s;
         }
+        .btn-outline-white:hover { background: #fff; color: #000; }
+
+        .btn-black {
+            background: #000; color: #fff; font-weight: 700;
+            padding: 10px 26px; border-radius: 50px; border: none;
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;
+            display: inline-block; transition: 0.3s;
+        }
+        .btn-black:hover { background: #333; color: #fff; transform: translateY(-2px); }
 
         /* ===== HERO ===== */
         .hero {
-            padding: 90px 0 70px;
+            padding: 80px 0 60px;
             background: linear-gradient(180deg, #0b0b0e 0%, #12121a 100%);
             text-align: center;
             border-bottom: 1px solid #26262e;
@@ -87,21 +114,15 @@
             display: inline-block;
             background: rgba(247,201,72,0.12);
             border: 1px solid rgba(247,201,72,0.25);
-            padding: 6px 20px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            color: #f7c948;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 600;
-            margin-bottom: 25px;
+            padding: 6px 20px; border-radius: 50px;
+            font-size: 0.8rem; color: #f7c948;
+            text-transform: uppercase; letter-spacing: 1.5px;
+            font-weight: 600; margin-bottom: 25px;
         }
         .hero h1 {
             font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 700;
-            text-transform: uppercase;
-            line-height: 1.1;
-            margin-bottom: 20px;
+            font-weight: 700; text-transform: uppercase;
+            line-height: 1.1; margin-bottom: 20px;
         }
         .hero h1 .highlight {
             background: linear-gradient(135deg, #f7c948, #ff8c00);
@@ -110,257 +131,335 @@
             background-clip: text;
         }
         .hero p {
-            font-size: 1.15rem;
-            color: #aaa;
-            max-width: 750px;
-            margin: 0 auto 35px;
+            font-size: 1.15rem; color: #aaa;
+            max-width: 750px; margin: 0 auto 35px;
         }
-        .hero .cta-group {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
+        .hero .cta-group { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
 
-        /* ===== BUTTONS ===== */
-        .btn-yellow {
-            background: #f7c948;
-            color: #000;
-            font-weight: 700;
-            padding: 14px 38px;
-            border-radius: 50px;
-            border: none;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: inline-block;
-            transition: 0.3s;
+        /* Stats */
+        .stats-row .stat-item i { font-size: 2rem; color: #f7c948; }
+        .stats-row .stat-item h3 { font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700; margin: 8px 0 0; }
+        .stats-row .stat-item p { color: #888; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+        /* ===== URGENCY BAR ===== */
+        .urgency-bar {
+            background: #1a1a22;
+            border-top: 1px solid #26262e;
+            border-bottom: 1px solid #26262e;
+            padding: 14px 0; text-align: center;
         }
-        .btn-yellow:hover {
-            background: #fff;
-            color: #000;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(247,201,72,0.3);
-        }
-        .btn-outline-white {
-            border: 2px solid #fff;
-            color: #fff;
-            font-weight: 700;
-            padding: 14px 38px;
-            border-radius: 50px;
-            background: transparent;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: inline-block;
-            transition: 0.3s;
-        }
-        .btn-outline-white:hover {
-            background: #fff;
-            color: #000;
-        }
+        .urgency-bar .urgency-text { font-size: 1rem; font-weight: 700; color: #f7c948; letter-spacing: 1px; }
+        .urgency-bar .urgency-text i { margin-right: 8px; }
+        .urgency-bar .countdown-big { font-size: 1.2rem; font-weight: 900; color: #fff; margin-left: 12px; }
 
         /* ===== SECTIONS ===== */
         section { padding: 70px 0; }
         .section-title {
             font-family: 'Oswald', sans-serif;
             font-size: clamp(2rem, 4.5vw, 2.8rem);
-            font-weight: 700;
-            text-transform: uppercase;
-            text-align: center;
-            margin-bottom: 10px;
+            font-weight: 700; text-transform: uppercase;
+            text-align: center; margin-bottom: 10px;
         }
         .section-sub {
-            text-align: center;
-            color: #999;
-            max-width: 650px;
-            margin: 0 auto 45px;
-            font-size: 1.05rem;
+            text-align: center; color: #999;
+            max-width: 650px; margin: 0 auto 45px; font-size: 1.05rem;
         }
         .section-dark { background: #0f0f13; }
 
-        /* ===== CARDS ===== */
-        .feature-card {
-            background: #15151b;
-            padding: 35px 25px;
-            border-radius: 20px;
-            border: 1px solid #26262e;
-            transition: 0.4s;
-            text-align: center;
-            height: 100%;
-        }
-        .feature-card:hover {
-            border-color: #f7c948;
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-        }
-        .feature-card i {
-            font-size: 2.8rem;
-            color: #f7c948;
-            margin-bottom: 18px;
-        }
-        .feature-card h4 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-        .feature-card p {
-            color: #999;
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        /* ===== TICKET CARD ===== */
-        .ticket-card {
-            background: #15151b;
-            border: 2px solid #26262e;
-            border-radius: 24px;
-            padding: 45px 35px;
-            text-align: center;
-            max-width: 520px;
-            margin: 0 auto;
+        /* ===== RAFFLE CARD ===== */
+        .raffle-card {
+            background: #15151b; border-radius: 24px;
+            border: 1px solid #26262e; overflow: hidden;
+            transition: 0.4s; height: 100%;
+            display: flex; flex-direction: column;
             position: relative;
-            transition: 0.3s;
         }
-        .ticket-card:hover {
-            border-color: #f7c948;
+        .raffle-card:hover { border-color: #f7c948; transform: translateY(-8px); }
+        .raffle-card .raffle-img {
+            height: 240px; background: linear-gradient(135deg, #1a1a22, #0f0f13);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 5rem; color: #f7c948;
+            border-bottom: 1px solid #26262e;
         }
-        .ticket-card .price {
-            font-size: 4.5rem;
-            font-weight: 900;
+        .raffle-card .raffle-body { padding: 28px 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .raffle-card .raffle-body h3 {
+            font-family: 'Oswald', sans-serif; font-size: 1.4rem;
+            font-weight: 700; text-transform: uppercase; margin-bottom: 5px;
+        }
+        .raffle-card .raffle-body .prize-value { color: #f7c948; font-weight: 700; font-size: 0.9rem; }
+        .raffle-card .raffle-body p { color: #aaa; font-size: 0.95rem; margin: 12px 0 20px; flex-grow: 1; }
+        .raffle-card .raffle-footer {
+            display: flex; justify-content: space-between; align-items: center;
+            border-top: 1px solid #26262e; padding-top: 18px; margin-top: 5px;
+            flex-wrap: wrap; gap: 10px;
+        }
+        .raffle-card .raffle-footer .ticket-price {
+            font-size: 1.9rem; font-weight: 900;
+            font-family: 'Oswald', sans-serif; color: #fff;
+        }
+        .raffle-card .raffle-footer .ticket-price small { font-size: 0.8rem; color: #888; }
+        .raffle-card .raffle-footer .tickets-left { color: #ff6b6b; font-weight: 700; font-size: 0.85rem; }
+        .raffle-card .badge-hot {
+            position: absolute; top: 15px; right: 15px;
+            background: #ff4444; color: #fff;
+            padding: 4px 14px; border-radius: 50px;
+            font-size: 0.7rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 1px;
             font-family: 'Oswald', sans-serif;
-            background: linear-gradient(135deg, #f7c948, #ff8c00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1;
-        }
-        .ticket-card .price small {
-            font-size: 1.2rem;
-            color: #888;
-            font-weight: 400;
-            -webkit-text-fill-color: #888;
-        }
-        .ticket-card .tickets-left {
-            display: inline-block;
-            background: rgba(255,68,68,0.15);
-            border: 1px solid rgba(255,68,68,0.4);
-            color: #ff6b6b;
-            padding: 6px 18px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin: 15px 0;
         }
 
-        /* ===== PROGRESS ===== */
-        .progress-wrap {
-            max-width: 700px;
-            margin: 30px auto 0;
+        /* ===== SOCIAL POSTS ===== */
+        .social-post {
+            background: #15151b; border-radius: 20px;
+            border: 1px solid #26262e; overflow: hidden; transition: 0.3s; height: 100%;
         }
-        .progress-wrap .progress {
-            height: 28px;
-            background: #1a1a22;
-            border-radius: 50px;
-            overflow: hidden;
-            border: 1px solid #26262e;
+        .social-post:hover { border-color: #555; transform: scale(1.02); }
+        .social-post .post-header {
+            display: flex; align-items: center;
+            padding: 12px 16px; gap: 12px;
+            border-bottom: 1px solid #26262e;
         }
-        .progress-wrap .progress-bar {
-            background: linear-gradient(90deg, #f7c948, #ff8c00);
-            font-weight: 700;
-            font-size: 0.9rem;
-            line-height: 28px;
-            color: #000;
+        .social-post .post-header .avatar {
+            width: 36px; height: 36px; border-radius: 50%;
+            background: #333; display: flex; align-items: center; justify-content: center;
+            font-weight: 700; color: #f7c948; font-size: 1rem;
         }
+        .social-post .post-header .username { font-weight: 700; color: #fff; font-size: 0.9rem; }
+        .social-post .post-header .platform { margin-left: auto; color: #888; font-size: 1.2rem; }
+        .social-post .post-media {
+            height: 240px; background: linear-gradient(135deg, #1a1a22, #0f0f13);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 3.5rem; color: #f7c948; position: relative;
+        }
+        .social-post .post-media .play-btn {
+            position: absolute; background: rgba(0,0,0,0.6); color: #fff;
+            font-size: 2.5rem; width: 65px; height: 65px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            border: 2px solid #fff;
+        }
+        .social-post .post-caption { padding: 14px 16px; color: #ccc; font-size: 0.9rem; border-bottom: 1px solid #26262e; }
+        .social-post .post-caption strong { color: #fff; }
+        .social-post .post-actions { padding: 10px 16px; display: flex; gap: 20px; color: #888; font-size: 0.85rem; }
+        .social-post .post-actions i { font-size: 1.1rem; margin-right: 5px; }
+
+        /* ===== MODELS GALLERY ===== */
+        .model-card {
+            border-radius: 20px; overflow: hidden; border: none;
+            background: transparent; position: relative; transition: 0.4s;
+        }
+        .model-card:hover { transform: scale(1.02); }
+        .model-card img {
+            width: 100%; height: 320px;
+            object-fit: cover; border-radius: 20px;
+        }
+        .model-card .overlay {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            padding: 30px 20px 20px;
+            background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+            border-radius: 0 0 20px 20px;
+        }
+        .model-card .overlay h5 {
+            font-family: 'Oswald', sans-serif; font-weight: 600;
+            text-transform: uppercase; margin-bottom: 3px; color: #fff;
+        }
+        .model-card .overlay p { color: #ccc; font-size: 0.8rem; margin-bottom: 12px; }
+        .model-card .overlay .btn-sm-white {
+            background: #fff; color: #000; font-weight: 700;
+            font-size: 0.75rem; padding: 6px 18px;
+            border-radius: 50px; border: none; transition: 0.3s;
+            display: inline-block; text-decoration: none;
+        }
+        .model-card .overlay .btn-sm-white:hover { background: #ccc; }
+        .model-card .badge-ambassador {
+            position: absolute; top: 15px; left: 15px;
+            background: #f7c948; color: #000;
+            font-weight: 800; font-size: 0.65rem;
+            padding: 4px 14px; border-radius: 50px;
+            text-transform: uppercase; letter-spacing: 1px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        /* ===== PARTNERSHIP CARDS (B2B) ===== */
+        .partner-card {
+            background: #15151b; padding: 35px 25px;
+            border-radius: 20px; border: 1px solid #26262e;
+            transition: 0.4s; text-align: center; height: 100%;
+        }
+        .partner-card:hover { border-color: #f7c948; transform: translateY(-8px); }
+        .partner-card i { font-size: 2.5rem; color: #f7c948; margin-bottom: 18px; }
+        .partner-card h4 {
+            font-family: 'Oswald', sans-serif; font-size: 1.15rem;
+            font-weight: 600; text-transform: uppercase; margin-bottom: 10px;
+        }
+        .partner-card p { color: #999; font-size: 0.9rem; margin: 0; }
+
+        /* ===== PACKAGES ===== */
+        .package-card {
+            background: #15151b; padding: 40px 28px;
+            border-radius: 24px; border: 1px solid #26262e;
+            transition: 0.4s; display: flex; flex-direction: column;
+            height: 100%; position: relative;
+        }
+        .package-card:hover { border-color: #f7c948; transform: translateY(-5px); }
+        .package-card.popular { border-color: #f7c948; background: #1a1a24; }
+        .package-card.popular .popular-badge {
+            position: absolute; top: -12px; right: 20px;
+            background: #f7c948; color: #000;
+            padding: 4px 18px; border-radius: 50px;
+            font-size: 0.7rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 1px;
+            font-family: 'Oswald', sans-serif;
+        }
+        .package-card h3 {
+            font-family: 'Oswald', sans-serif; font-size: 1.5rem;
+            font-weight: 700; text-transform: uppercase; margin-bottom: 4px;
+        }
+        .package-card .price-tag {
+            color: #f7c948; font-weight: 600; font-size: 0.85rem;
+            margin-bottom: 22px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .package-card ul { list-style: none; padding: 0; margin-bottom: 30px; flex-grow: 1; }
+        .package-card ul li { padding: 9px 0; border-bottom: 1px solid #26262e; color: #ccc; font-size: 0.9rem; }
+        .package-card ul li i { color: #f7c948; margin-right: 12px; }
 
         /* ===== CONTACT FORM ===== */
         .contact-form {
-            background: #15151b;
-            border-radius: 24px;
-            padding: 45px 35px;
-            border: 1px solid #26262e;
-            max-width: 600px;
-            margin: 0 auto;
+            background: #15151b; border-radius: 24px; padding: 45px 35px;
+            border: 1px solid #26262e; max-width: 600px; margin: 0 auto;
         }
         .contact-form .form-control {
-            background: #1a1a22;
-            border: 1px solid #333;
-            color: #fff;
-            border-radius: 50px;
-            padding: 14px 22px;
+            background: #1a1a22; border: 1px solid #333; color: #fff;
+            border-radius: 50px; padding: 14px 22px;
         }
-        .contact-form .form-control::placeholder {
-            color: #666;
-        }
-        .contact-form .form-control:focus {
-            border-color: #f7c948;
-            background: #222;
-            box-shadow: none;
-        }
-        .contact-form textarea.form-control {
-            border-radius: 20px;
-        }
+        .contact-form .form-control::placeholder { color: #666; }
+        .contact-form .form-control:focus { border-color: #f7c948; background: #222; box-shadow: none; }
+        .contact-form textarea.form-control { border-radius: 20px; }
 
         /* ===== FOOTER ===== */
-        footer {
-            padding: 45px 0 30px;
-            border-top: 1px solid #26262e;
-            text-align: center;
+        footer { padding: 45px 0 30px; border-top: 1px solid #26262e; text-align: center; }
+        footer .location { color: #aaa; font-size: 0.95rem; }
+        footer .location i { color: #f7c948; }
+        footer .socials-footer a { color: #888; font-size: 1.5rem; transition: 0.3s; margin: 0 10px; }
+        footer .socials-footer a:hover { color: #f7c948; transform: scale(1.1); }
+        footer p { color: #666; font-size: 0.85rem; margin-top: 12px; }
+
+        /* ===== FLOATING BUY ===== */
+        .floating-buy {
+            position: fixed; bottom: 20px; right: 20px; z-index: 9999;
+            background: #f7c948; color: #000; font-weight: 900;
+            padding: 12px 24px; border-radius: 50px;
+            box-shadow: 0 8px 30px rgba(247,201,72,0.4);
+            text-transform: uppercase; font-size: 0.8rem;
+            letter-spacing: 1px; border: none; transition: 300ms;
+            display: flex; align-items: center; gap: 8px;
         }
-        footer .location {
-            color: #aaa;
-            font-size: 0.95rem;
-        }
-        footer .location i {
-            color: #f7c948;
-        }
-        footer p {
-            color: #666;
-            font-size: 0.85rem;
-            margin-top: 12px;
+        .floating-buy:hover { background: #fff; color: #000; transform: scale(1.05); }
+        @media (max-width: 576px) {
+            .floating-buy { padding: 9px 16px; font-size: 0.7rem; bottom: 10px; right: 10px; }
         }
 
+        /* ===== OFF CANVAS ===== */
+        .offcanvas { background: #000 !important; }
+        .offcanvas .nav-link {
+            color: #ccc !important; font-weight: 600;
+            text-transform: uppercase; font-size: 0.95rem; padding: 12px 0;
+        }
+        .offcanvas .nav-link:hover { color: #f7c948 !important; }
+
         /* ===== RESPONSIVE ===== */
+        @media (max-width: 991px) {
+            .social-icons-header { display: none; }
+        }
         @media (max-width: 768px) {
-            .hero { padding: 60px 0 50px; }
-            .hero h1 { font-size: 2.2rem; }
+            .hero { padding: 50px 0 40px; }
+            .hero h1 { font-size: 2.1rem; }
             section { padding: 50px 0; }
-            .ticket-card .price { font-size: 3.2rem; }
-            .ticket-card { padding: 35px 25px; }
-            .contact-form { padding: 35px 25px; }
+            .raffle-card .raffle-img { height: 180px; font-size: 4rem; }
+            .social-post .post-media { height: 180px; }
+            .model-card img { height: 260px; }
         }
         @media (max-width: 576px) {
             .logo-text { font-size: 1.4rem; }
-            .btn-yellow, .btn-outline-white { padding: 12px 26px; font-size: 0.85rem; }
+            .raffle-card .raffle-footer .ticket-price { font-size: 1.5rem; }
+            .btn-yellow, .btn-outline-white { padding: 10px 22px; font-size: 0.8rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- ===== FLOATING BUY ===== -->
+    <a href="#raffle" class="floating-buy">
+        <i class="bi bi-ticket-perforated"></i> <span data-i18n="floating-buy">Comprar Boleto</span>
+    </a>
+
     <!-- ===== HEADER ===== -->
     <header id="header2">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-6 col-md-4">
+                <!-- Logo -->
+                <div class="col-6 col-md-3">
                     <a href="#" class="logo-text">RIFA <span>MARACAIBO</span></a>
                 </div>
-                <div class="col-6 col-md-8 d-flex justify-content-end">
-                    <div class="lang-switch">
+
+                <!-- Desktop Nav -->
+                <div class="col-md-5 d-none d-lg-block">
+                    <nav class="navbar navbar-expand-lg py-0">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#raffle" class="nav-link nav-link-custom active" data-i18n="nav-raffle">Rifa</a></li>
+                            <li class="nav-item"><a href="#social" class="nav-link nav-link-custom" data-i18n="nav-social">Promos</a></li>
+                            <li class="nav-item"><a href="#models" class="nav-link nav-link-custom" data-i18n="nav-models">Modelos</a></li>
+                            <li class="nav-item"><a href="#partner" class="nav-link nav-link-custom" data-i18n="nav-partner">Alianzas</a></li>
+                            <li class="nav-item"><a href="#contact" class="nav-link nav-link-custom" data-i18n="nav-contact">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Language + Hamburger -->
+                <div class="col-6 col-md-4 d-flex justify-content-end align-items-center">
+                    <div class="lang-switch me-2">
                         <a href="#" data-lang="es" class="active-lang" onclick="setLanguage('es'); return false;">ES</a>
                         <a href="#" data-lang="en" onclick="setLanguage('en'); return false;">EN</a>
                     </div>
+                    <button class="btn btn-link text-white p-0 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                        <i class="bi bi-list fs-2"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- ===== OFF CANVAS ===== -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <a href="#" class="logo-text">RIFA <span>MARACAIBO</span></a>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav fw-bold">
+                <li class="nav-item"><a class="nav-link nav-link-custom active" href="#raffle" data-i18n="nav-raffle">Rifa</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#social" data-i18n="nav-social">Promos</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#models" data-i18n="nav-models">Modelos</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#partner" data-i18n="nav-partner">Alianzas</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact" data-i18n="nav-contact">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===== URGENCY BAR ===== -->
+    <div class="urgency-bar">
+        <div class="container">
+            <span class="urgency-text" data-i18n="urgency-text">
+                <i class="bi bi-fire"></i> ¡Boletos Limitados Disponibles!
+            </span>
+            <span class="countdown-big" id="countdown-timer">⏳ 24:00:00</span>
+        </div>
+    </div>
+
     <!-- ===== HERO ===== -->
     <section class="hero">
         <div class="container text-center">
             <div class="sub-badge" data-i18n="hero-badge">
-                <i class="bi bi-lightning-fill me-1"></i> Rifa Beta · Maracaibo
+                <i class="bi bi-ticket-perforated me-1"></i> Rifa Beta · Maracaibo
             </div>
             <h1>
                 <span data-i18n="hero-title-1">GANA UN</span><br>
@@ -370,109 +469,287 @@
                 12,000 BTU · Compresor Toshiba · Tubería de cobre · Refrigerante R32 · 220V
             </p>
             <div class="cta-group">
-                <a href="#contact" class="btn-yellow" data-i18n="hero-cta">
-                    <i class="bi bi-ticket-perforated me-2"></i> Comprar Boletos
+                <a href="#raffle" class="btn-yellow">
+                    <i class="bi bi-ticket-perforated me-2"></i> <span data-i18n="hero-cta">Comprar Boletos</span>
                 </a>
-                <a href="#prize" class="btn-outline-white" data-i18n="hero-cta-2">
-                    <i class="bi bi-info-circle me-2"></i> Ver Detalles
+                <a href="#partner" class="btn-outline-white">
+                    <i class="bi bi-briefcase me-2"></i> <span data-i18n="hero-cta-2">Alianzas Comerciales</span>
                 </a>
             </div>
-        </div>
-    </section>
 
-    <!-- ===== PRIZE DETAILS ===== -->
-    <section id="prize">
-        <div class="container">
-            <h2 class="section-title" data-i18n="prize-title">🎁 Detalles del Premio</h2>
-            <p class="section-sub" data-i18n="prize-sub">Un premio de alta calidad, ideal para el clima de Maracaibo.</p>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <i class="bi bi-snow2"></i>
-                        <h4 data-i18n="prize-1-title">12,000 BTU</h4>
-                        <p data-i18n="prize-1-desc">Capacidad de enfriamiento ideal para habitaciones medianas.</p>
-                    </div>
+            <!-- Stats -->
+            <div class="row stats-row mt-5 g-4">
+                <div class="col-4 stat-item">
+                    <i class="bi bi-ticket-perforated"></i>
+                    <h3>75</h3>
+                    <p data-i18n="stat-1">Boletos Totales</p>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <i class="bi bi-gear-fill"></i>
-                        <h4 data-i18n="prize-2-title">Compresor Toshiba</h4>
-                        <p data-i18n="prize-2-desc">Tecnología japonesa, duradera y eficiente.</p>
-                    </div>
+                <div class="col-4 stat-item">
+                    <i class="bi bi-cash-coin"></i>
+                    <h3>$10</h3>
+                    <p data-i18n="stat-2">Por Boleto</p>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <i class="bi bi-droplet-fill"></i>
-                        <h4 data-i18n="prize-3-title">Refrigerante R32</h4>
-                        <p data-i18n="prize-3-desc">Ecológico y de alto rendimiento.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <i class="bi bi-plug-fill"></i>
-                        <h4 data-i18n="prize-4-title">220V</h4>
-                        <p data-i18n="prize-4-desc">Compatible con la red eléctrica local.</p>
-                    </div>
+                <div class="col-4 stat-item">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <h3>MBO</h3>
+                    <p data-i18n="stat-3">Maracaibo</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== TICKET ===== -->
-    <section class="section-dark">
+    <!-- ===== RAFFLE (PRIMARY) ===== -->
+    <section class="section-dark" id="raffle">
         <div class="container">
-            <h2 class="section-title" data-i18n="ticket-title">🎟️ Compra tu Boleto</h2>
-            <p class="section-sub" data-i18n="ticket-sub">Solo 75 boletos disponibles. El sorteo se realiza cuando se vendan todos.</p>
+            <h2 class="section-title" data-i18n="raffle-title">🎟️ Rifa Actual</h2>
+            <p class="section-sub" data-i18n="raffle-sub">Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.</p>
 
-            <div class="ticket-card">
-                <div class="price">$10 <small>USD</small></div>
-                <div class="tickets-left" data-i18n="tickets-left">🔥 Quedan pocos boletos</div>
-                <p class="text-muted mt-3 mb-4" data-i18n="ticket-note">
-                    El manager de Maracaibo coordina el pago y la entrega de tu boleto.
-                </p>
-                <a href="#contact" class="btn-yellow w-100" data-i18n="ticket-cta">
-                    <i class="bi bi-cart-check me-2"></i> Quiero mi Boleto
-                </a>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="raffle-card position-relative">
+                        <span class="badge-hot" data-i18n="badge-hot">🔥 Beta</span>
+                        <div class="raffle-img"><i class="bi bi-snow"></i></div>
+                        <div class="raffle-body">
+                            <h3 data-i18n="raffle-title-1">Aire Acondicionado Toshiba 12,000 BTU</h3>
+                            <div class="prize-value" data-i18n="raffle-value">💰 Compresor Toshiba · R32 · 220V</div>
+                            <p data-i18n="raffle-desc">Incluye tubería de cobre, instalación básica y garantía. Ideal para el clima de Maracaibo.</p>
+                            <div class="raffle-footer">
+                                <div>
+                                    <div class="ticket-price">$10 <small>USD</small></div>
+                                    <div class="tickets-left" data-i18n="raffle-left">🔥 Solo 75 boletos</div>
+                                </div>
+                                <a href="#contact" class="btn-yellow" data-i18n="raffle-btn">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Progress -->
-                <div class="progress-wrap">
-                    <div class="d-flex justify-content-between mb-2">
-                        <span class="small text-muted" data-i18n="progress-sold">Vendidos</span>
-                        <span class="small"><strong id="sold-count">0</strong> / 75</span>
-                    </div>
-                    <div class="progress">
-                        <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="75">0%</div>
+                <div class="col-md-6 col-lg-5 d-flex align-items-center">
+                    <div class="w-100">
+                        <h4 class="font-Oswald mb-3" data-i18n="progress-title">Progreso de Ventas</h4>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted" data-i18n="progress-sold">Vendidos</span>
+                            <span><strong id="sold-count">0</strong> / 75</span>
+                        </div>
+                        <div class="progress" style="height:28px;background:#1a1a22;border-radius:50px;overflow:hidden;border:1px solid #26262e;">
+                            <div id="progress-bar" class="progress-bar" role="progressbar" style="width:0%;background:linear-gradient(90deg,#f7c948,#ff8c00);color:#000;font-weight:700;line-height:28px;">0%</div>
+                        </div>
+                        <p class="mt-3 text-muted small" data-i18n="progress-note">
+                            El manager de Maracaibo coordina el pago y la entrega.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== HOW TO BUY ===== -->
-    <section>
+    <!-- ===== SOCIAL MEDIA PROMOS ===== -->
+    <section id="social">
         <div class="container">
-            <h2 class="section-title" data-i18n="how-title">⚡ ¿Cómo Comprar?</h2>
-            <p class="section-sub" data-i18n="how-sub">Tres pasos simples para participar.</p>
+            <h2 class="section-title" data-i18n="social-title">📱 Promociones en Redes</h2>
+            <p class="section-sub" data-i18n="social-sub">Nuestras modelos embajadoras promocionan la rifa en Instagram y TikTok.</p>
+
             <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="social-post">
+                        <div class="post-header">
+                            <div class="avatar">V</div>
+                            <span class="username">@veronica_vee</span>
+                            <span class="platform"><i class="bi bi-instagram"></i></span>
+                        </div>
+                        <div class="post-media">
+                            <i class="bi bi-play-circle-fill"></i>
+                            <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+                        </div>
+                        <div class="post-caption" data-i18n="post-1-caption">
+                            <strong>🔥 ¡Rifa Toshiba 12,000 BTU!</strong> Solo 75 boletos a $10. Link en bio. #Maracaibo #Rifa
+                        </div>
+                        <div class="post-actions">
+                            <span><i class="bi bi-heart-fill" style="color:#ff4444;"></i> 1.2K</span>
+                            <span><i class="bi bi-chat-fill"></i> 234</span>
+                            <span><i class="bi bi-share-fill"></i> 89</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="social-post">
+                        <div class="post-header">
+                            <div class="avatar">M</div>
+                            <span class="username">@model_maria</span>
+                            <span class="platform"><i class="bi bi-tiktok"></i></span>
+                        </div>
+                        <div class="post-media">
+                            <i class="bi bi-play-circle-fill"></i>
+                            <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+                        </div>
+                        <div class="post-caption" data-i18n="post-2-caption">
+                            <strong>❄️ ¡Sorteo Aire Toshiba!</strong> No más calor en Maracaibo. Boletos volando! #Toshiba #Rifa
+                        </div>
+                        <div class="post-actions">
+                            <span><i class="bi bi-heart-fill" style="color:#ff4444;"></i> 845</span>
+                            <span><i class="bi bi-chat-fill"></i> 156</span>
+                            <span><i class="bi bi-share-fill"></i> 45</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="social-post">
+                        <div class="post-header">
+                            <div class="avatar">A</div>
+                            <span class="username">@ambassador_ana</span>
+                            <span class="platform"><i class="bi bi-instagram"></i></span>
+                        </div>
+                        <div class="post-media">
+                            <i class="bi bi-play-circle-fill"></i>
+                            <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+                        </div>
+                        <div class="post-caption" data-i18n="post-3-caption">
+                            <strong>💰 Solo $10 por boleto!</strong> Participa ya. Sorteo al vender todos. #Maracaibo #Sorteo
+                        </div>
+                        <div class="post-actions">
+                            <span><i class="bi bi-heart-fill" style="color:#ff4444;"></i> 2.1K</span>
+                            <span><i class="bi bi-chat-fill"></i> 312</span>
+                            <span><i class="bi bi-share-fill"></i> 127</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODELS GALLERY ===== -->
+    <section class="section-dark" id="models">
+        <div class="container">
+            <h2 class="section-title" data-i18n="models-title">👩‍💼 Modelos Embajadoras</h2>
+            <p class="section-sub" data-i18n="models-sub">Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.</p>
+
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
+                        <span class="badge-ambassador" data-i18n="models-badge">⭐ Embajadora</span>
+                        <img src="https://veronicavee.com/storage/avatars/V8s82JJTS2hi0HUlVUumkvh5TDa2fPHdn5Z0mJSM.jpg" alt="Model" class="card-img h-100 model-img object-fit-cover">
+                        <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
+                            <h5 class="mb-1 fw-bold">Veronica Vee</h5>
+                            <p class="fs-14 mb-2">20 yrs • Maracaibo</p>
+                            <a href="#" class="btn-sm-white" data-i18n="models-view">Ver Perfil</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
+                        <span class="badge-ambassador" data-i18n="models-badge">⭐ Embajadora</span>
+                        <img src="https://veronicavee.com/storage/avatars/19.jpeg" alt="Model" class="card-img h-100 model-img object-fit-cover">
+                        <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
+                            <h5 class="mb-1 fw-bold">Maria Gomez</h5>
+                            <p class="fs-14 mb-2">24 yrs • Maracaibo</p>
+                            <a href="#" class="btn-sm-white" data-i18n="models-view">Ver Perfil</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
+                        <img src="https://veronicavee.com/storage/models/avatars/WzXsM2zlbJ3wXxmeQkCTGOa8Jb29OV4Ap75Xmusd.png" alt="Model" class="card-img h-100 model-img object-fit-cover">
+                        <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
+                            <h5 class="mb-1 fw-bold">Ana Rodriguez</h5>
+                            <p class="fs-14 mb-2">22 yrs • Maracaibo</p>
+                            <a href="#" class="btn-sm-white" data-i18n="models-view">Ver Perfil</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-white model-card">
+                        <img src="https://veronicavee.com/storage/models/avatars/Yno7Y5RUDd3nDJEigvMJ4Nbo8SyljJQ4odeGQoHg.jpg" alt="Model" class="card-img h-100 model-img object-fit-cover">
+                        <div class="card-img-overlay rounded-0 top-unset pt-5 overlay">
+                            <h5 class="mb-1 fw-bold">Lucia Perez</h5>
+                            <p class="fs-14 mb-2">26 yrs • Maracaibo</p>
+                            <a href="#" class="btn-sm-white" data-i18n="models-view">Ver Perfil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn-outline-white" data-i18n="models-see-all">Ver Todas <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PARTNERSHIP (B2B) ===== -->
+    <section id="partner">
+        <div class="container">
+            <h2 class="section-title" data-i18n="partner-title">🚀 Eleva Tu Marca</h2>
+            <p class="section-sub" data-i18n="partner-sub">Promociona tus productos con nuestras rifas virales y modelos embajadoras.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="partner-card">
+                        <i class="bi bi-gift-fill"></i>
+                        <h4 data-i18n="partner-feat-1">Rifas Virales</h4>
+                        <p data-i18n="partner-feat-1-desc">Tus productos como premios que generan buzz masivo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="partner-card">
+                        <i class="bi bi-person-fill"></i>
+                        <h4 data-i18n="partner-feat-2">Modelos Embajadoras</h4>
+                        <p data-i18n="partner-feat-2-desc">Contenido premium creado por modelos seleccionadas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="partner-card">
+                        <i class="bi bi-share-fill"></i>
+                        <h4 data-i18n="partner-feat-3">Exposición en Redes</h4>
+                        <p data-i18n="partner-feat-3-desc">Instagram, TikTok y Facebook – alcance masivo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="partner-card">
+                        <i class="bi bi-star-fill"></i>
+                        <h4 data-i18n="partner-feat-4">Selección Curada</h4>
+                        <p data-i18n="partner-feat-4-desc">Solo unas pocas modelos son elegidas para tu negocio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Packages -->
+            <div class="row g-4 mt-5">
                 <div class="col-md-4">
-                    <div class="feature-card">
-                        <i class="bi bi-whatsapp"></i>
-                        <h4 data-i18n="how-1-title">1. Contacta al Manager</h4>
-                        <p data-i18n="how-1-desc">Escríbenos por WhatsApp o completa el formulario.</p>
+                    <div class="package-card">
+                        <h3 data-i18n="pack-1-name">LANZAMIENTO</h3>
+                        <div class="price-tag" data-i18n="pack-1-tag">Ideal para empezar</div>
+                        <ul>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-1">Campaña de un producto</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-2">Promoción en redes</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">1 modelo embajadora</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-outline-white" data-i18n="pack-1-btn">Elegir</a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="feature-card">
-                        <i class="bi bi-cash-coin"></i>
-                        <h4 data-i18n="how-2-title">2. Paga $10</h4>
-                        <p data-i18n="how-2-desc">El manager coordina el pago y te entrega tu boleto.</p>
+                    <div class="package-card popular">
+                        <div class="popular-badge" data-i18n="pack-popular">Más Popular</div>
+                        <h3 data-i18n="pack-2-name">CRECIMIENTO</h3>
+                        <div class="price-tag" data-i18n="pack-2-tag">Más alcance</div>
+                        <ul>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-1">Múltiples modelos</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-2">Reels profesionales</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Audiencia expandida</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-black" style="background:#f7c948;color:#000;" data-i18n="pack-2-btn">Elegir</a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="feature-card">
-                        <i class="bi bi-trophy-fill"></i>
-                        <h4 data-i18n="how-3-title">3. Espera el Sorteo</h4>
-                        <p data-i18n="how-3-desc">Cuando se vendan los 75 boletos, se realiza el sorteo.</p>
+                    <div class="package-card">
+                        <h3 data-i18n="pack-3-name">PREMIER ÉLITE</h3>
+                        <div class="price-tag" data-i18n="pack-3-tag">Alianza anual</div>
+                        <ul>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-1">Campañas mensuales</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-2">Programación prioritaria</span></li>
+                            <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Exclusividad por categoría</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-outline-white" data-i18n="pack-3-btn">Elegir</a>
                     </div>
                 </div>
             </div>
@@ -482,10 +759,8 @@
     <!-- ===== CONTACT ===== -->
     <section class="section-dark" id="contact">
         <div class="container">
-            <h2 class="section-title" data-i18n="contact-title">📩 Compra tus Boletos</h2>
-            <p class="section-sub" data-i18n="contact-sub">
-                Completa el formulario y el manager de Maracaibo te contactará lo antes posible.
-            </p>
+            <h2 class="section-title" data-i18n="contact-title">📩 Contáctanos</h2>
+            <p class="section-sub" data-i18n="contact-sub">Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.</p>
 
             <div class="contact-form">
                 <form>
@@ -496,18 +771,19 @@
                         <input type="tel" class="form-control" placeholder="WhatsApp / Teléfono" data-i18n="form-phone" required>
                     </div>
                     <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Email (opcional)" data-i18n="form-email">
+                        <select class="form-control" style="background:#1a1a22;border:1px solid #333;color:#fff;border-radius:50px;padding:14px 22px;">
+                            <option value="" data-i18n="form-select-ph">Estoy interesado en...</option>
+                            <option value="ticket" data-i18n="form-select-1">Comprar un boleto de rifa</option>
+                            <option value="partner" data-i18n="form-select-2">Alianza comercial para mi negocio</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <textarea class="form-control" rows="3" placeholder="Mensaje (opcional)" data-i18n="form-message"></textarea>
                     </div>
                     <button type="submit" class="btn-yellow w-100" data-i18n="form-submit">
-                        <i class="bi bi-send me-2"></i> Enviar Solicitud
+                        <i class="bi bi-send me-2"></i> Enviar
                     </button>
                 </form>
-                <p class="text-muted text-center mt-3 small" data-i18n="form-note">
-                    Proceso transparente y confiable.
-                </p>
             </div>
         </div>
     </section>
@@ -519,98 +795,200 @@
             <p class="location mt-2">
                 <i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela
             </p>
-            <p data-i18n="footer-text">
-                © 2026 Rifa Maracaibo · Sorteo transparente, proceso confiable.
-            </p>
+            <div class="socials-footer">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-tiktok"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+            </div>
+            <p data-i18n="footer-text">© 2026 Rifa Maracaibo · Sorteo transparente, proceso confiable.</p>
         </div>
     </footer>
 
     <!-- ===== BOOTSTRAP JS ===== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- ===== COUNTDOWN ===== -->
+    <script>
+        function startCountdown() {
+            let hours = 24, minutes = 0, seconds = 0;
+            const timer = document.getElementById('countdown-timer');
+            function update() {
+                if (hours === 0 && minutes === 0 && seconds === 0) {
+                    timer.textContent = '⏳ ¡AGOTADO!';
+                    return;
+                }
+                if (seconds === 0) {
+                    if (minutes === 0) { if (hours > 0) { hours--; minutes = 59; seconds = 59; } }
+                    else { minutes--; seconds = 59; }
+                } else { seconds--; }
+                const h = String(hours).padStart(2, '0');
+                const m = String(minutes).padStart(2, '0');
+                const s = String(seconds).padStart(2, '0');
+                timer.textContent = `⏳ ${h}:${m}:${s}`;
+            }
+            setInterval(update, 1000);
+        }
+        document.addEventListener('DOMContentLoaded', startCountdown);
+    </script>
+
     <!-- ===== LANGUAGE TOGGLE ===== -->
     <script>
         const translations = {
             es: {
-                "hero-badge": "Rifa Beta · Maracaibo",
+                "floating-buy": "Comprar Boleto",
+                "nav-raffle": "Rifa",
+                "nav-social": "Promos",
+                "nav-models": "Modelos",
+                "nav-partner": "Alianzas",
+                "nav-contact": "Contacto",
+                "urgency-text": "🔥 ¡Boletos Limitados Disponibles!",
+                "hero-badge": "🎟️ Rifa Beta · Maracaibo",
                 "hero-title-1": "GANA UN",
                 "hero-title-2": "AIRE ACONDICIONADO TOSHIBA",
                 "hero-desc": "12,000 BTU · Compresor Toshiba · Tubería de cobre · Refrigerante R32 · 220V",
                 "hero-cta": "Comprar Boletos",
-                "hero-cta-2": "Ver Detalles",
-                "prize-title": "🎁 Detalles del Premio",
-                "prize-sub": "Un premio de alta calidad, ideal para el clima de Maracaibo.",
-                "prize-1-title": "12,000 BTU",
-                "prize-1-desc": "Capacidad de enfriamiento ideal para habitaciones medianas.",
-                "prize-2-title": "Compresor Toshiba",
-                "prize-2-desc": "Tecnología japonesa, duradera y eficiente.",
-                "prize-3-title": "Refrigerante R32",
-                "prize-3-desc": "Ecológico y de alto rendimiento.",
-                "prize-4-title": "220V",
-                "prize-4-desc": "Compatible con la red eléctrica local.",
-                "ticket-title": "🎟️ Compra tu Boleto",
-                "ticket-sub": "Solo 75 boletos disponibles. El sorteo se realiza cuando se vendan todos.",
-                "tickets-left": "🔥 Quedan pocos boletos",
-                "ticket-note": "El manager de Maracaibo coordina el pago y la entrega de tu boleto.",
-                "ticket-cta": "Quiero mi Boleto",
+                "hero-cta-2": "Alianzas Comerciales",
+                "stat-1": "Boletos Totales",
+                "stat-2": "Por Boleto",
+                "stat-3": "Maracaibo",
+                "raffle-title": "🎟️ Rifa Actual",
+                "raffle-sub": "Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.",
+                "badge-hot": "🔥 Beta",
+                "raffle-title-1": "Aire Acondicionado Toshiba 12,000 BTU",
+                "raffle-value": "💰 Compresor Toshiba · R32 · 220V",
+                "raffle-desc": "Incluye tubería de cobre, instalación básica y garantía. Ideal para el clima de Maracaibo.",
+                "raffle-left": "🔥 Solo 75 boletos",
+                "raffle-btn": "Comprar",
+                "progress-title": "Progreso de Ventas",
                 "progress-sold": "Vendidos",
-                "how-title": "⚡ ¿Cómo Comprar?",
-                "how-sub": "Tres pasos simples para participar.",
-                "how-1-title": "1. Contacta al Manager",
-                "how-1-desc": "Escríbenos por WhatsApp o completa el formulario.",
-                "how-2-title": "2. Paga $10",
-                "how-2-desc": "El manager coordina el pago y te entrega tu boleto.",
-                "how-3-title": "3. Espera el Sorteo",
-                "how-3-desc": "Cuando se vendan los 75 boletos, se realiza el sorteo.",
-                "contact-title": "📩 Compra tus Boletos",
-                "contact-sub": "Completa el formulario y el manager de Maracaibo te contactará lo antes posible.",
+                "progress-note": "El manager de Maracaibo coordina el pago y la entrega.",
+                "social-title": "📱 Promociones en Redes",
+                "social-sub": "Nuestras modelos embajadoras promocionan la rifa en Instagram y TikTok.",
+                "post-1-caption": "🔥 ¡Rifa Toshiba 12,000 BTU! Solo 75 boletos a $10. Link en bio. #Maracaibo #Rifa",
+                "post-2-caption": "❄️ ¡Sorteo Aire Toshiba! No más calor en Maracaibo. Boletos volando! #Toshiba #Rifa",
+                "post-3-caption": "💰 Solo $10 por boleto! Participa ya. Sorteo al vender todos. #Maracaibo #Sorteo",
+                "models-title": "👩‍💼 Modelos Embajadoras",
+                "models-sub": "Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.",
+                "models-badge": "⭐ Embajadora",
+                "models-view": "Ver Perfil",
+                "models-see-all": "Ver Todas",
+                "partner-title": "🚀 Eleva Tu Marca",
+                "partner-sub": "Promociona tus productos con nuestras rifas virales y modelos embajadoras.",
+                "partner-feat-1": "Rifas Virales",
+                "partner-feat-1-desc": "Tus productos como premios que generan buzz masivo.",
+                "partner-feat-2": "Modelos Embajadoras",
+                "partner-feat-2-desc": "Contenido premium creado por modelos seleccionadas.",
+                "partner-feat-3": "Exposición en Redes",
+                "partner-feat-3-desc": "Instagram, TikTok y Facebook – alcance masivo.",
+                "partner-feat-4": "Selección Curada",
+                "partner-feat-4-desc": "Solo unas pocas modelos son elegidas para tu negocio.",
+                "pack-popular": "Más Popular",
+                "pack-1-name": "LANZAMIENTO",
+                "pack-1-tag": "Ideal para empezar",
+                "pack-1-li-1": "Campaña de un producto",
+                "pack-1-li-2": "Promoción en redes",
+                "pack-1-li-3": "1 modelo embajadora",
+                "pack-1-btn": "Elegir",
+                "pack-2-name": "CRECIMIENTO",
+                "pack-2-tag": "Más alcance",
+                "pack-2-li-1": "Múltiples modelos",
+                "pack-2-li-2": "Reels profesionales",
+                "pack-2-li-3": "Audiencia expandida",
+                "pack-2-btn": "Elegir",
+                "pack-3-name": "PREMIER ÉLITE",
+                "pack-3-tag": "Alianza anual",
+                "pack-3-li-1": "Campañas mensuales",
+                "pack-3-li-2": "Programación prioritaria",
+                "pack-3-li-3": "Exclusividad por categoría",
+                "pack-3-btn": "Elegir",
+                "contact-title": "📩 Contáctanos",
+                "contact-sub": "Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.",
                 "form-name": "Tu Nombre",
                 "form-phone": "WhatsApp / Teléfono",
-                "form-email": "Email (opcional)",
+                "form-select-ph": "Estoy interesado en...",
+                "form-select-1": "Comprar un boleto de rifa",
+                "form-select-2": "Alianza comercial para mi negocio",
                 "form-message": "Mensaje (opcional)",
-                "form-submit": "Enviar Solicitud",
-                "form-note": "Proceso transparente y confiable.",
+                "form-submit": "Enviar",
                 "footer-text": "© 2026 Rifa Maracaibo · Sorteo transparente, proceso confiable."
             },
             en: {
-                "hero-badge": "Beta Raffle · Maracaibo",
+                "floating-buy": "Buy Ticket",
+                "nav-raffle": "Raffle",
+                "nav-social": "Promos",
+                "nav-models": "Models",
+                "nav-partner": "Partners",
+                "nav-contact": "Contact",
+                "urgency-text": "🔥 Limited Tickets Available!",
+                "hero-badge": "🎟️ Beta Raffle · Maracaibo",
                 "hero-title-1": "WIN A",
                 "hero-title-2": "TOSHIBA AIR CONDITIONER",
                 "hero-desc": "12,000 BTU · Toshiba Compressor · Copper Tubing · R32 Refrigerant · 220V",
                 "hero-cta": "Buy Tickets",
-                "hero-cta-2": "View Details",
-                "prize-title": "🎁 Prize Details",
-                "prize-sub": "A high-quality prize, perfect for Maracaibo's climate.",
-                "prize-1-title": "12,000 BTU",
-                "prize-1-desc": "Ideal cooling capacity for medium rooms.",
-                "prize-2-title": "Toshiba Compressor",
-                "prize-2-desc": "Japanese technology, durable and efficient.",
-                "prize-3-title": "R32 Refrigerant",
-                "prize-3-desc": "Eco-friendly and high performance.",
-                "prize-4-title": "220V",
-                "prize-4-desc": "Compatible with local power grid.",
-                "ticket-title": "🎟️ Buy Your Ticket",
-                "ticket-sub": "Only 75 tickets available. The draw happens when all are sold.",
-                "tickets-left": "🔥 Few tickets left",
-                "ticket-note": "The Maracaibo manager coordinates payment and gives you your ticket.",
-                "ticket-cta": "I Want My Ticket",
+                "hero-cta-2": "Business Partnerships",
+                "stat-1": "Total Tickets",
+                "stat-2": "Per Ticket",
+                "stat-3": "Maracaibo",
+                "raffle-title": "🎟️ Current Raffle",
+                "raffle-sub": "Buy your ticket before they sell out. The draw happens when all 75 are sold.",
+                "badge-hot": "🔥 Beta",
+                "raffle-title-1": "Toshiba Air Conditioner 12,000 BTU",
+                "raffle-value": "💰 Toshiba Compressor · R32 · 220V",
+                "raffle-desc": "Includes copper tubing, basic installation and warranty. Ideal for Maracaibo's climate.",
+                "raffle-left": "🔥 Only 75 tickets",
+                "raffle-btn": "Buy",
+                "progress-title": "Sales Progress",
                 "progress-sold": "Sold",
-                "how-title": "⚡ How to Buy?",
-                "how-sub": "Three simple steps to participate.",
-                "how-1-title": "1. Contact the Manager",
-                "how-1-desc": "Message us on WhatsApp or fill out the form.",
-                "how-2-title": "2. Pay $10",
-                "how-2-desc": "The manager coordinates payment and gives you your ticket.",
-                "how-3-title": "3. Wait for the Draw",
-                "how-3-desc": "When all 75 tickets are sold, the draw takes place.",
-                "contact-title": "📩 Buy Your Tickets",
-                "contact-sub": "Fill out the form and the Maracaibo manager will contact you soon.",
+                "progress-note": "The Maracaibo manager coordinates payment and delivery.",
+                "social-title": "📱 Social Media Promos",
+                "social-sub": "Our ambassador models promote the raffle on Instagram and TikTok.",
+                "post-1-caption": "🔥 Toshiba 12,000 BTU Raffle! Only 75 tickets at $10. Link in bio. #Maracaibo #Raffle",
+                "post-2-caption": "❄️ Toshiba AC Giveaway! No more heat in Maracaibo. Tickets selling fast! #Toshiba #Raffle",
+                "post-3-caption": "💰 Only $10 per ticket! Join now. Draw when all sold. #Maracaibo #Raffle",
+                "models-title": "👩‍💼 Ambassador Models",
+                "models-sub": "The faces behind our campaigns. Only a few are selected as ambassadors.",
+                "models-badge": "⭐ Ambassador",
+                "models-view": "View Profile",
+                "models-see-all": "See All Models",
+                "partner-title": "🚀 Elevate Your Brand",
+                "partner-sub": "Promote your products with our viral raffles and ambassador models.",
+                "partner-feat-1": "Viral Raffles",
+                "partner-feat-1-desc": "Your products as prizes that generate massive buzz.",
+                "partner-feat-2": "Ambassador Models",
+                "partner-feat-2-desc": "Premium content created by handpicked models.",
+                "partner-feat-3": "Social Media Exposure",
+                "partner-feat-3-desc": "Instagram, TikTok & Facebook – massive reach.",
+                "partner-feat-4": "Curated Selection",
+                "partner-feat-4-desc": "Only a few select models are chosen for your business.",
+                "pack-popular": "Most Popular",
+                "pack-1-name": "LAUNCH",
+                "pack-1-tag": "Ideal to Start",
+                "pack-1-li-1": "Single product campaign",
+                "pack-1-li-2": "Social media promotion",
+                "pack-1-li-3": "1 ambassador model",
+                "pack-1-btn": "Choose This",
+                "pack-2-name": "GROWTH",
+                "pack-2-tag": "More Reach",
+                "pack-2-li-1": "Multiple models",
+                "pack-2-li-2": "Professional reels",
+                "pack-2-li-3": "Expanded audience",
+                "pack-2-btn": "Choose This",
+                "pack-3-name": "PREMIER ELITE",
+                "pack-3-tag": "Annual Partnership",
+                "pack-3-li-1": "Monthly campaigns",
+                "pack-3-li-2": "Priority scheduling",
+                "pack-3-li-3": "Category exclusivity",
+                "pack-3-btn": "Choose This",
+                "contact-title": "📩 Contact Us",
+                "contact-sub": "Buy tickets or request a business partnership. We'll respond within 24 hours.",
                 "form-name": "Your Name",
                 "form-phone": "WhatsApp / Phone",
-                "form-email": "Email (optional)",
+                "form-select-ph": "I am interested in...",
+                "form-select-1": "Buying a raffle ticket",
+                "form-select-2": "Business partnership",
                 "form-message": "Message (optional)",
-                "form-submit": "Send Request",
-                "form-note": "Transparent and trusted process.",
+                "form-submit": "Submit",
                 "footer-text": "© 2026 Rifa Maracaibo · Transparent draw, trusted process."
             }
         };
@@ -640,15 +1018,13 @@
                 setLanguage(browserLang.startsWith('es') ? 'es' : 'en');
             }
 
-            // Progress bar (update manually)
-            const sold = 0;
-            const total = 75;
+            // Progress bar
+            const sold = 0, total = 75;
             const percent = Math.round((sold / total) * 100);
             document.getElementById('sold-count').textContent = sold;
             const bar = document.getElementById('progress-bar');
             bar.style.width = percent + '%';
             bar.textContent = percent + '%';
-            bar.setAttribute('aria-valuenow', sold);
         });
     </script>
 
