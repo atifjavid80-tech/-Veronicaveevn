@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rifa Maracaibo | Veronica Vee Style</title>
+    <title>Rifa Maracaibo — Modelos Embajadoras & Alianzas</title>
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,14 +15,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ===== EXACT VERONICA VEE STYLE ===== */
+        /* ===== VERONICA VEE EXACT STYLE — BLACK & WHITE ONLY ===== */
         :root {
-            --gold: #f7c948;
-            --gold-dark: #d4a020;
-            --bg-dark: #000000;
+            --bg-black: #000000;
+            --bg-dark: #0a0a0a;
             --card-bg: #15151b;
             --border-color: #26262e;
+            --text-white: #ffffff;
             --text-muted: #aaaaaa;
+            --text-dim: #888888;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
@@ -30,8 +31,8 @@
 
         body {
             font-family: 'Lato', sans-serif;
-            background-color: var(--bg-dark);
-            color: #ffffff;
+            background-color: var(--bg-black);
+            color: var(--text-white);
             line-height: 1.6;
         }
 
@@ -45,59 +46,49 @@
 
         .container { max-width: 1200px; }
 
-        /* ===== HEADER (VeronicaVee exact) ===== */
+        /* ===== HEADER ===== */
         #header {
             background: #0a0a0a;
-            border-bottom: 1px solid rgba(247, 201, 72, 0.15);
+            border-bottom: 1px solid var(--border-color);
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            backdrop-filter: blur(8px);
         }
 
         .logo-text {
             font-family: 'Oswald', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
             letter-spacing: 1px;
-            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #fff;
             text-decoration: none;
         }
         .logo-text span {
             font-weight: 300;
-            color: #fff;
-            -webkit-text-fill-color: #fff;
+            color: #888;
         }
 
         .nav-link-custom {
             color: #cccccc !important;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             padding: 8px 16px !important;
             transition: 0.3s;
         }
-        .nav-link-custom:hover {
-            color: var(--gold) !important;
-        }
+        .nav-link-custom:hover,
         .nav-link-custom.active {
-            color: var(--gold) !important;
+            color: #ffffff !important;
         }
 
         /* Language Switcher */
-        .lang-switch {
-            display: flex;
-            gap: 8px;
-        }
+        .lang-switch { display: flex; gap: 8px; }
         .lang-switch a {
             color: #ccc;
             font-weight: 700;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             padding: 5px 14px;
             border-radius: 50px;
@@ -105,54 +96,84 @@
             transition: 0.3s;
         }
         .lang-switch a:hover {
-            border-color: var(--gold);
-            color: var(--gold);
+            border-color: #fff;
+            color: #fff;
         }
         .lang-switch a.active-lang {
-            background: var(--gold);
-            border-color: var(--gold);
+            background: #fff;
+            border-color: #fff;
             color: #000;
         }
 
-        /* ===== BUTTONS (VeronicaVee exact) ===== */
-        .btn-gold {
-            background: var(--gold);
+        /* ===== HERO ===== */
+        .hero {
+            padding: 90px 0 60px;
+            background: #000;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero .badge-pill {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #333;
+            padding: 7px 22px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: #ccc;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 45px;
+        }
+
+        .hero .cta-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 60px;
+        }
+
+        /* ===== BUTTONS (Black & White only) ===== */
+        .btn-white {
+            background: #fff;
             color: #000;
             font-weight: 700;
             padding: 14px 36px;
             border-radius: 50px;
             border: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             display: inline-block;
             transition: 0.3s;
             font-family: 'Lato', sans-serif;
         }
-        .btn-gold:hover {
-            background: #fff;
+        .btn-white:hover {
+            background: #ccc;
             color: #000;
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(247, 201, 72, 0.3);
-        }
-
-        .btn-outline-gold {
-            background: transparent;
-            color: var(--gold);
-            font-weight: 700;
-            padding: 12px 34px;
-            border-radius: 50px;
-            border: 2px solid var(--gold);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: inline-block;
-            transition: 0.3s;
-            font-family: 'Lato', sans-serif;
-        }
-        .btn-outline-gold:hover {
-            background: var(--gold);
-            color: #000;
         }
 
         .btn-outline-white {
@@ -162,7 +183,7 @@
             padding: 12px 34px;
             border-radius: 50px;
             border: 2px solid #fff;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             display: inline-block;
@@ -174,121 +195,234 @@
             color: #000;
         }
 
-        /* ===== HERO (VeronicaVee style) ===== */
-        .hero {
-            padding: 100px 0 80px;
-            background: linear-gradient(180deg, #000000 0%, #0f0f13 100%);
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .hero .badge-pill {
-            display: inline-block;
-            background: rgba(247, 201, 72, 0.12);
-            border: 1px solid rgba(247, 201, 72, 0.3);
-            padding: 8px 24px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-
-        .hero h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: clamp(2.8rem, 8vw, 5rem);
-            font-weight: 700;
-            text-transform: uppercase;
-            line-height: 1.05;
-            margin-bottom: 25px;
-            letter-spacing: -1px;
-        }
-
-        .hero h1 .gold-text {
-            background: linear-gradient(135deg, var(--gold), #ff8c00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
-
-        .hero .cta-group {
+        /* Stats */
+        .stats-row {
             display: flex;
             justify-content: center;
+            gap: 70px;
             flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        /* Stats (VeronicaVee exact) */
-        .stats-row {
-            margin-top: 60px;
             padding-top: 50px;
             border-top: 1px solid var(--border-color);
         }
-        .stat-item {
-            text-align: center;
-        }
+        .stat-item { text-align: center; }
         .stat-item h3 {
             font-family: 'Oswald', sans-serif;
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            color: var(--gold);
+            color: #fff;
             line-height: 1;
             margin-bottom: 8px;
         }
         .stat-item p {
             color: var(--text-muted);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-weight: 600;
             margin: 0;
         }
 
-        /* ===== SECTION TITLES (VeronicaVee style) ===== */
-        section {
-            padding: 90px 0;
-        }
+        /* ===== SECTIONS ===== */
+        section { padding: 80px 0; }
 
         .section-title {
             font-family: 'Oswald', sans-serif;
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
             font-weight: 700;
             text-transform: uppercase;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             letter-spacing: -0.5px;
-        }
-
-        .section-title .gold-text {
-            background: linear-gradient(135deg, var(--gold), #ff8c00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .section-sub {
             text-align: center;
             color: var(--text-muted);
             max-width: 600px;
-            margin: 0 auto 55px;
-            font-size: 1.05rem;
+            margin: 0 auto 50px;
+            font-size: 1rem;
         }
 
-        .section-dark {
-            background: #0a0a0a;
+        .section-dark { background: #0a0a0a; }
+
+        /* ===== RAFFLE CARD ===== */
+        .raffle-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            overflow: hidden;
+            max-width: 700px;
+            margin: 0 auto;
+            transition: 0.4s;
+        }
+        .raffle-card:hover {
+            border-color: #555;
+            transform: translateY(-5px);
+        }
+        .raffle-card .raffle-image {
+            height: 300px;
+            background: #0f0f13;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: #fff;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .raffle-card .raffle-body {
+            padding: 40px 35px;
+            text-align: center;
+        }
+        .raffle-card .raffle-body h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .raffle-card .raffle-body .prize-detail {
+            color: #ccc;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .raffle-card .raffle-body p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+        .raffle-card .price-display {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .raffle-card .price-display small {
+            font-size: 1.2rem;
+            color: #888;
+            font-weight: 400;
+        }
+        .raffle-card .tickets-left {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #444;
+            color: #ccc;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 25px;
         }
 
-        /* ===== CARDS (VeronicaVee exact) ===== */
-        .card-custom {
+        /* ===== MODELS GRID ===== */
+        .models-section { padding: 70px 0; }
+
+        .model-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: 0.4s;
+            border: 1px solid var(--border-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .model-card:hover {
+            border-color: #555;
+            transform: translateY(-5px);
+        }
+
+        .model-card .card-img-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .model-card .card-img-wrap img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .model-card:hover .card-img-wrap img {
+            transform: scale(1.05);
+        }
+
+        .model-card .badge-verified {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #fff;
+            color: #000;
+            font-weight: 700;
+            font-size: 0.6rem;
+            padding: 4px 12px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Oswald', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .model-card .card-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .model-card h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            color: #fff;
+        }
+
+        .model-card .card-meta {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .model-card .card-meta i {
+            color: #888;
+            margin-right: 4px;
+        }
+
+        .model-card .btn-view {
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+            display: block;
+        }
+
+        .model-card .btn-view:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* ===== PARTNER CARDS ===== */
+        .partner-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 20px;
@@ -297,261 +431,35 @@
             height: 100%;
             transition: 0.4s;
         }
-        .card-custom:hover {
-            border-color: var(--gold);
+        .partner-card:hover {
+            border-color: #555;
             transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
         }
-        .card-custom i {
+        .partner-card i {
             font-size: 2.5rem;
-            color: var(--gold);
+            color: #fff;
             margin-bottom: 20px;
             display: block;
         }
-        .card-custom h4 {
+        .partner-card h4 {
             font-family: 'Oswald', sans-serif;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 600;
             text-transform: uppercase;
             margin-bottom: 10px;
-            letter-spacing: 0.5px;
         }
-        .card-custom p {
+        .partner-card p {
             color: var(--text-muted);
             font-size: 0.9rem;
             margin: 0;
         }
 
-        /* ===== RAFFLE CARD (VeronicaVee style) ===== */
-        .raffle-card {
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 24px;
-            overflow: hidden;
-            transition: 0.4s;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .raffle-card:hover {
-            border-color: var(--gold);
-        }
-        .raffle-card .raffle-image {
-            height: 280px;
-            background: linear-gradient(135deg, #1a1a22, #0f0f13);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 6rem;
-            color: var(--gold);
-            border-bottom: 1px solid var(--border-color);
-        }
-        .raffle-card .raffle-body {
-            padding: 35px 30px;
-        }
-        .raffle-card .raffle-body h3 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-        .raffle-card .raffle-body .prize-detail {
-            color: var(--gold);
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-        .raffle-card .raffle-body p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 25px;
-        }
-        .raffle-card .price-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 25px;
-            border-top: 1px solid var(--border-color);
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .raffle-card .price {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--gold);
-            line-height: 1;
-        }
-        .raffle-card .price small {
-            font-size: 1rem;
-            color: #888;
-            font-weight: 400;
-        }
-
-        /* ===== SOCIAL POSTS (VeronicaVee style) ===== */
-        .social-post {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            overflow: hidden;
-            height: 100%;
-            transition: 0.3s;
-        }
-        .social-post:hover {
-            border-color: #555;
-            transform: scale(1.02);
-        }
-        .social-post .post-header {
-            display: flex;
-            align-items: center;
-            padding: 14px 18px;
-            gap: 12px;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .social-post .avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--gold);
-            color: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1rem;
-            font-family: 'Oswald', sans-serif;
-        }
-        .social-post .username {
-            font-weight: 700;
-            color: #fff;
-            font-size: 0.9rem;
-        }
-        .social-post .platform {
-            margin-left: auto;
-            color: var(--gold);
-            font-size: 1.2rem;
-        }
-        .social-post .post-media {
-            height: 260px;
-            background: linear-gradient(135deg, #1a1a22, #0f0f13);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: var(--gold);
-            position: relative;
-        }
-        .social-post .play-btn {
-            position: absolute;
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            font-size: 2.5rem;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid #fff;
-        }
-        .social-post .post-caption {
-            padding: 16px 18px;
-            color: #ccc;
-            font-size: 0.9rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .social-post .post-caption strong {
-            color: var(--gold);
-        }
-        .social-post .post-actions {
-            padding: 12px 18px;
-            display: flex;
-            gap: 20px;
-            color: #888;
-            font-size: 0.85rem;
-        }
-        .social-post .post-actions i {
-            font-size: 1.1rem;
-            margin-right: 5px;
-        }
-
-        /* ===== MODELS (VeronicaVee exact) ===== */
-        .model-card {
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            transition: 0.4s;
-            background: transparent;
-        }
-        .model-card:hover {
-            transform: scale(1.02);
-        }
-        .model-card img {
-            width: 100%;
-            height: 340px;
-            object-fit: cover;
-            border-radius: 20px;
-            display: block;
-        }
-        .model-card .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 35px 20px 20px;
-            background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-            border-radius: 0 0 20px 20px;
-        }
-        .model-card .overlay h5 {
-            font-family: 'Oswald', sans-serif;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 3px;
-            color: #fff;
-            font-size: 1.1rem;
-        }
-        .model-card .overlay p {
-            color: #ccc;
-            font-size: 0.8rem;
-            margin-bottom: 12px;
-        }
-        .model-card .btn-sm-white {
-            background: #fff;
-            color: #000;
-            font-weight: 700;
-            font-size: 0.75rem;
-            padding: 7px 20px;
-            border-radius: 50px;
-            border: none;
-            transition: 0.3s;
-            display: inline-block;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .model-card .btn-sm-white:hover {
-            background: var(--gold);
-        }
-        .model-card .badge-amb {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: var(--gold);
-            color: #000;
-            font-weight: 800;
-            font-size: 0.65rem;
-            padding: 5px 14px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: 'Oswald', sans-serif;
-        }
-
-        /* ===== PACKAGES (VeronicaVee style) ===== */
+        /* ===== PACKAGES ===== */
         .package-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 45px 30px;
+            border-radius: 20px;
+            padding: 40px 28px;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -559,23 +467,23 @@
             position: relative;
         }
         .package-card:hover {
-            border-color: var(--gold);
+            border-color: #555;
             transform: translateY(-5px);
         }
         .package-card.popular {
-            border-color: var(--gold);
-            background: #1a1a24;
+            border-color: #fff;
+            background: #1a1a1a;
         }
         .package-card.popular::after {
             content: "MÁS POPULAR";
             position: absolute;
             top: -12px;
             right: 25px;
-            background: var(--gold);
+            background: #fff;
             color: #000;
             padding: 5px 18px;
             border-radius: 50px;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -583,15 +491,15 @@
         }
         .package-card h3 {
             font-family: 'Oswald', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 5px;
         }
         .package-card .price-tag {
-            color: var(--gold);
+            color: #aaa;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             margin-bottom: 25px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -609,11 +517,11 @@
             font-size: 0.9rem;
         }
         .package-card ul li i {
-            color: var(--gold);
+            color: #fff;
             margin-right: 12px;
         }
 
-        /* ===== CONTACT FORM (VeronicaVee style) ===== */
+        /* ===== CONTACT FORM ===== */
         .contact-form {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -636,7 +544,7 @@
         }
         .contact-form .form-control:focus,
         .contact-form .form-select:focus {
-            border-color: var(--gold);
+            border-color: #fff;
             background: #222;
             box-shadow: none;
             color: #fff;
@@ -649,44 +557,45 @@
             color: #fff;
         }
 
-        /* ===== URGENCY BAR (VeronicaVee style) ===== */
-        .urgency-bar {
-            background: linear-gradient(90deg, #1a1a22, #0f0f13);
+        /* ===== FOOTER ===== */
+        footer {
+            background: #000;
             border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            padding: 16px 0;
+            padding: 40px 0 25px;
             text-align: center;
         }
-        .urgency-bar .urgency-text {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--gold);
+
+        footer .logo-text { font-size: 1.6rem; }
+
+        footer .footer-links { margin: 20px 0; }
+
+        footer .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin: 0 12px;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-        .urgency-bar .countdown {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #fff;
-            margin-left: 15px;
+            letter-spacing: 0.5px;
         }
 
-        /* ===== PROGRESS BAR ===== */
-        .progress-custom {
-            height: 30px;
-            background: #1a1a22;
-            border-radius: 50px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
+        footer .footer-links a:hover { color: #fff; }
+
+        footer .social-icons a {
+            color: #888;
+            font-size: 1.4rem;
+            margin: 0 10px;
+            transition: 0.3s;
+            display: inline-block;
         }
-        .progress-custom .progress-bar {
-            background: linear-gradient(90deg, var(--gold), #ff8c00);
-            color: #000;
-            font-weight: 700;
-            font-size: 0.9rem;
-            line-height: 30px;
-            font-family: 'Oswald', sans-serif;
+        footer .social-icons a:hover {
+            color: #fff;
+            transform: scale(1.15);
+        }
+
+        footer .copyright {
+            color: #555;
+            font-size: 0.8rem;
+            margin-top: 20px;
         }
 
         /* ===== FLOATING BUTTON ===== */
@@ -695,14 +604,14 @@
             bottom: 25px;
             right: 25px;
             z-index: 9999;
-            background: var(--gold);
+            background: #fff;
             color: #000;
             font-weight: 900;
-            padding: 14px 28px;
+            padding: 14px 26px;
             border-radius: 50px;
-            box-shadow: 0 10px 35px rgba(247, 201, 72, 0.4);
+            box-shadow: 0 10px 35px rgba(255, 255, 255, 0.15);
             text-transform: uppercase;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             letter-spacing: 1px;
             display: flex;
             align-items: center;
@@ -711,75 +620,40 @@
             font-family: 'Lato', sans-serif;
         }
         .floating-btn:hover {
-            background: #fff;
+            background: #ccc;
             color: #000;
             transform: scale(1.05);
         }
 
-        /* ===== FOOTER (VeronicaVee exact) ===== */
-        footer {
-            background: #000;
-            border-top: 1px solid var(--border-color);
-            padding: 50px 0 30px;
-            text-align: center;
-        }
-        footer .logo-text {
-            font-size: 2rem;
-        }
-        footer .location {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin: 15px 0 20px;
-        }
-        footer .location i {
-            color: var(--gold);
-        }
-        footer .social-icons a {
-            color: #888;
-            font-size: 1.6rem;
-            margin: 0 12px;
-            transition: 0.3s;
-            display: inline-block;
-        }
-        footer .social-icons a:hover {
-            color: var(--gold);
-            transform: scale(1.15);
-        }
-        footer .copyright {
-            color: #555;
-            font-size: 0.85rem;
-            margin-top: 25px;
-        }
-
-        /* ===== OFF CANVAS ===== */
-        .offcanvas {
-            background: #0a0a0a !important;
-        }
+        /* ===== MOBILE MENU ===== */
+        .offcanvas { background: #0a0a0a !important; }
         .offcanvas .nav-link {
             color: #ccc !important;
             font-weight: 600;
             text-transform: uppercase;
-            font-size: 1rem;
+            font-size: 0.9rem;
             padding: 14px 0;
             border-bottom: 1px solid #1a1a22;
             font-family: 'Oswald', sans-serif;
+            letter-spacing: 0.5px;
         }
-        .offcanvas .nav-link:hover {
-            color: var(--gold) !important;
-        }
+        .offcanvas .nav-link:hover { color: #fff !important; }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .hero { padding: 60px 0 50px; }
-            .hero h1 { font-size: 2.2rem; }
-            section { padding: 60px 0; }
-            .stat-item h3 { font-size: 2rem; }
-            .raffle-card .raffle-image { height: 200px; font-size: 4rem; }
-            .model-card img { height: 280px; }
+            .hero { padding: 60px 0 40px; }
+            .hero h1 { font-size: 1.8rem; }
+            .stat-item h3 { font-size: 2.5rem; }
+            .stats-row { gap: 35px; }
+            .model-card .card-img-wrap img { height: 250px; }
+            .models-section { padding: 50px 0; }
+            section { padding: 55px 0; }
             .contact-form { padding: 35px 25px; }
         }
         @media (max-width: 576px) {
-            .logo-text { font-size: 1.4rem; }
+            .logo-text { font-size: 1.3rem; }
+            .stat-item h3 { font-size: 2rem; }
+            .model-card .card-img-wrap img { height: 220px; }
             .floating-btn { padding: 10px 18px; font-size: 0.7rem; bottom: 15px; right: 15px; }
         }
     </style>
@@ -796,26 +670,22 @@
     <header id="header">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Logo -->
                 <div class="col-6 col-md-3">
                     <a href="#" class="logo-text">RIFA <span>MARACAIBO</span></a>
                 </div>
 
-                <!-- Desktop Nav -->
-                <div class="col-md-5 d-none d-lg-block">
-                    <nav class="navbar navbar-expand-lg py-0">
-                        <ul class="navbar-nav mx-auto">
+                <div class="col-md-6 d-none d-lg-block">
+                    <nav class="navbar navbar-expand-lg py-0 justify-content-center">
+                        <ul class="navbar-nav">
                             <li class="nav-item"><a href="#raffle" class="nav-link nav-link-custom active" data-i18n="nav-raffle">Rifa</a></li>
-                            <li class="nav-item"><a href="#social" class="nav-link nav-link-custom" data-i18n="nav-social">Promos</a></li>
                             <li class="nav-item"><a href="#models" class="nav-link nav-link-custom" data-i18n="nav-models">Modelos</a></li>
-                            <li class="nav-item"><a href="#partner" class="nav-link nav-link-custom" data-i18n="nav-partner">Alianzas</a></li>
+                            <li class="nav-item"><a href="#partners" class="nav-link nav-link-custom" data-i18n="nav-partners">Alianzas</a></li>
                             <li class="nav-item"><a href="#contact" class="nav-link nav-link-custom" data-i18n="nav-contact">Contacto</a></li>
                         </ul>
                     </nav>
                 </div>
 
-                <!-- Language + Hamburger -->
-                <div class="col-6 col-md-4 d-flex justify-content-end align-items-center gap-3">
+                <div class="col-6 col-md-3 d-flex justify-content-end align-items-center gap-3">
                     <div class="lang-switch">
                         <a href="#" data-lang="es" class="active-lang" onclick="setLanguage('es'); return false;">ES</a>
                         <a href="#" data-lang="en" onclick="setLanguage('en'); return false;">EN</a>
@@ -837,57 +707,45 @@
         <div class="offcanvas-body">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#raffle" data-i18n="nav-raffle">Rifa</a></li>
-                <li class="nav-item"><a class="nav-link" href="#social" data-i18n="nav-social">Promos</a></li>
                 <li class="nav-item"><a class="nav-link" href="#models" data-i18n="nav-models">Modelos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#partner" data-i18n="nav-partner">Alianzas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#partners" data-i18n="nav-partners">Alianzas</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav-contact">Contacto</a></li>
             </ul>
         </div>
     </div>
 
-    <!-- ===== URGENCY BAR ===== -->
-    <div class="urgency-bar">
-        <div class="container">
-            <span class="urgency-text" data-i18n="urgency-text">
-                <i class="bi bi-fire"></i> ¡Boletos Limitados!
-            </span>
-            <span class="countdown" id="countdown-timer">⏳ 24:00:00</span>
-        </div>
-    </div>
-
     <!-- ===== HERO ===== -->
     <section class="hero">
-        <div class="container text-center">
+        <div class="container">
             <div class="badge-pill" data-i18n="hero-badge">
                 <i class="bi bi-ticket-perforated me-2"></i> Rifa Beta · Maracaibo
             </div>
             <h1>
                 <span data-i18n="hero-title-1">GANA UN</span><br>
-                <span class="gold-text" data-i18n="hero-title-2">AIRE ACONDICIONADO TOSHIBA</span>
+                <span data-i18n="hero-title-2">AIRE ACONDICIONADO TOSHIBA</span>
             </h1>
-            <p data-i18n="hero-desc">
+            <p data-i18n="hero-sub">
                 12,000 BTU · Compresor Toshiba · Tubería de cobre · Refrigerante R32 · 220V
             </p>
             <div class="cta-group">
-                <a href="#contact" class="btn-gold">
+                <a href="#raffle" class="btn-white">
                     <i class="bi bi-ticket-perforated me-2"></i> <span data-i18n="hero-cta">Comprar Boletos</span>
                 </a>
-                <a href="#partner" class="btn-outline-gold">
+                <a href="#partners" class="btn-outline-white">
                     <i class="bi bi-briefcase me-2"></i> <span data-i18n="hero-cta-2">Alianzas Comerciales</span>
                 </a>
             </div>
 
-            <!-- Stats (VeronicaVee style) -->
-            <div class="row stats-row g-4">
-                <div class="col-4 stat-item">
+            <div class="stats-row">
+                <div class="stat-item">
                     <h3>75</h3>
                     <p data-i18n="stat-1">Boletos Totales</p>
                 </div>
-                <div class="col-4 stat-item">
+                <div class="stat-item">
                     <h3>$10</h3>
                     <p data-i18n="stat-2">Por Boleto</p>
                 </div>
-                <div class="col-4 stat-item">
+                <div class="stat-item">
                     <h3>1</h3>
                     <p data-i18n="stat-3">Premio Principal</p>
                 </div>
@@ -898,7 +756,7 @@
     <!-- ===== RAFFLE ===== -->
     <section class="section-dark" id="raffle">
         <div class="container">
-            <h2 class="section-title" data-i18n="raffle-title">La <span class="gold-text">Rifa Actual</span></h2>
+            <h2 class="section-title" data-i18n="raffle-title">La Rifa Actual</h2>
             <p class="section-sub" data-i18n="raffle-sub">Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.</p>
 
             <div class="raffle-card">
@@ -910,99 +768,13 @@
                     <div class="prize-detail" data-i18n="raffle-detail">12,000 BTU · Compresor Toshiba · R32 · 220V</div>
                     <p data-i18n="raffle-desc">Incluye tubería de cobre, instalación básica y garantía. Ideal para el clima de Maracaibo.</p>
 
-                    <div class="price-row">
-                        <div class="price">$10 <small>USD</small></div>
-                        <a href="#contact" class="btn-gold" data-i18n="raffle-btn">Comprar Boleto</a>
-                    </div>
-                </div>
-            </div>
+                    <div class="price-display">$10 <small>USD</small></div>
+                    <div class="tickets-left" data-i18n="tickets-left">🔥 Solo 75 boletos</div>
 
-            <!-- Progress -->
-            <div class="mt-5" style="max-width: 600px; margin: 0 auto;">
-                <div class="d-flex justify-content-between mb-2">
-                    <span class="text-muted" data-i18n="progress-sold">Vendidos</span>
-                    <span><strong id="sold-count">0</strong> / 75</span>
-                </div>
-                <div class="progress-custom">
-                    <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;">0%</div>
-                </div>
-                <p class="text-muted small mt-2 text-center" data-i18n="progress-note">
-                    Actualizado manualmente por el manager de Maracaibo.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SOCIAL PROMOS ===== -->
-    <section id="social">
-        <div class="container">
-            <h2 class="section-title" data-i18n="social-title">Promos en <span class="gold-text">Redes</span></h2>
-            <p class="section-sub" data-i18n="social-sub">Nuestras modelos embajadoras promocionan la rifa en Instagram y TikTok.</p>
-
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="social-post">
-                        <div class="post-header">
-                            <div class="avatar">V</div>
-                            <span class="username">@veronica_vee</span>
-                            <span class="platform"><i class="bi bi-instagram"></i></span>
-                        </div>
-                        <div class="post-media">
-                            <i class="bi bi-play-circle-fill"></i>
-                            <div class="play-btn"><i class="bi bi-play-fill"></i></div>
-                        </div>
-                        <div class="post-caption" data-i18n="post-1-caption">
-                            <strong>¡Rifa Toshiba 12,000 BTU!</strong> Solo 75 boletos a $10. Link en bio. #Maracaibo
-                        </div>
-                        <div class="post-actions">
-                            <span><i class="bi bi-heart-fill" style="color:#ff4444;"></i> 1.2K</span>
-                            <span><i class="bi bi-chat-fill"></i> 234</span>
-                            <span><i class="bi bi-share-fill"></i> 89</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="social-post">
-                        <div class="post-header">
-                            <div class="avatar">M</div>
-                            <span class="username">@model_maria</span>
-                            <span class="platform"><i class="bi bi-tiktok"></i></span>
-                        </div>
-                        <div class="post-media">
-                            <i class="bi bi-play-circle-fill"></i>
-                            <div class="play-btn"><i class="bi bi-play-fill"></i></div>
-                        </div>
-                        <div class="post-caption" data-i18n="post-2-caption">
-                            <strong>¡Sorteo Aire Toshiba!</strong> No más calor en Maracaibo. Boletos volando! #Toshiba
-                        </div>
-                        <div class="post-actions">
-                            <span><i class="bi bi-heart-fill" style="color:#ff4444;"></i> 845</span>
-                            <span><i class="bi bi-chat-fill"></i> 156</span>
-                            <span><i class="bi bi-share-fill"></i> 45</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="social-post">
-                        <div class="post-header">
-                            <div class="avatar">A</div>
-                            <span class="username">@ambassador_ana</span>
-                            <span class="platform"><i class="bi bi-instagram"></i></span>
-                        </div>
-                        <div class="post-media">
-                            <i class="bi bi-play-circle-fill"></i>
-                            <div class="play-btn"><i class="bi bi-play-fill"></i></div>
-                        </div>
-                        <div class="post-caption" data-i18n="post-3-caption">
-                            <strong>Solo $10 por boleto!</strong> Participa ya. Sorteo al vender todos. #Maracaibo
-                        </div>
-                        <div class="post-actions">
-                            <span><i class="bi bi-heart-fill" style="color:#ff4444;"></i> 2.1K</span>
-                            <span><i class="bi bi-chat-fill"></i> 312</span>
-                            <span><i class="bi bi-share-fill"></i> 127</span>
-                        </div>
+                    <div style="margin-top: 25px;">
+                        <a href="#contact" class="btn-white" data-i18n="raffle-btn">
+                            <i class="bi bi-cart-check me-2"></i> Comprar Boleto
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1010,96 +782,168 @@
     </section>
 
     <!-- ===== MODELS ===== -->
-    <section class="section-dark" id="models">
+    <section class="models-section" id="models">
         <div class="container">
-            <h2 class="section-title" data-i18n="models-title">Modelos <span class="gold-text">Embajadoras</span></h2>
+            <h2 class="section-title" data-i18n="models-title">Modelos Embajadoras</h2>
             <p class="section-sub" data-i18n="models-sub">Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.</p>
 
             <div class="row g-4">
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="model-card">
-                        <span class="badge-amb" data-i18n="models-badge">⭐ Embajadora</span>
-                        <img src="https://veronicavee.com/storage/avatars/V8s82JJTS2hi0HUlVUumkvh5TDa2fPHdn5Z0mJSM.jpg" alt="Model">
-                        <div class="overlay">
-                            <h5>Veronica Vee</h5>
-                            <p>20 yrs • Maracaibo</p>
-                            <a href="#" class="btn-sm-white" data-i18n="models-view">Ver Perfil</a>
+                        <div class="card-img-wrap">
+                            <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> <span data-i18n="badge-verified">Embajadora</span></span>
+                            <img src="https://veronicavee.com/storage/avatars/V8s82JJTS2hi0HUlVUumkvh5TDa2fPHdn5Z0mJSM.jpg" alt="Model">
+                        </div>
+                        <div class="card-body">
+                            <h4>Veronica Vee</h4>
+                            <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
+                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="model-card">
-                        <span class="badge-amb" data-i18n="models-badge">⭐ Embajadora</span>
-                        <img src="https://veronicavee.com/storage/avatars/19.jpeg" alt="Model">
-                        <div class="overlay">
-                            <h5>Maria Gomez</h5>
-                            <p>24 yrs • Maracaibo</p>
-                            <a href="#" class="btn-sm-white" data-i18n="models-view">Ver Perfil</a>
+                        <div class="card-img-wrap">
+                            <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> <span data-i18n="badge-verified">Embajadora</span></span>
+                            <img src="https://veronicavee.com/storage/avatars/19.jpeg" alt="Model">
+                        </div>
+                        <div class="card-body">
+                            <h4>Maria Gomez</h4>
+                            <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
+                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="model-card">
-                        <img src="https://veronicavee.com/storage/models/avatars/WzXsM2zlbJ3wXxmeQkCTGOa8Jb29OV4Ap75Xmusd.png" alt="Model">
-                        <div class="overlay">
-                            <h5>Ana Rodriguez</h5>
-                            <p>22 yrs • Maracaibo</p>
-                            <a href="#" class="btn-sm-white" data-i18n="models-view">Ver Perfil</a>
+                        <div class="card-img-wrap">
+                            <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> <span data-i18n="badge-verified">Embajadora</span></span>
+                            <img src="https://veronicavee.com/storage/models/avatars/WzXsM2zlbJ3wXxmeQkCTGOa8Jb29OV4Ap75Xmusd.png" alt="Model">
+                        </div>
+                        <div class="card-body">
+                            <h4>Ana Rodriguez</h4>
+                            <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
+                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="model-card">
-                        <img src="https://veronicavee.com/storage/models/avatars/Yno7Y5RUDd3nDJEigvMJ4Nbo8SyljJQ4odeGQoHg.jpg" alt="Model">
-                        <div class="overlay">
-                            <h5>Lucia Perez</h5>
-                            <p>26 yrs • Maracaibo</p>
-                            <a href="#" class="btn-sm-white" data-i18n="models-view">Ver Perfil</a>
+                        <div class="card-img-wrap">
+                            <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> <span data-i18n="badge-verified">Embajadora</span></span>
+                            <img src="https://veronicavee.com/storage/models/avatars/Yno7Y5RUDd3nDJEigvMJ4Nbo8SyljJQ4odeGQoHg.jpg" alt="Model">
+                        </div>
+                        <div class="card-body">
+                            <h4>Lucia Perez</h4>
+                            <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
+                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="model-card">
+                        <div class="card-img-wrap">
+                            <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> <span data-i18n="badge-verified">Embajadora</span></span>
+                            <img src="https://veronicavee.com/storage/avatars/19.jpeg" alt="Model">
+                        </div>
+                        <div class="card-body">
+                            <h4>Sofia Martinez</h4>
+                            <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
+                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="model-card">
+                        <div class="card-img-wrap">
+                            <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> <span data-i18n="badge-verified">Embajadora</span></span>
+                            <img src="https://veronicavee.com/storage/models/avatars/WzXsM2zlbJ3wXxmeQkCTGOa8Jb29OV4Ap75Xmusd.png" alt="Model">
+                        </div>
+                        <div class="card-body">
+                            <h4>Camila Torres</h4>
+                            <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
+                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="model-card">
+                        <div class="card-img-wrap">
+                            <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> <span data-i18n="badge-verified">Embajadora</span></span>
+                            <img src="https://veronicavee.com/storage/avatars/V8s82JJTS2hi0HUlVUumkvh5TDa2fPHdn5Z0mJSM.jpg" alt="Model">
+                        </div>
+                        <div class="card-body">
+                            <h4>Valentina Rios</h4>
+                            <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
+                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="model-card">
+                        <div class="card-img-wrap">
+                            <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> <span data-i18n="badge-verified">Embajadora</span></span>
+                            <img src="https://veronicavee.com/storage/models/avatars/Yno7Y5RUDd3nDJEigvMJ4Nbo8SyljJQ4odeGQoHg.jpg" alt="Model">
+                        </div>
+                        <div class="card-body">
+                            <h4>Isabella Cruz</h4>
+                            <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
+                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <button class="btn-outline-white" data-i18n="load-more">Cargar Más Modelos</button>
             </div>
         </div>
     </section>
 
-    <!-- ===== PARTNERSHIP (B2B) ===== -->
-    <section id="partner">
+    <!-- ===== PARTNERS ===== -->
+    <section class="section-dark" id="partners">
         <div class="container">
-            <h2 class="section-title" data-i18n="partner-title">Eleva Tu <span class="gold-text">Marca</span></h2>
-            <p class="section-sub" data-i18n="partner-sub">Promociona tus productos con nuestras rifas virales y modelos embajadoras.</p>
+            <h2 class="section-title" data-i18n="partners-title">Eleva Tu Marca</h2>
+            <p class="section-sub" data-i18n="partners-sub">Promociona tus productos con nuestras rifas virales y modelos embajadoras.</p>
 
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
+                    <div class="partner-card">
                         <i class="bi bi-gift-fill"></i>
-                        <h4 data-i18n="partner-feat-1">Rifas Virales</h4>
-                        <p data-i18n="partner-feat-1-desc">Tus productos como premios que generan buzz masivo.</p>
+                        <h4 data-i18n="partner-1">Rifas Virales</h4>
+                        <p data-i18n="partner-1-desc">Tus productos como premios que generan buzz masivo.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
+                    <div class="partner-card">
                         <i class="bi bi-person-fill"></i>
-                        <h4 data-i18n="partner-feat-2">Modelos Embajadoras</h4>
-                        <p data-i18n="partner-feat-2-desc">Contenido premium creado por modelos seleccionadas.</p>
+                        <h4 data-i18n="partner-2">Modelos Embajadoras</h4>
+                        <p data-i18n="partner-2-desc">Contenido premium creado por modelos seleccionadas.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
+                    <div class="partner-card">
                         <i class="bi bi-share-fill"></i>
-                        <h4 data-i18n="partner-feat-3">Exposición en Redes</h4>
-                        <p data-i18n="partner-feat-3-desc">Instagram, TikTok y Facebook – alcance masivo.</p>
+                        <h4 data-i18n="partner-3">Exposición en Redes</h4>
+                        <p data-i18n="partner-3-desc">Instagram, TikTok y Facebook – alcance masivo.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
+                    <div class="partner-card">
                         <i class="bi bi-star-fill"></i>
-                        <h4 data-i18n="partner-feat-4">Selección Curada</h4>
-                        <p data-i18n="partner-feat-4-desc">Solo unas pocas modelos son elegidas para tu negocio.</p>
+                        <h4 data-i18n="partner-4">Selección Curada</h4>
+                        <p data-i18n="partner-4-desc">Solo unas pocas modelos son elegidas para tu negocio.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Packages -->
             <div class="row g-4 mt-5">
                 <div class="col-md-4">
                     <div class="package-card">
@@ -1110,7 +954,7 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-2">Promoción en redes</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">1 modelo embajadora</span></li>
                         </ul>
-                        <a href="#contact" class="btn-outline-gold" data-i18n="pack-1-btn">Elegir</a>
+                        <a href="#contact" class="btn-outline-white" data-i18n="pack-1-btn">Elegir</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -1122,7 +966,7 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-2">Reels profesionales</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Audiencia expandida</span></li>
                         </ul>
-                        <a href="#contact" class="btn-gold" data-i18n="pack-2-btn">Elegir</a>
+                        <a href="#contact" class="btn-white" data-i18n="pack-2-btn">Elegir</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -1134,7 +978,7 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-2">Programación prioritaria</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Exclusividad por categoría</span></li>
                         </ul>
-                        <a href="#contact" class="btn-outline-gold" data-i18n="pack-3-btn">Elegir</a>
+                        <a href="#contact" class="btn-outline-white" data-i18n="pack-3-btn">Elegir</a>
                     </div>
                 </div>
             </div>
@@ -1142,9 +986,9 @@
     </section>
 
     <!-- ===== CONTACT ===== -->
-    <section class="section-dark" id="contact">
+    <section id="contact">
         <div class="container">
-            <h2 class="section-title" data-i18n="contact-title">Contác<span class="gold-text">tanos</span></h2>
+            <h2 class="section-title" data-i18n="contact-title">Contáctanos</h2>
             <p class="section-sub" data-i18n="contact-sub">Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.</p>
 
             <div class="contact-form">
@@ -1165,7 +1009,7 @@
                     <div class="mb-3">
                         <textarea class="form-control" rows="3" placeholder="Mensaje (opcional)" data-i18n="form-message"></textarea>
                     </div>
-                    <button type="submit" class="btn-gold w-100" data-i18n="form-submit">
+                    <button type="submit" class="btn-white w-100" data-i18n="form-submit">
                         <i class="bi bi-send me-2"></i> Enviar
                     </button>
                 </form>
@@ -1177,45 +1021,24 @@
     <footer>
         <div class="container">
             <a href="#" class="logo-text">RIFA <span>MARACAIBO</span></a>
-            <p class="location">
-                <i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela
-            </p>
+            <div class="footer-links">
+                <a href="#raffle" data-i18n="nav-raffle">Rifa</a>
+                <a href="#models" data-i18n="nav-models">Modelos</a>
+                <a href="#partners" data-i18n="nav-partners">Alianzas</a>
+                <a href="#contact" data-i18n="nav-contact">Contacto</a>
+            </div>
             <div class="social-icons">
                 <a href="#"><i class="bi bi-instagram"></i></a>
                 <a href="#"><i class="bi bi-tiktok"></i></a>
                 <a href="#"><i class="bi bi-facebook"></i></a>
                 <a href="#"><i class="bi bi-whatsapp"></i></a>
             </div>
-            <p class="copyright" data-i18n="footer-text">© 2026 Rifa Maracaibo · Sorteo transparente, proceso confiable.</p>
+            <p class="copyright" data-i18n="footer-text">© 2026 Rifa Maracaibo · Plataforma de talento y rifas.</p>
         </div>
     </footer>
 
     <!-- ===== BOOTSTRAP JS ===== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- ===== COUNTDOWN ===== -->
-    <script>
-        function startCountdown() {
-            let hours = 24, minutes = 0, seconds = 0;
-            const timer = document.getElementById('countdown-timer');
-            function update() {
-                if (hours === 0 && minutes === 0 && seconds === 0) {
-                    timer.textContent = '⏳ ¡AGOTADO!';
-                    return;
-                }
-                if (seconds === 0) {
-                    if (minutes === 0) { if (hours > 0) { hours--; minutes = 59; seconds = 59; } }
-                    else { minutes--; seconds = 59; }
-                } else { seconds--; }
-                const h = String(hours).padStart(2, '0');
-                const m = String(minutes).padStart(2, '0');
-                const s = String(seconds).padStart(2, '0');
-                timer.textContent = `⏳ ${h}:${m}:${s}`;
-            }
-            setInterval(update, 1000);
-        }
-        document.addEventListener('DOMContentLoaded', startCountdown);
-    </script>
 
     <!-- ===== LANGUAGE TOGGLE ===== -->
     <script>
@@ -1223,15 +1046,13 @@
             es: {
                 "floating-btn": "Comprar Boleto",
                 "nav-raffle": "Rifa",
-                "nav-social": "Promos",
                 "nav-models": "Modelos",
-                "nav-partner": "Alianzas",
+                "nav-partners": "Alianzas",
                 "nav-contact": "Contacto",
-                "urgency-text": "¡Boletos Limitados!",
                 "hero-badge": "Rifa Beta · Maracaibo",
                 "hero-title-1": "GANA UN",
                 "hero-title-2": "AIRE ACONDICIONADO TOSHIBA",
-                "hero-desc": "12,000 BTU · Compresor Toshiba · Tubería de cobre · Refrigerante R32 · 220V",
+                "hero-sub": "12,000 BTU · Compresor Toshiba · Tubería de cobre · Refrigerante R32 · 220V",
                 "hero-cta": "Comprar Boletos",
                 "hero-cta-2": "Alianzas Comerciales",
                 "stat-1": "Boletos Totales",
@@ -1242,28 +1063,23 @@
                 "raffle-name": "Aire Acondicionado Toshiba",
                 "raffle-detail": "12,000 BTU · Compresor Toshiba · R32 · 220V",
                 "raffle-desc": "Incluye tubería de cobre, instalación básica y garantía. Ideal para el clima de Maracaibo.",
+                "tickets-left": "🔥 Solo 75 boletos",
                 "raffle-btn": "Comprar Boleto",
-                "progress-sold": "Vendidos",
-                "progress-note": "Actualizado manualmente por el manager de Maracaibo.",
-                "social-title": "Promos en Redes",
-                "social-sub": "Nuestras modelos embajadoras promocionan la rifa en Instagram y TikTok.",
-                "post-1-caption": "¡Rifa Toshiba 12,000 BTU! Solo 75 boletos a $10. Link en bio. #Maracaibo",
-                "post-2-caption": "¡Sorteo Aire Toshiba! No más calor en Maracaibo. Boletos volando! #Toshiba",
-                "post-3-caption": "Solo $10 por boleto! Participa ya. Sorteo al vender todos. #Maracaibo",
                 "models-title": "Modelos Embajadoras",
                 "models-sub": "Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.",
-                "models-badge": "⭐ Embajadora",
-                "models-view": "Ver Perfil",
-                "partner-title": "Eleva Tu Marca",
-                "partner-sub": "Promociona tus productos con nuestras rifas virales y modelos embajadoras.",
-                "partner-feat-1": "Rifas Virales",
-                "partner-feat-1-desc": "Tus productos como premios que generan buzz masivo.",
-                "partner-feat-2": "Modelos Embajadoras",
-                "partner-feat-2-desc": "Contenido premium creado por modelos seleccionadas.",
-                "partner-feat-3": "Exposición en Redes",
-                "partner-feat-3-desc": "Instagram, TikTok y Facebook – alcance masivo.",
-                "partner-feat-4": "Selección Curada",
-                "partner-feat-4-desc": "Solo unas pocas modelos son elegidas para tu negocio.",
+                "badge-verified": "Embajadora",
+                "view-profile": "Ver Perfil",
+                "load-more": "Cargar Más Modelos",
+                "partners-title": "Eleva Tu Marca",
+                "partners-sub": "Promociona tus productos con nuestras rifas virales y modelos embajadoras.",
+                "partner-1": "Rifas Virales",
+                "partner-1-desc": "Tus productos como premios que generan buzz masivo.",
+                "partner-2": "Modelos Embajadoras",
+                "partner-2-desc": "Contenido premium creado por modelos seleccionadas.",
+                "partner-3": "Exposición en Redes",
+                "partner-3-desc": "Instagram, TikTok y Facebook – alcance masivo.",
+                "partner-4": "Selección Curada",
+                "partner-4-desc": "Solo unas pocas modelos son elegidas para tu negocio.",
                 "pack-1-name": "LAUNCH",
                 "pack-1-tag": "Ideal para empezar",
                 "pack-1-li-1": "Campaña de un producto",
@@ -1291,20 +1107,18 @@
                 "form-select-2": "Alianza comercial para mi negocio",
                 "form-message": "Mensaje (opcional)",
                 "form-submit": "Enviar",
-                "footer-text": "© 2026 Rifa Maracaibo · Sorteo transparente, proceso confiable."
+                "footer-text": "© 2026 Rifa Maracaibo · Plataforma de talento y rifas."
             },
             en: {
                 "floating-btn": "Buy Ticket",
                 "nav-raffle": "Raffle",
-                "nav-social": "Promos",
                 "nav-models": "Models",
-                "nav-partner": "Partners",
+                "nav-partners": "Partners",
                 "nav-contact": "Contact",
-                "urgency-text": "Limited Tickets!",
                 "hero-badge": "Beta Raffle · Maracaibo",
                 "hero-title-1": "WIN A",
                 "hero-title-2": "TOSHIBA AIR CONDITIONER",
-                "hero-desc": "12,000 BTU · Toshiba Compressor · Copper Tubing · R32 Refrigerant · 220V",
+                "hero-sub": "12,000 BTU · Toshiba Compressor · Copper Tubing · R32 Refrigerant · 220V",
                 "hero-cta": "Buy Tickets",
                 "hero-cta-2": "Business Partnerships",
                 "stat-1": "Total Tickets",
@@ -1315,28 +1129,23 @@
                 "raffle-name": "Toshiba Air Conditioner",
                 "raffle-detail": "12,000 BTU · Toshiba Compressor · R32 · 220V",
                 "raffle-desc": "Includes copper tubing, basic installation and warranty. Ideal for Maracaibo's climate.",
+                "tickets-left": "🔥 Only 75 tickets",
                 "raffle-btn": "Buy Ticket",
-                "progress-sold": "Sold",
-                "progress-note": "Manually updated by the Maracaibo manager.",
-                "social-title": "Social Media Promos",
-                "social-sub": "Our ambassador models promote the raffle on Instagram and TikTok.",
-                "post-1-caption": "Toshiba 12,000 BTU Raffle! Only 75 tickets at $10. Link in bio. #Maracaibo",
-                "post-2-caption": "Toshiba AC Giveaway! No more heat in Maracaibo. Tickets selling fast! #Toshiba",
-                "post-3-caption": "Only $10 per ticket! Join now. Draw when all sold. #Maracaibo",
                 "models-title": "Ambassador Models",
                 "models-sub": "The faces behind our campaigns. Only a few are selected as ambassadors.",
-                "models-badge": "⭐ Ambassador",
-                "models-view": "View Profile",
-                "partner-title": "Elevate Your Brand",
-                "partner-sub": "Promote your products with our viral raffles and ambassador models.",
-                "partner-feat-1": "Viral Raffles",
-                "partner-feat-1-desc": "Your products as prizes that generate massive buzz.",
-                "partner-feat-2": "Ambassador Models",
-                "partner-feat-2-desc": "Premium content created by handpicked models.",
-                "partner-feat-3": "Social Media Exposure",
-                "partner-feat-3-desc": "Instagram, TikTok & Facebook – massive reach.",
-                "partner-feat-4": "Curated Selection",
-                "partner-feat-4-desc": "Only a few select models are chosen for your business.",
+                "badge-verified": "Ambassador",
+                "view-profile": "View Profile",
+                "load-more": "Load More Models",
+                "partners-title": "Elevate Your Brand",
+                "partners-sub": "Promote your products with our viral raffles and ambassador models.",
+                "partner-1": "Viral Raffles",
+                "partner-1-desc": "Your products as prizes that generate massive buzz.",
+                "partner-2": "Ambassador Models",
+                "partner-2-desc": "Premium content created by handpicked models.",
+                "partner-3": "Social Media Exposure",
+                "partner-3-desc": "Instagram, TikTok & Facebook – massive reach.",
+                "partner-4": "Curated Selection",
+                "partner-4-desc": "Only a few select models are chosen for your business.",
                 "pack-1-name": "LAUNCH",
                 "pack-1-tag": "Ideal to Start",
                 "pack-1-li-1": "Single product campaign",
@@ -1364,7 +1173,7 @@
                 "form-select-2": "Business partnership",
                 "form-message": "Message (optional)",
                 "form-submit": "Submit",
-                "footer-text": "© 2026 Rifa Maracaibo · Transparent draw, trusted process."
+                "footer-text": "© 2026 Rifa Maracaibo · Talent & raffle platform."
             }
         };
 
@@ -1392,14 +1201,6 @@
                 const browserLang = navigator.language || navigator.languages?.[0] || 'es';
                 setLanguage(browserLang.startsWith('es') ? 'es' : 'en');
             }
-
-            // Progress bar
-            const sold = 0, total = 75;
-            const percent = Math.round((sold / total) * 100);
-            document.getElementById('sold-count').textContent = sold;
-            const bar = document.getElementById('progress-bar');
-            bar.style.width = percent + '%';
-            bar.textContent = percent + '%';
         });
     </script>
 
