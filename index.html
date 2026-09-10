@@ -17,17 +17,16 @@
     <style>
         /* ===== FLYER EXACT COLOR SCHEME ===== */
         :root {
-            --navy: #061029;           /* Deep navy from flyer */
-            --navy-2: #0b1a3a;         /* Lighter navy */
-            --navy-card: #102145;      /* Card navy */
-            --cyan: #00e5ff;           /* Bright neon cyan */
+            --navy: #061029;
+            --navy-2: #0b1a3a;
+            --navy-card: #102145;
+            --cyan: #00e5ff;
             --cyan-dark: #00b8d4;
-            --yellow: #ffd60a;         /* Bright yellow */
+            --yellow: #ffd60a;
             --yellow-dark: #f5c400;
-            --pink: #ff006e;           /* Hot pink/magenta */
+            --pink: #ff006e;
             --pink-dark: #d6005c;
-            --blue: #2563eb;           /* Blue circle */
-            --purple: #7c3aed;         /* Purple circle */
+            --blue: #2563eb;
             --white: #ffffff;
             --text-light: #a8bbd4;
             --border-blue: #1a3a6b;
@@ -76,7 +75,6 @@
             opacity: 0.7;
         }
 
-        /* Content sits above stars */
         header, section, footer { position: relative; z-index: 1; }
 
         /* ===== HEADER ===== */
@@ -123,7 +121,6 @@
             color: var(--cyan) !important;
         }
 
-        /* Language Switcher */
         .lang-switch { display: flex; gap: 8px; }
         .lang-switch a {
             color: #ccc;
@@ -145,7 +142,7 @@
             color: #000;
         }
 
-        /* ===== HERO (Flyer-style bold) ===== */
+        /* ===== HERO ===== */
         .hero {
             padding: 70px 0 60px;
             text-align: center;
@@ -155,7 +152,6 @@
                         radial-gradient(ellipse at 80% 80%, rgba(255,0,110,0.1) 0%, transparent 50%);
         }
 
-        /* Top ribbon */
         .hero .top-ribbon {
             display: inline-block;
             background: var(--cyan);
@@ -171,7 +167,6 @@
             box-shadow: 0 0 30px rgba(0,229,255,0.5);
         }
 
-        /* Main headline like "¡DISPARA TUS VENTAS!" */
         .hero .headline-mini {
             font-family: 'Oswald', sans-serif;
             font-size: clamp(1rem, 2.5vw, 1.4rem);
@@ -192,24 +187,10 @@
             letter-spacing: -2px;
         }
 
-        .hero h1 .yellow {
-            color: var(--yellow);
-            text-shadow: 0 0 30px rgba(255,214,10,0.5);
-            display: block;
-        }
+        .hero h1 .yellow { color: var(--yellow); text-shadow: 0 0 30px rgba(255,214,10,0.5); display: block; }
+        .hero h1 .white { color: #fff; display: block; }
+        .hero h1 .cyan-glow { color: var(--cyan); text-shadow: 0 0 40px rgba(0,229,255,0.6); display: block; }
 
-        .hero h1 .white {
-            color: #fff;
-            display: block;
-        }
-
-        .hero h1 .cyan-glow {
-            color: var(--cyan);
-            text-shadow: 0 0 40px rgba(0,229,255,0.6);
-            display: block;
-        }
-
-        /* Banner strips (cyan & pink) */
         .banner-strip {
             display: inline-block;
             padding: 12px 30px;
@@ -222,21 +203,8 @@
             margin: 6px 0;
             transform: skewX(-5deg);
         }
-        .banner-strip.cyan {
-            background: var(--cyan);
-            color: #000;
-            box-shadow: 0 0 30px rgba(0,229,255,0.5);
-        }
-        .banner-strip.pink {
-            background: var(--pink);
-            color: #fff;
-            box-shadow: 0 0 30px rgba(255,0,110,0.5);
-        }
-        .banner-strip.dark {
-            background: var(--navy-card);
-            color: #fff;
-            border: 1px solid var(--cyan);
-        }
+        .banner-strip.cyan { background: var(--cyan); color: #000; box-shadow: 0 0 30px rgba(0,229,255,0.5); }
+        .banner-strip.pink { background: var(--pink); color: #fff; box-shadow: 0 0 30px rgba(255,0,110,0.5); }
 
         .hero .sub-line {
             color: var(--yellow);
@@ -270,7 +238,6 @@
             transition: 0.3s;
             font-family: 'Oswald', sans-serif;
             box-shadow: 0 0 30px rgba(255,214,10,0.4);
-            position: relative;
         }
         .btn-yellow:hover {
             background: #fff;
@@ -354,7 +321,6 @@
 
         /* ===== SECTIONS ===== */
         section { padding: 80px 0; }
-
         .section-title {
             font-family: 'Oswald', sans-serif;
             font-size: clamp(1.8rem, 5vw, 2.8rem);
@@ -364,7 +330,6 @@
             margin-bottom: 12px;
             letter-spacing: -1px;
         }
-
         .section-title .yellow { color: var(--yellow); text-shadow: 0 0 25px rgba(255,214,10,0.4); }
         .section-title .cyan { color: var(--cyan); text-shadow: 0 0 25px rgba(0,229,255,0.4); }
         .section-title .pink { color: var(--pink); text-shadow: 0 0 25px rgba(255,0,110,0.4); }
@@ -376,13 +341,9 @@
             margin: 0 auto 50px;
             font-size: 1rem;
         }
+        .section-navy-light { background: linear-gradient(180deg, rgba(11,26,58,0.5) 0%, rgba(6,16,41,0.5) 100%); }
 
-        .section-navy { background: transparent; }
-        .section-navy-light {
-            background: linear-gradient(180deg, rgba(11,26,58,0.5) 0%, rgba(6,16,41,0.5) 100%);
-        }
-
-        /* ===== TICKET CARD (EXACT FLYER 2 STYLE) ===== */
+        /* ===== TICKET CARD (EXACT FLYER STYLE) ===== */
         .ticket-wrapper {
             max-width: 900px;
             margin: 0 auto;
@@ -409,7 +370,6 @@
             transform: translateY(-5px);
         }
 
-        /* Top cyan band inside ticket */
         .ticket-card .ticket-top {
             background: linear-gradient(135deg, #0a1628 0%, #122447 100%);
             padding: 18px 30px;
@@ -433,12 +393,8 @@
             letter-spacing: 3px;
             text-transform: uppercase;
         }
-        .ticket-card .ticket-top h3 i {
-            color: var(--cyan);
-            margin-right: 8px;
-        }
+        .ticket-card .ticket-top h3 i { color: var(--cyan); margin-right: 8px; }
 
-        /* Main ticket body */
         .ticket-card .ticket-body {
             padding: 35px 40px;
             display: grid;
@@ -448,7 +404,6 @@
             background: #f5f8fb;
         }
 
-        /* Ticket number box */
         .ticket-card .ticket-number-box {
             background: #fff;
             border: 4px solid var(--navy);
@@ -467,10 +422,7 @@
             letter-spacing: -2px;
         }
 
-        /* Middle info */
-        .ticket-card .ticket-info {
-            color: var(--navy);
-        }
+        .ticket-card .ticket-info { color: var(--navy); }
         .ticket-card .ticket-info .win-label {
             font-family: 'Oswald', sans-serif;
             font-size: 0.75rem;
@@ -489,9 +441,7 @@
             line-height: 1.1;
             margin-bottom: 15px;
         }
-        .ticket-card .ticket-info h4 .accent {
-            color: var(--pink);
-        }
+        .ticket-card .ticket-info h4 .accent { color: var(--pink); }
 
         .ticket-card .ticket-info .details-label {
             font-family: 'Oswald', sans-serif;
@@ -526,17 +476,17 @@
             font-size: 0.6rem;
         }
 
-        /* AC Image (right side) */
         .ticket-card .ticket-image {
             text-align: center;
             position: relative;
         }
         .ticket-card .ticket-image img {
-            max-width: 220px;
+            max-width: 240px;
             width: 100%;
             height: auto;
-            filter: drop-shadow(0 10px 25px rgba(0,229,255,0.4));
+            filter: drop-shadow(0 10px 25px rgba(0,229,255,0.5));
             transition: 0.4s;
+            border-radius: 8px;
         }
         .ticket-card .ticket-image img:hover {
             transform: scale(1.05) rotate(-2deg);
@@ -546,8 +496,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             background: radial-gradient(circle, rgba(0,229,255,0.3) 0%, transparent 70%);
             z-index: -1;
@@ -558,7 +508,6 @@
             50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.9; }
         }
 
-        /* Bottom ticket bar with price */
         .ticket-card .ticket-bottom {
             background: linear-gradient(135deg, #0a1628 0%, #122447 100%);
             padding: 20px 30px;
@@ -577,12 +526,8 @@
             letter-spacing: 2px;
             text-transform: uppercase;
         }
-        .ticket-card .ticket-bottom .ticket-id .label {
-            color: var(--cyan);
-        }
-        .ticket-card .ticket-bottom .ticket-id .num {
-            color: var(--yellow);
-        }
+        .ticket-card .ticket-bottom .ticket-id .label { color: var(--cyan); }
+        .ticket-card .ticket-bottom .ticket-id .num { color: var(--yellow); }
 
         .ticket-card .ticket-price-tag {
             background: linear-gradient(135deg, var(--navy) 0%, #1a3a6b 100%);
@@ -613,7 +558,6 @@
 
         /* ===== MODELS GRID ===== */
         .models-section { padding: 70px 0; }
-
         .model-card {
             background: var(--navy-card);
             border-radius: 16px;
@@ -624,351 +568,162 @@
             display: flex;
             flex-direction: column;
         }
-
         .model-card:hover {
             border-color: var(--cyan);
             transform: translateY(-5px);
             box-shadow: 0 0 30px rgba(0,229,255,0.3);
         }
-
-        .model-card .card-img-wrap {
-            position: relative;
-            overflow: hidden;
-        }
-
+        .model-card .card-img-wrap { position: relative; overflow: hidden; }
         .model-card .card-img-wrap img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            display: block;
-            transition: 0.5s;
+            width: 100%; height: 320px; object-fit: cover; display: block; transition: 0.5s;
         }
-
-        .model-card:hover .card-img-wrap img {
-            transform: scale(1.05);
-        }
-
+        .model-card:hover .card-img-wrap img { transform: scale(1.05); }
         .model-card .badge-verified {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            background: var(--cyan);
-            color: #000;
-            font-weight: 700;
-            font-size: 0.6rem;
-            padding: 4px 12px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            position: absolute; top: 12px; left: 12px;
+            background: var(--cyan); color: #000;
+            font-weight: 700; font-size: 0.6rem;
+            padding: 4px 12px; border-radius: 50px;
+            text-transform: uppercase; letter-spacing: 1px;
             font-family: 'Oswald', sans-serif;
-            display: flex;
-            align-items: center;
-            gap: 4px;
+            display: flex; align-items: center; gap: 4px;
             box-shadow: 0 0 15px rgba(0,229,255,0.5);
         }
-
-        .model-card .card-body {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
+        .model-card .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
         .model-card h4 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-            color: #fff;
+            font-family: 'Oswald', sans-serif; font-size: 1.1rem;
+            font-weight: 700; text-transform: uppercase; margin-bottom: 4px; color: #fff;
         }
-
-        .model-card .card-meta {
-            color: var(--text-light);
-            font-size: 0.8rem;
-            margin-bottom: 15px;
-        }
-
-        .model-card .card-meta i {
-            color: var(--cyan);
-            margin-right: 4px;
-        }
-
+        .model-card .card-meta { color: var(--text-light); font-size: 0.8rem; margin-bottom: 15px; }
+        .model-card .card-meta i { color: var(--cyan); margin-right: 4px; }
         .model-card .btn-view {
-            background: transparent;
-            border: 1px solid var(--cyan);
-            color: var(--cyan);
-            font-weight: 700;
-            font-size: 0.75rem;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: 0.3s;
-            text-align: center;
-            width: 100%;
-            margin-top: auto;
-            display: block;
+            background: transparent; border: 1px solid var(--cyan);
+            color: var(--cyan); font-weight: 700; font-size: 0.75rem;
+            padding: 10px 20px; border-radius: 50px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+            transition: 0.3s; text-align: center; width: 100%;
+            margin-top: auto; display: block;
         }
+        .model-card .btn-view:hover { background: var(--cyan); color: #000; }
 
-        .model-card .btn-view:hover {
-            background: var(--cyan);
-            color: #000;
-        }
-
-        /* ===== FEATURE CARDS (flyer-style with colored circles) ===== */
+        /* ===== FEATURE CARDS ===== */
         .feature-card {
-            background: var(--navy-card);
-            border: 1px solid var(--border-blue);
-            border-radius: 20px;
-            padding: 30px 25px;
-            text-align: center;
-            height: 100%;
-            transition: 0.4s;
+            background: var(--navy-card); border: 1px solid var(--border-blue);
+            border-radius: 20px; padding: 30px 25px; text-align: center;
+            height: 100%; transition: 0.4s;
         }
-        .feature-card:hover {
-            border-color: var(--cyan);
-            transform: translateY(-8px);
-            box-shadow: 0 0 30px rgba(0,229,255,0.2);
-        }
+        .feature-card:hover { border-color: var(--cyan); transform: translateY(-8px); box-shadow: 0 0 30px rgba(0,229,255,0.2); }
         .feature-card .circle {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
-            box-shadow: 0 0 25px rgba(0,229,255,0.3);
+            width: 70px; height: 70px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; font-size: 1.8rem; box-shadow: 0 0 25px rgba(0,229,255,0.3);
         }
         .feature-card .circle.cyan { background: linear-gradient(135deg, var(--cyan), var(--cyan-dark)); color: #000; }
         .feature-card .circle.yellow { background: linear-gradient(135deg, var(--yellow), var(--yellow-dark)); color: #000; }
         .feature-card .circle.pink { background: linear-gradient(135deg, var(--pink), var(--pink-dark)); color: #fff; }
         .feature-card .circle.blue { background: linear-gradient(135deg, var(--blue), #1d4ed8); color: #fff; }
-
         .feature-card h4 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            color: #fff;
+            font-family: 'Oswald', sans-serif; font-size: 1.1rem;
+            font-weight: 700; text-transform: uppercase; margin-bottom: 10px; color: #fff;
         }
-        .feature-card p {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin: 0;
-        }
+        .feature-card p { color: var(--text-light); font-size: 0.9rem; margin: 0; }
 
         /* ===== PACKAGES ===== */
         .package-card {
-            background: var(--navy-card);
-            border: 1px solid var(--border-blue);
-            border-radius: 20px;
-            padding: 40px 28px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            transition: 0.4s;
-            position: relative;
-            text-align: center;
+            background: var(--navy-card); border: 1px solid var(--border-blue);
+            border-radius: 20px; padding: 40px 28px; height: 100%;
+            display: flex; flex-direction: column; transition: 0.4s;
+            position: relative; text-align: center;
         }
-        .package-card:hover {
-            border-color: var(--cyan);
-            transform: translateY(-5px);
-            box-shadow: 0 0 30px rgba(0,229,255,0.2);
-        }
+        .package-card:hover { border-color: var(--cyan); transform: translateY(-5px); box-shadow: 0 0 30px rgba(0,229,255,0.2); }
         .package-card.popular {
             border: 2px solid var(--pink);
             background: linear-gradient(180deg, #1a0f2e 0%, var(--navy-card) 100%);
             box-shadow: 0 0 40px rgba(255,0,110,0.2);
         }
         .package-card.popular::after {
-            content: "MÁS POPULAR";
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--pink);
-            color: #fff;
-            padding: 6px 22px;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-family: 'Oswald', sans-serif;
-            box-shadow: 0 0 25px rgba(255,0,110,0.6);
+            content: "MÁS POPULAR"; position: absolute; top: -12px; left: 50%;
+            transform: translateX(-50%); background: var(--pink); color: #fff;
+            padding: 6px 22px; border-radius: 50px; font-size: 0.7rem;
+            font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;
+            font-family: 'Oswald', sans-serif; box-shadow: 0 0 25px rgba(255,0,110,0.6);
             white-space: nowrap;
         }
-
         .package-card .package-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
+            width: 80px; height: 80px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; font-size: 2rem;
         }
-        .package-card .package-icon.blue {
-            background: linear-gradient(135deg, var(--blue), #1d4ed8);
-            color: #fff;
-            box-shadow: 0 0 30px rgba(37,99,235,0.5);
-        }
-        .package-card .package-icon.pink {
-            background: linear-gradient(135deg, var(--pink), var(--pink-dark));
-            color: #fff;
-            box-shadow: 0 0 30px rgba(255,0,110,0.5);
-        }
-        .package-card .package-icon.yellow {
-            background: linear-gradient(135deg, var(--yellow), var(--yellow-dark));
-            color: #000;
-            box-shadow: 0 0 30px rgba(255,214,10,0.5);
-        }
-
+        .package-card .package-icon.blue { background: linear-gradient(135deg, var(--blue), #1d4ed8); color: #fff; box-shadow: 0 0 30px rgba(37,99,235,0.5); }
+        .package-card .package-icon.pink { background: linear-gradient(135deg, var(--pink), var(--pink-dark)); color: #fff; box-shadow: 0 0 30px rgba(255,0,110,0.5); }
+        .package-card .package-icon.yellow { background: linear-gradient(135deg, var(--yellow), var(--yellow-dark)); color: #000; box-shadow: 0 0 30px rgba(255,214,10,0.5); }
         .package-card h3 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-            color: #fff;
+            font-family: 'Oswald', sans-serif; font-size: 1.5rem;
+            font-weight: 800; text-transform: uppercase; margin-bottom: 5px; color: #fff;
         }
         .package-card .price-tag {
-            color: var(--cyan);
-            font-weight: 700;
-            font-size: 0.8rem;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: var(--cyan); font-weight: 700; font-size: 0.8rem;
+            margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;
         }
-        .package-card ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-            flex-grow: 1;
-            text-align: left;
-        }
+        .package-card ul { list-style: none; padding: 0; margin-bottom: 30px; flex-grow: 1; text-align: left; }
         .package-card ul li {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border-blue);
-            color: #ccc;
-            font-size: 0.9rem;
+            padding: 10px 0; border-bottom: 1px solid var(--border-blue);
+            color: #ccc; font-size: 0.9rem;
         }
-        .package-card ul li i {
-            color: var(--cyan);
-            margin-right: 12px;
-        }
+        .package-card ul li i { color: var(--cyan); margin-right: 12px; }
 
         /* ===== CONTACT FORM ===== */
         .contact-form {
-            background: var(--navy-card);
-            border: 1px solid var(--border-blue);
-            border-radius: 24px;
-            padding: 50px 40px;
-            max-width: 600px;
-            margin: 0 auto;
-            box-shadow: 0 0 40px rgba(0,229,255,0.1);
+            background: var(--navy-card); border: 1px solid var(--border-blue);
+            border-radius: 24px; padding: 50px 40px; max-width: 600px;
+            margin: 0 auto; box-shadow: 0 0 40px rgba(0,229,255,0.1);
         }
         .contact-form .form-control,
         .contact-form .form-select {
-            background: var(--navy);
-            border: 1px solid var(--border-blue);
-            color: #fff;
-            border-radius: 50px;
-            padding: 15px 24px;
+            background: var(--navy); border: 1px solid var(--border-blue);
+            color: #fff; border-radius: 50px; padding: 15px 24px;
             font-family: 'Lato', sans-serif;
         }
-        .contact-form .form-control::placeholder {
-            color: #666;
-        }
+        .contact-form .form-control::placeholder { color: #666; }
         .contact-form .form-control:focus,
         .contact-form .form-select:focus {
-            border-color: var(--cyan);
-            background: var(--navy-2);
-            box-shadow: 0 0 20px rgba(0,229,255,0.3);
-            color: #fff;
+            border-color: var(--cyan); background: var(--navy-2);
+            box-shadow: 0 0 20px rgba(0,229,255,0.3); color: #fff;
         }
-        .contact-form textarea.form-control {
-            border-radius: 20px;
-        }
-        .contact-form .form-select option {
-            background: var(--navy-2);
-            color: #fff;
-        }
+        .contact-form textarea.form-control { border-radius: 20px; }
+        .contact-form .form-select option { background: var(--navy-2); color: #fff; }
 
         /* ===== FOOTER ===== */
         footer {
-            background: var(--navy);
-            border-top: 1px solid var(--border-blue);
-            padding: 40px 0 25px;
-            text-align: center;
-            position: relative;
+            background: var(--navy); border-top: 1px solid var(--border-blue);
+            padding: 40px 0 25px; text-align: center; position: relative;
         }
         footer::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--cyan), var(--yellow), var(--pink), var(--cyan));
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 3px; background: linear-gradient(90deg, var(--cyan), var(--yellow), var(--pink), var(--cyan));
         }
-
         footer .logo-text { font-size: 1.5rem; justify-content: center; }
-
         footer .footer-links { margin: 20px 0; }
-
         footer .footer-links a {
-            color: var(--text-light);
-            font-size: 0.8rem;
-            margin: 0 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: var(--text-light); font-size: 0.8rem; margin: 0 12px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
         }
-
         footer .footer-links a:hover { color: var(--cyan); }
-
         footer .social-icons a {
-            color: #888;
-            font-size: 1.4rem;
-            margin: 0 10px;
-            transition: 0.3s;
-            display: inline-block;
+            color: #888; font-size: 1.4rem; margin: 0 10px;
+            transition: 0.3s; display: inline-block;
         }
-        footer .social-icons a:hover {
-            color: var(--cyan);
-            transform: scale(1.15);
-        }
-
-        footer .copyright {
-            color: #555;
-            font-size: 0.8rem;
-            margin-top: 20px;
-        }
+        footer .social-icons a:hover { color: var(--cyan); transform: scale(1.15); }
+        footer .copyright { color: #555; font-size: 0.8rem; margin-top: 20px; }
 
         /* ===== FLOATING BUTTON ===== */
         .floating-btn {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            z-index: 9999;
-            background: var(--yellow);
-            color: #000;
-            font-weight: 900;
-            padding: 16px 28px;
-            border-radius: 50px;
+            position: fixed; bottom: 25px; right: 25px; z-index: 9999;
+            background: var(--yellow); color: #000; font-weight: 900;
+            padding: 16px 28px; border-radius: 50px;
             box-shadow: 0 0 30px rgba(255,214,10,0.6);
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1.5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.3s;
-            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1.5px;
+            display: flex; align-items: center; gap: 8px;
+            transition: 0.3s; font-family: 'Oswald', sans-serif;
             animation: float-bounce 2s ease-in-out infinite;
         }
         @keyframes float-bounce {
@@ -976,48 +731,26 @@
             50% { transform: translateY(-6px); }
         }
         .floating-btn:hover {
-            background: #fff;
-            color: #000;
-            animation: none;
-            transform: scale(1.08);
+            background: #fff; color: #000; animation: none; transform: scale(1.08);
         }
 
         /* ===== MOBILE MENU ===== */
         .offcanvas { background: var(--navy) !important; }
         .offcanvas .nav-link {
-            color: #ccc !important;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            padding: 14px 0;
-            border-bottom: 1px solid var(--border-blue);
-            font-family: 'Oswald', sans-serif;
-            letter-spacing: 1px;
+            color: #ccc !important; font-weight: 600; text-transform: uppercase;
+            font-size: 0.9rem; padding: 14px 0; border-bottom: 1px solid var(--border-blue);
+            font-family: 'Oswald', sans-serif; letter-spacing: 1px;
         }
         .offcanvas .nav-link:hover { color: var(--cyan) !important; }
         .offcanvas .btn-close { filter: invert(1); }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 900px) {
-            .ticket-card .ticket-body {
-                grid-template-columns: 1fr;
-                text-align: center;
-                padding: 30px 25px;
-            }
-            .ticket-card .ticket-number-box {
-                margin: 0 auto;
-            }
-            .ticket-card .ticket-info .prize-list {
-                justify-content: center;
-                text-align: left;
-                max-width: 320px;
-                margin: 0 auto;
-            }
-            .ticket-card .ticket-image img {
-                max-width: 200px;
-            }
+            .ticket-card .ticket-body { grid-template-columns: 1fr; text-align: center; padding: 30px 25px; }
+            .ticket-card .ticket-number-box { margin: 0 auto; }
+            .ticket-card .ticket-info .prize-list { justify-content: center; text-align: left; max-width: 320px; margin: 0 auto; }
+            .ticket-card .ticket-image img { max-width: 200px; }
         }
-
         @media (max-width: 768px) {
             .hero { padding: 50px 0 40px; }
             .hero h1 { font-size: 2.2rem; letter-spacing: -1px; }
@@ -1031,7 +764,6 @@
             .ticket-card .ticket-info h4 { font-size: 1.3rem; }
             .ticket-card .ticket-number-box .num { font-size: 2.5rem; }
         }
-
         @media (max-width: 576px) {
             .logo-text { font-size: 1.2rem; }
             .logo-text i { font-size: 1.4rem; }
@@ -1046,16 +778,13 @@
 </head>
 <body>
 
-    <!-- Star background -->
     <div class="stars-bg"></div>
 
-    <!-- ===== FLOATING BUTTON ===== -->
     <a href="#contact" class="floating-btn">
         <i class="bi bi-ticket-perforated-fill"></i>
         <span data-i18n="floating-btn">Comprar Boleto</span>
     </a>
 
-    <!-- ===== HEADER ===== -->
     <header id="header">
         <div class="container">
             <div class="row align-items-center">
@@ -1065,7 +794,6 @@
                         VERÓNICA <span>RAFFLES</span>
                     </a>
                 </div>
-
                 <div class="col-md-6 d-none d-lg-block">
                     <nav class="navbar navbar-expand-lg py-0 justify-content-center">
                         <ul class="navbar-nav">
@@ -1076,7 +804,6 @@
                         </ul>
                     </nav>
                 </div>
-
                 <div class="col-5 col-md-3 d-flex justify-content-end align-items-center gap-3">
                     <div class="lang-switch">
                         <a href="#" data-lang="es" class="active-lang" onclick="setLanguage('es'); return false;">ES</a>
@@ -1090,7 +817,6 @@
         </div>
     </header>
 
-    <!-- ===== OFF CANVAS ===== -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
         <div class="offcanvas-header border-bottom border-secondary">
             <a href="#" class="logo-text"><i class="bi bi-snow"></i> VERÓNICA <span>RAFFLES</span></a>
@@ -1106,32 +832,26 @@
         </div>
     </div>
 
-    <!-- ===== HERO (Flyer bold style) ===== -->
     <section class="hero">
         <div class="container">
             <div class="top-ribbon">
                 <i class="bi bi-fire me-2"></i> <span data-i18n="hero-ribbon">Rifa Beta · Maracaibo</span>
             </div>
-
             <div class="headline-mini" data-i18n="hero-mini">¡GANA CON VERÓNICA RAFFLES!</div>
-
             <h1>
                 <span class="white" data-i18n="hero-title-1">GANA UN</span>
                 <span class="yellow" data-i18n="hero-title-2">AIRE ACONDICIONADO</span>
                 <span class="cyan-glow" data-i18n="hero-title-3">TOSHIBA 12,000 BTU</span>
             </h1>
-
             <div>
                 <div class="banner-strip cyan" data-i18n="hero-banner-1">12,000 BTU · COMPRESOR TOSHIBA</div>
             </div>
             <div>
                 <div class="banner-strip pink" data-i18n="hero-banner-2">TUBERÍA DE COBRE · R32 · 220V</div>
             </div>
-
             <div class="sub-line" data-i18n="hero-sub">
                 🔥 SOLO 75 BOLETOS · $10 CADA UNO · SORTEO AL VENDER TODOS 🔥
             </div>
-
             <div class="cta-group">
                 <a href="#raffle" class="btn-yellow">
                     <i class="bi bi-ticket-perforated-fill me-2"></i> <span data-i18n="hero-cta">COMPRAR BOLETO</span>
@@ -1140,7 +860,6 @@
                     <i class="bi bi-briefcase-fill me-2"></i> <span data-i18n="hero-cta-2">ALIANZAS</span>
                 </a>
             </div>
-
             <div class="stats-row">
                 <div class="stat-item">
                     <h3>75</h3>
@@ -1158,7 +877,6 @@
         </div>
     </section>
 
-    <!-- ===== RAFFLE TICKET (EXACT FLYER 2 STYLE) ===== -->
     <section class="section-navy-light" id="raffle">
         <div class="container">
             <h2 class="section-title">
@@ -1167,31 +885,21 @@
             </h2>
             <p class="section-sub" data-i18n="raffle-sub">Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.</p>
 
-            <!-- TICKET -->
             <div class="ticket-wrapper">
                 <div class="ticket-card">
-
-                    <!-- Ticket Top -->
                     <div class="ticket-top">
                         <h3><i class="bi bi-snow"></i> VERÓNICA RAFFLES · RAFFLE TICKET</h3>
                     </div>
-
-                    <!-- Ticket Body -->
                     <div class="ticket-body">
-
-                        <!-- Ticket Number Box -->
                         <div class="ticket-number-box">
                             <div class="num">001</div>
                         </div>
-
-                        <!-- Info -->
                         <div class="ticket-info">
                             <div class="win-label" data-i18n="ticket-win-label">WIN A 12,000 BTU</div>
                             <h4>
                                 <span class="accent">TOSHIBA</span><br>
                                 <span data-i18n="ticket-title">AIR CONDITIONER</span>
                             </h4>
-
                             <div class="details-label" data-i18n="ticket-details-label">PRIZE DETAILS:</div>
                             <ul class="prize-list">
                                 <li data-i18n="prize-1">Toshiba Brand</li>
@@ -1202,41 +910,31 @@
                                 <li data-i18n="prize-6">220V</li>
                             </ul>
                         </div>
-
-                        <!-- AC Image -->
                         <div class="ticket-image">
                             <div class="glow-ring"></div>
-                            <img
-                                src="https://images.pexels.com/photos/3964736/pexels-photo-3964736.jpeg?auto=compress&cs=tinysrgb&w=500"
-                                alt="Toshiba 12,000 BTU Air Conditioner"
-                                onerror="this.onerror=null; this.src='https://placehold.co/400x300/f5f8fb/00b8d4?text=Toshiba+AC+12%2C000+BTU';"
-                            >
+                            <!-- 🖼️ AC IMAGE: Save your cropped AC image as "ac.png" in the same folder -->
+                            <img src="ac.png" alt="Toshiba 12,000 BTU Air Conditioner" 
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=400&q=80';">
                         </div>
                     </div>
-
-                    <!-- Ticket Bottom -->
                     <div class="ticket-bottom">
                         <div class="ticket-id">
                             <span class="label">TICKET</span>
                             <span class="num"> #001</span>
                         </div>
-
                         <div class="ticket-price-tag">
                             <span class="price-label" data-i18n="ticket-price-label">PRICE:</span>
                             <span class="price-value">$10</span>
                         </div>
-
                         <a href="#contact" class="btn-yellow" style="padding: 10px 25px; font-size: 0.75rem;">
                             <i class="bi bi-cart-check-fill me-1"></i> <span data-i18n="ticket-buy">COMPRAR</span>
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== MODELS ===== -->
     <section class="models-section" id="models">
         <div class="container">
             <h2 class="section-title">
@@ -1259,7 +957,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="model-card">
                         <div class="card-img-wrap">
@@ -1273,7 +970,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="model-card">
                         <div class="card-img-wrap">
@@ -1287,7 +983,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="model-card">
                         <div class="card-img-wrap">
@@ -1305,7 +1000,6 @@
         </div>
     </section>
 
-    <!-- ===== PARTNERS (Flyer style "LO QUE TE OFRECEMOS") ===== -->
     <section class="section-navy-light" id="partners">
         <div class="container">
             <h2 class="section-title">
@@ -1345,7 +1039,6 @@
                 </div>
             </div>
 
-            <!-- Packages (flyer style) -->
             <h2 class="section-title mt-5" style="font-size: 1.6rem;">
                 <span class="cyan" data-i18n="packages-title">ELIGE TU PLAN DE ALIANZA</span>
             </h2>
@@ -1400,7 +1093,6 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
     <section id="contact">
         <div class="container">
             <h2 class="section-title">
@@ -1435,7 +1127,6 @@
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             <a href="#" class="logo-text"><i class="bi bi-snow"></i> VERÓNICA <span>RAFFLES</span></a>
@@ -1455,170 +1146,82 @@
         </div>
     </footer>
 
-    <!-- ===== BOOTSTRAP JS ===== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- ===== LANGUAGE TOGGLE ===== -->
     <script>
         const translations = {
             es: {
-                "floating-btn": "Comprar Boleto",
-                "nav-raffle": "Rifa",
-                "nav-models": "Modelos",
-                "nav-partners": "Alianzas",
-                "nav-contact": "Contacto",
-                "hero-ribbon": "Rifa Beta · Maracaibo",
-                "hero-mini": "¡GANA CON VERÓNICA RAFFLES!",
-                "hero-title-1": "GANA UN",
-                "hero-title-2": "AIRE ACONDICIONADO",
-                "hero-title-3": "TOSHIBA 12,000 BTU",
-                "hero-banner-1": "12,000 BTU · COMPRESOR TOSHIBA",
-                "hero-banner-2": "TUBERÍA DE COBRE · R32 · 220V",
+                "floating-btn": "Comprar Boleto", "nav-raffle": "Rifa", "nav-models": "Modelos", "nav-partners": "Alianzas", "nav-contact": "Contacto",
+                "hero-ribbon": "Rifa Beta · Maracaibo", "hero-mini": "¡GANA CON VERÓNICA RAFFLES!",
+                "hero-title-1": "GANA UN", "hero-title-2": "AIRE ACONDICIONADO", "hero-title-3": "TOSHIBA 12,000 BTU",
+                "hero-banner-1": "12,000 BTU · COMPRESOR TOSHIBA", "hero-banner-2": "TUBERÍA DE COBRE · R32 · 220V",
                 "hero-sub": "🔥 SOLO 75 BOLETOS · $10 CADA UNO · SORTEO AL VENDER TODOS 🔥",
-                "hero-cta": "COMPRAR BOLETO",
-                "hero-cta-2": "ALIANZAS",
-                "stat-1": "Boletos Totales",
-                "stat-2": "Por Boleto",
-                "stat-3": "Premio Principal",
-                "raffle-title-1": "BOLETO",
-                "raffle-title-2": "OFICIAL",
+                "hero-cta": "COMPRAR BOLETO", "hero-cta-2": "ALIANZAS",
+                "stat-1": "Boletos Totales", "stat-2": "Por Boleto", "stat-3": "Premio Principal",
+                "raffle-title-1": "BOLETO", "raffle-title-2": "OFICIAL",
                 "raffle-sub": "Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.",
-                "ticket-win-label": "WIN A 12,000 BTU",
-                "ticket-title": "AIR CONDITIONER",
-                "ticket-details-label": "PRIZE DETAILS:",
-                "prize-1": "Marca Toshiba",
-                "prize-2": "12,000 BTU",
-                "prize-3": "Compresor Toshiba",
-                "prize-4": "Tubería de Cobre",
-                "prize-5": "Refrigerante R32",
-                "prize-6": "220V",
-                "ticket-price-label": "PRECIO:",
-                "ticket-buy": "COMPRAR",
-                "models-title-1": "MODELOS",
-                "models-title-2": "EMBAJADORAS",
+                "ticket-win-label": "WIN A 12,000 BTU", "ticket-title": "AIR CONDITIONER", "ticket-details-label": "PRIZE DETAILS:",
+                "prize-1": "Marca Toshiba", "prize-2": "12,000 BTU", "prize-3": "Compresor Toshiba",
+                "prize-4": "Tubería de Cobre", "prize-5": "Refrigerante R32", "prize-6": "220V",
+                "ticket-price-label": "PRECIO:", "ticket-buy": "COMPRAR",
+                "models-title-1": "MODELOS", "models-title-2": "EMBAJADORAS",
                 "models-sub": "Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.",
-                "badge-verified": "Embajadora",
-                "view-profile": "Ver Perfil",
-                "partners-title-1": "ELEVA",
-                "partners-title-2": "TU MARCA",
+                "badge-verified": "Embajadora", "view-profile": "Ver Perfil",
+                "partners-title-1": "ELEVA", "partners-title-2": "TU MARCA",
                 "partners-sub": "Promociona tus productos con nuestras rifas virales y modelos embajadoras.",
-                "partner-1": "Rifas Virales",
-                "partner-1-desc": "Tus productos como premios que generan buzz masivo.",
-                "partner-2": "Modelos Embajadoras",
-                "partner-2-desc": "Contenido premium creado por modelos seleccionadas.",
-                "partner-3": "Exposición en Redes",
-                "partner-3-desc": "Instagram, TikTok y Facebook – alcance masivo.",
-                "partner-4": "Selección Curada",
-                "partner-4-desc": "Solo unas pocas modelos son elegidas para tu negocio.",
+                "partner-1": "Rifas Virales", "partner-1-desc": "Tus productos como premios que generan buzz masivo.",
+                "partner-2": "Modelos Embajadoras", "partner-2-desc": "Contenido premium creado por modelos seleccionadas.",
+                "partner-3": "Exposición en Redes", "partner-3-desc": "Instagram, TikTok y Facebook – alcance masivo.",
+                "partner-4": "Selección Curada", "partner-4-desc": "Solo unas pocas modelos son elegidas para tu negocio.",
                 "packages-title": "ELIGE TU PLAN DE ALIANZA",
-                "pack-1-name": "LAUNCH PARTNER",
-                "pack-1-tag": "Ideal para empezar",
-                "pack-1-li-1": "Campaña de un producto",
-                "pack-1-li-2": "Promoción en redes",
-                "pack-1-li-3": "1 modelo embajadora",
-                "pack-1-btn": "ELEGIR",
-                "pack-2-name": "GROWTH PARTNER",
-                "pack-2-tag": "Más alcance",
-                "pack-2-li-1": "Múltiples modelos",
-                "pack-2-li-2": "Reels profesionales",
-                "pack-2-li-3": "Audiencia expandida",
-                "pack-2-btn": "ELEGIR",
-                "pack-3-name": "PREMIER ELITE",
-                "pack-3-tag": "Alianza anual",
-                "pack-3-li-1": "Campañas mensuales",
-                "pack-3-li-2": "Programación prioritaria",
-                "pack-3-li-3": "Exclusividad por categoría",
-                "pack-3-btn": "ELEGIR",
-                "contact-title-1": "CONTÁC",
-                "contact-title-2": "TANOS",
+                "pack-1-name": "LAUNCH PARTNER", "pack-1-tag": "Ideal para empezar",
+                "pack-1-li-1": "Campaña de un producto", "pack-1-li-2": "Promoción en redes", "pack-1-li-3": "1 modelo embajadora", "pack-1-btn": "ELEGIR",
+                "pack-2-name": "GROWTH PARTNER", "pack-2-tag": "Más alcance",
+                "pack-2-li-1": "Múltiples modelos", "pack-2-li-2": "Reels profesionales", "pack-2-li-3": "Audiencia expandida", "pack-2-btn": "ELEGIR",
+                "pack-3-name": "PREMIER ELITE", "pack-3-tag": "Alianza anual",
+                "pack-3-li-1": "Campañas mensuales", "pack-3-li-2": "Programación prioritaria", "pack-3-li-3": "Exclusividad por categoría", "pack-3-btn": "ELEGIR",
+                "contact-title-1": "CONTÁC", "contact-title-2": "TANOS",
                 "contact-sub": "Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.",
-                "form-name": "Tu Nombre",
-                "form-phone": "WhatsApp / Teléfono",
-                "form-select-ph": "Estoy interesado en...",
-                "form-select-1": "Comprar un boleto de rifa",
-                "form-select-2": "Alianza comercial para mi negocio",
-                "form-message": "Mensaje (opcional)",
-                "form-submit": "ENVIAR",
+                "form-name": "Tu Nombre", "form-phone": "WhatsApp / Teléfono",
+                "form-select-ph": "Estoy interesado en...", "form-select-1": "Comprar un boleto de rifa", "form-select-2": "Alianza comercial para mi negocio",
+                "form-message": "Mensaje (opcional)", "form-submit": "ENVIAR",
                 "footer-text": "© 2026 Verónica Raffles · Plataforma de talento y rifas."
             },
             en: {
-                "floating-btn": "Buy Ticket",
-                "nav-raffle": "Raffle",
-                "nav-models": "Models",
-                "nav-partners": "Partners",
-                "nav-contact": "Contact",
-                "hero-ribbon": "Beta Raffle · Maracaibo",
-                "hero-mini": "WIN WITH VERÓNICA RAFFLES!",
-                "hero-title-1": "WIN A",
-                "hero-title-2": "AIR CONDITIONER",
-                "hero-title-3": "TOSHIBA 12,000 BTU",
-                "hero-banner-1": "12,000 BTU · TOSHIBA COMPRESSOR",
-                "hero-banner-2": "COPPER TUBING · R32 · 220V",
+                "floating-btn": "Buy Ticket", "nav-raffle": "Raffle", "nav-models": "Models", "nav-partners": "Partners", "nav-contact": "Contact",
+                "hero-ribbon": "Beta Raffle · Maracaibo", "hero-mini": "WIN WITH VERÓNICA RAFFLES!",
+                "hero-title-1": "WIN A", "hero-title-2": "AIR CONDITIONER", "hero-title-3": "TOSHIBA 12,000 BTU",
+                "hero-banner-1": "12,000 BTU · TOSHIBA COMPRESSOR", "hero-banner-2": "COPPER TUBING · R32 · 220V",
                 "hero-sub": "🔥 ONLY 75 TICKETS · $10 EACH · DRAW WHEN ALL SOLD 🔥",
-                "hero-cta": "BUY TICKET",
-                "hero-cta-2": "PARTNERSHIPS",
-                "stat-1": "Total Tickets",
-                "stat-2": "Per Ticket",
-                "stat-3": "Main Prize",
-                "raffle-title-1": "OFFICIAL",
-                "raffle-title-2": "TICKET",
+                "hero-cta": "BUY TICKET", "hero-cta-2": "PARTNERSHIPS",
+                "stat-1": "Total Tickets", "stat-2": "Per Ticket", "stat-3": "Main Prize",
+                "raffle-title-1": "OFFICIAL", "raffle-title-2": "TICKET",
                 "raffle-sub": "Buy your ticket before they sell out. The draw happens when all 75 are sold.",
-                "ticket-win-label": "WIN A 12,000 BTU",
-                "ticket-title": "AIR CONDITIONER",
-                "ticket-details-label": "PRIZE DETAILS:",
-                "prize-1": "Toshiba Brand",
-                "prize-2": "12,000 BTU",
-                "prize-3": "Toshiba Compressor",
-                "prize-4": "Copper Tubing",
-                "prize-5": "R32 Refrigerant",
-                "prize-6": "220V",
-                "ticket-price-label": "PRICE:",
-                "ticket-buy": "BUY",
-                "models-title-1": "AMBASSADOR",
-                "models-title-2": "MODELS",
+                "ticket-win-label": "WIN A 12,000 BTU", "ticket-title": "AIR CONDITIONER", "ticket-details-label": "PRIZE DETAILS:",
+                "prize-1": "Toshiba Brand", "prize-2": "12,000 BTU", "prize-3": "Toshiba Compressor",
+                "prize-4": "Copper Tubing", "prize-5": "R32 Refrigerant", "prize-6": "220V",
+                "ticket-price-label": "PRICE:", "ticket-buy": "BUY",
+                "models-title-1": "AMBASSADOR", "models-title-2": "MODELS",
                 "models-sub": "The faces behind our campaigns. Only a few are selected as ambassadors.",
-                "badge-verified": "Ambassador",
-                "view-profile": "View Profile",
-                "partners-title-1": "ELEVATE",
-                "partners-title-2": "YOUR BRAND",
+                "badge-verified": "Ambassador", "view-profile": "View Profile",
+                "partners-title-1": "ELEVATE", "partners-title-2": "YOUR BRAND",
                 "partners-sub": "Promote your products with our viral raffles and ambassador models.",
-                "partner-1": "Viral Raffles",
-                "partner-1-desc": "Your products as prizes that generate massive buzz.",
-                "partner-2": "Ambassador Models",
-                "partner-2-desc": "Premium content created by handpicked models.",
-                "partner-3": "Social Media Exposure",
-                "partner-3-desc": "Instagram, TikTok & Facebook – massive reach.",
-                "partner-4": "Curated Selection",
-                "partner-4-desc": "Only a few select models are chosen for your business.",
+                "partner-1": "Viral Raffles", "partner-1-desc": "Your products as prizes that generate massive buzz.",
+                "partner-2": "Ambassador Models", "partner-2-desc": "Premium content created by handpicked models.",
+                "partner-3": "Social Media Exposure", "partner-3-desc": "Instagram, TikTok & Facebook – massive reach.",
+                "partner-4": "Curated Selection", "partner-4-desc": "Only a few select models are chosen for your business.",
                 "packages-title": "CHOOSE YOUR PARTNERSHIP PLAN",
-                "pack-1-name": "LAUNCH PARTNER",
-                "pack-1-tag": "Ideal to Start",
-                "pack-1-li-1": "Single product campaign",
-                "pack-1-li-2": "Social media promotion",
-                "pack-1-li-3": "1 ambassador model",
-                "pack-1-btn": "CHOOSE",
-                "pack-2-name": "GROWTH PARTNER",
-                "pack-2-tag": "More Reach",
-                "pack-2-li-1": "Multiple models",
-                "pack-2-li-2": "Professional reels",
-                "pack-2-li-3": "Expanded audience",
-                "pack-2-btn": "CHOOSE",
-                "pack-3-name": "PREMIER ELITE",
-                "pack-3-tag": "Annual Partnership",
-                "pack-3-li-1": "Monthly campaigns",
-                "pack-3-li-2": "Priority scheduling",
-                "pack-3-li-3": "Category exclusivity",
-                "pack-3-btn": "CHOOSE",
-                "contact-title-1": "CONTACT",
-                "contact-title-2": "US",
+                "pack-1-name": "LAUNCH PARTNER", "pack-1-tag": "Ideal to Start",
+                "pack-1-li-1": "Single product campaign", "pack-1-li-2": "Social media promotion", "pack-1-li-3": "1 ambassador model", "pack-1-btn": "CHOOSE",
+                "pack-2-name": "GROWTH PARTNER", "pack-2-tag": "More Reach",
+                "pack-2-li-1": "Multiple models", "pack-2-li-2": "Professional reels", "pack-2-li-3": "Expanded audience", "pack-2-btn": "CHOOSE",
+                "pack-3-name": "PREMIER ELITE", "pack-3-tag": "Annual Partnership",
+                "pack-3-li-1": "Monthly campaigns", "pack-3-li-2": "Priority scheduling", "pack-3-li-3": "Category exclusivity", "pack-3-btn": "CHOOSE",
+                "contact-title-1": "CONTACT", "contact-title-2": "US",
                 "contact-sub": "Buy tickets or request a business partnership. We'll respond within 24 hours.",
-                "form-name": "Your Name",
-                "form-phone": "WhatsApp / Phone",
-                "form-select-ph": "I am interested in...",
-                "form-select-1": "Buying a raffle ticket",
-                "form-select-2": "Business partnership",
-                "form-message": "Message (optional)",
-                "form-submit": "SUBMIT",
+                "form-name": "Your Name", "form-phone": "WhatsApp / Phone",
+                "form-select-ph": "I am interested in...", "form-select-1": "Buying a raffle ticket", "form-select-2": "Business partnership",
+                "form-message": "Message (optional)", "form-submit": "SUBMIT",
                 "footer-text": "© 2026 Verónica Raffles · Talent & raffle platform."
             }
         };
@@ -1649,6 +1252,5 @@
             }
         });
     </script>
-
 </body>
 </html>
