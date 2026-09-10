@@ -3,26 +3,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rifa Maracaibo — Modelos Embajadoras & Alianzas</title>
+    <title>Verónica Raffles | Rifa Maracaibo</title>
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
 
-    <!-- Google Fonts: Oswald + Lato (exact VeronicaVee) -->
+    <!-- Google Fonts: Oswald + Lato -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ===== VERONICA VEE EXACT STYLE — WHITE BACKGROUND ===== */
+        /* ===== NUEVA PALETA DE COLORES (Flyer + Ticket) ===== */
         :root {
-            --bg-white: #ffffff;
-            --bg-light: #f8f8f8;
-            --text-black: #000000;
-            --text-dark: #1a1a1a;
-            --text-muted: #666666;
-            --border-light: #e5e5e5;
+            --bg-dark: #0a1224;       /* Dark Navy */
+            --bg-card: #111c35;       /* Card Background */
+            --cyan: #00d2ff;          /* Neon Cyan */
+            --cyan-dark: #0099cc;
+            --yellow: #facc15;        /* Bright Yellow */
+            --pink: #ec4899;          /* Pink Accent */
+            --text-white: #ffffff;
+            --text-muted: #94a3b8;
+            --border-color: #1e3a8a;  /* Dark Blue Border */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
@@ -30,15 +33,14 @@
 
         body {
             font-family: 'Lato', sans-serif;
-            background-color: var(--bg-white);
-            color: var(--text-black);
+            background-color: var(--bg-dark);
+            color: var(--text-white);
             line-height: 1.6;
         }
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Oswald', sans-serif;
             font-weight: 600;
-            color: var(--text-black);
         }
 
         a { text-decoration: none; transition: 300ms; }
@@ -48,8 +50,8 @@
 
         /* ===== HEADER ===== */
         #header {
-            background: #ffffff;
-            border-bottom: 1px solid var(--border-light);
+            background: #0a1224;
+            border-bottom: 1px solid var(--border-color);
             padding: 15px 0;
             position: sticky;
             top: 0;
@@ -61,16 +63,15 @@
             font-size: 1.6rem;
             font-weight: 700;
             letter-spacing: 1px;
-            color: #000;
+            color: #fff;
             text-decoration: none;
         }
         .logo-text span {
-            font-weight: 300;
-            color: #888;
+            color: var(--yellow);
         }
 
         .nav-link-custom {
-            color: #333 !important;
+            color: #ccc !important;
             font-weight: 600;
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -80,47 +81,47 @@
         }
         .nav-link-custom:hover,
         .nav-link-custom.active {
-            color: #000 !important;
+            color: var(--cyan) !important;
         }
 
         /* Language Switcher */
         .lang-switch { display: flex; gap: 8px; }
         .lang-switch a {
-            color: #666;
+            color: #ccc;
             font-weight: 700;
             font-size: 0.7rem;
             text-transform: uppercase;
             padding: 5px 14px;
             border-radius: 50px;
-            border: 1px solid #ddd;
+            border: 1px solid #333;
             transition: 0.3s;
         }
         .lang-switch a:hover {
-            border-color: #000;
-            color: #000;
+            border-color: var(--cyan);
+            color: var(--cyan);
         }
         .lang-switch a.active-lang {
-            background: #000;
-            border-color: #000;
-            color: #fff;
+            background: var(--cyan);
+            border-color: var(--cyan);
+            color: #000;
         }
 
         /* ===== HERO ===== */
         .hero {
             padding: 100px 0 70px;
-            background: #ffffff;
+            background: linear-gradient(180deg, #0a1224 0%, #111c35 100%);
             text-align: center;
-            border-bottom: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .hero .badge-pill {
             display: inline-block;
-            background: #f0f0f0;
-            border: none;
+            background: rgba(0, 210, 255, 0.1);
+            border: 1px solid var(--cyan);
             padding: 8px 22px;
             border-radius: 50px;
             font-size: 0.75rem;
-            color: #333;
+            color: var(--cyan);
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 600;
@@ -138,7 +139,11 @@
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
-            color: #000;
+            color: #fff;
+        }
+
+        .hero h1 .highlight {
+            color: var(--yellow);
         }
 
         .hero p {
@@ -156,14 +161,14 @@
             margin-bottom: 60px;
         }
 
-        /* ===== BUTTONS (Black & White) ===== */
-        .btn-black {
-            background: #000;
-            color: #fff;
+        /* ===== BUTTONS ===== */
+        .btn-cyan {
+            background: var(--cyan);
+            color: #000;
             font-weight: 700;
             padding: 14px 36px;
             border-radius: 50px;
-            border: 2px solid #000;
+            border: 2px solid var(--cyan);
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -171,20 +176,43 @@
             transition: 0.3s;
             font-family: 'Lato', sans-serif;
         }
-        .btn-black:hover {
-            background: #333;
-            border-color: #333;
-            color: #fff;
+        .btn-cyan:hover {
+            background: #fff;
+            border-color: #fff;
+            color: #000;
             transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
         }
 
-        .btn-outline-black {
-            background: transparent;
+        .btn-yellow {
+            background: var(--yellow);
             color: #000;
+            font-weight: 700;
+            padding: 14px 36px;
+            border-radius: 50px;
+            border: 2px solid var(--yellow);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            transition: 0.3s;
+            font-family: 'Lato', sans-serif;
+        }
+        .btn-yellow:hover {
+            background: #fff;
+            border-color: #fff;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
+        }
+
+        .btn-outline-cyan {
+            background: transparent;
+            color: var(--cyan);
             font-weight: 700;
             padding: 12px 34px;
             border-radius: 50px;
-            border: 2px solid #000;
+            border: 2px solid var(--cyan);
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -192,9 +220,9 @@
             transition: 0.3s;
             font-family: 'Lato', sans-serif;
         }
-        .btn-outline-black:hover {
-            background: #000;
-            color: #fff;
+        .btn-outline-cyan:hover {
+            background: var(--cyan);
+            color: #000;
         }
 
         /* Stats */
@@ -204,14 +232,14 @@
             gap: 70px;
             flex-wrap: wrap;
             padding-top: 50px;
-            border-top: 1px solid var(--border-light);
+            border-top: 1px solid var(--border-color);
         }
         .stat-item { text-align: center; }
         .stat-item h3 {
             font-family: 'Oswald', sans-serif;
             font-size: 3.5rem;
             font-weight: 700;
-            color: #000;
+            color: var(--yellow);
             line-height: 1;
             margin-bottom: 8px;
         }
@@ -235,7 +263,11 @@
             text-align: center;
             margin-bottom: 12px;
             letter-spacing: -0.5px;
-            color: #000;
+            color: #fff;
+        }
+
+        .section-title .highlight {
+            color: var(--cyan);
         }
 
         .section-sub {
@@ -246,32 +278,33 @@
             font-size: 1rem;
         }
 
-        .section-light { background: #f8f8f8; }
+        .section-dark { background: #0f1629; }
 
         /* ===== RAFFLE CARD ===== */
         .raffle-card {
-            background: #ffffff;
-            border: 1px solid var(--border-light);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: 20px;
             overflow: hidden;
             max-width: 700px;
             margin: 0 auto;
             transition: 0.4s;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 0 30px rgba(0, 210, 255, 0.1);
         }
         .raffle-card:hover {
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-color: var(--cyan);
+            box-shadow: 0 0 40px rgba(0, 210, 255, 0.2);
             transform: translateY(-5px);
         }
         .raffle-card .raffle-image {
             height: 300px;
-            background: #f0f0f0;
+            background: #0a1224;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 6rem;
-            color: #000;
-            border-bottom: 1px solid var(--border-light);
+            color: var(--cyan);
+            border-bottom: 1px solid var(--border-color);
         }
         .raffle-card .raffle-body {
             padding: 40px 35px;
@@ -283,10 +316,10 @@
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 10px;
-            color: #000;
+            color: #fff;
         }
         .raffle-card .raffle-body .prize-detail {
-            color: #666;
+            color: var(--cyan);
             font-weight: 700;
             font-size: 0.9rem;
             margin-bottom: 20px;
@@ -302,7 +335,7 @@
             font-family: 'Oswald', sans-serif;
             font-size: 3.5rem;
             font-weight: 900;
-            color: #000;
+            color: var(--yellow);
             line-height: 1;
             margin-bottom: 10px;
         }
@@ -313,9 +346,9 @@
         }
         .raffle-card .tickets-left {
             display: inline-block;
-            background: #f0f0f0;
-            border: none;
-            color: #333;
+            background: rgba(236, 72, 153, 0.15);
+            border: 1px solid var(--pink);
+            color: #ffb3d9;
             padding: 6px 20px;
             border-radius: 50px;
             font-weight: 700;
@@ -327,20 +360,20 @@
         .models-section { padding: 70px 0; }
 
         .model-card {
-            background: #ffffff;
+            background: var(--bg-card);
             border-radius: 16px;
             overflow: hidden;
             transition: 0.4s;
-            border: 1px solid var(--border-light);
+            border: 1px solid var(--border-color);
             height: 100%;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
         }
 
         .model-card:hover {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: var(--cyan);
             transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.15);
         }
 
         .model-card .card-img-wrap {
@@ -364,7 +397,7 @@
             position: absolute;
             top: 12px;
             left: 12px;
-            background: #fff;
+            background: var(--cyan);
             color: #000;
             font-weight: 700;
             font-size: 0.6rem;
@@ -376,7 +409,6 @@
             display: flex;
             align-items: center;
             gap: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .model-card .card-body {
@@ -392,7 +424,7 @@
             font-weight: 600;
             text-transform: uppercase;
             margin-bottom: 4px;
-            color: #000;
+            color: #fff;
         }
 
         .model-card .card-meta {
@@ -402,14 +434,14 @@
         }
 
         .model-card .card-meta i {
-            color: #888;
+            color: var(--cyan);
             margin-right: 4px;
         }
 
         .model-card .btn-view {
             background: transparent;
-            border: 1px solid #000;
-            color: #000;
+            border: 1px solid var(--cyan);
+            color: var(--cyan);
             font-weight: 700;
             font-size: 0.75rem;
             padding: 10px 20px;
@@ -424,28 +456,28 @@
         }
 
         .model-card .btn-view:hover {
-            background: #000;
-            color: #fff;
+            background: var(--cyan);
+            color: #000;
         }
 
         /* ===== PARTNER CARDS ===== */
         .partner-card {
-            background: #ffffff;
-            border: 1px solid var(--border-light);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 35px 25px;
             text-align: center;
             height: 100%;
             transition: 0.4s;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
         }
         .partner-card:hover {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: var(--yellow);
             transform: translateY(-8px);
+            box-shadow: 0 0 20px rgba(250, 204, 21, 0.15);
         }
         .partner-card i {
             font-size: 2.5rem;
-            color: #000;
+            color: var(--yellow);
             margin-bottom: 20px;
             display: block;
         }
@@ -455,7 +487,7 @@
             font-weight: 600;
             text-transform: uppercase;
             margin-bottom: 10px;
-            color: #000;
+            color: #fff;
         }
         .partner-card p {
             color: var(--text-muted);
@@ -465,8 +497,8 @@
 
         /* ===== PACKAGES ===== */
         .package-card {
-            background: #ffffff;
-            border: 1px solid var(--border-light);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 40px 28px;
             height: 100%;
@@ -474,23 +506,22 @@
             flex-direction: column;
             transition: 0.4s;
             position: relative;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
         }
         .package-card:hover {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: var(--cyan);
             transform: translateY(-5px);
         }
         .package-card.popular {
-            border: 2px solid #000;
-            background: #ffffff;
+            border: 2px solid var(--cyan);
+            background: #0f1a2e;
         }
         .package-card.popular::after {
             content: "MÁS POPULAR";
             position: absolute;
             top: -12px;
             right: 25px;
-            background: #000;
-            color: #fff;
+            background: var(--cyan);
+            color: #000;
             padding: 5px 18px;
             border-radius: 50px;
             font-size: 0.65rem;
@@ -505,10 +536,10 @@
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 5px;
-            color: #000;
+            color: #fff;
         }
         .package-card .price-tag {
-            color: #666;
+            color: var(--cyan);
             font-weight: 600;
             font-size: 0.8rem;
             margin-bottom: 25px;
@@ -523,56 +554,55 @@
         }
         .package-card ul li {
             padding: 10px 0;
-            border-bottom: 1px solid var(--border-light);
-            color: #333;
+            border-bottom: 1px solid var(--border-color);
+            color: #ccc;
             font-size: 0.9rem;
         }
         .package-card ul li i {
-            color: #000;
+            color: var(--cyan);
             margin-right: 12px;
         }
 
         /* ===== CONTACT FORM ===== */
         .contact-form {
-            background: #ffffff;
-            border: 1px solid var(--border-light);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: 24px;
             padding: 50px 40px;
             max-width: 600px;
             margin: 0 auto;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
         .contact-form .form-control,
         .contact-form .form-select {
-            background: #f8f8f8;
-            border: 1px solid #ddd;
-            color: #000;
+            background: #0a1224;
+            border: 1px solid var(--border-color);
+            color: #fff;
             border-radius: 50px;
             padding: 15px 24px;
             font-family: 'Lato', sans-serif;
         }
         .contact-form .form-control::placeholder {
-            color: #999;
+            color: #666;
         }
         .contact-form .form-control:focus,
         .contact-form .form-select:focus {
-            border-color: #000;
-            background: #fff;
+            border-color: var(--cyan);
+            background: #111c35;
             box-shadow: none;
-            color: #000;
+            color: #fff;
         }
         .contact-form textarea.form-control {
             border-radius: 20px;
         }
         .contact-form .form-select option {
-            background: #fff;
-            color: #000;
+            background: #111c35;
+            color: #fff;
         }
 
         /* ===== FOOTER ===== */
         footer {
-            background: #f8f8f8;
-            border-top: 1px solid var(--border-light);
+            background: #0a1224;
+            border-top: 1px solid var(--border-color);
             padding: 40px 0 25px;
             text-align: center;
         }
@@ -590,7 +620,7 @@
             letter-spacing: 0.5px;
         }
 
-        footer .footer-links a:hover { color: #000; }
+        footer .footer-links a:hover { color: var(--cyan); }
 
         footer .social-icons a {
             color: #888;
@@ -600,12 +630,12 @@
             display: inline-block;
         }
         footer .social-icons a:hover {
-            color: #000;
+            color: var(--cyan);
             transform: scale(1.15);
         }
 
         footer .copyright {
-            color: #999;
+            color: #555;
             font-size: 0.8rem;
             margin-top: 20px;
         }
@@ -616,12 +646,12 @@
             bottom: 25px;
             right: 25px;
             z-index: 9999;
-            background: #000;
-            color: #fff;
+            background: var(--yellow);
+            color: #000;
             font-weight: 900;
             padding: 14px 26px;
             border-radius: 50px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 35px rgba(250, 204, 21, 0.3);
             text-transform: uppercase;
             font-size: 0.8rem;
             letter-spacing: 1px;
@@ -632,25 +662,25 @@
             font-family: 'Lato', sans-serif;
         }
         .floating-btn:hover {
-            background: #333;
-            color: #fff;
+            background: #fff;
+            color: #000;
             transform: scale(1.05);
         }
 
         /* ===== MOBILE MENU ===== */
-        .offcanvas { background: #ffffff !important; }
+        .offcanvas { background: #0a1224 !important; }
         .offcanvas .nav-link {
-            color: #333 !important;
+            color: #ccc !important;
             font-weight: 600;
             text-transform: uppercase;
             font-size: 0.9rem;
             padding: 14px 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--border-color);
             font-family: 'Oswald', sans-serif;
             letter-spacing: 0.5px;
         }
-        .offcanvas .nav-link:hover { color: #000 !important; }
-        .offcanvas .btn-close { filter: none; }
+        .offcanvas .nav-link:hover { color: var(--cyan) !important; }
+        .offcanvas .btn-close { filter: invert(1); }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
@@ -684,7 +714,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-6 col-md-3">
-                    <a href="#" class="logo-text">RIFA <span>MARACAIBO</span></a>
+                    <a href="#" class="logo-text">VERÓNICA <span>RAFFLES</span></a>
                 </div>
 
                 <div class="col-md-6 d-none d-lg-block">
@@ -703,7 +733,7 @@
                         <a href="#" data-lang="es" class="active-lang" onclick="setLanguage('es'); return false;">ES</a>
                         <a href="#" data-lang="en" onclick="setLanguage('en'); return false;">EN</a>
                     </div>
-                    <button class="btn btn-link text-dark p-0 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    <button class="btn btn-link text-white p-0 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                         <i class="bi bi-list fs-2"></i>
                     </button>
                 </div>
@@ -713,8 +743,8 @@
 
     <!-- ===== OFF CANVAS ===== -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
-        <div class="offcanvas-header border-bottom">
-            <a href="#" class="logo-text">RIFA <span>MARACAIBO</span></a>
+        <div class="offcanvas-header border-bottom border-secondary">
+            <a href="#" class="logo-text">VERÓNICA <span>RAFFLES</span></a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
@@ -735,16 +765,16 @@
             </div>
             <h1>
                 <span data-i18n="hero-title-1">GANA UN</span><br>
-                <span data-i18n="hero-title-2">AIRE ACONDICIONADO TOSHIBA</span>
+                <span class="highlight" data-i18n="hero-title-2">AIRE ACONDICIONADO TOSHIBA</span>
             </h1>
             <p data-i18n="hero-sub">
                 12,000 BTU · Compresor Toshiba · Tubería de cobre · Refrigerante R32 · 220V
             </p>
             <div class="cta-group">
-                <a href="#raffle" class="btn-black">
+                <a href="#raffle" class="btn-yellow">
                     <i class="bi bi-ticket-perforated me-2"></i> <span data-i18n="hero-cta">Comprar Boletos</span>
                 </a>
-                <a href="#partners" class="btn-outline-black">
+                <a href="#partners" class="btn-outline-cyan">
                     <i class="bi bi-briefcase me-2"></i> <span data-i18n="hero-cta-2">Alianzas Comerciales</span>
                 </a>
             </div>
@@ -767,9 +797,9 @@
     </section>
 
     <!-- ===== RAFFLE ===== -->
-    <section class="section-light" id="raffle">
+    <section class="section-dark" id="raffle">
         <div class="container">
-            <h2 class="section-title" data-i18n="raffle-title">La Rifa Actual</h2>
+            <h2 class="section-title" data-i18n="raffle-title">La <span class="highlight">Rifa Actual</span></h2>
             <p class="section-sub" data-i18n="raffle-sub">Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.</p>
 
             <div class="raffle-card">
@@ -785,7 +815,7 @@
                     <div class="tickets-left" data-i18n="tickets-left">🔥 Solo 75 boletos</div>
 
                     <div style="margin-top: 25px;">
-                        <a href="#contact" class="btn-black" data-i18n="raffle-btn">
+                        <a href="#contact" class="btn-yellow" data-i18n="raffle-btn">
                             <i class="bi bi-cart-check me-2"></i> Comprar Boleto
                         </a>
                     </div>
@@ -797,7 +827,7 @@
     <!-- ===== MODELS ===== -->
     <section class="models-section" id="models">
         <div class="container">
-            <h2 class="section-title" data-i18n="models-title">Modelos Embajadoras</h2>
+            <h2 class="section-title" data-i18n="models-title">Modelos <span class="highlight">Embajadoras</span></h2>
             <p class="section-sub" data-i18n="models-sub">Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.</p>
 
             <div class="row g-4">
@@ -856,74 +886,14 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="model-card">
-                        <div class="card-img-wrap">
-                            <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> <span data-i18n="badge-verified">Embajadora</span></span>
-                            <img src="https://veronicavee.com/storage/avatars/19.jpeg" alt="Model">
-                        </div>
-                        <div class="card-body">
-                            <h4>Sofia Martinez</h4>
-                            <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="model-card">
-                        <div class="card-img-wrap">
-                            <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> <span data-i18n="badge-verified">Embajadora</span></span>
-                            <img src="https://veronicavee.com/storage/models/avatars/WzXsM2zlbJ3wXxmeQkCTGOa8Jb29OV4Ap75Xmusd.png" alt="Model">
-                        </div>
-                        <div class="card-body">
-                            <h4>Camila Torres</h4>
-                            <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="model-card">
-                        <div class="card-img-wrap">
-                            <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> <span data-i18n="badge-verified">Embajadora</span></span>
-                            <img src="https://veronicavee.com/storage/avatars/V8s82JJTS2hi0HUlVUumkvh5TDa2fPHdn5Z0mJSM.jpg" alt="Model">
-                        </div>
-                        <div class="card-body">
-                            <h4>Valentina Rios</h4>
-                            <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="model-card">
-                        <div class="card-img-wrap">
-                            <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> <span data-i18n="badge-verified">Embajadora</span></span>
-                            <img src="https://veronicavee.com/storage/models/avatars/Yno7Y5RUDd3nDJEigvMJ4Nbo8SyljJQ4odeGQoHg.jpg" alt="Model">
-                        </div>
-                        <div class="card-body">
-                            <h4>Isabella Cruz</h4>
-                            <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-5">
-                <button class="btn-outline-black" data-i18n="load-more">Cargar Más Modelos</button>
             </div>
         </div>
     </section>
 
     <!-- ===== PARTNERS ===== -->
-    <section class="section-light" id="partners">
+    <section class="section-dark" id="partners">
         <div class="container">
-            <h2 class="section-title" data-i18n="partners-title">Eleva Tu Marca</h2>
+            <h2 class="section-title" data-i18n="partners-title">Eleva Tu <span class="highlight">Marca</span></h2>
             <p class="section-sub" data-i18n="partners-sub">Promociona tus productos con nuestras rifas virales y modelos embajadoras.</p>
 
             <div class="row g-4">
@@ -967,7 +937,7 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-2">Promoción en redes</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">1 modelo embajadora</span></li>
                         </ul>
-                        <a href="#contact" class="btn-outline-black" data-i18n="pack-1-btn">Elegir</a>
+                        <a href="#contact" class="btn-outline-cyan" data-i18n="pack-1-btn">Elegir</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -979,7 +949,7 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-2">Reels profesionales</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Audiencia expandida</span></li>
                         </ul>
-                        <a href="#contact" class="btn-black" data-i18n="pack-2-btn">Elegir</a>
+                        <a href="#contact" class="btn-cyan" data-i18n="pack-2-btn">Elegir</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -991,7 +961,7 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-2">Programación prioritaria</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Exclusividad por categoría</span></li>
                         </ul>
-                        <a href="#contact" class="btn-outline-black" data-i18n="pack-3-btn">Elegir</a>
+                        <a href="#contact" class="btn-outline-cyan" data-i18n="pack-3-btn">Elegir</a>
                     </div>
                 </div>
             </div>
@@ -1001,7 +971,7 @@
     <!-- ===== CONTACT ===== -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title" data-i18n="contact-title">Contáctanos</h2>
+            <h2 class="section-title" data-i18n="contact-title">Contác<span class="highlight">tanos</span></h2>
             <p class="section-sub" data-i18n="contact-sub">Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.</p>
 
             <div class="contact-form">
@@ -1022,7 +992,7 @@
                     <div class="mb-3">
                         <textarea class="form-control" rows="3" placeholder="Mensaje (opcional)" data-i18n="form-message"></textarea>
                     </div>
-                    <button type="submit" class="btn-black w-100" data-i18n="form-submit">
+                    <button type="submit" class="btn-yellow w-100" data-i18n="form-submit">
                         <i class="bi bi-send me-2"></i> Enviar
                     </button>
                 </form>
@@ -1033,7 +1003,7 @@
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
-            <a href="#" class="logo-text">RIFA <span>MARACAIBO</span></a>
+            <a href="#" class="logo-text">VERÓNICA <span>RAFFLES</span></a>
             <div class="footer-links">
                 <a href="#raffle" data-i18n="nav-raffle">Rifa</a>
                 <a href="#models" data-i18n="nav-models">Modelos</a>
@@ -1046,7 +1016,7 @@
                 <a href="#"><i class="bi bi-facebook"></i></a>
                 <a href="#"><i class="bi bi-whatsapp"></i></a>
             </div>
-            <p class="copyright" data-i18n="footer-text">© 2026 Rifa Maracaibo · Plataforma de talento y rifas.</p>
+            <p class="copyright" data-i18n="footer-text">© 2026 Verónica Raffles · Plataforma de talento y rifas.</p>
         </div>
     </footer>
 
@@ -1120,7 +1090,7 @@
                 "form-select-2": "Alianza comercial para mi negocio",
                 "form-message": "Mensaje (opcional)",
                 "form-submit": "Enviar",
-                "footer-text": "© 2026 Rifa Maracaibo · Plataforma de talento y rifas."
+                "footer-text": "© 2026 Verónica Raffles · Plataforma de talento y rifas."
             },
             en: {
                 "floating-btn": "Buy Ticket",
@@ -1186,7 +1156,7 @@
                 "form-select-2": "Business partnership",
                 "form-message": "Message (optional)",
                 "form-submit": "Submit",
-                "footer-text": "© 2026 Rifa Maracaibo · Talent & raffle platform."
+                "footer-text": "© 2026 Verónica Raffles · Talent & raffle platform."
             }
         };
 
