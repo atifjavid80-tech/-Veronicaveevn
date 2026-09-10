@@ -15,17 +15,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ===== NUEVA PALETA DE COLORES (Flyer + Ticket) ===== */
+        /* ===== FLYER COLOR SCHEME (Exact Match) ===== */
         :root {
-            --bg-dark: #0a1224;       /* Dark Navy */
-            --bg-card: #111c35;       /* Card Background */
-            --cyan: #00d2ff;          /* Neon Cyan */
-            --cyan-dark: #0099cc;
-            --yellow: #facc15;        /* Bright Yellow */
-            --pink: #ec4899;          /* Pink Accent */
-            --text-white: #ffffff;
-            --text-muted: #94a3b8;
-            --border-color: #1e3a8a;  /* Dark Blue Border */
+            --navy: #0a1628;           /* Dark Navy Background (flyer) */
+            --navy-light: #0f1f38;     /* Slightly lighter navy */
+            --navy-card: #132845;      /* Card background */
+            --cyan: #00d4ff;           /* Neon Cyan (ticket border) */
+            --cyan-glow: #00a8cc;      /* Cyan glow */
+            --yellow: #ffd700;         /* Bright Yellow (headlines) */
+            --yellow-dark: #f5b800;    /* Yellow hover */
+            --pink: #e91e63;           /* Pink/Magenta (banner) */
+            --pink-dark: #c2185b;      /* Pink hover */
+            --white: #ffffff;          /* White */
+            --text-light: #b8c5d6;     /* Light grey text */
+            --border-blue: #1e3a5f;    /* Blue border */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
@@ -33,8 +36,8 @@
 
         body {
             font-family: 'Lato', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-white);
+            background-color: var(--navy);
+            color: var(--white);
             line-height: 1.6;
         }
 
@@ -50,8 +53,8 @@
 
         /* ===== HEADER ===== */
         #header {
-            background: #0a1224;
-            border-bottom: 1px solid var(--border-color);
+            background: var(--navy);
+            border-bottom: 1px solid var(--border-blue);
             padding: 15px 0;
             position: sticky;
             top: 0;
@@ -93,7 +96,7 @@
             text-transform: uppercase;
             padding: 5px 14px;
             border-radius: 50px;
-            border: 1px solid #333;
+            border: 1px solid var(--border-blue);
             transition: 0.3s;
         }
         .lang-switch a:hover {
@@ -109,14 +112,18 @@
         /* ===== HERO ===== */
         .hero {
             padding: 100px 0 70px;
-            background: linear-gradient(180deg, #0a1224 0%, #111c35 100%);
+            background: var(--navy);
+            background-image: radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 70%, rgba(233, 30, 99, 0.06) 0%, transparent 50%);
             text-align: center;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-blue);
+            position: relative;
+            overflow: hidden;
         }
 
         .hero .badge-pill {
             display: inline-block;
-            background: rgba(0, 210, 255, 0.1);
+            background: rgba(0, 212, 255, 0.12);
             border: 1px solid var(--cyan);
             padding: 8px 22px;
             border-radius: 50px;
@@ -139,16 +146,19 @@
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
-            color: #fff;
         }
 
-        .hero h1 .highlight {
+        .hero h1 .yellow-text {
             color: var(--yellow);
+        }
+
+        .hero h1 .white-text {
+            color: #fff;
         }
 
         .hero p {
             font-size: 1.1rem;
-            color: var(--text-muted);
+            color: var(--text-light);
             max-width: 650px;
             margin: 0 auto 45px;
         }
@@ -161,29 +171,7 @@
             margin-bottom: 60px;
         }
 
-        /* ===== BUTTONS ===== */
-        .btn-cyan {
-            background: var(--cyan);
-            color: #000;
-            font-weight: 700;
-            padding: 14px 36px;
-            border-radius: 50px;
-            border: 2px solid var(--cyan);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: inline-block;
-            transition: 0.3s;
-            font-family: 'Lato', sans-serif;
-        }
-        .btn-cyan:hover {
-            background: #fff;
-            border-color: #fff;
-            color: #000;
-            transform: translateY(-3px);
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
-        }
-
+        /* ===== BUTTONS (Flyer style) ===== */
         .btn-yellow {
             background: var(--yellow);
             color: #000;
@@ -203,7 +191,50 @@
             border-color: #fff;
             color: #000;
             transform: translateY(-3px);
-            box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+        }
+
+        .btn-cyan {
+            background: var(--cyan);
+            color: #000;
+            font-weight: 700;
+            padding: 14px 36px;
+            border-radius: 50px;
+            border: 2px solid var(--cyan);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            transition: 0.3s;
+            font-family: 'Lato', sans-serif;
+        }
+        .btn-cyan:hover {
+            background: #fff;
+            border-color: #fff;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+        }
+
+        .btn-pink {
+            background: var(--pink);
+            color: #fff;
+            font-weight: 700;
+            padding: 14px 36px;
+            border-radius: 50px;
+            border: 2px solid var(--pink);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            transition: 0.3s;
+            font-family: 'Lato', sans-serif;
+        }
+        .btn-pink:hover {
+            background: var(--pink-dark);
+            border-color: var(--pink-dark);
+            color: #fff;
+            transform: translateY(-3px);
         }
 
         .btn-outline-cyan {
@@ -232,7 +263,7 @@
             gap: 70px;
             flex-wrap: wrap;
             padding-top: 50px;
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid var(--border-blue);
         }
         .stat-item { text-align: center; }
         .stat-item h3 {
@@ -244,7 +275,7 @@
             margin-bottom: 8px;
         }
         .stat-item p {
-            color: var(--text-muted);
+            color: var(--text-light);
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -266,105 +297,175 @@
             color: #fff;
         }
 
-        .section-title .highlight {
+        .section-title .yellow-text {
+            color: var(--yellow);
+        }
+
+        .section-title .cyan-text {
             color: var(--cyan);
         }
 
         .section-sub {
             text-align: center;
-            color: var(--text-muted);
+            color: var(--text-light);
             max-width: 600px;
             margin: 0 auto 50px;
             font-size: 1rem;
         }
 
-        .section-dark { background: #0f1629; }
+        .section-navy { background: var(--navy); }
+        .section-navy-light { background: var(--navy-light); }
 
-        /* ===== RAFFLE CARD ===== */
-        .raffle-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
+        /* ===== TICKET-STYLE RAFFLE CARD (exact flyer style) ===== */
+        .ticket-card {
+            background: linear-gradient(135deg, #ffffff 0%, #e8f4f8 100%);
+            border: 3px solid var(--cyan);
             border-radius: 20px;
             overflow: hidden;
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto;
+            position: relative;
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.4),
+                        0 0 80px rgba(0, 212, 255, 0.15),
+                        inset 0 0 30px rgba(0, 212, 255, 0.05);
             transition: 0.4s;
-            box-shadow: 0 0 30px rgba(0, 210, 255, 0.1);
         }
-        .raffle-card:hover {
-            border-color: var(--cyan);
-            box-shadow: 0 0 40px rgba(0, 210, 255, 0.2);
+        .ticket-card:hover {
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.6),
+                        0 0 100px rgba(0, 212, 255, 0.25),
+                        inset 0 0 30px rgba(0, 212, 255, 0.1);
             transform: translateY(-5px);
         }
-        .raffle-card .raffle-image {
-            height: 300px;
-            background: #0a1224;
+
+        .ticket-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--cyan), var(--yellow), var(--cyan));
+            z-index: 2;
+        }
+
+        .ticket-card .ticket-header {
+            background: var(--navy);
+            padding: 20px 30px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-blue);
+        }
+        .ticket-card .ticket-header h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .ticket-card .ticket-header .ticket-num {
+            color: var(--yellow);
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .ticket-card .ticket-body {
+            padding: 35px 30px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 6rem;
-            color: var(--cyan);
-            border-bottom: 1px solid var(--border-color);
+            gap: 30px;
+            flex-wrap: wrap;
         }
-        .raffle-card .raffle-body {
-            padding: 40px 35px;
+
+        .ticket-card .ticket-number-box {
+            background: #fff;
+            border: 3px solid var(--navy);
+            border-radius: 12px;
+            padding: 20px 30px;
             text-align: center;
+            min-width: 140px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        .raffle-card .raffle-body h3 {
+        .ticket-card .ticket-number-box .num {
             font-family: 'Oswald', sans-serif;
-            font-size: 1.8rem;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--navy);
+            line-height: 1;
+        }
+        .ticket-card .ticket-number-box .label {
+            font-size: 0.7rem;
             font-weight: 700;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        .ticket-card .ticket-info {
+            flex: 1;
+            min-width: 250px;
+            color: var(--navy);
+        }
+        .ticket-card .ticket-info h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
             text-transform: uppercase;
             margin-bottom: 10px;
-            color: #fff;
         }
-        .raffle-card .raffle-body .prize-detail {
+        .ticket-card .ticket-info .prize-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        .ticket-card .ticket-info .prize-list li {
+            color: var(--navy);
+            font-size: 0.9rem;
+            padding: 3px 0;
+            font-weight: 500;
+        }
+        .ticket-card .ticket-info .prize-list li::before {
+            content: '● ';
             color: var(--cyan);
             font-weight: 700;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
+        }
+
+        .ticket-card .ticket-price-tag {
+            background: var(--navy);
+            color: var(--yellow);
+            padding: 15px 25px;
+            border-radius: 12px;
+            text-align: center;
+            display: inline-block;
+            border: 2px solid var(--cyan);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        .ticket-card .ticket-price-tag .price-label {
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            color: #fff;
+            display: block;
         }
-        .raffle-card .raffle-body p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 30px;
-        }
-        .raffle-card .price-display {
+        .ticket-card .ticket-price-tag .price-value {
             font-family: 'Oswald', sans-serif;
-            font-size: 3.5rem;
+            font-size: 2rem;
             font-weight: 900;
             color: var(--yellow);
             line-height: 1;
-            margin-bottom: 10px;
-        }
-        .raffle-card .price-display small {
-            font-size: 1.2rem;
-            color: #888;
-            font-weight: 400;
-        }
-        .raffle-card .tickets-left {
-            display: inline-block;
-            background: rgba(236, 72, 153, 0.15);
-            border: 1px solid var(--pink);
-            color: #ffb3d9;
-            padding: 6px 20px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            margin-bottom: 25px;
         }
 
         /* ===== MODELS GRID ===== */
         .models-section { padding: 70px 0; }
 
         .model-card {
-            background: var(--bg-card);
+            background: var(--navy-card);
             border-radius: 16px;
             overflow: hidden;
             transition: 0.4s;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--border-blue);
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -373,7 +474,7 @@
         .model-card:hover {
             border-color: var(--cyan);
             transform: translateY(-5px);
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.15);
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.2);
         }
 
         .model-card .card-img-wrap {
@@ -428,7 +529,7 @@
         }
 
         .model-card .card-meta {
-            color: var(--text-muted);
+            color: var(--text-light);
             font-size: 0.8rem;
             margin-bottom: 15px;
         }
@@ -462,8 +563,8 @@
 
         /* ===== PARTNER CARDS ===== */
         .partner-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
+            background: var(--navy-card);
+            border: 1px solid var(--border-blue);
             border-radius: 20px;
             padding: 35px 25px;
             text-align: center;
@@ -473,7 +574,7 @@
         .partner-card:hover {
             border-color: var(--yellow);
             transform: translateY(-8px);
-            box-shadow: 0 0 20px rgba(250, 204, 21, 0.15);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
         }
         .partner-card i {
             font-size: 2.5rem;
@@ -490,15 +591,15 @@
             color: #fff;
         }
         .partner-card p {
-            color: var(--text-muted);
+            color: var(--text-light);
             font-size: 0.9rem;
             margin: 0;
         }
 
-        /* ===== PACKAGES ===== */
+        /* ===== PACKAGES (Flyer style with colored circles) ===== */
         .package-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
+            background: var(--navy-card);
+            border: 1px solid var(--border-blue);
             border-radius: 20px;
             padding: 40px 28px;
             height: 100%;
@@ -506,6 +607,7 @@
             flex-direction: column;
             transition: 0.4s;
             position: relative;
+            text-align: center;
         }
         .package-card:hover {
             border-color: var(--cyan);
@@ -513,7 +615,7 @@
         }
         .package-card.popular {
             border: 2px solid var(--cyan);
-            background: #0f1a2e;
+            background: #0f2440;
         }
         .package-card.popular::after {
             content: "MÁS POPULAR";
@@ -530,6 +632,30 @@
             letter-spacing: 1px;
             font-family: 'Oswald', sans-serif;
         }
+
+        .package-card .package-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+        }
+        .package-card .package-icon.blue {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: #fff;
+        }
+        .package-card .package-icon.pink {
+            background: linear-gradient(135deg, var(--pink), #f472b6);
+            color: #fff;
+        }
+        .package-card .package-icon.yellow {
+            background: linear-gradient(135deg, var(--yellow), #f59e0b);
+            color: #000;
+        }
+
         .package-card h3 {
             font-family: 'Oswald', sans-serif;
             font-size: 1.5rem;
@@ -551,10 +677,11 @@
             padding: 0;
             margin-bottom: 30px;
             flex-grow: 1;
+            text-align: left;
         }
         .package-card ul li {
             padding: 10px 0;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-blue);
             color: #ccc;
             font-size: 0.9rem;
         }
@@ -565,8 +692,8 @@
 
         /* ===== CONTACT FORM ===== */
         .contact-form {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
+            background: var(--navy-card);
+            border: 1px solid var(--border-blue);
             border-radius: 24px;
             padding: 50px 40px;
             max-width: 600px;
@@ -574,8 +701,8 @@
         }
         .contact-form .form-control,
         .contact-form .form-select {
-            background: #0a1224;
-            border: 1px solid var(--border-color);
+            background: var(--navy);
+            border: 1px solid var(--border-blue);
             color: #fff;
             border-radius: 50px;
             padding: 15px 24px;
@@ -587,22 +714,22 @@
         .contact-form .form-control:focus,
         .contact-form .form-select:focus {
             border-color: var(--cyan);
-            background: #111c35;
-            box-shadow: none;
+            background: var(--navy-light);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
             color: #fff;
         }
         .contact-form textarea.form-control {
             border-radius: 20px;
         }
         .contact-form .form-select option {
-            background: #111c35;
+            background: var(--navy-light);
             color: #fff;
         }
 
         /* ===== FOOTER ===== */
         footer {
-            background: #0a1224;
-            border-top: 1px solid var(--border-color);
+            background: var(--navy);
+            border-top: 1px solid var(--border-blue);
             padding: 40px 0 25px;
             text-align: center;
         }
@@ -612,7 +739,7 @@
         footer .footer-links { margin: 20px 0; }
 
         footer .footer-links a {
-            color: var(--text-muted);
+            color: var(--text-light);
             font-size: 0.8rem;
             margin: 0 12px;
             font-weight: 600;
@@ -651,7 +778,7 @@
             font-weight: 900;
             padding: 14px 26px;
             border-radius: 50px;
-            box-shadow: 0 10px 35px rgba(250, 204, 21, 0.3);
+            box-shadow: 0 10px 35px rgba(255, 215, 0, 0.4);
             text-transform: uppercase;
             font-size: 0.8rem;
             letter-spacing: 1px;
@@ -668,14 +795,14 @@
         }
 
         /* ===== MOBILE MENU ===== */
-        .offcanvas { background: #0a1224 !important; }
+        .offcanvas { background: var(--navy) !important; }
         .offcanvas .nav-link {
             color: #ccc !important;
             font-weight: 600;
             text-transform: uppercase;
             font-size: 0.9rem;
             padding: 14px 0;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-blue);
             font-family: 'Oswald', sans-serif;
             letter-spacing: 0.5px;
         }
@@ -692,12 +819,14 @@
             .models-section { padding: 50px 0; }
             section { padding: 55px 0; }
             .contact-form { padding: 35px 25px; }
+            .ticket-card .ticket-body { flex-direction: column; text-align: center; }
         }
         @media (max-width: 576px) {
             .logo-text { font-size: 1.3rem; }
             .stat-item h3 { font-size: 2rem; }
             .model-card .card-img-wrap img { height: 220px; }
             .floating-btn { padding: 10px 18px; font-size: 0.7rem; bottom: 15px; right: 15px; }
+            .ticket-card .ticket-number-box .num { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -764,8 +893,8 @@
                 <i class="bi bi-ticket-perforated me-2"></i> Rifa Beta · Maracaibo
             </div>
             <h1>
-                <span data-i18n="hero-title-1">GANA UN</span><br>
-                <span class="highlight" data-i18n="hero-title-2">AIRE ACONDICIONADO TOSHIBA</span>
+                <span class="white-text" data-i18n="hero-title-1">GANA UN</span><br>
+                <span class="yellow-text" data-i18n="hero-title-2">AIRE ACONDICIONADO TOSHIBA</span>
             </h1>
             <p data-i18n="hero-sub">
                 12,000 BTU · Compresor Toshiba · Tubería de cobre · Refrigerante R32 · 220V
@@ -796,28 +925,46 @@
         </div>
     </section>
 
-    <!-- ===== RAFFLE ===== -->
-    <section class="section-dark" id="raffle">
+    <!-- ===== RAFFLE (Ticket Style) ===== -->
+    <section class="section-navy-light" id="raffle">
         <div class="container">
-            <h2 class="section-title" data-i18n="raffle-title">La <span class="highlight">Rifa Actual</span></h2>
+            <h2 class="section-title" data-i18n="raffle-title">La <span class="yellow-text">Rifa Actual</span></h2>
             <p class="section-sub" data-i18n="raffle-sub">Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.</p>
 
-            <div class="raffle-card">
-                <div class="raffle-image">
-                    <i class="bi bi-snow"></i>
+            <!-- Ticket-style card (exact flyer 2 style) -->
+            <div class="ticket-card">
+                <div class="ticket-header">
+                    <h3>VERÓNICA RAFFLES · <span class="ticket-num">TICKET #001</span></h3>
                 </div>
-                <div class="raffle-body">
-                    <h3 data-i18n="raffle-name">Aire Acondicionado Toshiba</h3>
-                    <div class="prize-detail" data-i18n="raffle-detail">12,000 BTU · Compresor Toshiba · R32 · 220V</div>
-                    <p data-i18n="raffle-desc">Incluye tubería de cobre, instalación básica y garantía. Ideal para el clima de Maracaibo.</p>
+                <div class="ticket-body">
+                    <div class="ticket-number-box">
+                        <div class="num">001</div>
+                        <div class="label">Ticket #</div>
+                    </div>
 
-                    <div class="price-display">$10 <small>USD</small></div>
-                    <div class="tickets-left" data-i18n="tickets-left">🔥 Solo 75 boletos</div>
+                    <div class="ticket-info">
+                        <h4 data-i18n="raffle-ticket-title">WIN A 12,000 BTU<br>TOSHIBA AIR CONDITIONER</h4>
+                        <div style="color: var(--navy); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;" data-i18n="raffle-ticket-sub">PRIZE DETAILS:</div>
+                        <ul class="prize-list">
+                            <li data-i18n="prize-1">Toshiba Brand</li>
+                            <li data-i18n="prize-2">12,000 BTU</li>
+                            <li data-i18n="prize-3">Toshiba Compressor</li>
+                            <li data-i18n="prize-4">Copper Tubing</li>
+                            <li data-i18n="prize-5">R32 Refrigerant</li>
+                            <li data-i18n="prize-6">220V</li>
+                        </ul>
+                    </div>
 
-                    <div style="margin-top: 25px;">
-                        <a href="#contact" class="btn-yellow" data-i18n="raffle-btn">
-                            <i class="bi bi-cart-check me-2"></i> Comprar Boleto
-                        </a>
+                    <div style="text-align: center;">
+                        <div class="ticket-price-tag">
+                            <span class="price-label" data-i18n="ticket-price-label">PRICE:</span>
+                            <span class="price-value">$10</span>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <a href="#contact" class="btn-yellow" style="padding: 10px 25px; font-size: 0.75rem;" data-i18n="raffle-btn">
+                                <i class="bi bi-cart-check me-1"></i> Comprar
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -827,7 +974,7 @@
     <!-- ===== MODELS ===== -->
     <section class="models-section" id="models">
         <div class="container">
-            <h2 class="section-title" data-i18n="models-title">Modelos <span class="highlight">Embajadoras</span></h2>
+            <h2 class="section-title" data-i18n="models-title">Modelos <span class="cyan-text">Embajadoras</span></h2>
             <p class="section-sub" data-i18n="models-sub">Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.</p>
 
             <div class="row g-4">
@@ -891,9 +1038,9 @@
     </section>
 
     <!-- ===== PARTNERS ===== -->
-    <section class="section-dark" id="partners">
+    <section class="section-navy-light" id="partners">
         <div class="container">
-            <h2 class="section-title" data-i18n="partners-title">Eleva Tu <span class="highlight">Marca</span></h2>
+            <h2 class="section-title" data-i18n="partners-title">Eleva Tu <span class="yellow-text">Marca</span></h2>
             <p class="section-sub" data-i18n="partners-sub">Promociona tus productos con nuestras rifas virales y modelos embajadoras.</p>
 
             <div class="row g-4">
@@ -927,9 +1074,13 @@
                 </div>
             </div>
 
+            <!-- Packages with colored icons (flyer style) -->
             <div class="row g-4 mt-5">
                 <div class="col-md-4">
                     <div class="package-card">
+                        <div class="package-icon blue">
+                            <i class="bi bi-rocket-takeoff"></i>
+                        </div>
                         <h3 data-i18n="pack-1-name">LAUNCH</h3>
                         <div class="price-tag" data-i18n="pack-1-tag">Ideal para empezar</div>
                         <ul>
@@ -942,6 +1093,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="package-card popular">
+                        <div class="package-icon pink">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
                         <h3 data-i18n="pack-2-name">GROWTH</h3>
                         <div class="price-tag" data-i18n="pack-2-tag">Más alcance</div>
                         <ul>
@@ -954,6 +1108,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="package-card">
+                        <div class="package-icon yellow">
+                            <i class="bi bi-crown"></i>
+                        </div>
                         <h3 data-i18n="pack-3-name">PREMIER ELITE</h3>
                         <div class="price-tag" data-i18n="pack-3-tag">Alianza anual</div>
                         <ul>
@@ -971,7 +1128,7 @@
     <!-- ===== CONTACT ===== -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title" data-i18n="contact-title">Contác<span class="highlight">tanos</span></h2>
+            <h2 class="section-title" data-i18n="contact-title">Contác<span class="yellow-text">tanos</span></h2>
             <p class="section-sub" data-i18n="contact-sub">Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.</p>
 
             <div class="contact-form">
@@ -1043,16 +1200,20 @@
                 "stat-3": "Premio Principal",
                 "raffle-title": "La Rifa Actual",
                 "raffle-sub": "Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.",
-                "raffle-name": "Aire Acondicionado Toshiba",
-                "raffle-detail": "12,000 BTU · Compresor Toshiba · R32 · 220V",
-                "raffle-desc": "Incluye tubería de cobre, instalación básica y garantía. Ideal para el clima de Maracaibo.",
-                "tickets-left": "🔥 Solo 75 boletos",
-                "raffle-btn": "Comprar Boleto",
+                "raffle-ticket-title": "GANA UN 12,000 BTU<br>AIRE ACONDICIONADO TOSHIBA",
+                "raffle-ticket-sub": "DETALLES DEL PREMIO:",
+                "prize-1": "Marca Toshiba",
+                "prize-2": "12,000 BTU",
+                "prize-3": "Compresor Toshiba",
+                "prize-4": "Tubería de Cobre",
+                "prize-5": "Refrigerante R32",
+                "prize-6": "220V",
+                "ticket-price-label": "PRECIO:",
+                "raffle-btn": "Comprar",
                 "models-title": "Modelos Embajadoras",
                 "models-sub": "Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.",
                 "badge-verified": "Embajadora",
                 "view-profile": "Ver Perfil",
-                "load-more": "Cargar Más Modelos",
                 "partners-title": "Eleva Tu Marca",
                 "partners-sub": "Promociona tus productos con nuestras rifas virales y modelos embajadoras.",
                 "partner-1": "Rifas Virales",
@@ -1109,16 +1270,20 @@
                 "stat-3": "Main Prize",
                 "raffle-title": "Current Raffle",
                 "raffle-sub": "Buy your ticket before they sell out. The draw happens when all 75 are sold.",
-                "raffle-name": "Toshiba Air Conditioner",
-                "raffle-detail": "12,000 BTU · Toshiba Compressor · R32 · 220V",
-                "raffle-desc": "Includes copper tubing, basic installation and warranty. Ideal for Maracaibo's climate.",
-                "tickets-left": "🔥 Only 75 tickets",
-                "raffle-btn": "Buy Ticket",
+                "raffle-ticket-title": "WIN A 12,000 BTU<br>TOSHIBA AIR CONDITIONER",
+                "raffle-ticket-sub": "PRIZE DETAILS:",
+                "prize-1": "Toshiba Brand",
+                "prize-2": "12,000 BTU",
+                "prize-3": "Toshiba Compressor",
+                "prize-4": "Copper Tubing",
+                "prize-5": "R32 Refrigerant",
+                "prize-6": "220V",
+                "ticket-price-label": "PRICE:",
+                "raffle-btn": "Buy",
                 "models-title": "Ambassador Models",
                 "models-sub": "The faces behind our campaigns. Only a few are selected as ambassadors.",
                 "badge-verified": "Ambassador",
                 "view-profile": "View Profile",
-                "load-more": "Load More Models",
                 "partners-title": "Elevate Your Brand",
                 "partners-sub": "Promote your products with our viral raffles and ambassador models.",
                 "partner-1": "Viral Raffles",
@@ -1170,7 +1335,11 @@
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
-                    el.textContent = translations[lang][key];
+                    if (key === 'raffle-ticket-title') {
+                        el.innerHTML = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
                 }
             });
             localStorage.setItem('preferred-lang', lang);
