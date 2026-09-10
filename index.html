@@ -15,20 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --primary: #0d6efd;
-            --primary-dark: #0b5ed7;
-            --dark: #121212;
-            --dark-2: #1e1e1e;
-            --light: #f8f9fa;
-            --text-muted: #a0a0a0;
-        }
-
         * { outline: none; }
         html { scroll-behavior: smooth; }
         body {
             font-family: 'Lato', sans-serif !important;
-            background: var(--dark);
+            background: #000000;
             color: #ffffff;
             line-height: 1.6;
         }
@@ -36,27 +27,29 @@
         a { text-decoration: none; transition: 300ms; }
         a:hover { text-decoration: underline; }
 
-        /* HEADER */
-        #header {
-            background: #1a1a1a;
-            border-bottom: 1px solid #2a2a2a;
+        /* ===== HEADER ===== */
+        #header2 {
+            background: #313234;
+            background: radial-gradient(circle, rgba(49,50,52,1) 0%, rgba(0,0,0,1) 100%);
             padding: 15px 0;
+            border-bottom: 1px solid rgba(255,215,0,0.15);
         }
         .logo-text {
             font-family: 'Oswald', sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
             color: #fff;
+            letter-spacing: 1px;
             text-decoration: none;
         }
         .logo-text span {
-            color: var(--primary);
-        }
-        .filterWhite {
-            filter: brightness(0) invert(1);
+            background: linear-gradient(135deg, #f7c948, #d4a020);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        /* LANGUAGE SWITCHER */
+        /* Language Switcher */
         .lang-switch {
             display: flex;
             align-items: center;
@@ -74,223 +67,285 @@
             text-decoration: none;
         }
         .lang-switch a:hover {
-            border-color: #fff;
-            color: #fff;
+            border-color: #f7c948;
+            color: #f7c948;
         }
         .lang-switch a.active-lang {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: #fff;
+            background: #f7c948;
+            border-color: #f7c948;
+            color: #000;
         }
 
-        /* HERO */
+        /* ===== HERO ===== */
         .hero {
-            padding: 60px 0 40px;
-            background: linear-gradient(180deg, #121212 0%, #1a1a1a 100%);
+            padding: 90px 0 70px;
+            background: linear-gradient(180deg, #0b0b0e 0%, #12121a 100%);
             text-align: center;
+            border-bottom: 1px solid #26262e;
+        }
+        .hero .sub-badge {
+            display: inline-block;
+            background: rgba(247,201,72,0.12);
+            border: 1px solid rgba(247,201,72,0.25);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: #f7c948;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            margin-bottom: 25px;
         }
         .hero h1 {
-            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
             font-weight: 700;
             text-transform: uppercase;
-            line-height: 1.2;
+            line-height: 1.1;
+            margin-bottom: 20px;
         }
         .hero h1 .highlight {
-            color: var(--primary);
-        }
-        .hero .prize-icon {
-            font-size: 4rem;
-            color: var(--primary);
-            margin-bottom: 20px;
+            background: linear-gradient(135deg, #f7c948, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         .hero p {
             font-size: 1.15rem;
             color: #aaa;
-            max-width: 700px;
-            margin: 0 auto 30px;
+            max-width: 750px;
+            margin: 0 auto 35px;
+        }
+        .hero .cta-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        /* PRIZE CARD */
-        .prize-card {
-            background: var(--dark-2);
-            border: 1px solid #2a2a2a;
-            border-radius: 24px;
-            padding: 30px 20px;
-            height: 100%;
-            transition: 0.3s;
-        }
-        .prize-card:hover {
-            border-color: var(--primary);
-        }
-        .prize-card i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        .prize-card h4 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        .prize-card p {
-            color: #aaa;
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        /* PROGRESS */
-        .progress-wrap {
-            background: var(--dark-2);
-            border-radius: 24px;
-            padding: 30px 25px;
-            border: 1px solid #2a2a2a;
-        }
-        .progress-wrap .progress {
-            height: 25px;
-            background: #2a2a2a;
-            border-radius: 50px;
-            overflow: hidden;
-        }
-        .progress-wrap .progress-bar {
-            background: var(--primary);
+        /* ===== BUTTONS ===== */
+        .btn-yellow {
+            background: #f7c948;
+            color: #000;
             font-weight: 700;
-            font-size: 0.9rem;
-            line-height: 25px;
-        }
-
-        /* TICKET INFO */
-        .ticket-info {
-            background: var(--dark-2);
-            border-radius: 24px;
-            padding: 40px 30px;
-            border: 1px solid #2a2a2a;
-            text-align: center;
-        }
-        .ticket-info .price {
-            font-size: 4rem;
-            font-weight: 900;
-            font-family: 'Oswald', sans-serif;
-            color: var(--primary);
-            line-height: 1;
-        }
-        .ticket-info .price small {
-            font-size: 1.2rem;
-            color: #888;
-            font-weight: 400;
-        }
-        .ticket-info .tickets-left {
-            font-size: 1.2rem;
-            color: #ff6b6b;
-            font-weight: 700;
-        }
-
-        /* BUTTONS */
-        .btn-primary-custom {
-            background: var(--primary);
-            color: #fff;
-            font-weight: 700;
-            padding: 14px 40px;
+            padding: 14px 38px;
             border-radius: 50px;
             border: none;
-            font-size: 1rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            display: inline-block;
             transition: 0.3s;
         }
-        .btn-primary-custom:hover {
-            background: var(--primary-dark);
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(13, 110, 253, 0.3);
+        .btn-yellow:hover {
+            background: #fff;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(247,201,72,0.3);
         }
-        .btn-outline-custom {
-            border: 2px solid var(--primary);
-            color: var(--primary);
+        .btn-outline-white {
+            border: 2px solid #fff;
+            color: #fff;
             font-weight: 700;
-            padding: 12px 36px;
+            padding: 14px 38px;
             border-radius: 50px;
             background: transparent;
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            display: inline-block;
             transition: 0.3s;
         }
-        .btn-outline-custom:hover {
-            background: var(--primary);
-            color: #fff;
+        .btn-outline-white:hover {
+            background: #fff;
+            color: #000;
         }
 
-        /* CONTACT FORM */
-        .contact-form {
-            background: var(--dark-2);
+        /* ===== SECTIONS ===== */
+        section { padding: 70px 0; }
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2rem, 4.5vw, 2.8rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .section-sub {
+            text-align: center;
+            color: #999;
+            max-width: 650px;
+            margin: 0 auto 45px;
+            font-size: 1.05rem;
+        }
+        .section-dark { background: #0f0f13; }
+
+        /* ===== CARDS ===== */
+        .feature-card {
+            background: #15151b;
+            padding: 35px 25px;
+            border-radius: 20px;
+            border: 1px solid #26262e;
+            transition: 0.4s;
+            text-align: center;
+            height: 100%;
+        }
+        .feature-card:hover {
+            border-color: #f7c948;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+        }
+        .feature-card i {
+            font-size: 2.8rem;
+            color: #f7c948;
+            margin-bottom: 18px;
+        }
+        .feature-card h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            color: #999;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* ===== TICKET CARD ===== */
+        .ticket-card {
+            background: #15151b;
+            border: 2px solid #26262e;
             border-radius: 24px;
-            padding: 40px 30px;
-            border: 1px solid #2a2a2a;
+            padding: 45px 35px;
+            text-align: center;
+            max-width: 520px;
+            margin: 0 auto;
+            position: relative;
+            transition: 0.3s;
+        }
+        .ticket-card:hover {
+            border-color: #f7c948;
+        }
+        .ticket-card .price {
+            font-size: 4.5rem;
+            font-weight: 900;
+            font-family: 'Oswald', sans-serif;
+            background: linear-gradient(135deg, #f7c948, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+        .ticket-card .price small {
+            font-size: 1.2rem;
+            color: #888;
+            font-weight: 400;
+            -webkit-text-fill-color: #888;
+        }
+        .ticket-card .tickets-left {
+            display: inline-block;
+            background: rgba(255,68,68,0.15);
+            border: 1px solid rgba(255,68,68,0.4);
+            color: #ff6b6b;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin: 15px 0;
+        }
+
+        /* ===== PROGRESS ===== */
+        .progress-wrap {
+            max-width: 700px;
+            margin: 30px auto 0;
+        }
+        .progress-wrap .progress {
+            height: 28px;
+            background: #1a1a22;
+            border-radius: 50px;
+            overflow: hidden;
+            border: 1px solid #26262e;
+        }
+        .progress-wrap .progress-bar {
+            background: linear-gradient(90deg, #f7c948, #ff8c00);
+            font-weight: 700;
+            font-size: 0.9rem;
+            line-height: 28px;
+            color: #000;
+        }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form {
+            background: #15151b;
+            border-radius: 24px;
+            padding: 45px 35px;
+            border: 1px solid #26262e;
             max-width: 600px;
             margin: 0 auto;
         }
         .contact-form .form-control {
-            background: #1a1a1a;
+            background: #1a1a22;
             border: 1px solid #333;
             color: #fff;
             border-radius: 50px;
-            padding: 14px 20px;
+            padding: 14px 22px;
         }
         .contact-form .form-control::placeholder {
             color: #666;
         }
         .contact-form .form-control:focus {
-            border-color: var(--primary);
+            border-color: #f7c948;
             background: #222;
+            box-shadow: none;
         }
-        .contact-form .form-select {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            color: #fff;
-            border-radius: 50px;
-            padding: 14px 20px;
+        .contact-form textarea.form-control {
+            border-radius: 20px;
         }
 
-        /* FOOTER */
+        /* ===== FOOTER ===== */
         footer {
-            padding: 40px 0 30px;
-            border-top: 1px solid #2a2a2a;
+            padding: 45px 0 30px;
+            border-top: 1px solid #26262e;
             text-align: center;
-            color: #888;
-            font-size: 0.9rem;
         }
-        footer a {
+        footer .location {
             color: #aaa;
-            text-decoration: none;
+            font-size: 0.95rem;
         }
-        footer a:hover {
-            color: #fff;
+        footer .location i {
+            color: #f7c948;
+        }
+        footer p {
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 12px;
         }
 
-        /* RESPONSIVE */
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .hero { padding: 40px 0 30px; }
-            .hero h1 { font-size: 2rem; }
-            .ticket-info .price { font-size: 3rem; }
-            .progress-wrap { padding: 20px 15px; }
+            .hero { padding: 60px 0 50px; }
+            .hero h1 { font-size: 2.2rem; }
+            section { padding: 50px 0; }
+            .ticket-card .price { font-size: 3.2rem; }
+            .ticket-card { padding: 35px 25px; }
+            .contact-form { padding: 35px 25px; }
         }
         @media (max-width: 576px) {
             .logo-text { font-size: 1.4rem; }
+            .btn-yellow, .btn-outline-white { padding: 12px 26px; font-size: 0.85rem; }
         }
     </style>
 </head>
 <body>
 
     <!-- ===== HEADER ===== -->
-    <header id="header">
+    <header id="header2">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Logo -->
                 <div class="col-6 col-md-4">
                     <a href="#" class="logo-text">RIFA <span>MARACAIBO</span></a>
                 </div>
-                <!-- Language Switcher -->
                 <div class="col-6 col-md-8 d-flex justify-content-end">
                     <div class="lang-switch">
                         <a href="#" data-lang="es" class="active-lang" onclick="setLanguage('es'); return false;">ES</a>
@@ -303,9 +358,9 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero">
-        <div class="container">
-            <div class="prize-icon">
-                <i class="bi bi-snow"></i>
+        <div class="container text-center">
+            <div class="sub-badge" data-i18n="hero-badge">
+                <i class="bi bi-lightning-fill me-1"></i> Rifa Beta · Maracaibo
             </div>
             <h1>
                 <span data-i18n="hero-title-1">GANA UN</span><br>
@@ -314,41 +369,47 @@
             <p data-i18n="hero-desc">
                 12,000 BTU · Compresor Toshiba · Tubería de cobre · Refrigerante R32 · 220V
             </p>
-            <a href="#contact" class="btn-primary-custom" data-i18n="hero-cta">
-                <i class="bi bi-ticket-perforated me-2"></i> Comprar Boletos
-            </a>
+            <div class="cta-group">
+                <a href="#contact" class="btn-yellow" data-i18n="hero-cta">
+                    <i class="bi bi-ticket-perforated me-2"></i> Comprar Boletos
+                </a>
+                <a href="#prize" class="btn-outline-white" data-i18n="hero-cta-2">
+                    <i class="bi bi-info-circle me-2"></i> Ver Detalles
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- ===== PRIZE DETAILS ===== -->
-    <section class="py-5">
+    <section id="prize">
         <div class="container">
-            <h2 class="text-center font-Oswald mb-4" data-i18n="prize-title">Detalles del Premio</h2>
+            <h2 class="section-title" data-i18n="prize-title">🎁 Detalles del Premio</h2>
+            <p class="section-sub" data-i18n="prize-sub">Un premio de alta calidad, ideal para el clima de Maracaibo.</p>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
-                    <div class="prize-card text-center">
+                    <div class="feature-card">
                         <i class="bi bi-snow2"></i>
                         <h4 data-i18n="prize-1-title">12,000 BTU</h4>
                         <p data-i18n="prize-1-desc">Capacidad de enfriamiento ideal para habitaciones medianas.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="prize-card text-center">
-                        <i class="bi bi-gear"></i>
+                    <div class="feature-card">
+                        <i class="bi bi-gear-fill"></i>
                         <h4 data-i18n="prize-2-title">Compresor Toshiba</h4>
                         <p data-i18n="prize-2-desc">Tecnología japonesa, duradera y eficiente.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="prize-card text-center">
-                        <i class="bi bi-droplet"></i>
+                    <div class="feature-card">
+                        <i class="bi bi-droplet-fill"></i>
                         <h4 data-i18n="prize-3-title">Refrigerante R32</h4>
                         <p data-i18n="prize-3-desc">Ecológico y de alto rendimiento.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="prize-card text-center">
-                        <i class="bi bi-plug"></i>
+                    <div class="feature-card">
+                        <i class="bi bi-plug-fill"></i>
                         <h4 data-i18n="prize-4-title">220V</h4>
                         <p data-i18n="prize-4-desc">Compatible con la red eléctrica local.</p>
                     </div>
@@ -357,35 +418,30 @@
         </div>
     </section>
 
-    <!-- ===== TICKET & PROGRESS ===== -->
-    <section class="py-5" style="background: #0f0f0f;">
+    <!-- ===== TICKET ===== -->
+    <section class="section-dark">
         <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-md-6">
-                    <div class="ticket-info">
-                        <h3 class="font-Oswald mb-3" data-i18n="ticket-title">Boletos Disponibles</h3>
-                        <div class="price">$10 <small>USD</small></div>
-                        <p class="mt-3 mb-2" data-i18n="ticket-desc">Solo 75 boletos disponibles</p>
-                        <div class="tickets-left" data-i18n="tickets-left">🔥 ¡Quedan pocos!</div>
-                        <hr class="my-4" style="border-color: #2a2a2a;">
-                        <p class="mb-0" data-i18n="ticket-note">
-                            El sorteo se realizará cuando se vendan todos los boletos.
-                        </p>
+            <h2 class="section-title" data-i18n="ticket-title">🎟️ Compra tu Boleto</h2>
+            <p class="section-sub" data-i18n="ticket-sub">Solo 75 boletos disponibles. El sorteo se realiza cuando se vendan todos.</p>
+
+            <div class="ticket-card">
+                <div class="price">$10 <small>USD</small></div>
+                <div class="tickets-left" data-i18n="tickets-left">🔥 Quedan pocos boletos</div>
+                <p class="text-muted mt-3 mb-4" data-i18n="ticket-note">
+                    El manager de Maracaibo coordina el pago y la entrega de tu boleto.
+                </p>
+                <a href="#contact" class="btn-yellow w-100" data-i18n="ticket-cta">
+                    <i class="bi bi-cart-check me-2"></i> Quiero mi Boleto
+                </a>
+
+                <!-- Progress -->
+                <div class="progress-wrap">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="small text-muted" data-i18n="progress-sold">Vendidos</span>
+                        <span class="small"><strong id="sold-count">0</strong> / 75</span>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="progress-wrap">
-                        <h4 class="font-Oswald mb-3" data-i18n="progress-title">Progreso de Ventas</h4>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span data-i18n="progress-sold">Vendidos</span>
-                            <span><strong id="sold-count">0</strong> / 75</span>
-                        </div>
-                        <div class="progress">
-                            <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="75">0%</div>
-                        </div>
-                        <p class="mt-3 mb-0 text-muted small" data-i18n="progress-note">
-                            Actualizado manualmente por el manager.
-                        </p>
+                    <div class="progress">
+                        <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="75">0%</div>
                     </div>
                 </div>
             </div>
@@ -393,28 +449,29 @@
     </section>
 
     <!-- ===== HOW TO BUY ===== -->
-    <section class="py-5">
+    <section>
         <div class="container">
-            <h2 class="text-center font-Oswald mb-4" data-i18n="how-title">¿Cómo Comprar?</h2>
-            <div class="row g-4 justify-content-center">
+            <h2 class="section-title" data-i18n="how-title">⚡ ¿Cómo Comprar?</h2>
+            <p class="section-sub" data-i18n="how-sub">Tres pasos simples para participar.</p>
+            <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="prize-card text-center">
+                    <div class="feature-card">
                         <i class="bi bi-whatsapp"></i>
-                        <h4 data-i18n="how-1-title">Contacta al Manager</h4>
+                        <h4 data-i18n="how-1-title">1. Contacta al Manager</h4>
                         <p data-i18n="how-1-desc">Escríbenos por WhatsApp o completa el formulario.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="prize-card text-center">
-                        <i class="bi bi-cash"></i>
-                        <h4 data-i18n="how-2-title">Paga $10</h4>
+                    <div class="feature-card">
+                        <i class="bi bi-cash-coin"></i>
+                        <h4 data-i18n="how-2-title">2. Paga $10</h4>
                         <p data-i18n="how-2-desc">El manager coordina el pago y te entrega tu boleto.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="prize-card text-center">
-                        <i class="bi bi-trophy"></i>
-                        <h4 data-i18n="how-3-title">Espera el Sorteo</h4>
+                    <div class="feature-card">
+                        <i class="bi bi-trophy-fill"></i>
+                        <h4 data-i18n="how-3-title">3. Espera el Sorteo</h4>
                         <p data-i18n="how-3-desc">Cuando se vendan los 75 boletos, se realiza el sorteo.</p>
                     </div>
                 </div>
@@ -422,13 +479,14 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT FORM ===== -->
-    <section class="py-5" id="contact" style="background: #0f0f0f;">
+    <!-- ===== CONTACT ===== -->
+    <section class="section-dark" id="contact">
         <div class="container">
-            <h2 class="text-center font-Oswald mb-4" data-i18n="contact-title">Compra tus Boletos</h2>
-            <p class="text-center text-muted mb-4" data-i18n="contact-sub">
-                Completa el formulario y el manager de Maracaibo te contactará.
+            <h2 class="section-title" data-i18n="contact-title">📩 Compra tus Boletos</h2>
+            <p class="section-sub" data-i18n="contact-sub">
+                Completa el formulario y el manager de Maracaibo te contactará lo antes posible.
             </p>
+
             <div class="contact-form">
                 <form>
                     <div class="mb-3">
@@ -443,12 +501,12 @@
                     <div class="mb-3">
                         <textarea class="form-control" rows="3" placeholder="Mensaje (opcional)" data-i18n="form-message"></textarea>
                     </div>
-                    <button type="submit" class="btn-primary-custom w-100" data-i18n="form-submit">
+                    <button type="submit" class="btn-yellow w-100" data-i18n="form-submit">
                         <i class="bi bi-send me-2"></i> Enviar Solicitud
                     </button>
                 </form>
                 <p class="text-muted text-center mt-3 small" data-i18n="form-note">
-                    Te contactaremos lo antes posible.
+                    Proceso transparente y confiable.
                 </p>
             </div>
         </div>
@@ -457,11 +515,11 @@
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
-            <p class="mb-1">
-                <i class="bi bi-geo-alt-fill me-1" style="color: var(--primary);"></i>
-                Maracaibo, Venezuela
+            <a href="#" class="logo-text">RIFA <span>MARACAIBO</span></a>
+            <p class="location mt-2">
+                <i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela
             </p>
-            <p class="mb-0" data-i18n="footer-text">
+            <p data-i18n="footer-text">
                 © 2026 Rifa Maracaibo · Sorteo transparente, proceso confiable.
             </p>
         </div>
@@ -474,11 +532,14 @@
     <script>
         const translations = {
             es: {
+                "hero-badge": "Rifa Beta · Maracaibo",
                 "hero-title-1": "GANA UN",
                 "hero-title-2": "AIRE ACONDICIONADO TOSHIBA",
                 "hero-desc": "12,000 BTU · Compresor Toshiba · Tubería de cobre · Refrigerante R32 · 220V",
                 "hero-cta": "Comprar Boletos",
-                "prize-title": "Detalles del Premio",
+                "hero-cta-2": "Ver Detalles",
+                "prize-title": "🎁 Detalles del Premio",
+                "prize-sub": "Un premio de alta calidad, ideal para el clima de Maracaibo.",
                 "prize-1-title": "12,000 BTU",
                 "prize-1-desc": "Capacidad de enfriamiento ideal para habitaciones medianas.",
                 "prize-2-title": "Compresor Toshiba",
@@ -487,36 +548,39 @@
                 "prize-3-desc": "Ecológico y de alto rendimiento.",
                 "prize-4-title": "220V",
                 "prize-4-desc": "Compatible con la red eléctrica local.",
-                "ticket-title": "Boletos Disponibles",
-                "ticket-desc": "Solo 75 boletos disponibles",
-                "tickets-left": "🔥 ¡Quedan pocos!",
-                "ticket-note": "El sorteo se realizará cuando se vendan todos los boletos.",
-                "progress-title": "Progreso de Ventas",
+                "ticket-title": "🎟️ Compra tu Boleto",
+                "ticket-sub": "Solo 75 boletos disponibles. El sorteo se realiza cuando se vendan todos.",
+                "tickets-left": "🔥 Quedan pocos boletos",
+                "ticket-note": "El manager de Maracaibo coordina el pago y la entrega de tu boleto.",
+                "ticket-cta": "Quiero mi Boleto",
                 "progress-sold": "Vendidos",
-                "progress-note": "Actualizado manualmente por el manager.",
-                "how-title": "¿Cómo Comprar?",
-                "how-1-title": "Contacta al Manager",
+                "how-title": "⚡ ¿Cómo Comprar?",
+                "how-sub": "Tres pasos simples para participar.",
+                "how-1-title": "1. Contacta al Manager",
                 "how-1-desc": "Escríbenos por WhatsApp o completa el formulario.",
-                "how-2-title": "Paga $10",
+                "how-2-title": "2. Paga $10",
                 "how-2-desc": "El manager coordina el pago y te entrega tu boleto.",
-                "how-3-title": "Espera el Sorteo",
+                "how-3-title": "3. Espera el Sorteo",
                 "how-3-desc": "Cuando se vendan los 75 boletos, se realiza el sorteo.",
-                "contact-title": "Compra tus Boletos",
-                "contact-sub": "Completa el formulario y el manager de Maracaibo te contactará.",
+                "contact-title": "📩 Compra tus Boletos",
+                "contact-sub": "Completa el formulario y el manager de Maracaibo te contactará lo antes posible.",
                 "form-name": "Tu Nombre",
                 "form-phone": "WhatsApp / Teléfono",
                 "form-email": "Email (opcional)",
                 "form-message": "Mensaje (opcional)",
                 "form-submit": "Enviar Solicitud",
-                "form-note": "Te contactaremos lo antes posible.",
+                "form-note": "Proceso transparente y confiable.",
                 "footer-text": "© 2026 Rifa Maracaibo · Sorteo transparente, proceso confiable."
             },
             en: {
+                "hero-badge": "Beta Raffle · Maracaibo",
                 "hero-title-1": "WIN A",
                 "hero-title-2": "TOSHIBA AIR CONDITIONER",
                 "hero-desc": "12,000 BTU · Toshiba Compressor · Copper Tubing · R32 Refrigerant · 220V",
                 "hero-cta": "Buy Tickets",
-                "prize-title": "Prize Details",
+                "hero-cta-2": "View Details",
+                "prize-title": "🎁 Prize Details",
+                "prize-sub": "A high-quality prize, perfect for Maracaibo's climate.",
                 "prize-1-title": "12,000 BTU",
                 "prize-1-desc": "Ideal cooling capacity for medium rooms.",
                 "prize-2-title": "Toshiba Compressor",
@@ -525,28 +589,28 @@
                 "prize-3-desc": "Eco-friendly and high performance.",
                 "prize-4-title": "220V",
                 "prize-4-desc": "Compatible with local power grid.",
-                "ticket-title": "Available Tickets",
-                "ticket-desc": "Only 75 tickets available",
-                "tickets-left": "🔥 Few left!",
-                "ticket-note": "The draw will be held when all tickets are sold.",
-                "progress-title": "Sales Progress",
+                "ticket-title": "🎟️ Buy Your Ticket",
+                "ticket-sub": "Only 75 tickets available. The draw happens when all are sold.",
+                "tickets-left": "🔥 Few tickets left",
+                "ticket-note": "The Maracaibo manager coordinates payment and gives you your ticket.",
+                "ticket-cta": "I Want My Ticket",
                 "progress-sold": "Sold",
-                "progress-note": "Manually updated by the manager.",
-                "how-title": "How to Buy?",
-                "how-1-title": "Contact the Manager",
+                "how-title": "⚡ How to Buy?",
+                "how-sub": "Three simple steps to participate.",
+                "how-1-title": "1. Contact the Manager",
                 "how-1-desc": "Message us on WhatsApp or fill out the form.",
-                "how-2-title": "Pay $10",
+                "how-2-title": "2. Pay $10",
                 "how-2-desc": "The manager coordinates payment and gives you your ticket.",
-                "how-3-title": "Wait for the Draw",
+                "how-3-title": "3. Wait for the Draw",
                 "how-3-desc": "When all 75 tickets are sold, the draw takes place.",
-                "contact-title": "Buy Your Tickets",
-                "contact-sub": "Fill out the form and the Maracaibo manager will contact you.",
+                "contact-title": "📩 Buy Your Tickets",
+                "contact-sub": "Fill out the form and the Maracaibo manager will contact you soon.",
                 "form-name": "Your Name",
                 "form-phone": "WhatsApp / Phone",
                 "form-email": "Email (optional)",
                 "form-message": "Message (optional)",
                 "form-submit": "Send Request",
-                "form-note": "We will contact you as soon as possible.",
+                "form-note": "Transparent and trusted process.",
                 "footer-text": "© 2026 Rifa Maracaibo · Transparent draw, trusted process."
             }
         };
@@ -555,11 +619,9 @@
 
         function setLanguage(lang) {
             currentLang = lang;
-            // Update language switcher active state
             document.querySelectorAll('.lang-switch a').forEach(link => {
                 link.classList.toggle('active-lang', link.dataset.lang === lang);
             });
-            // Update all elements with data-i18n
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
@@ -578,9 +640,7 @@
                 setLanguage(browserLang.startsWith('es') ? 'es' : 'en');
             }
 
-            // Optional: simulate progress (remove in production)
-            // You can update this manually via the manager.
-            // For demo, set to 0.
+            // Progress bar (update manually)
             const sold = 0;
             const total = 75;
             const percent = Math.round((sold / total) * 100);
