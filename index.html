@@ -54,7 +54,7 @@
 
         header, section, footer { position: relative; z-index: 1; }
 
-        /* ===== HEADER ===== */
+        /* HEADER */
         #header {
             background: rgba(6, 16, 41, 0.98);
             backdrop-filter: blur(10px);
@@ -106,7 +106,7 @@
         .lang-switch a:hover { border-color: var(--cyan); color: var(--cyan); }
         .lang-switch a.active-lang { background: var(--cyan); border-color: var(--cyan); color: #000; }
 
-        /* ===== HERO ===== */
+        /* HERO */
         .hero-section-wrap { padding: 40px 20px 30px; background: var(--page-bg); }
 
         .hero {
@@ -163,7 +163,6 @@
         .hero h1 .yellow { color: var(--yellow); text-shadow: 0 0 30px rgba(255,214,10,0.5); display: block; }
         .hero h1 .cyan-glow { color: var(--cyan); text-shadow: 0 0 40px rgba(0,229,255,0.6); display: block; }
 
-        /* ===== AC IMAGE IN HERO ===== */
         .hero-ac-image {
             max-width: 480px;
             width: 100%;
@@ -347,7 +346,6 @@
 
         .section-navy-light { background: #f8f9fa; }
 
-        /* ===== OFFICIAL TICKET HEADER ===== */
         #raffle { background: var(--page-bg); padding: 40px 0 60px; }
 
         .raffle-header-box {
@@ -368,7 +366,6 @@
         .raffle-header-box .section-title .yellow { color: var(--yellow); text-shadow: 0 0 25px rgba(255,214,10,0.5); }
         .raffle-header-box .section-sub { color: var(--text-light); margin-bottom: 0; }
 
-        /* ===== TICKET IMAGES ===== */
         .ticket-images-wrapper {
             max-width: 950px;
             margin: 0 auto;
@@ -395,7 +392,6 @@
 
         .ticket-img-box img { width: 100%; height: auto; display: block; }
 
-        /* ===== MODEL CARDS ===== */
         .models-section { padding: 60px 0; }
         .model-card {
             background: var(--navy-card);
@@ -446,7 +442,6 @@
         }
         .model-card .btn-view:hover { background: var(--cyan); color: #000; }
 
-        /* ===== WEBSITE LINK ===== */
         .website-link-wrap {
             text-align: center;
             margin-top: 50px;
@@ -486,7 +481,6 @@
         }
         .website-link-wrap a i { font-size: 1.4rem; }
 
-        /* ===== FEATURE CARDS ===== */
         .feature-card {
             background: var(--navy-card); border: 1px solid var(--border-blue);
             border-radius: 20px; padding: 30px 25px; text-align: center;
@@ -512,7 +506,6 @@
         }
         .feature-card p { color: var(--text-light); font-size: 0.9rem; margin: 0; }
 
-        /* ===== PACKAGE CARDS ===== */
         .package-card {
             background: var(--navy-card); border: 1px solid var(--border-blue);
             border-radius: 20px; padding: 40px 28px; height: 100%;
@@ -559,7 +552,6 @@
         }
         .package-card ul li i { color: var(--cyan); margin-right: 12px; }
 
-        /* ===== CONTACT FORM ===== */
         .contact-form {
             background: var(--navy-card); border: 1px solid var(--border-blue);
             border-radius: 24px; padding: 50px 40px; max-width: 600px;
@@ -580,7 +572,6 @@
         .contact-form textarea.form-control { border-radius: 20px; }
         .contact-form .form-select option { background: var(--navy-2); color: #fff; }
 
-        /* ===== FOOTER ===== */
         footer {
             background: var(--navy); border-top: 1px solid var(--border-blue);
             padding: 40px 0 25px; text-align: center; position: relative;
@@ -604,7 +595,6 @@
         footer .social-icons a:hover { color: var(--cyan); transform: scale(1.15); }
         footer .copyright { color: #555; font-size: 0.8rem; margin-top: 20px; }
 
-        /* ===== FLOATING BTN ===== */
         .floating-btn {
             position: fixed; bottom: 25px; right: 25px; z-index: 9999;
             background: var(--yellow); color: #000; font-weight: 900;
@@ -621,7 +611,6 @@
         }
         .floating-btn:hover { background: var(--navy); color: #fff; animation: none; transform: scale(1.08); }
 
-        /* ===== OFF CANVAS ===== */
         .offcanvas { background: var(--navy) !important; }
         .offcanvas .nav-link {
             color: #ccc !important; font-weight: 600; text-transform: uppercase;
@@ -632,7 +621,6 @@
         .offcanvas .nav-link:hover { color: var(--cyan) !important; }
         .offcanvas .btn-close { filter: invert(1); }
 
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 991px) { .logo-img { max-height: 70px; } }
 
         @media (max-width: 768px) {
@@ -666,13 +654,13 @@
 </head>
 <body>
 
-    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
-    <a href="https://wa.me/13852228100?text=Hola,%20quiero%20comprar%20un%20boleto%20para%20la%20rifa%20Toshiba" target="_blank" class="floating-btn">
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="#" data-wa-key="wa-floating" target="_blank" class="floating-btn">
         <i class="bi bi-whatsapp"></i>
         <span data-i18n="floating-btn">Comprar Boleto</span>
     </a>
 
-    <!-- ===== HEADER ===== -->
+    <!-- HEADER -->
     <header id="header">
         <div class="container">
             <div class="row align-items-center">
@@ -725,7 +713,7 @@
         </div>
     </div>
 
-    <!-- ===== HERO ===== -->
+    <!-- HERO -->
     <div class="hero-section-wrap">
         <section class="hero">
             <div class="top-ribbon">
@@ -738,7 +726,6 @@
                 <span class="cyan-glow" data-i18n="hero-title-3">TOSHIBA 12,000 BTU</span>
             </h1>
 
-            <!-- AC IMAGE -->
             <img 
                 src="https://raw.githubusercontent.com/atifjavid80-tech/-veronicaraffles/refs/heads/main/Toshiba%20Smart%20Wi-Fi%20Portable%20Air%20Conditioner.webp" 
                 alt="Toshiba Smart Wi-Fi Portable Air Conditioner" 
@@ -755,7 +742,7 @@
                 🔥 SOLO 75 BOLETOS · $10 CADA UNO · SORTEO AL VENDER TODOS 🔥
             </div>
             <div class="cta-group">
-                <a href="https://wa.me/13852228100?text=Hola,%20quiero%20comprar%20un%20boleto%20para%20la%20rifa%20Toshiba" target="_blank" class="btn-yellow">
+                <a href="#" data-wa-key="wa-buy-ticket" target="_blank" class="btn-yellow">
                     <i class="bi bi-whatsapp"></i>
                     <span data-i18n="hero-cta">COMPRAR BOLETO</span>
                 </a>
@@ -781,7 +768,7 @@
         </section>
     </div>
 
-    <!-- ===== RAFFLE — TICKET IMAGES ===== -->
+    <!-- RAFFLE -->
     <section id="raffle">
         <div class="container">
             <div class="raffle-header-box">
@@ -803,7 +790,7 @@
         </div>
     </section>
 
-    <!-- ===== MODELS ===== -->
+    <!-- MODELS -->
     <section class="models-section" id="models">
         <div class="container">
             <h2 class="section-title">
@@ -822,7 +809,7 @@
                         <div class="card-body">
                             <h4>Veronica Vee</h4>
                             <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view">
+                            <a href="#" data-wa-key="wa-model" target="_blank" class="btn-view">
                                 <i class="bi bi-whatsapp"></i>
                                 <span data-i18n="view-profile">Contactar</span>
                             </a>
@@ -838,7 +825,7 @@
                         <div class="card-body">
                             <h4>Maria Gomez</h4>
                             <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view">
+                            <a href="#" data-wa-key="wa-model" target="_blank" class="btn-view">
                                 <i class="bi bi-whatsapp"></i>
                                 <span data-i18n="view-profile">Contactar</span>
                             </a>
@@ -854,7 +841,7 @@
                         <div class="card-body">
                             <h4>Ana Rodriguez</h4>
                             <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view">
+                            <a href="#" data-wa-key="wa-model" target="_blank" class="btn-view">
                                 <i class="bi bi-whatsapp"></i>
                                 <span data-i18n="view-profile">Contactar</span>
                             </a>
@@ -870,7 +857,7 @@
                         <div class="card-body">
                             <h4>Lucia Perez</h4>
                             <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view">
+                            <a href="#" data-wa-key="wa-model" target="_blank" class="btn-view">
                                 <i class="bi bi-whatsapp"></i>
                                 <span data-i18n="view-profile">Contactar</span>
                             </a>
@@ -879,7 +866,6 @@
                 </div>
             </div>
 
-            <!-- WEBSITE LINK -->
             <div class="website-link-wrap">
                 <p data-i18n="website-link-title">Nuestra Plataforma de Modelos</p>
                 <a href="https://veronicavee.com/" target="_blank">
@@ -891,7 +877,7 @@
         </div>
     </section>
 
-    <!-- ===== PARTNERS — ELEVATE YOUR BRAND ===== -->
+    <!-- PARTNERS -->
     <section class="section-navy-light" id="partners">
         <div class="container">
             <h2 class="section-title">
@@ -948,7 +934,7 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-2">Promoción en redes</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">1 modelo embajadora</span></li>
                         </ul>
-                        <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20el%20plan%20LAUNCH%20PARTNER" target="_blank" class="btn-outline-cyan">
+                        <a href="#" data-wa-key="wa-pack-1" target="_blank" class="btn-outline-cyan">
                             <i class="bi bi-whatsapp"></i>
                             <span data-i18n="pack-1-btn">Contactar</span>
                         </a>
@@ -966,7 +952,7 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-2">Reels profesionales</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Audiencia expandida</span></li>
                         </ul>
-                        <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20el%20plan%20GROWTH%20PARTNER" target="_blank" class="btn-pink">
+                        <a href="#" data-wa-key="wa-pack-2" target="_blank" class="btn-pink">
                             <i class="bi bi-whatsapp"></i>
                             <span data-i18n="pack-2-btn">Contactar</span>
                         </a>
@@ -984,7 +970,7 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-2">Programación prioritaria</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Exclusividad por categoría</span></li>
                         </ul>
-                        <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20el%20plan%20PREMIER%20ELITE" target="_blank" class="btn-outline-cyan">
+                        <a href="#" data-wa-key="wa-pack-3" target="_blank" class="btn-outline-cyan">
                             <i class="bi bi-whatsapp"></i>
                             <span data-i18n="pack-3-btn">Contactar</span>
                         </a>
@@ -994,7 +980,7 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
+    <!-- CONTACT -->
     <section id="contact">
         <div class="container">
             <h2 class="section-title">
@@ -1030,7 +1016,7 @@
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <a href="#" class="logo-text">
@@ -1057,6 +1043,45 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        const WHATSAPP_NUMBER = "13852228100";
+
+        // WhatsApp message templates per language
+        const waMessages = {
+            es: {
+                "wa-floating": "Hola, quiero comprar un boleto para la rifa Toshiba.",
+                "wa-buy-ticket": "Hola, quiero comprar un boleto para la rifa Toshiba.",
+                "wa-model": "Hola, quiero información sobre las modelos embajadoras.",
+                "wa-pack-1": "Hola, quiero información sobre el plan LAUNCH PARTNER.",
+                "wa-pack-2": "Hola, quiero información sobre el plan GROWTH PARTNER.",
+                "wa-pack-3": "Hola, quiero información sobre el plan PREMIER ELITE.",
+                "wa-form": "Hola, quiero información sobre Verónica Raffles.",
+                "wa-form-ticket": "Hola, quiero comprar un boleto de rifa.",
+                "wa-form-partner": "Hola, quiero una alianza comercial para mi negocio."
+            },
+            en: {
+                "wa-floating": "Hi, I want to buy a ticket for the Toshiba raffle.",
+                "wa-buy-ticket": "Hi, I want to buy a ticket for the Toshiba raffle.",
+                "wa-model": "Hi, I want information about the ambassador models.",
+                "wa-pack-1": "Hi, I want information about the LAUNCH PARTNER plan.",
+                "wa-pack-2": "Hi, I want information about the GROWTH PARTNER plan.",
+                "wa-pack-3": "Hi, I want information about the PREMIER ELITE plan.",
+                "wa-form": "Hi, I want information about Verónica Raffles.",
+                "wa-form-ticket": "Hi, I want to buy a raffle ticket.",
+                "wa-form-partner": "Hi, I want a business partnership for my company."
+            }
+        };
+
+        function getWhatsAppLink(key) {
+            const msg = (waMessages[currentLang] && waMessages[currentLang][key]) || waMessages.es[key] || "";
+            return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+        }
+
+        function updateWhatsAppLinks() {
+            document.querySelectorAll('[data-wa-key]').forEach(el => {
+                el.setAttribute('href', getWhatsAppLink(el.getAttribute('data-wa-key')));
+            });
+        }
+
         const translations = {
             es: {
                 "floating-btn": "Comprar Boleto",
@@ -1204,24 +1229,18 @@
 
         function setLanguage(lang) {
             currentLang = lang;
-            // Update active state
             document.querySelectorAll('.lang-switch a').forEach(link => {
                 link.classList.toggle('active-lang', link.dataset.lang === lang);
             });
-            // Update ALL elements with data-i18n (only the <span> inside keeps the icon intact)
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
-                    // Only update text nodes — preserve the icon if present
-                    // If the element has an <i> child, update only the text nodes
                     if (el.querySelector('i')) {
-                        // Find text nodes and update them
                         el.childNodes.forEach(node => {
                             if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
                                 node.textContent = translations[lang][key];
                             }
                         });
-                        // Also handle span-wrapped text
                         const span = el.querySelector('span[data-i18n], span:not([data-i18n])');
                         if (span && !span.querySelector('i')) {
                             span.textContent = translations[lang][key];
@@ -1233,6 +1252,8 @@
                     }
                 }
             });
+            // IMPORTANT: Update WhatsApp links with new language
+            updateWhatsAppLinks();
             localStorage.setItem('preferred-lang', lang);
         }
 
@@ -1246,7 +1267,7 @@
             }
         });
 
-        // Contact form — submit via WhatsApp
+        // Contact form — submit via WhatsApp in current language
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('formName').value;
@@ -1254,9 +1275,19 @@
             const interest = document.getElementById('formInterest').value;
             const message = document.getElementById('formMessage').value;
 
-            let waText = `Hola,%20soy%20${encodeURIComponent(name)}.%20Mi%20teléfono:%20${encodeURIComponent(phone)}.%20Estoy%20interesado%20en:%20${encodeURIComponent(interest)}.%20${encodeURIComponent(message)}`;
+            let baseMsg;
+            if (interest === 'ticket') {
+                baseMsg = waMessages[currentLang]["wa-form-ticket"];
+            } else if (interest === 'partner') {
+                baseMsg = waMessages[currentLang]["wa-form-partner"];
+            } else {
+                baseMsg = waMessages[currentLang]["wa-form"];
+            }
 
-            window.location.href = `https://wa.me/13852228100?text=${waText}`;
+            let waText = baseMsg + `\n\n${currentLang === 'es' ? 'Nombre' : 'Name'}: ${name}\n${currentLang === 'es' ? 'Teléfono' : 'Phone'}: ${phone}`;
+            if (message) waText += `\n${currentLang === 'es' ? 'Mensaje' : 'Message'}: ${message}`;
+
+            window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
         });
     </script>
 
