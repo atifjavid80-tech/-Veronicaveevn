@@ -292,6 +292,38 @@
             box-shadow: 0 0 30px rgba(0,229,255,0.5);
         }
 
+        /* NEW: Big Buy Ticket Button */
+        .btn-buy-ticket-big {
+            background: var(--yellow);
+            color: #000;
+            font-weight: 900;
+            padding: 20px 60px;
+            border-radius: 50px;
+            border: 3px solid var(--yellow);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.3s;
+            font-family: 'Oswald', sans-serif;
+            box-shadow: 0 0 40px rgba(255,214,10,0.6),
+                        0 0 80px rgba(255,214,10,0.3);
+            cursor: pointer;
+        }
+        .btn-buy-ticket-big:hover {
+            background: #fff;
+            border-color: #fff;
+            color: #000;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 0 60px rgba(255,214,10,0.9),
+                        0 0 100px rgba(255,214,10,0.5);
+        }
+        .btn-buy-ticket-big i {
+            font-size: 1.4rem;
+        }
+
         .stats-row {
             display: flex;
             justify-content: center;
@@ -365,6 +397,14 @@
         .raffle-header-box .section-title .cyan { color: var(--cyan); text-shadow: 0 0 25px rgba(0,229,255,0.5); }
         .raffle-header-box .section-title .yellow { color: var(--yellow); text-shadow: 0 0 25px rgba(255,214,10,0.5); }
         .raffle-header-box .section-sub { color: var(--text-light); margin-bottom: 0; }
+
+        /* NEW: Buy Ticket CTA wrapper */
+        /* NEW: Buy Ticket CTA wrapper */
+        .buy-ticket-cta-wrap {
+            text-align: center;
+            margin: 20px auto 50px;
+            padding: 0 20px;
+        }
 
         .ticket-images-wrapper {
             max-width: 950px;
@@ -639,6 +679,8 @@
             .ticket-images-wrapper { gap: 25px; }
             .ticket-img-box { border-radius: 16px; }
             .website-link-wrap a { font-size: 1rem; padding: 14px 30px; }
+            .btn-buy-ticket-big { padding: 16px 40px; font-size: 0.95rem; }
+            .btn-buy-ticket-big i { font-size: 1.2rem; }
         }
         @media (max-width: 576px) {
             .stat-item h3 { font-size: 1.8rem; }
@@ -649,6 +691,8 @@
             .ticket-img-box { border-radius: 14px; border-width: 2px; }
             .hero-ac-image { max-width: 260px; }
             .website-link-wrap a { font-size: 0.9rem; padding: 12px 24px; }
+            .btn-buy-ticket-big { padding: 14px 30px; font-size: 0.85rem; letter-spacing: 1px; }
+            .btn-buy-ticket-big i { font-size: 1rem; }
         }
     </style>
 </head>
@@ -777,6 +821,14 @@
                     <span class="yellow" data-i18n="raffle-title-2">OFICIAL</span>
                 </h2>
                 <p class="section-sub" data-i18n="raffle-sub">Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.</p>
+            </div>
+
+            <!-- ===== NEW: BUY TICKET BUTTON (where the red X was) ===== -->
+            <div class="buy-ticket-cta-wrap">
+                <a href="#" data-wa-key="wa-buy-ticket" target="_blank" class="btn-buy-ticket-big">
+                    <i class="bi bi-whatsapp"></i>
+                    <span data-i18n="buy-ticket-cta">COMPRAR BOLETO</span>
+                </a>
             </div>
 
             <div class="ticket-images-wrapper">
@@ -1105,6 +1157,7 @@
                 "raffle-title-1": "BOLETO",
                 "raffle-title-2": "OFICIAL",
                 "raffle-sub": "Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.",
+                "buy-ticket-cta": "COMPRAR BOLETO",
                 "models-title-1": "AMBASSADOR",
                 "models-title-2": "MODELS",
                 "models-sub": "Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.",
@@ -1175,6 +1228,7 @@
                 "raffle-title-1": "OFFICIAL",
                 "raffle-title-2": "TICKET",
                 "raffle-sub": "Buy your ticket before they sell out. The draw happens when all 75 are sold.",
+                "buy-ticket-cta": "BUY TICKET",
                 "models-title-1": "AMBASSADOR",
                 "models-title-2": "MODELS",
                 "models-sub": "The faces behind our campaigns. Only a few are selected as ambassadors.",
