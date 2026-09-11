@@ -163,7 +163,7 @@
         .hero h1 .yellow { color: var(--yellow); text-shadow: 0 0 30px rgba(255,214,10,0.5); display: block; }
         .hero h1 .cyan-glow { color: var(--cyan); text-shadow: 0 0 40px rgba(0,229,255,0.6); display: block; }
 
-        /* ===== NEW: AC IMAGE IN HERO ===== */
+        /* ===== AC IMAGE IN HERO ===== */
         .hero-ac-image {
             max-width: 480px;
             width: 100%;
@@ -228,10 +228,13 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             transition: 0.3s;
             font-family: 'Oswald', sans-serif;
             box-shadow: 0 0 30px rgba(255,214,10,0.4);
+            cursor: pointer;
         }
         .btn-yellow:hover {
             background: #fff;
@@ -251,10 +254,13 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             transition: 0.3s;
             font-family: 'Oswald', sans-serif;
             box-shadow: 0 0 30px rgba(255,0,110,0.4);
+            cursor: pointer;
         }
         .btn-pink:hover {
             background: #fff;
@@ -274,9 +280,12 @@
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             transition: 0.3s;
             font-family: 'Oswald', sans-serif;
+            cursor: pointer;
         }
         .btn-outline-cyan:hover {
             background: var(--cyan);
@@ -314,7 +323,6 @@
 
         section { padding: 60px 0; }
 
-        /* ===== ENLARGED SECTION TITLES ===== */
         .section-title {
             font-family: 'Oswald', sans-serif;
             font-size: clamp(2.4rem, 6vw, 3.6rem);
@@ -432,11 +440,13 @@
             padding: 10px 20px; border-radius: 50px;
             text-transform: uppercase; letter-spacing: 0.5px;
             transition: 0.3s; text-align: center; width: 100%;
-            margin-top: auto; display: block;
+            margin-top: auto; display: inline-flex;
+            align-items: center; justify-content: center; gap: 6px;
+            cursor: pointer;
         }
         .model-card .btn-view:hover { background: var(--cyan); color: #000; }
 
-        /* ===== WEBSITE LINK (NEW) ===== */
+        /* ===== WEBSITE LINK ===== */
         .website-link-wrap {
             text-align: center;
             margin-top: 50px;
@@ -656,8 +666,9 @@
 </head>
 <body>
 
+    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
     <a href="https://wa.me/13852228100?text=Hola,%20quiero%20comprar%20un%20boleto%20para%20la%20rifa%20Toshiba" target="_blank" class="floating-btn">
-        <i class="bi bi-ticket-perforated-fill"></i>
+        <i class="bi bi-whatsapp"></i>
         <span data-i18n="floating-btn">Comprar Boleto</span>
     </a>
 
@@ -727,7 +738,7 @@
                 <span class="cyan-glow" data-i18n="hero-title-3">TOSHIBA 12,000 BTU</span>
             </h1>
 
-            <!-- ===== NEW: AC IMAGE ===== -->
+            <!-- AC IMAGE -->
             <img 
                 src="https://raw.githubusercontent.com/atifjavid80-tech/-veronicaraffles/refs/heads/main/Toshiba%20Smart%20Wi-Fi%20Portable%20Air%20Conditioner.webp" 
                 alt="Toshiba Smart Wi-Fi Portable Air Conditioner" 
@@ -745,10 +756,12 @@
             </div>
             <div class="cta-group">
                 <a href="https://wa.me/13852228100?text=Hola,%20quiero%20comprar%20un%20boleto%20para%20la%20rifa%20Toshiba" target="_blank" class="btn-yellow">
-                    <i class="bi bi-whatsapp me-2"></i> <span data-i18n="hero-cta">COMPRAR BOLETO</span>
+                    <i class="bi bi-whatsapp"></i>
+                    <span data-i18n="hero-cta">COMPRAR BOLETO</span>
                 </a>
                 <a href="#partners" class="btn-pink">
-                    <i class="bi bi-briefcase-fill me-2"></i> <span data-i18n="hero-cta-2">ALIANZAS</span>
+                    <i class="bi bi-briefcase-fill"></i>
+                    <span data-i18n="hero-cta-2">ALIANZAS</span>
                 </a>
             </div>
             <div class="stats-row">
@@ -809,7 +822,10 @@
                         <div class="card-body">
                             <h4>Veronica Vee</h4>
                             <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view" data-i18n="view-profile">Contactar</a>
+                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view">
+                                <i class="bi bi-whatsapp"></i>
+                                <span data-i18n="view-profile">Contactar</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -822,7 +838,10 @@
                         <div class="card-body">
                             <h4>Maria Gomez</h4>
                             <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view" data-i18n="view-profile">Contactar</a>
+                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view">
+                                <i class="bi bi-whatsapp"></i>
+                                <span data-i18n="view-profile">Contactar</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -835,7 +854,10 @@
                         <div class="card-body">
                             <h4>Ana Rodriguez</h4>
                             <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view" data-i18n="view-profile">Contactar</a>
+                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view">
+                                <i class="bi bi-whatsapp"></i>
+                                <span data-i18n="view-profile">Contactar</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -848,13 +870,16 @@
                         <div class="card-body">
                             <h4>Lucia Perez</h4>
                             <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view" data-i18n="view-profile">Contactar</a>
+                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view">
+                                <i class="bi bi-whatsapp"></i>
+                                <span data-i18n="view-profile">Contactar</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ===== NEW: WEBSITE LINK ===== -->
+            <!-- WEBSITE LINK -->
             <div class="website-link-wrap">
                 <p data-i18n="website-link-title">Nuestra Plataforma de Modelos</p>
                 <a href="https://veronicavee.com/" target="_blank">
@@ -866,7 +891,7 @@
         </div>
     </section>
 
-    <!-- ===== PARTNERS (WHAT WE DO — ELEVATE YOUR BRAND) ===== -->
+    <!-- ===== PARTNERS — ELEVATE YOUR BRAND ===== -->
     <section class="section-navy-light" id="partners">
         <div class="container">
             <h2 class="section-title">
@@ -923,7 +948,10 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-2">Promoción en redes</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">1 modelo embajadora</span></li>
                         </ul>
-                        <a href="#contact" class="btn-outline-cyan" data-i18n="pack-1-btn">Contactar</a>
+                        <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20el%20plan%20LAUNCH%20PARTNER" target="_blank" class="btn-outline-cyan">
+                            <i class="bi bi-whatsapp"></i>
+                            <span data-i18n="pack-1-btn">Contactar</span>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -938,7 +966,10 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-2">Reels profesionales</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Audiencia expandida</span></li>
                         </ul>
-                        <a href="#contact" class="btn-pink" data-i18n="pack-2-btn">Contactar</a>
+                        <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20el%20plan%20GROWTH%20PARTNER" target="_blank" class="btn-pink">
+                            <i class="bi bi-whatsapp"></i>
+                            <span data-i18n="pack-2-btn">Contactar</span>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -953,7 +984,10 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-2">Programación prioritaria</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Exclusividad por categoría</span></li>
                         </ul>
-                        <a href="#contact" class="btn-outline-cyan" data-i18n="pack-3-btn">Contactar</a>
+                        <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20el%20plan%20PREMIER%20ELITE" target="_blank" class="btn-outline-cyan">
+                            <i class="bi bi-whatsapp"></i>
+                            <span data-i18n="pack-3-btn">Contactar</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -970,25 +1004,26 @@
             <p class="section-sub" data-i18n="contact-sub">Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.</p>
 
             <div class="contact-form">
-                <form onsubmit="event.preventDefault(); window.location.href='https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20Verónica%20Raffles';">
+                <form id="contactForm">
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Tu Nombre" data-i18n="form-name" required>
+                        <input type="text" class="form-control" id="formName" placeholder="Tu Nombre" data-i18n="form-name" required>
                     </div>
                     <div class="mb-3">
-                        <input type="tel" class="form-control" placeholder="WhatsApp / Teléfono" data-i18n="form-phone" required>
+                        <input type="tel" class="form-control" id="formPhone" placeholder="WhatsApp / Teléfono" data-i18n="form-phone" required>
                     </div>
                     <div class="mb-3">
-                        <select class="form-select">
+                        <select class="form-select" id="formInterest">
                             <option value="" data-i18n="form-select-ph">Estoy interesado en...</option>
                             <option value="ticket" data-i18n="form-select-1">Comprar un boleto de rifa</option>
                             <option value="partner" data-i18n="form-select-2">Alianza comercial para mi negocio</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <textarea class="form-control" rows="3" placeholder="Mensaje (opcional)" data-i18n="form-message"></textarea>
+                        <textarea class="form-control" id="formMessage" rows="3" placeholder="Mensaje (opcional)" data-i18n="form-message"></textarea>
                     </div>
-                    <button type="submit" class="btn-yellow w-100" data-i18n="form-submit">
-                        <i class="bi bi-whatsapp me-2"></i> ENVIAR
+                    <button type="submit" class="btn-yellow w-100" style="justify-content: center;" data-i18n="form-submit">
+                        <i class="bi bi-whatsapp"></i>
+                        <span>ENVIAR</span>
                     </button>
                 </form>
             </div>
@@ -1024,71 +1059,143 @@
     <script>
         const translations = {
             es: {
-                "floating-btn": "Comprar Boleto", "nav-raffle": "Rifa", "nav-models": "Modelos", "nav-what": "¿Qué Hacemos?", "nav-contact": "Contacto",
-                "hero-ribbon": "Rifa Beta · Maracaibo", "hero-mini": "¡GANA CON VERÓNICA RAFFLES!",
-                "hero-title-1": "GANA UN", "hero-title-2": "AIRE ACONDICIONADO", "hero-title-3": "TOSHIBA 12,000 BTU",
-                "hero-banner-1": "12,000 BTU · COMPRESOR TOSHIBA", "hero-banner-2": "TUBERÍA DE COBRE · R32 · 220V",
+                "floating-btn": "Comprar Boleto",
+                "nav-raffle": "Rifa",
+                "nav-models": "Modelos",
+                "nav-what": "¿Qué Hacemos?",
+                "nav-contact": "Contacto",
+                "hero-ribbon": "Rifa Beta · Maracaibo",
+                "hero-mini": "¡GANA CON VERÓNICA RAFFLES!",
+                "hero-title-1": "GANA UN",
+                "hero-title-2": "AIRE ACONDICIONADO",
+                "hero-title-3": "TOSHIBA 12,000 BTU",
+                "hero-banner-1": "12,000 BTU · COMPRESOR TOSHIBA",
+                "hero-banner-2": "TUBERÍA DE COBRE · R32 · 220V",
                 "hero-sub": "🔥 SOLO 75 BOLETOS · $10 CADA UNO · SORTEO AL VENDER TODOS 🔥",
-                "hero-cta": "COMPRAR BOLETO", "hero-cta-2": "ALIANZAS",
-                "stat-1": "Boletos Totales", "stat-2": "Por Boleto", "stat-3": "Premio Principal",
-                "raffle-title-1": "BOLETO", "raffle-title-2": "OFICIAL",
+                "hero-cta": "COMPRAR BOLETO",
+                "hero-cta-2": "ALIANZAS",
+                "stat-1": "Boletos Totales",
+                "stat-2": "Por Boleto",
+                "stat-3": "Premio Principal",
+                "raffle-title-1": "BOLETO",
+                "raffle-title-2": "OFICIAL",
                 "raffle-sub": "Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.",
-                "models-title-1": "AMBASSADOR", "models-title-2": "MODELS",
+                "models-title-1": "AMBASSADOR",
+                "models-title-2": "MODELS",
                 "models-sub": "Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.",
-                "badge-verified": "Embajadora", "view-profile": "Contactar",
+                "badge-verified": "Embajadora",
+                "view-profile": "Contactar",
                 "website-link-title": "Nuestra Plataforma de Modelos",
-                "partners-title-1": "ELEVATE", "partners-title-2": "YOUR BRAND",
+                "partners-title-1": "ELEVATE",
+                "partners-title-2": "YOUR BRAND",
                 "partners-sub": "Promociona tus productos con nuestras rifas virales y modelos embajadoras.",
-                "partner-1": "Rifas Virales", "partner-1-desc": "Tus productos como premios que generan buzz masivo.",
-                "partner-2": "Modelos Embajadoras", "partner-2-desc": "Contenido premium creado por modelos seleccionadas.",
-                "partner-3": "Exposición en Redes", "partner-3-desc": "Instagram, TikTok y Facebook – alcance masivo.",
-                "partner-4": "Selección Curada", "partner-4-desc": "Solo unas pocas modelos son elegidas para tu negocio.",
+                "partner-1": "Rifas Virales",
+                "partner-1-desc": "Tus productos como premios que generan buzz masivo.",
+                "partner-2": "Modelos Embajadoras",
+                "partner-2-desc": "Contenido premium creado por modelos seleccionadas.",
+                "partner-3": "Exposición en Redes",
+                "partner-3-desc": "Instagram, TikTok y Facebook – alcance masivo.",
+                "partner-4": "Selección Curada",
+                "partner-4-desc": "Solo unas pocas modelos son elegidas para tu negocio.",
                 "packages-title": "CHOOSE YOUR PARTNERSHIP PLAN",
-                "pack-1-name": "LAUNCH PARTNER", "pack-1-tag": "Ideal para empezar",
-                "pack-1-li-1": "Campaña de un producto", "pack-1-li-2": "Promoción en redes", "pack-1-li-3": "1 modelo embajadora", "pack-1-btn": "Contactar",
-                "pack-2-name": "GROWTH PARTNER", "pack-2-tag": "Más alcance",
-                "pack-2-li-1": "Múltiples modelos", "pack-2-li-2": "Reels profesionales", "pack-2-li-3": "Audiencia expandida", "pack-2-btn": "Contactar",
-                "pack-3-name": "PREMIER ELITE", "pack-3-tag": "Alianza anual",
-                "pack-3-li-1": "Campañas mensuales", "pack-3-li-2": "Programación prioritaria", "pack-3-li-3": "Exclusividad por categoría", "pack-3-btn": "Contactar",
-                "contact-title-1": "CONTÁC", "contact-title-2": "TANOS",
+                "pack-1-name": "LAUNCH PARTNER",
+                "pack-1-tag": "Ideal para empezar",
+                "pack-1-li-1": "Campaña de un producto",
+                "pack-1-li-2": "Promoción en redes",
+                "pack-1-li-3": "1 modelo embajadora",
+                "pack-1-btn": "Contactar",
+                "pack-2-name": "GROWTH PARTNER",
+                "pack-2-tag": "Más alcance",
+                "pack-2-li-1": "Múltiples modelos",
+                "pack-2-li-2": "Reels profesionales",
+                "pack-2-li-3": "Audiencia expandida",
+                "pack-2-btn": "Contactar",
+                "pack-3-name": "PREMIER ELITE",
+                "pack-3-tag": "Alianza anual",
+                "pack-3-li-1": "Campañas mensuales",
+                "pack-3-li-2": "Programación prioritaria",
+                "pack-3-li-3": "Exclusividad por categoría",
+                "pack-3-btn": "Contactar",
+                "contact-title-1": "CONTÁC",
+                "contact-title-2": "TANOS",
                 "contact-sub": "Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.",
-                "form-name": "Tu Nombre", "form-phone": "WhatsApp / Teléfono",
-                "form-select-ph": "Estoy interesado en...", "form-select-1": "Comprar un boleto de rifa", "form-select-2": "Alianza comercial para mi negocio",
-                "form-message": "Mensaje (opcional)", "form-submit": "ENVIAR",
+                "form-name": "Tu Nombre",
+                "form-phone": "WhatsApp / Teléfono",
+                "form-select-ph": "Estoy interesado en...",
+                "form-select-1": "Comprar un boleto de rifa",
+                "form-select-2": "Alianza comercial para mi negocio",
+                "form-message": "Mensaje (opcional)",
+                "form-submit": "ENVIAR",
                 "footer-text": "© 2026 Verónica Raffles · Plataforma de talento y rifas."
             },
             en: {
-                "floating-btn": "Buy Ticket", "nav-raffle": "Raffle", "nav-models": "Models", "nav-what": "What We Do", "nav-contact": "Contact",
-                "hero-ribbon": "Beta Raffle · Maracaibo", "hero-mini": "WIN WITH VERÓNICA RAFFLES!",
-                "hero-title-1": "WIN A", "hero-title-2": "AIR CONDITIONER", "hero-title-3": "TOSHIBA 12,000 BTU",
-                "hero-banner-1": "12,000 BTU · TOSHIBA COMPRESSOR", "hero-banner-2": "COPPER TUBING · R32 · 220V",
+                "floating-btn": "Buy Ticket",
+                "nav-raffle": "Raffle",
+                "nav-models": "Models",
+                "nav-what": "What We Do",
+                "nav-contact": "Contact",
+                "hero-ribbon": "Beta Raffle · Maracaibo",
+                "hero-mini": "WIN WITH VERÓNICA RAFFLES!",
+                "hero-title-1": "WIN A",
+                "hero-title-2": "AIR CONDITIONER",
+                "hero-title-3": "TOSHIBA 12,000 BTU",
+                "hero-banner-1": "12,000 BTU · TOSHIBA COMPRESSOR",
+                "hero-banner-2": "COPPER TUBING · R32 · 220V",
                 "hero-sub": "🔥 ONLY 75 TICKETS · $10 EACH · DRAW WHEN ALL SOLD 🔥",
-                "hero-cta": "BUY TICKET", "hero-cta-2": "PARTNERSHIPS",
-                "stat-1": "Total Tickets", "stat-2": "Per Ticket", "stat-3": "Main Prize",
-                "raffle-title-1": "OFFICIAL", "raffle-title-2": "TICKET",
+                "hero-cta": "BUY TICKET",
+                "hero-cta-2": "PARTNERSHIPS",
+                "stat-1": "Total Tickets",
+                "stat-2": "Per Ticket",
+                "stat-3": "Main Prize",
+                "raffle-title-1": "OFFICIAL",
+                "raffle-title-2": "TICKET",
                 "raffle-sub": "Buy your ticket before they sell out. The draw happens when all 75 are sold.",
-                "models-title-1": "AMBASSADOR", "models-title-2": "MODELS",
+                "models-title-1": "AMBASSADOR",
+                "models-title-2": "MODELS",
                 "models-sub": "The faces behind our campaigns. Only a few are selected as ambassadors.",
-                "badge-verified": "Ambassador", "view-profile": "Contact",
+                "badge-verified": "Ambassador",
+                "view-profile": "Contact",
                 "website-link-title": "Our Model Platform",
-                "partners-title-1": "ELEVATE", "partners-title-2": "YOUR BRAND",
+                "partners-title-1": "ELEVATE",
+                "partners-title-2": "YOUR BRAND",
                 "partners-sub": "Promote your products with our viral raffles and ambassador models.",
-                "partner-1": "Viral Raffles", "partner-1-desc": "Your products as prizes that generate massive buzz.",
-                "partner-2": "Ambassador Models", "partner-2-desc": "Premium content created by handpicked models.",
-                "partner-3": "Social Media Exposure", "partner-3-desc": "Instagram, TikTok & Facebook – massive reach.",
-                "partner-4": "Curated Selection", "partner-4-desc": "Only a few select models are chosen for your business.",
+                "partner-1": "Viral Raffles",
+                "partner-1-desc": "Your products as prizes that generate massive buzz.",
+                "partner-2": "Ambassador Models",
+                "partner-2-desc": "Premium content created by handpicked models.",
+                "partner-3": "Social Media Exposure",
+                "partner-3-desc": "Instagram, TikTok & Facebook – massive reach.",
+                "partner-4": "Curated Selection",
+                "partner-4-desc": "Only a few select models are chosen for your business.",
                 "packages-title": "CHOOSE YOUR PARTNERSHIP PLAN",
-                "pack-1-name": "LAUNCH PARTNER", "pack-1-tag": "Ideal to Start",
-                "pack-1-li-1": "Single product campaign", "pack-1-li-2": "Social media promotion", "pack-1-li-3": "1 ambassador model", "pack-1-btn": "Contact",
-                "pack-2-name": "GROWTH PARTNER", "pack-2-tag": "More Reach",
-                "pack-2-li-1": "Multiple models", "pack-2-li-2": "Professional reels", "pack-2-li-3": "Expanded audience", "pack-2-btn": "Contact",
-                "pack-3-name": "PREMIER ELITE", "pack-3-tag": "Annual Partnership",
-                "pack-3-li-1": "Monthly campaigns", "pack-3-li-2": "Priority scheduling", "pack-3-li-3": "Category exclusivity", "pack-3-btn": "Contact",
-                "contact-title-1": "CONTACT", "contact-title-2": "US",
+                "pack-1-name": "LAUNCH PARTNER",
+                "pack-1-tag": "Ideal to Start",
+                "pack-1-li-1": "Single product campaign",
+                "pack-1-li-2": "Social media promotion",
+                "pack-1-li-3": "1 ambassador model",
+                "pack-1-btn": "Contact",
+                "pack-2-name": "GROWTH PARTNER",
+                "pack-2-tag": "More Reach",
+                "pack-2-li-1": "Multiple models",
+                "pack-2-li-2": "Professional reels",
+                "pack-2-li-3": "Expanded audience",
+                "pack-2-btn": "Contact",
+                "pack-3-name": "PREMIER ELITE",
+                "pack-3-tag": "Annual Partnership",
+                "pack-3-li-1": "Monthly campaigns",
+                "pack-3-li-2": "Priority scheduling",
+                "pack-3-li-3": "Category exclusivity",
+                "pack-3-btn": "Contact",
+                "contact-title-1": "CONTACT",
+                "contact-title-2": "US",
                 "contact-sub": "Buy tickets or request a business partnership. We'll respond within 24 hours.",
-                "form-name": "Your Name", "form-phone": "WhatsApp / Phone",
-                "form-select-ph": "I am interested in...", "form-select-1": "Buying a raffle ticket", "form-select-2": "Business partnership",
-                "form-message": "Message (optional)", "form-submit": "SUBMIT",
+                "form-name": "Your Name",
+                "form-phone": "WhatsApp / Phone",
+                "form-select-ph": "I am interested in...",
+                "form-select-1": "Buying a raffle ticket",
+                "form-select-2": "Business partnership",
+                "form-message": "Message (optional)",
+                "form-submit": "SUBMIT",
                 "footer-text": "© 2026 Verónica Raffles · Talent & raffle platform."
             }
         };
@@ -1097,13 +1204,33 @@
 
         function setLanguage(lang) {
             currentLang = lang;
+            // Update active state
             document.querySelectorAll('.lang-switch a').forEach(link => {
                 link.classList.toggle('active-lang', link.dataset.lang === lang);
             });
+            // Update ALL elements with data-i18n (only the <span> inside keeps the icon intact)
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
-                    el.textContent = translations[lang][key];
+                    // Only update text nodes — preserve the icon if present
+                    // If the element has an <i> child, update only the text nodes
+                    if (el.querySelector('i')) {
+                        // Find text nodes and update them
+                        el.childNodes.forEach(node => {
+                            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+                                node.textContent = translations[lang][key];
+                            }
+                        });
+                        // Also handle span-wrapped text
+                        const span = el.querySelector('span[data-i18n], span:not([data-i18n])');
+                        if (span && !span.querySelector('i')) {
+                            span.textContent = translations[lang][key];
+                        }
+                    } else if (el.querySelector('span')) {
+                        el.querySelector('span').textContent = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
                 }
             });
             localStorage.setItem('preferred-lang', lang);
@@ -1117,6 +1244,19 @@
                 const browserLang = navigator.language || navigator.languages?.[0] || 'es';
                 setLanguage(browserLang.startsWith('es') ? 'es' : 'en');
             }
+        });
+
+        // Contact form — submit via WhatsApp
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('formName').value;
+            const phone = document.getElementById('formPhone').value;
+            const interest = document.getElementById('formInterest').value;
+            const message = document.getElementById('formMessage').value;
+
+            let waText = `Hola,%20soy%20${encodeURIComponent(name)}.%20Mi%20teléfono:%20${encodeURIComponent(phone)}.%20Estoy%20interesado%20en:%20${encodeURIComponent(interest)}.%20${encodeURIComponent(message)}`;
+
+            window.location.href = `https://wa.me/13852228100?text=${waText}`;
         });
     </script>
 
