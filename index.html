@@ -24,6 +24,8 @@
             --pink: #ff006e;
             --pink-dark: #d6005c;
             --blue: #2563eb;
+            --blue-light: #4da6ff;
+            --blue-glow: #00b3ff;
             --white: #ffffff;
             --text-light: #a8bbd4;
             --border-blue: #1a3a6b;
@@ -179,44 +181,45 @@
             overflow: hidden;
         }
 
-        /* ===== NEW: LOGO-STYLE TICKET OUTLINE BADGE ===== */
+        /* ===== NEW: 3D LIGHT BLUE LOGO-STYLE TICKET BADGE ===== */
         .raffle-ticket-badge {
             position: relative;
             display: inline-block;
             margin-bottom: 30px;
-            /* Outer layer = red outline */
-            background: var(--red);
+            /* Outer layer = blue gradient border */
+            background: linear-gradient(135deg, #00b3ff 0%, #4da6ff 50%, #00b3ff 100%);
             padding: 3px;
-            /* Ticket shape with pointed/notched sides (like the logo) */
+            /* Ticket shape with pointed/notched sides */
             clip-path: polygon(
-                /* TOP edge with notches */
                 0% 15%, 4% 15%, 4% 0%, 96% 0%, 96% 15%, 100% 15%,
-                /* RIGHT edge with notch */
                 100% 40%, 96% 50%, 100% 60%,
-                /* BOTTOM edge */
                 100% 85%, 96% 85%, 96% 100%, 4% 100%, 4% 85%, 0% 85%,
-                /* LEFT edge with notch */
                 0% 60%, 4% 50%, 0% 40%
             );
-            filter: drop-shadow(0 0 15px rgba(230,57,70,0.6))
-                    drop-shadow(0 0 30px rgba(230,57,70,0.3));
+            filter: 
+                drop-shadow(0 0 15px rgba(0,179,255,0.8))
+                drop-shadow(0 0 30px rgba(0,179,255,0.5))
+                drop-shadow(0 0 50px rgba(0,179,255,0.3));
             animation: badge-pulse 2.5s ease-in-out infinite;
         }
 
         @keyframes badge-pulse {
             0%, 100% { 
-                filter: drop-shadow(0 0 15px rgba(230,57,70,0.6))
-                        drop-shadow(0 0 30px rgba(230,57,70,0.3));
+                filter: 
+                    drop-shadow(0 0 15px rgba(0,179,255,0.8))
+                    drop-shadow(0 0 30px rgba(0,179,255,0.5))
+                    drop-shadow(0 0 50px rgba(0,179,255,0.3));
             }
             50% { 
-                filter: drop-shadow(0 0 20px rgba(230,57,70,0.9))
-                        drop-shadow(0 0 40px rgba(230,57,70,0.5));
+                filter: 
+                    drop-shadow(0 0 20px rgba(0,179,255,1))
+                    drop-shadow(0 0 40px rgba(0,179,255,0.7))
+                    drop-shadow(0 0 60px rgba(0,179,255,0.5));
             }
         }
 
         .raffle-ticket-badge-inner {
-            /* Inner layer = transparent with the same shape */
-            background: var(--navy);
+            background: linear-gradient(135deg, #0a1a3a 0%, #0f2550 50%, #0a1a3a 100%);
             clip-path: polygon(
                 0% 15%, 4% 15%, 4% 0%, 96% 0%, 96% 15%, 100% 15%,
                 100% 40%, 96% 50%, 100% 60%,
@@ -228,21 +231,27 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
+            position: relative;
+            box-shadow: inset 0 0 30px rgba(0,179,255,0.3);
         }
 
         .raffle-ticket-badge-inner i {
-            color: var(--red);
+            color: var(--blue-glow);
             font-size: 1.3rem;
+            filter: drop-shadow(0 0 6px rgba(0,179,255,0.9));
         }
 
         .raffle-ticket-badge-inner span {
             font-family: 'Oswald', sans-serif;
             font-weight: 900;
             font-size: clamp(0.95rem, 2vw, 1.15rem);
-            color: var(--red);
+            color: #fff;
             text-transform: uppercase;
             letter-spacing: 4px;
-            text-shadow: 0 0 10px rgba(230,57,70,0.5);
+            text-shadow: 
+                0 0 8px rgba(0,179,255,0.9),
+                0 0 15px rgba(0,179,255,0.6),
+                0 0 25px rgba(0,179,255,0.4);
         }
 
         @media (max-width: 768px) {
@@ -812,7 +821,6 @@
 </head>
 <body>
 
-    <!-- FLOATING WHATSAPP BUTTON -->
     <a href="#" data-wa-key="wa-floating" target="_blank" class="floating-btn">
         <i class="bi bi-whatsapp"></i>
         <span data-i18n="floating-btn">Comprar Boleto</span>
@@ -885,7 +893,7 @@
     <div class="hero-section-wrap">
         <section class="hero">
 
-            <!-- ===== LOGO-STYLE TICKET OUTLINE BADGE (RED) ===== -->
+            <!-- ===== 3D LIGHT BLUE LOGO-STYLE TICKET BADGE ===== -->
             <div class="raffle-ticket-badge">
                 <div class="raffle-ticket-badge-inner">
                     <i class="bi bi-ticket-perforated-fill"></i>
@@ -1173,10 +1181,10 @@
             <div class="contact-form">
                 <form id="contactForm">
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="formName" placeholder="Tu Nombre" data-i18n="form-name" required>
+                        <input type="text" class="form-control" id="formName" data-i18n-placeholder="form-name" placeholder="Tu Nombre" required>
                     </div>
                     <div class="mb-3">
-                        <input type="tel" class="form-control" id="formPhone" placeholder="WhatsApp / Teléfono" data-i18n="form-phone" required>
+                        <input type="tel" class="form-control" id="formPhone" data-i18n-placeholder="form-phone" placeholder="WhatsApp / Teléfono" required>
                     </div>
                     <div class="mb-3">
                         <select class="form-select" id="formInterest">
@@ -1186,11 +1194,11 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <textarea class="form-control" id="formMessage" rows="3" placeholder="Mensaje (opcional)" data-i18n="form-message"></textarea>
+                        <textarea class="form-control" id="formMessage" rows="3" data-i18n-placeholder="form-message" placeholder="Mensaje (opcional)"></textarea>
                     </div>
-                    <button type="submit" class="btn-yellow w-100" style="justify-content: center;" data-i18n="form-submit">
+                    <button type="submit" class="btn-yellow w-100" style="justify-content: center;">
                         <i class="bi bi-whatsapp"></i>
-                        <span>ENVIAR</span>
+                        <span data-i18n="form-submit">ENVIAR</span>
                     </button>
                 </form>
             </div>
@@ -1414,6 +1422,7 @@
             document.querySelectorAll('.lang-switch a').forEach(link => {
                 link.classList.toggle('active-lang', link.dataset.lang === lang);
             });
+            // Update text content
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
@@ -1432,6 +1441,13 @@
                     } else {
                         el.textContent = translations[lang][key];
                     }
+                }
+            });
+            // NEW: Update placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    el.setAttribute('placeholder', translations[lang][key]);
                 }
             });
             updateWhatsAppLinks();
