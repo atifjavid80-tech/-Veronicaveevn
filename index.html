@@ -83,18 +83,20 @@
         .logo-text span { color: var(--yellow); }
         .logo-text i { color: var(--cyan); font-size: 1.8rem; }
 
+        /* ===== FIXED: Nav links — nowrap ===== */
         .nav-link-custom {
             color: #ccc !important;
             font-weight: 600;
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            padding: 8px 16px !important;
+            padding: 8px 14px !important;
             transition: 0.3s;
+            white-space: nowrap;
         }
         .nav-link-custom:hover, .nav-link-custom.active { color: var(--cyan) !important; }
 
-        /* ===== HEADER SOCIAL ICONS (Only IG + TikTok) ===== */
+        /* HEADER SOCIAL ICONS (Only IG + TikTok) */
         .header-socials {
             display: flex;
             align-items: center;
@@ -188,21 +190,22 @@
             overflow: hidden;
         }
 
-        /* ===== REVERTED: Simple Cyan Pill Badge with RED Text ===== */
+        /* ===== UPDATED: OUTLINE ONLY Badge with RED Text ===== */
         .hero .top-ribbon {
             display: inline-block;
-            background: var(--cyan);
+            background: transparent;
             color: var(--red);
             font-family: 'Oswald', sans-serif;
             font-weight: 800;
             font-size: clamp(0.9rem, 2vw, 1.1rem);
             padding: 12px 40px;
             border-radius: 50px;
+            border: 2px solid var(--red);
             text-transform: uppercase;
             letter-spacing: 3px;
             margin-bottom: 25px;
-            box-shadow: 0 0 30px rgba(0,229,255,0.5);
-            text-shadow: 0 0 8px rgba(230,57,70,0.3);
+            box-shadow: 0 0 20px rgba(230,57,70,0.3);
+            text-shadow: 0 0 8px rgba(230,57,70,0.4);
         }
 
         .hero .top-ribbon i {
@@ -761,7 +764,7 @@
             .btn-buy-ticket-big { padding: 14px 30px; font-size: 0.85rem; letter-spacing: 1px; }
             .btn-buy-ticket-big i { font-size: 1rem; }
             .header-socials a { width: 30px !important; height: 30px !important; font-size: 0.9rem !important; }
-            .hero .top-ribbon { padding: 10px 28px; letter-spacing: 2px; }
+            .hero .top-ribbon { padding: 10px 28px; letter-spacing: 2px; font-size: 0.85rem; }
         }
     </style>
 </head>
@@ -821,7 +824,7 @@
         </div>
     </header>
 
-    <!-- OFF CANVAS (No socials inside — they are in header now) -->
+    <!-- OFF CANVAS -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
         <div class="offcanvas-header border-bottom border-secondary">
             <a href="#" class="logo-text">
@@ -845,7 +848,7 @@
     <div class="hero-section-wrap">
         <section class="hero">
 
-            <!-- ===== REVERTED: Cyan Pill Badge with RED Text ===== -->
+            <!-- ===== UPDATED: OUTLINE ONLY Badge with RED Text ===== -->
             <div class="top-ribbon">
                 <i class="bi bi-ticket-perforated-fill"></i>
                 <span data-i18n="hero-ribbon">RAFFLE TICKET</span>
