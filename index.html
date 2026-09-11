@@ -91,23 +91,25 @@
         .lang-switch a:hover { border-color: var(--cyan); color: var(--cyan); }
         .lang-switch a.active-lang { background: var(--cyan); border-color: var(--cyan); color: #000; }
 
-        /* ===== HERO (WHITE BACKGROUND) ===== */
+        /* ===== HERO (DARK BACKGROUND — circled area) ===== */
         .hero {
             padding: 70px 0 60px; text-align: center; position: relative;
-            background: var(--page-bg);
-            border-bottom: 1px solid var(--page-border);
+            background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.15) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 80%, rgba(255,0,110,0.1) 0%, transparent 50%),
+                        var(--navy);
+            border-bottom: 1px solid var(--border-blue);
         }
 
         .hero .top-ribbon {
             display: inline-block; background: var(--cyan); color: #000;
             font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 0.75rem;
             padding: 8px 24px; border-radius: 50px; text-transform: uppercase;
-            letter-spacing: 2px; margin-bottom: 20px; box-shadow: 0 0 20px rgba(0,229,255,0.4);
+            letter-spacing: 2px; margin-bottom: 20px; box-shadow: 0 0 30px rgba(0,229,255,0.5);
         }
 
         .hero .headline-mini {
             font-family: 'Oswald', sans-serif; font-size: clamp(1rem, 2.5vw, 1.4rem);
-            font-weight: 500; color: var(--navy);
+            font-weight: 500; color: #fff;
             text-transform: uppercase; letter-spacing: 3px; margin-bottom: 5px;
         }
 
@@ -117,9 +119,9 @@
             margin-bottom: 25px; letter-spacing: -2px;
         }
 
-        .hero h1 .white { color: var(--navy); display: block; }
-        .hero h1 .yellow { color: var(--amber); display: block; }
-        .hero h1 .cyan-glow { color: var(--dark-cyan); display: block; }
+        .hero h1 .white { color: #fff; display: block; }
+        .hero h1 .yellow { color: var(--yellow); text-shadow: 0 0 30px rgba(255,214,10,0.5); display: block; }
+        .hero h1 .cyan-glow { color: var(--cyan); text-shadow: 0 0 40px rgba(0,229,255,0.6); display: block; }
 
         .banner-strip {
             display: inline-block; padding: 12px 30px; border-radius: 8px;
@@ -127,11 +129,11 @@
             font-size: clamp(0.85rem, 1.8vw, 1.1rem); text-transform: uppercase;
             letter-spacing: 2px; margin: 6px 0; transform: skewX(-5deg);
         }
-        .banner-strip.cyan { background: var(--cyan); color: #000; box-shadow: 0 0 20px rgba(0,229,255,0.4); }
-        .banner-strip.pink { background: var(--pink); color: #fff; box-shadow: 0 0 20px rgba(255,0,110,0.4); }
+        .banner-strip.cyan { background: var(--cyan); color: #000; box-shadow: 0 0 30px rgba(0,229,255,0.5); }
+        .banner-strip.pink { background: var(--pink); color: #fff; box-shadow: 0 0 30px rgba(255,0,110,0.5); }
 
         .hero .sub-line {
-            color: var(--amber); font-weight: 700; font-size: 0.9rem;
+            color: var(--yellow); font-weight: 700; font-size: 0.9rem;
             text-transform: uppercase; letter-spacing: 1.5px; margin: 20px 0 30px;
         }
 
@@ -145,11 +147,11 @@
             padding: 16px 40px; border-radius: 50px; border: 3px solid var(--yellow);
             font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;
             display: inline-block; transition: 0.3s;
-            font-family: 'Oswald', sans-serif; box-shadow: 0 0 20px rgba(255,214,10,0.35);
+            font-family: 'Oswald', sans-serif; box-shadow: 0 0 30px rgba(255,214,10,0.4);
         }
         .btn-yellow:hover {
-            background: var(--navy); border-color: var(--navy); color: #fff;
-            transform: translateY(-3px);
+            background: #fff; border-color: #fff; color: #000;
+            transform: translateY(-3px); box-shadow: 0 0 50px rgba(255,214,10,0.7);
         }
 
         .btn-pink {
@@ -157,11 +159,11 @@
             padding: 16px 40px; border-radius: 50px; border: 3px solid var(--pink);
             font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;
             display: inline-block; transition: 0.3s;
-            font-family: 'Oswald', sans-serif; box-shadow: 0 0 20px rgba(255,0,110,0.3);
+            font-family: 'Oswald', sans-serif; box-shadow: 0 0 30px rgba(255,0,110,0.4);
         }
         .btn-pink:hover {
-            background: var(--navy); border-color: var(--navy); color: #fff;
-            transform: translateY(-3px);
+            background: #fff; border-color: #fff; color: #000;
+            transform: translateY(-3px); box-shadow: 0 0 50px rgba(255,0,110,0.7);
         }
 
         .btn-outline-cyan {
@@ -171,20 +173,21 @@
             display: inline-block; transition: 0.3s; font-family: 'Oswald', sans-serif;
         }
         .btn-outline-cyan:hover {
-            background: var(--cyan); color: #000;
+            background: var(--cyan); color: #000; box-shadow: 0 0 30px rgba(0,229,255,0.5);
         }
 
         .stats-row {
             display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;
-            padding-top: 40px; border-top: 1px solid var(--page-border); margin-top: 20px;
+            padding-top: 40px; border-top: 1px solid var(--border-blue); margin-top: 20px;
         }
         .stat-item { text-align: center; }
         .stat-item h3 {
             font-family: 'Oswald', sans-serif; font-size: 3rem; font-weight: 900;
-            color: var(--amber); line-height: 1; margin-bottom: 8px;
+            color: var(--yellow); line-height: 1; margin-bottom: 8px;
+            text-shadow: 0 0 20px rgba(255,214,10,0.4);
         }
         .stat-item p {
-            color: var(--page-muted); font-size: 0.7rem; text-transform: uppercase;
+            color: var(--text-light); font-size: 0.7rem; text-transform: uppercase;
             letter-spacing: 2px; font-weight: 700; margin: 0;
         }
 
@@ -208,6 +211,15 @@
 
         /* Light grey for alternating sections (was dark navy) */
         .section-navy-light { background: #f8f9fa; }
+
+        /* ===== RAFFLE SECTION HEADER (DARK BACKGROUND — circled area) ===== */
+        #raffle {
+            background: var(--navy);
+            border-bottom: 1px solid var(--border-blue);
+        }
+        #raffle .section-title .cyan { color: var(--cyan); text-shadow: 0 0 25px rgba(0,229,255,0.4); }
+        #raffle .section-title .yellow { color: var(--yellow); text-shadow: 0 0 25px rgba(255,214,10,0.4); }
+        #raffle .section-sub { color: var(--text-light); }
 
         /* ===== TICKET CARD (KEEP AS IS — white bg + cyan glow) ===== */
         .ticket-wrapper { max-width: 950px; margin: 0 auto; perspective: 1000px; }
@@ -518,7 +530,7 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-6px); }
         }
-        .floating-btn:hover { background: var(--navy); color: #fff; animation: none; transform: scale(1.08); }
+        .floating-btn:hover { background: #fff; color: #000; animation: none; transform: scale(1.08); }
 
         /* ===== OFF CANVAS (KEEP DARK) ===== */
         .offcanvas { background: var(--navy) !important; }
@@ -620,7 +632,7 @@
         </div>
     </div>
 
-    <!-- ===== HERO (WHITE BACKGROUND) ===== -->
+    <!-- ===== HERO (DARK BACKGROUND — circled area) ===== -->
     <section class="hero">
         <div class="container">
             <div class="top-ribbon">
@@ -666,8 +678,8 @@
         </div>
     </section>
 
-    <!-- ===== RAFFLE TICKET (KEPT AS IS — white with cyan border) ===== -->
-    <section class="section-navy-light" id="raffle">
+    <!-- ===== RAFFLE TICKET (DARK SECTION — circled area) ===== -->
+    <section id="raffle">
         <div class="container">
             <h2 class="section-title">
                 <span class="cyan" data-i18n="raffle-title-1">BOLETO</span>
