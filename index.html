@@ -27,6 +27,8 @@
             --white: #ffffff;
             --text-light: #a8bbd4;
             --border-blue: #1a3a6b;
+            --red: #e53935;
+            --red-dark: #c62828;
 
             --page-bg: #ffffff;
             --page-text: #1a1a1a;
@@ -124,19 +126,114 @@
             overflow: hidden;
         }
 
-        .hero .top-ribbon {
+        /* ===== NEW: RAFFLE TICKET SHAPE BADGE ===== */
+        .ticket-badge-wrap {
             display: inline-block;
-            background: var(--cyan);
-            color: #000;
+            margin-bottom: 30px;
+            position: relative;
+            transform: rotate(-2deg);
+        }
+
+        .ticket-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            background: var(--yellow);
+            color: var(--red);
             font-family: 'Oswald', sans-serif;
-            font-weight: 700;
-            font-size: 0.75rem;
-            padding: 8px 24px;
-            border-radius: 50px;
+            font-weight: 900;
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+            padding: 18px 70px;
+            border-radius: 12px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 30px rgba(0,229,255,0.5);
+            letter-spacing: 3px;
+            position: relative;
+            box-shadow: 
+                0 0 40px rgba(255,214,10,0.7),
+                0 0 80px rgba(255,214,10,0.35),
+                0 8px 25px rgba(0,0,0,0.4);
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
+            animation: ticket-float 3s ease-in-out infinite;
+        }
+
+        @keyframes ticket-float {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-5px) rotate(-2deg); }
+        }
+
+        /* Left & Right notches (raffle ticket perforations) */
+        .ticket-badge::before,
+        .ticket-badge::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: var(--navy);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .ticket-badge::before {
+            left: -15px;
+            box-shadow: inset -3px 0 6px rgba(0,0,0,0.3);
+        }
+
+        .ticket-badge::after {
+            right: -15px;
+            box-shadow: inset 3px 0 6px rgba(0,0,0,0.3);
+        }
+
+        /* Dotted line in the middle of ticket */
+        .ticket-badge .ticket-line {
+            display: none;
+        }
+
+        .ticket-badge i {
+            font-size: 1.5rem;
+            color: var(--red);
+            animation: flame-flicker 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes flame-flicker {
+            from { transform: scale(1); opacity: 1; }
+            to { transform: scale(1.15); opacity: 0.85; }
+        }
+
+        @media (max-width: 768px) {
+            .ticket-badge {
+                padding: 14px 50px;
+                font-size: 0.95rem;
+                letter-spacing: 2px;
+                gap: 10px;
+            }
+            .ticket-badge i { font-size: 1.2rem; }
+            .ticket-badge::before,
+            .ticket-badge::after {
+                width: 24px;
+                height: 24px;
+            }
+            .ticket-badge::before { left: -12px; }
+            .ticket-badge::after { right: -12px; }
+        }
+
+        @media (max-width: 576px) {
+            .ticket-badge {
+                padding: 12px 40px;
+                font-size: 0.8rem;
+                letter-spacing: 1.5px;
+                gap: 8px;
+            }
+            .ticket-badge i { font-size: 1rem; }
+            .ticket-badge::before,
+            .ticket-badge::after {
+                width: 20px;
+                height: 20px;
+            }
+            .ticket-badge::before { left: -10px; }
+            .ticket-badge::after { right: -10px; }
         }
 
         .hero .headline-mini {
@@ -292,7 +389,6 @@
             box-shadow: 0 0 30px rgba(0,229,255,0.5);
         }
 
-        /* NEW: Big Buy Ticket Button */
         .btn-buy-ticket-big {
             background: var(--yellow);
             color: #000;
@@ -320,9 +416,7 @@
             box-shadow: 0 0 60px rgba(255,214,10,0.9),
                         0 0 100px rgba(255,214,10,0.5);
         }
-        .btn-buy-ticket-big i {
-            font-size: 1.4rem;
-        }
+        .btn-buy-ticket-big i { font-size: 1.4rem; }
 
         .stats-row {
             display: flex;
@@ -398,8 +492,6 @@
         .raffle-header-box .section-title .yellow { color: var(--yellow); text-shadow: 0 0 25px rgba(255,214,10,0.5); }
         .raffle-header-box .section-sub { color: var(--text-light); margin-bottom: 0; }
 
-        /* NEW: Buy Ticket CTA wrapper */
-        /* NEW: Buy Ticket CTA wrapper */
         .buy-ticket-cta-wrap {
             text-align: center;
             margin: 20px auto 50px;
@@ -760,9 +852,15 @@
     <!-- HERO -->
     <div class="hero-section-wrap">
         <section class="hero">
-            <div class="top-ribbon">
-                <i class="bi bi-fire me-2"></i> <span data-i18n="hero-ribbon">Rifa Beta · Maracaibo</span>
+
+            <!-- ===== NEW: RAFFLE TICKET SHAPE BADGE WITH RED TEXT ===== -->
+            <div class="ticket-badge-wrap">
+                <div class="ticket-badge">
+                    <i class="bi bi-fire"></i>
+                    <span data-i18n="hero-ribbon">BETA RAFFLE · MARACAIBO</span>
+                </div>
             </div>
+
             <div class="headline-mini" data-i18n="hero-mini">¡GANA CON VERÓNICA RAFFLES!</div>
             <h1>
                 <span class="white" data-i18n="hero-title-1">GANA UN</span>
@@ -823,7 +921,6 @@
                 <p class="section-sub" data-i18n="raffle-sub">Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.</p>
             </div>
 
-            <!-- ===== NEW: BUY TICKET BUTTON (where the red X was) ===== -->
             <div class="buy-ticket-cta-wrap">
                 <a href="#" data-wa-key="wa-buy-ticket" target="_blank" class="btn-buy-ticket-big">
                     <i class="bi bi-whatsapp"></i>
@@ -1097,7 +1194,6 @@
     <script>
         const WHATSAPP_NUMBER = "13852228100";
 
-        // WhatsApp message templates per language
         const waMessages = {
             es: {
                 "wa-floating": "Hola, quiero comprar un boleto para la rifa Toshiba.",
@@ -1141,7 +1237,7 @@
                 "nav-models": "Modelos",
                 "nav-what": "¿Qué Hacemos?",
                 "nav-contact": "Contacto",
-                "hero-ribbon": "Rifa Beta · Maracaibo",
+                "hero-ribbon": "BETA RAFFLE · MARACAIBO",
                 "hero-mini": "¡GANA CON VERÓNICA RAFFLES!",
                 "hero-title-1": "GANA UN",
                 "hero-title-2": "AIRE ACONDICIONADO",
@@ -1212,7 +1308,7 @@
                 "nav-models": "Models",
                 "nav-what": "What We Do",
                 "nav-contact": "Contact",
-                "hero-ribbon": "Beta Raffle · Maracaibo",
+                "hero-ribbon": "BETA RAFFLE · MARACAIBO",
                 "hero-mini": "WIN WITH VERÓNICA RAFFLES!",
                 "hero-title-1": "WIN A",
                 "hero-title-2": "AIR CONDITIONER",
@@ -1306,7 +1402,6 @@
                     }
                 }
             });
-            // IMPORTANT: Update WhatsApp links with new language
             updateWhatsAppLinks();
             localStorage.setItem('preferred-lang', lang);
         }
@@ -1321,7 +1416,6 @@
             }
         });
 
-        // Contact form — submit via WhatsApp in current language
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('formName').value;
