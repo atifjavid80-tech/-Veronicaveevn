@@ -27,8 +27,8 @@
             --white: #ffffff;
             --text-light: #a8bbd4;
             --border-blue: #1a3a6b;
-            --red: #e53935;
-            --red-dark: #c62828;
+            --red: #e63946;
+            --red-dark: #c1121f;
 
             --page-bg: #ffffff;
             --page-text: #1a1a1a;
@@ -94,6 +94,65 @@
         }
         .nav-link-custom:hover, .nav-link-custom.active { color: var(--cyan) !important; }
 
+        /* ===== NEW: HEADER SOCIAL ICONS ===== */
+        .header-socials {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0 15px;
+            border-left: 1px solid rgba(255,255,255,0.1);
+            border-right: 1px solid rgba(255,255,255,0.1);
+            margin: 0 5px;
+        }
+
+        .header-socials a {
+            color: #ccc;
+            font-size: 1.1rem;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .header-socials a:hover {
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .header-socials a.instagram:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border-color: transparent;
+        }
+
+        .header-socials a.tiktok:hover {
+            background: #000;
+            border-color: #fff;
+        }
+
+        .header-socials a.facebook:hover {
+            background: #1877f2;
+        }
+
+        .header-socials a.whatsapp:hover {
+            background: #25d366;
+        }
+
+        @media (max-width: 991px) {
+            .header-socials {
+                display: none;
+            }
+        }
+
+        /* Show socials on tablet — smaller gap */
+        @media (max-width: 1199px) and (min-width: 992px) {
+            .header-socials { gap: 2px; padding: 0 8px; }
+            .header-socials a { width: 30px; height: 30px; font-size: 0.95rem; }
+        }
+
         .lang-switch { display: flex; gap: 8px; }
         .lang-switch a {
             color: #ccc;
@@ -126,7 +185,7 @@
             overflow: hidden;
         }
 
-        /* ===== NEW: RAFFLE TICKET SHAPE BADGE ===== */
+        /* ===== RAFFLE TICKET SHAPE BADGE (RED TEXT) ===== */
         .ticket-badge-wrap {
             display: inline-block;
             margin-bottom: 30px;
@@ -162,7 +221,6 @@
             50% { transform: translateY(-5px) rotate(-2deg); }
         }
 
-        /* Left & Right notches (raffle ticket perforations) */
         .ticket-badge::before,
         .ticket-badge::after {
             content: '';
@@ -184,11 +242,6 @@
         .ticket-badge::after {
             right: -15px;
             box-shadow: inset 3px 0 6px rgba(0,0,0,0.3);
-        }
-
-        /* Dotted line in the middle of ticket */
-        .ticket-badge .ticket-line {
-            display: none;
         }
 
         .ticket-badge i {
@@ -222,7 +275,7 @@
         @media (max-width: 576px) {
             .ticket-badge {
                 padding: 12px 40px;
-                font-size: 0.8rem;
+                font-size: 0.85rem;
                 letter-spacing: 1.5px;
                 gap: 8px;
             }
@@ -753,6 +806,34 @@
         .offcanvas .nav-link:hover { color: var(--cyan) !important; }
         .offcanvas .btn-close { filter: invert(1); }
 
+        /* Offcanvas social icons */
+        .offcanvas-socials {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-blue);
+        }
+        .offcanvas-socials a {
+            color: #ccc;
+            font-size: 1.3rem;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--border-blue);
+            transition: 0.3s;
+        }
+        .offcanvas-socials a:hover {
+            color: #fff;
+            border-color: var(--cyan);
+            background: var(--cyan);
+            color: #000;
+        }
+
         @media (max-width: 991px) { .logo-img { max-height: 70px; } }
 
         @media (max-width: 768px) {
@@ -800,14 +881,17 @@
     <header id="header">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-7 col-md-3">
+                <!-- Logo -->
+                <div class="col-5 col-md-3">
                     <a href="#" class="logo-text">
                         <img src="https://raw.githubusercontent.com/atifjavid80-tech/-veronicaraffles/refs/heads/main/Veronica%20Raffles%20LOGO.png"
                              alt="Verónica Raffles"
                              class="logo-img">
                     </a>
                 </div>
-                <div class="col-md-6 d-none d-lg-block">
+
+                <!-- Desktop Nav (center) -->
+                <div class="col-md-4 d-none d-lg-block">
                     <nav class="navbar navbar-expand-lg py-0 justify-content-center">
                         <ul class="navbar-nav">
                             <li class="nav-item"><a href="#raffle" class="nav-link nav-link-custom active" data-i18n="nav-raffle">Rifa</a></li>
@@ -817,11 +901,33 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col-5 col-md-3 d-flex justify-content-end align-items-center gap-3">
+
+                <!-- Right: Social Icons + Language + Hamburger -->
+                <div class="col-7 col-md-5 d-flex justify-content-end align-items-center gap-2">
+
+                    <!-- ===== NEW: SOCIAL MEDIA ICONS ===== -->
+                    <div class="header-socials">
+                        <a href="#" target="_blank" class="instagram" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" class="tiktok" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                        <a href="#" target="_blank" class="facebook" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://wa.me/13852228100" target="_blank" class="whatsapp" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+
+                    <!-- Language Switcher -->
                     <div class="lang-switch">
                         <a href="#" data-lang="es" class="active-lang" onclick="setLanguage('es'); return false;">ES</a>
                         <a href="#" data-lang="en" onclick="setLanguage('en'); return false;">EN</a>
                     </div>
+
+                    <!-- Mobile Hamburger -->
                     <button class="btn btn-link text-white p-0 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                         <i class="bi bi-list fs-2"></i>
                     </button>
@@ -830,6 +936,7 @@
         </div>
     </header>
 
+    <!-- OFF CANVAS -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
         <div class="offcanvas-header border-bottom border-secondary">
             <a href="#" class="logo-text">
@@ -846,6 +953,14 @@
                 <li class="nav-item"><a class="nav-link" href="#partners" data-i18n="nav-what">¿Qué Hacemos?</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav-contact">Contacto</a></li>
             </ul>
+
+            <!-- Socials in Offcanvas -->
+            <div class="offcanvas-socials">
+                <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-tiktok"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://wa.me/13852228100" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            </div>
         </div>
     </div>
 
@@ -853,11 +968,11 @@
     <div class="hero-section-wrap">
         <section class="hero">
 
-            <!-- ===== NEW: RAFFLE TICKET SHAPE BADGE WITH RED TEXT ===== -->
+            <!-- ===== RAFFLE TICKET BADGE (RED TEXT) ===== -->
             <div class="ticket-badge-wrap">
                 <div class="ticket-badge">
-                    <i class="bi bi-fire"></i>
-                    <span data-i18n="hero-ribbon">BETA RAFFLE · MARACAIBO</span>
+                    <i class="bi bi-ticket-perforated-fill"></i>
+                    <span data-i18n="hero-ribbon">RAFFLE TICKET</span>
                 </div>
             </div>
 
@@ -1237,7 +1352,7 @@
                 "nav-models": "Modelos",
                 "nav-what": "¿Qué Hacemos?",
                 "nav-contact": "Contacto",
-                "hero-ribbon": "BETA RAFFLE · MARACAIBO",
+                "hero-ribbon": "RAFFLE TICKET",
                 "hero-mini": "¡GANA CON VERÓNICA RAFFLES!",
                 "hero-title-1": "GANA UN",
                 "hero-title-2": "AIRE ACONDICIONADO",
@@ -1308,7 +1423,7 @@
                 "nav-models": "Models",
                 "nav-what": "What We Do",
                 "nav-contact": "Contact",
-                "hero-ribbon": "BETA RAFFLE · MARACAIBO",
+                "hero-ribbon": "RAFFLE TICKET",
                 "hero-mini": "WIN WITH VERÓNICA RAFFLES!",
                 "hero-title-1": "WIN A",
                 "hero-title-2": "AIR CONDITIONER",
