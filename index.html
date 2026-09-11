@@ -65,15 +65,8 @@
             z-index: 1000;
         }
 
-        .logo-img {
-            max-height: 95px;
-            width: auto;
-            display: block;
-        }
-
-        @media (min-width: 992px) {
-            .logo-img { max-height: 100px; }
-        }
+        .logo-img { max-height: 95px; width: auto; display: block; }
+        @media (min-width: 992px) { .logo-img { max-height: 100px; } }
 
         .logo-text {
             font-family: 'Oswald', sans-serif;
@@ -81,7 +74,6 @@
             font-weight: 700;
             letter-spacing: 1px;
             color: #fff;
-            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -115,10 +107,7 @@
         .lang-switch a.active-lang { background: var(--cyan); border-color: var(--cyan); color: #000; }
 
         /* ===== HERO ===== */
-        .hero-section-wrap {
-            padding: 40px 20px 30px;
-            background: var(--page-bg);
-        }
+        .hero-section-wrap { padding: 40px 20px 30px; background: var(--page-bg); }
 
         .hero {
             max-width: 1100px;
@@ -131,8 +120,7 @@
                         var(--navy);
             border-radius: 28px;
             border: 1px solid var(--border-blue);
-            box-shadow: 0 20px 60px rgba(6, 16, 41, 0.25),
-                        0 0 0 1px rgba(0,229,255,0.1);
+            box-shadow: 0 20px 60px rgba(6, 16, 41, 0.25), 0 0 0 1px rgba(0,229,255,0.1);
             overflow: hidden;
         }
 
@@ -174,6 +162,29 @@
         .hero h1 .white { color: #fff; display: block; }
         .hero h1 .yellow { color: var(--yellow); text-shadow: 0 0 30px rgba(255,214,10,0.5); display: block; }
         .hero h1 .cyan-glow { color: var(--cyan); text-shadow: 0 0 40px rgba(0,229,255,0.6); display: block; }
+
+        /* ===== NEW: AC IMAGE IN HERO ===== */
+        .hero-ac-image {
+            max-width: 480px;
+            width: 100%;
+            height: auto;
+            margin: 30px auto 30px;
+            display: block;
+            border-radius: 16px;
+            filter: drop-shadow(0 20px 50px rgba(0,229,255,0.7))
+                    drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
+            transition: 0.5s ease;
+            animation: float-ac 4s ease-in-out infinite;
+        }
+        .hero-ac-image:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 25px 60px rgba(0,229,255,0.9))
+                    drop-shadow(0 15px 35px rgba(0, 0, 0, 0.5));
+        }
+        @keyframes float-ac {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
 
         .banner-strip {
             display: inline-block;
@@ -303,9 +314,10 @@
 
         section { padding: 60px 0; }
 
+        /* ===== ENLARGED SECTION TITLES ===== */
         .section-title {
             font-family: 'Oswald', sans-serif;
-            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-size: clamp(2.4rem, 6vw, 3.6rem);
             font-weight: 800;
             text-transform: uppercase;
             text-align: center;
@@ -328,18 +340,14 @@
         .section-navy-light { background: #f8f9fa; }
 
         /* ===== OFFICIAL TICKET HEADER ===== */
-        #raffle {
-            background: var(--page-bg);
-            padding: 40px 0 60px;
-        }
+        #raffle { background: var(--page-bg); padding: 40px 0 60px; }
 
         .raffle-header-box {
             max-width: 900px;
             margin: 0 auto 40px;
             padding: 40px 30px 35px;
             text-align: center;
-            background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.12) 0%, transparent 60%),
-                        var(--navy);
+            background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.12) 0%, transparent 60%), var(--navy);
             border-radius: 24px;
             border: 1px solid var(--border-blue);
             box-shadow: 0 15px 45px rgba(6, 16, 41, 0.2);
@@ -347,19 +355,12 @@
             overflow: hidden;
         }
 
-        .raffle-header-box .section-title {
-            color: #fff;
-            margin-bottom: 10px;
-        }
+        .raffle-header-box .section-title { color: #fff; margin-bottom: 10px; }
         .raffle-header-box .section-title .cyan { color: var(--cyan); text-shadow: 0 0 25px rgba(0,229,255,0.5); }
         .raffle-header-box .section-title .yellow { color: var(--yellow); text-shadow: 0 0 25px rgba(255,214,10,0.5); }
+        .raffle-header-box .section-sub { color: var(--text-light); margin-bottom: 0; }
 
-        .raffle-header-box .section-sub {
-            color: var(--text-light);
-            margin-bottom: 0;
-        }
-
-        /* ===== TICKET IMAGES (NEW) ===== */
+        /* ===== TICKET IMAGES ===== */
         .ticket-images-wrapper {
             max-width: 950px;
             margin: 0 auto;
@@ -374,27 +375,17 @@
             border-radius: 20px;
             overflow: hidden;
             border: 3px solid var(--cyan);
-            box-shadow: 
-                0 0 30px rgba(0,229,255,0.6),
-                0 0 60px rgba(0,229,255,0.3),
-                0 0 100px rgba(0,229,255,0.15);
+            box-shadow: 0 0 30px rgba(0,229,255,0.6), 0 0 60px rgba(0,229,255,0.3), 0 0 100px rgba(0,229,255,0.15);
             transition: 0.4s;
             background: #ffffff;
         }
 
         .ticket-img-box:hover {
-            box-shadow: 
-                0 0 40px rgba(0,229,255,0.8),
-                0 0 80px rgba(0,229,255,0.4),
-                0 0 120px rgba(0,229,255,0.2);
+            box-shadow: 0 0 40px rgba(0,229,255,0.8), 0 0 80px rgba(0,229,255,0.4), 0 0 120px rgba(0,229,255,0.2);
             transform: translateY(-5px);
         }
 
-        .ticket-img-box img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+        .ticket-img-box img { width: 100%; height: auto; display: block; }
 
         /* ===== MODEL CARDS ===== */
         .models-section { padding: 60px 0; }
@@ -415,93 +406,90 @@
         }
         .model-card .card-img-wrap { position: relative; overflow: hidden; }
         .model-card .card-img-wrap img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            display: block;
-            transition: 0.5s;
+            width: 100%; height: 320px; object-fit: cover; display: block; transition: 0.5s;
         }
         .model-card:hover .card-img-wrap img { transform: scale(1.05); }
         .model-card .badge-verified {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            background: var(--cyan);
-            color: #000;
-            font-weight: 700;
-            font-size: 0.6rem;
-            padding: 4px 12px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            position: absolute; top: 12px; left: 12px;
+            background: var(--cyan); color: #000;
+            font-weight: 700; font-size: 0.6rem;
+            padding: 4px 12px; border-radius: 50px;
+            text-transform: uppercase; letter-spacing: 1px;
             font-family: 'Oswald', sans-serif;
-            display: flex;
-            align-items: center;
-            gap: 4px;
+            display: flex; align-items: center; gap: 4px;
             box-shadow: 0 0 15px rgba(0,229,255,0.5);
         }
-        .model-card .card-body {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
+        .model-card .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
         .model-card h4 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-            color: #fff;
+            font-family: 'Oswald', sans-serif; font-size: 1.1rem;
+            font-weight: 700; text-transform: uppercase; margin-bottom: 4px; color: #fff;
         }
-        .model-card .card-meta {
-            color: var(--text-light);
-            font-size: 0.8rem;
-            margin-bottom: 15px;
-        }
+        .model-card .card-meta { color: var(--text-light); font-size: 0.8rem; margin-bottom: 15px; }
         .model-card .card-meta i { color: var(--cyan); margin-right: 4px; }
         .model-card .btn-view {
-            background: transparent;
-            border: 1px solid var(--cyan);
-            color: var(--cyan);
-            font-weight: 700;
-            font-size: 0.75rem;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: 0.3s;
-            text-align: center;
-            width: 100%;
-            margin-top: auto;
-            display: block;
+            background: transparent; border: 1px solid var(--cyan);
+            color: var(--cyan); font-weight: 700; font-size: 0.75rem;
+            padding: 10px 20px; border-radius: 50px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+            transition: 0.3s; text-align: center; width: 100%;
+            margin-top: auto; display: block;
         }
         .model-card .btn-view:hover { background: var(--cyan); color: #000; }
 
+        /* ===== WEBSITE LINK (NEW) ===== */
+        .website-link-wrap {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px 20px;
+        }
+        .website-link-wrap p {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            color: var(--navy);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        .website-link-wrap a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--navy);
+            color: var(--cyan);
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 16px 40px;
+            border-radius: 50px;
+            border: 3px solid var(--cyan);
+            box-shadow: 0 0 30px rgba(0,229,255,0.4);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+        .website-link-wrap a:hover {
+            background: var(--cyan);
+            color: #000;
+            transform: translateY(-4px);
+            box-shadow: 0 0 50px rgba(0,229,255,0.7);
+        }
+        .website-link-wrap a i { font-size: 1.4rem; }
+
         /* ===== FEATURE CARDS ===== */
         .feature-card {
-            background: var(--navy-card);
-            border: 1px solid var(--border-blue);
-            border-radius: 20px;
-            padding: 30px 25px;
-            text-align: center;
-            height: 100%;
-            transition: 0.4s;
+            background: var(--navy-card); border: 1px solid var(--border-blue);
+            border-radius: 20px; padding: 30px 25px; text-align: center;
+            height: 100%; transition: 0.4s;
         }
         .feature-card:hover {
-            border-color: var(--cyan);
-            transform: translateY(-8px);
+            border-color: var(--cyan); transform: translateY(-8px);
             box-shadow: 0 0 30px rgba(0,229,255,0.2);
         }
         .feature-card .circle {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
+            width: 70px; height: 70px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; font-size: 1.8rem;
             box-shadow: 0 0 25px rgba(0,229,255,0.3);
         }
         .feature-card .circle.cyan { background: linear-gradient(135deg, var(--cyan), var(--cyan-dark)); color: #000; }
@@ -509,31 +497,20 @@
         .feature-card .circle.pink { background: linear-gradient(135deg, var(--pink), var(--pink-dark)); color: #fff; }
         .feature-card .circle.blue { background: linear-gradient(135deg, var(--blue), #1d4ed8); color: #fff; }
         .feature-card h4 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            color: #fff;
+            font-family: 'Oswald', sans-serif; font-size: 1.1rem;
+            font-weight: 700; text-transform: uppercase; margin-bottom: 10px; color: #fff;
         }
         .feature-card p { color: var(--text-light); font-size: 0.9rem; margin: 0; }
 
         /* ===== PACKAGE CARDS ===== */
         .package-card {
-            background: var(--navy-card);
-            border: 1px solid var(--border-blue);
-            border-radius: 20px;
-            padding: 40px 28px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            transition: 0.4s;
-            position: relative;
-            text-align: center;
+            background: var(--navy-card); border: 1px solid var(--border-blue);
+            border-radius: 20px; padding: 40px 28px; height: 100%;
+            display: flex; flex-direction: column; transition: 0.4s;
+            position: relative; text-align: center;
         }
         .package-card:hover {
-            border-color: var(--cyan);
-            transform: translateY(-5px);
+            border-color: var(--cyan); transform: translateY(-5px);
             box-shadow: 0 0 30px rgba(0,229,255,0.2);
         }
         .package-card.popular {
@@ -542,156 +519,90 @@
             box-shadow: 0 0 40px rgba(255,0,110,0.2);
         }
         .package-card.popular::after {
-            content: "MÁS POPULAR";
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--pink);
-            color: #fff;
-            padding: 6px 22px;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
+            content: "MÁS POPULAR"; position: absolute; top: -12px; left: 50%;
+            transform: translateX(-50%); background: var(--pink); color: #fff;
+            padding: 6px 22px; border-radius: 50px; font-size: 0.7rem;
+            font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;
             font-family: 'Oswald', sans-serif;
-            box-shadow: 0 0 25px rgba(255,0,110,0.6);
-            white-space: nowrap;
+            box-shadow: 0 0 25px rgba(255,0,110,0.6); white-space: nowrap;
         }
         .package-card .package-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
+            width: 80px; height: 80px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; font-size: 2rem;
         }
         .package-card .package-icon.blue { background: linear-gradient(135deg, var(--blue), #1d4ed8); color: #fff; box-shadow: 0 0 30px rgba(37,99,235,0.5); }
         .package-card .package-icon.pink { background: linear-gradient(135deg, var(--pink), var(--pink-dark)); color: #fff; box-shadow: 0 0 30px rgba(255,0,110,0.5); }
         .package-card .package-icon.yellow { background: linear-gradient(135deg, var(--yellow), var(--yellow-dark)); color: #000; box-shadow: 0 0 30px rgba(255,214,10,0.5); }
         .package-card h3 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-            color: #fff;
+            font-family: 'Oswald', sans-serif; font-size: 1.5rem;
+            font-weight: 800; text-transform: uppercase; margin-bottom: 5px; color: #fff;
         }
         .package-card .price-tag {
-            color: var(--cyan);
-            font-weight: 700;
-            font-size: 0.8rem;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: var(--cyan); font-weight: 700; font-size: 0.8rem;
+            margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;
         }
-        .package-card ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-            flex-grow: 1;
-            text-align: left;
-        }
+        .package-card ul { list-style: none; padding: 0; margin-bottom: 30px; flex-grow: 1; text-align: left; }
         .package-card ul li {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border-blue);
-            color: #ccc;
-            font-size: 0.9rem;
+            padding: 10px 0; border-bottom: 1px solid var(--border-blue);
+            color: #ccc; font-size: 0.9rem;
         }
         .package-card ul li i { color: var(--cyan); margin-right: 12px; }
 
         /* ===== CONTACT FORM ===== */
         .contact-form {
-            background: var(--navy-card);
-            border: 1px solid var(--border-blue);
-            border-radius: 24px;
-            padding: 50px 40px;
-            max-width: 600px;
-            margin: 0 auto;
-            box-shadow: 0 0 40px rgba(0,229,255,0.1);
+            background: var(--navy-card); border: 1px solid var(--border-blue);
+            border-radius: 24px; padding: 50px 40px; max-width: 600px;
+            margin: 0 auto; box-shadow: 0 0 40px rgba(0,229,255,0.1);
         }
         .contact-form .form-control,
         .contact-form .form-select {
-            background: var(--navy);
-            border: 1px solid var(--border-blue);
-            color: #fff;
-            border-radius: 50px;
-            padding: 15px 24px;
+            background: var(--navy); border: 1px solid var(--border-blue);
+            color: #fff; border-radius: 50px; padding: 15px 24px;
             font-family: 'Lato', sans-serif;
         }
         .contact-form .form-control::placeholder { color: #666; }
         .contact-form .form-control:focus,
         .contact-form .form-select:focus {
-            border-color: var(--cyan);
-            background: var(--navy-2);
-            box-shadow: 0 0 20px rgba(0,229,255,0.3);
-            color: #fff;
+            border-color: var(--cyan); background: var(--navy-2);
+            box-shadow: 0 0 20px rgba(0,229,255,0.3); color: #fff;
         }
         .contact-form textarea.form-control { border-radius: 20px; }
         .contact-form .form-select option { background: var(--navy-2); color: #fff; }
 
         /* ===== FOOTER ===== */
         footer {
-            background: var(--navy);
-            border-top: 1px solid var(--border-blue);
-            padding: 40px 0 25px;
-            text-align: center;
-            position: relative;
+            background: var(--navy); border-top: 1px solid var(--border-blue);
+            padding: 40px 0 25px; text-align: center; position: relative;
         }
         footer::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
             height: 3px;
             background: linear-gradient(90deg, var(--cyan), var(--yellow), var(--pink), var(--cyan));
         }
-        footer .logo-img {
-            max-height: 80px;
-            margin: 0 auto;
-        }
+        footer .logo-img { max-height: 80px; margin: 0 auto; }
         footer .footer-links { margin: 20px 0; }
         footer .footer-links a {
-            color: var(--text-light);
-            font-size: 0.8rem;
-            margin: 0 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: var(--text-light); font-size: 0.8rem; margin: 0 12px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
         }
         footer .footer-links a:hover { color: var(--cyan); }
         footer .social-icons a {
-            color: #888;
-            font-size: 1.4rem;
-            margin: 0 10px;
-            transition: 0.3s;
-            display: inline-block;
+            color: #888; font-size: 1.4rem; margin: 0 10px;
+            transition: 0.3s; display: inline-block;
         }
         footer .social-icons a:hover { color: var(--cyan); transform: scale(1.15); }
         footer .copyright { color: #555; font-size: 0.8rem; margin-top: 20px; }
 
         /* ===== FLOATING BTN ===== */
         .floating-btn {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            z-index: 9999;
-            background: var(--yellow);
-            color: #000;
-            font-weight: 900;
-            padding: 16px 28px;
-            border-radius: 50px;
+            position: fixed; bottom: 25px; right: 25px; z-index: 9999;
+            background: var(--yellow); color: #000; font-weight: 900;
+            padding: 16px 28px; border-radius: 50px;
             box-shadow: 0 0 30px rgba(255,214,10,0.6);
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1.5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.3s;
-            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1.5px;
+            display: flex; align-items: center; gap: 8px;
+            transition: 0.3s; font-family: 'Oswald', sans-serif;
             animation: float-bounce 2s ease-in-out infinite;
         }
         @keyframes float-bounce {
@@ -703,27 +614,22 @@
         /* ===== OFF CANVAS ===== */
         .offcanvas { background: var(--navy) !important; }
         .offcanvas .nav-link {
-            color: #ccc !important;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            padding: 14px 0;
+            color: #ccc !important; font-weight: 600; text-transform: uppercase;
+            font-size: 0.9rem; padding: 14px 0;
             border-bottom: 1px solid var(--border-blue);
-            font-family: 'Oswald', sans-serif;
-            letter-spacing: 1px;
+            font-family: 'Oswald', sans-serif; letter-spacing: 1px;
         }
         .offcanvas .nav-link:hover { color: var(--cyan) !important; }
         .offcanvas .btn-close { filter: invert(1); }
 
         /* ===== RESPONSIVE ===== */
-        @media (max-width: 991px) {
-            .logo-img { max-height: 70px; }
-        }
+        @media (max-width: 991px) { .logo-img { max-height: 70px; } }
 
         @media (max-width: 768px) {
             .hero-section-wrap { padding: 20px 12px 20px; }
             .hero { padding: 40px 20px 35px; border-radius: 20px; }
             .hero h1 { font-size: 2rem; letter-spacing: -1px; }
+            .hero-ac-image { max-width: 320px; }
             .stat-item h3 { font-size: 2.2rem; }
             .stats-row { gap: 30px; }
             .model-card .card-img-wrap img { height: 250px; }
@@ -734,6 +640,7 @@
             .logo-img { max-height: 60px; }
             .ticket-images-wrapper { gap: 25px; }
             .ticket-img-box { border-radius: 16px; }
+            .website-link-wrap a { font-size: 1rem; padding: 14px 30px; }
         }
         @media (max-width: 576px) {
             .stat-item h3 { font-size: 1.8rem; }
@@ -742,12 +649,14 @@
             .logo-img { max-height: 55px; }
             footer .logo-img { max-height: 60px; }
             .ticket-img-box { border-radius: 14px; border-width: 2px; }
+            .hero-ac-image { max-width: 260px; }
+            .website-link-wrap a { font-size: 0.9rem; padding: 12px 24px; }
         }
     </style>
 </head>
 <body>
 
-    <a href="#contact" class="floating-btn">
+    <a href="https://wa.me/13852228100?text=Hola,%20quiero%20comprar%20un%20boleto%20para%20la%20rifa%20Toshiba" target="_blank" class="floating-btn">
         <i class="bi bi-ticket-perforated-fill"></i>
         <span data-i18n="floating-btn">Comprar Boleto</span>
     </a>
@@ -768,7 +677,7 @@
                         <ul class="navbar-nav">
                             <li class="nav-item"><a href="#raffle" class="nav-link nav-link-custom active" data-i18n="nav-raffle">Rifa</a></li>
                             <li class="nav-item"><a href="#models" class="nav-link nav-link-custom" data-i18n="nav-models">Modelos</a></li>
-                            <li class="nav-item"><a href="#partners" class="nav-link nav-link-custom" data-i18n="nav-partners">Alianzas</a></li>
+                            <li class="nav-item"><a href="#partners" class="nav-link nav-link-custom" data-i18n="nav-what">¿Qué Hacemos?</a></li>
                             <li class="nav-item"><a href="#contact" class="nav-link nav-link-custom" data-i18n="nav-contact">Contacto</a></li>
                         </ul>
                     </nav>
@@ -799,7 +708,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#raffle" data-i18n="nav-raffle">Rifa</a></li>
                 <li class="nav-item"><a class="nav-link" href="#models" data-i18n="nav-models">Modelos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#partners" data-i18n="nav-partners">Alianzas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#partners" data-i18n="nav-what">¿Qué Hacemos?</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav-contact">Contacto</a></li>
             </ul>
         </div>
@@ -817,6 +726,14 @@
                 <span class="yellow" data-i18n="hero-title-2">AIRE ACONDICIONADO</span>
                 <span class="cyan-glow" data-i18n="hero-title-3">TOSHIBA 12,000 BTU</span>
             </h1>
+
+            <!-- ===== NEW: AC IMAGE ===== -->
+            <img 
+                src="https://raw.githubusercontent.com/atifjavid80-tech/-veronicaraffles/refs/heads/main/Toshiba%20Smart%20Wi-Fi%20Portable%20Air%20Conditioner.webp" 
+                alt="Toshiba Smart Wi-Fi Portable Air Conditioner" 
+                class="hero-ac-image"
+            >
+
             <div>
                 <div class="banner-strip cyan" data-i18n="hero-banner-1">12,000 BTU · COMPRESOR TOSHIBA</div>
             </div>
@@ -827,8 +744,8 @@
                 🔥 SOLO 75 BOLETOS · $10 CADA UNO · SORTEO AL VENDER TODOS 🔥
             </div>
             <div class="cta-group">
-                <a href="#raffle" class="btn-yellow">
-                    <i class="bi bi-ticket-perforated-fill me-2"></i> <span data-i18n="hero-cta">COMPRAR BOLETO</span>
+                <a href="https://wa.me/13852228100?text=Hola,%20quiero%20comprar%20un%20boleto%20para%20la%20rifa%20Toshiba" target="_blank" class="btn-yellow">
+                    <i class="bi bi-whatsapp me-2"></i> <span data-i18n="hero-cta">COMPRAR BOLETO</span>
                 </a>
                 <a href="#partners" class="btn-pink">
                     <i class="bi bi-briefcase-fill me-2"></i> <span data-i18n="hero-cta-2">ALIANZAS</span>
@@ -862,22 +779,12 @@
                 <p class="section-sub" data-i18n="raffle-sub">Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.</p>
             </div>
 
-            <!-- ===== TICKET IMAGES (REPLACED) ===== -->
             <div class="ticket-images-wrapper">
-                <!-- Ticket Image 1 -->
                 <div class="ticket-img-box">
-                    <img 
-                        src="https://raw.githubusercontent.com/atifjavid80-tech/-veronicaraffles/refs/heads/main/Ticket.png" 
-                        alt="Verónica Raffles - Ticket"
-                    >
+                    <img src="https://raw.githubusercontent.com/atifjavid80-tech/-veronicaraffles/refs/heads/main/Ticket.png" alt="Verónica Raffles - Ticket">
                 </div>
-
-                <!-- Ticket Image 2 (Tickets.png) -->
                 <div class="ticket-img-box">
-                    <img 
-                        src="https://raw.githubusercontent.com/atifjavid80-tech/-veronicaraffles/refs/heads/main/Tickets.png" 
-                        alt="Verónica Raffles - Números de Tickets"
-                    >
+                    <img src="https://raw.githubusercontent.com/atifjavid80-tech/-veronicaraffles/refs/heads/main/Tickets.png" alt="Verónica Raffles - Números de Tickets">
                 </div>
             </div>
         </div>
@@ -887,8 +794,8 @@
     <section class="models-section" id="models">
         <div class="container">
             <h2 class="section-title">
-                <span class="pink" data-i18n="models-title-1">MODELOS</span>
-                <span class="cyan" data-i18n="models-title-2">EMBAJADORAS</span>
+                <span class="pink" data-i18n="models-title-1">AMBASSADOR</span>
+                <span class="cyan" data-i18n="models-title-2">MODELS</span>
             </h2>
             <p class="section-sub" data-i18n="models-sub">Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.</p>
 
@@ -902,7 +809,7 @@
                         <div class="card-body">
                             <h4>Veronica Vee</h4>
                             <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
+                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view" data-i18n="view-profile">Contactar</a>
                         </div>
                     </div>
                 </div>
@@ -915,7 +822,7 @@
                         <div class="card-body">
                             <h4>Maria Gomez</h4>
                             <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
+                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view" data-i18n="view-profile">Contactar</a>
                         </div>
                     </div>
                 </div>
@@ -928,7 +835,7 @@
                         <div class="card-body">
                             <h4>Ana Rodriguez</h4>
                             <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
+                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view" data-i18n="view-profile">Contactar</a>
                         </div>
                     </div>
                 </div>
@@ -941,20 +848,30 @@
                         <div class="card-body">
                             <h4>Lucia Perez</h4>
                             <p class="card-meta"><i class="bi bi-geo-alt-fill"></i> Maracaibo, Venezuela</p>
-                            <a href="#" class="btn-view" data-i18n="view-profile">Ver Perfil</a>
+                            <a href="https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20las%20modelos%20embajadoras" target="_blank" class="btn-view" data-i18n="view-profile">Contactar</a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- ===== NEW: WEBSITE LINK ===== -->
+            <div class="website-link-wrap">
+                <p data-i18n="website-link-title">Nuestra Plataforma de Modelos</p>
+                <a href="https://veronicavee.com/" target="_blank">
+                    <i class="bi bi-globe"></i>
+                    veronicavee.com
+                    <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- ===== PARTNERS ===== -->
+    <!-- ===== PARTNERS (WHAT WE DO — ELEVATE YOUR BRAND) ===== -->
     <section class="section-navy-light" id="partners">
         <div class="container">
             <h2 class="section-title">
-                <span class="yellow" data-i18n="partners-title-1">ELEVA</span>
-                <span class="cyan" data-i18n="partners-title-2">TU MARCA</span>
+                <span class="yellow" data-i18n="partners-title-1">ELEVATE</span>
+                <span class="cyan" data-i18n="partners-title-2">YOUR BRAND</span>
             </h2>
             <p class="section-sub" data-i18n="partners-sub">Promociona tus productos con nuestras rifas virales y modelos embajadoras.</p>
 
@@ -989,8 +906,8 @@
                 </div>
             </div>
 
-            <h2 class="section-title mt-5" style="font-size: 1.6rem;">
-                <span class="cyan" data-i18n="packages-title">ELIGE TU PLAN DE ALIANZA</span>
+            <h2 class="section-title mt-5" style="font-size: 2rem;">
+                <span class="cyan" data-i18n="packages-title">CHOOSE YOUR PARTNERSHIP PLAN</span>
             </h2>
 
             <div class="row g-4 mt-4">
@@ -1006,7 +923,7 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-2">Promoción en redes</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-1-li-3">1 modelo embajadora</span></li>
                         </ul>
-                        <a href="#contact" class="btn-outline-cyan" data-i18n="pack-1-btn">ELEGIR</a>
+                        <a href="#contact" class="btn-outline-cyan" data-i18n="pack-1-btn">Contactar</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -1021,7 +938,7 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-2">Reels profesionales</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-2-li-3">Audiencia expandida</span></li>
                         </ul>
-                        <a href="#contact" class="btn-pink" data-i18n="pack-2-btn">ELEGIR</a>
+                        <a href="#contact" class="btn-pink" data-i18n="pack-2-btn">Contactar</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -1036,7 +953,7 @@
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-2">Programación prioritaria</span></li>
                             <li><i class="bi bi-check-lg"></i> <span data-i18n="pack-3-li-3">Exclusividad por categoría</span></li>
                         </ul>
-                        <a href="#contact" class="btn-outline-cyan" data-i18n="pack-3-btn">ELEGIR</a>
+                        <a href="#contact" class="btn-outline-cyan" data-i18n="pack-3-btn">Contactar</a>
                     </div>
                 </div>
             </div>
@@ -1053,7 +970,7 @@
             <p class="section-sub" data-i18n="contact-sub">Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.</p>
 
             <div class="contact-form">
-                <form>
+                <form onsubmit="event.preventDefault(); window.location.href='https://wa.me/13852228100?text=Hola,%20quiero%20información%20sobre%20Verónica%20Raffles';">
                     <div class="mb-3">
                         <input type="text" class="form-control" placeholder="Tu Nombre" data-i18n="form-name" required>
                     </div>
@@ -1071,7 +988,7 @@
                         <textarea class="form-control" rows="3" placeholder="Mensaje (opcional)" data-i18n="form-message"></textarea>
                     </div>
                     <button type="submit" class="btn-yellow w-100" data-i18n="form-submit">
-                        <i class="bi bi-send-fill me-2"></i> ENVIAR
+                        <i class="bi bi-whatsapp me-2"></i> ENVIAR
                     </button>
                 </form>
             </div>
@@ -1089,14 +1006,14 @@
             <div class="footer-links">
                 <a href="#raffle" data-i18n="nav-raffle">Rifa</a>
                 <a href="#models" data-i18n="nav-models">Modelos</a>
-                <a href="#partners" data-i18n="nav-partners">Alianzas</a>
+                <a href="#partners" data-i18n="nav-what">¿Qué Hacemos?</a>
                 <a href="#contact" data-i18n="nav-contact">Contacto</a>
             </div>
             <div class="social-icons">
                 <a href="#"><i class="bi bi-instagram"></i></a>
                 <a href="#"><i class="bi bi-tiktok"></i></a>
                 <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://wa.me/13852228100" target="_blank"><i class="bi bi-whatsapp"></i></a>
             </div>
             <p class="copyright" data-i18n="footer-text">© 2026 Verónica Raffles · Plataforma de talento y rifas.</p>
         </div>
@@ -1107,7 +1024,7 @@
     <script>
         const translations = {
             es: {
-                "floating-btn": "Comprar Boleto", "nav-raffle": "Rifa", "nav-models": "Modelos", "nav-partners": "Alianzas", "nav-contact": "Contacto",
+                "floating-btn": "Comprar Boleto", "nav-raffle": "Rifa", "nav-models": "Modelos", "nav-what": "¿Qué Hacemos?", "nav-contact": "Contacto",
                 "hero-ribbon": "Rifa Beta · Maracaibo", "hero-mini": "¡GANA CON VERÓNICA RAFFLES!",
                 "hero-title-1": "GANA UN", "hero-title-2": "AIRE ACONDICIONADO", "hero-title-3": "TOSHIBA 12,000 BTU",
                 "hero-banner-1": "12,000 BTU · COMPRESOR TOSHIBA", "hero-banner-2": "TUBERÍA DE COBRE · R32 · 220V",
@@ -1116,22 +1033,23 @@
                 "stat-1": "Boletos Totales", "stat-2": "Por Boleto", "stat-3": "Premio Principal",
                 "raffle-title-1": "BOLETO", "raffle-title-2": "OFICIAL",
                 "raffle-sub": "Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.",
-                "models-title-1": "MODELOS", "models-title-2": "EMBAJADORAS",
+                "models-title-1": "AMBASSADOR", "models-title-2": "MODELS",
                 "models-sub": "Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.",
-                "badge-verified": "Embajadora", "view-profile": "Ver Perfil",
-                "partners-title-1": "ELEVA", "partners-title-2": "TU MARCA",
+                "badge-verified": "Embajadora", "view-profile": "Contactar",
+                "website-link-title": "Nuestra Plataforma de Modelos",
+                "partners-title-1": "ELEVATE", "partners-title-2": "YOUR BRAND",
                 "partners-sub": "Promociona tus productos con nuestras rifas virales y modelos embajadoras.",
                 "partner-1": "Rifas Virales", "partner-1-desc": "Tus productos como premios que generan buzz masivo.",
                 "partner-2": "Modelos Embajadoras", "partner-2-desc": "Contenido premium creado por modelos seleccionadas.",
                 "partner-3": "Exposición en Redes", "partner-3-desc": "Instagram, TikTok y Facebook – alcance masivo.",
                 "partner-4": "Selección Curada", "partner-4-desc": "Solo unas pocas modelos son elegidas para tu negocio.",
-                "packages-title": "ELIGE TU PLAN DE ALIANZA",
+                "packages-title": "CHOOSE YOUR PARTNERSHIP PLAN",
                 "pack-1-name": "LAUNCH PARTNER", "pack-1-tag": "Ideal para empezar",
-                "pack-1-li-1": "Campaña de un producto", "pack-1-li-2": "Promoción en redes", "pack-1-li-3": "1 modelo embajadora", "pack-1-btn": "ELEGIR",
+                "pack-1-li-1": "Campaña de un producto", "pack-1-li-2": "Promoción en redes", "pack-1-li-3": "1 modelo embajadora", "pack-1-btn": "Contactar",
                 "pack-2-name": "GROWTH PARTNER", "pack-2-tag": "Más alcance",
-                "pack-2-li-1": "Múltiples modelos", "pack-2-li-2": "Reels profesionales", "pack-2-li-3": "Audiencia expandida", "pack-2-btn": "ELEGIR",
+                "pack-2-li-1": "Múltiples modelos", "pack-2-li-2": "Reels profesionales", "pack-2-li-3": "Audiencia expandida", "pack-2-btn": "Contactar",
                 "pack-3-name": "PREMIER ELITE", "pack-3-tag": "Alianza anual",
-                "pack-3-li-1": "Campañas mensuales", "pack-3-li-2": "Programación prioritaria", "pack-3-li-3": "Exclusividad por categoría", "pack-3-btn": "ELEGIR",
+                "pack-3-li-1": "Campañas mensuales", "pack-3-li-2": "Programación prioritaria", "pack-3-li-3": "Exclusividad por categoría", "pack-3-btn": "Contactar",
                 "contact-title-1": "CONTÁC", "contact-title-2": "TANOS",
                 "contact-sub": "Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.",
                 "form-name": "Tu Nombre", "form-phone": "WhatsApp / Teléfono",
@@ -1140,7 +1058,7 @@
                 "footer-text": "© 2026 Verónica Raffles · Plataforma de talento y rifas."
             },
             en: {
-                "floating-btn": "Buy Ticket", "nav-raffle": "Raffle", "nav-models": "Models", "nav-partners": "Partners", "nav-contact": "Contact",
+                "floating-btn": "Buy Ticket", "nav-raffle": "Raffle", "nav-models": "Models", "nav-what": "What We Do", "nav-contact": "Contact",
                 "hero-ribbon": "Beta Raffle · Maracaibo", "hero-mini": "WIN WITH VERÓNICA RAFFLES!",
                 "hero-title-1": "WIN A", "hero-title-2": "AIR CONDITIONER", "hero-title-3": "TOSHIBA 12,000 BTU",
                 "hero-banner-1": "12,000 BTU · TOSHIBA COMPRESSOR", "hero-banner-2": "COPPER TUBING · R32 · 220V",
@@ -1151,7 +1069,8 @@
                 "raffle-sub": "Buy your ticket before they sell out. The draw happens when all 75 are sold.",
                 "models-title-1": "AMBASSADOR", "models-title-2": "MODELS",
                 "models-sub": "The faces behind our campaigns. Only a few are selected as ambassadors.",
-                "badge-verified": "Ambassador", "view-profile": "View Profile",
+                "badge-verified": "Ambassador", "view-profile": "Contact",
+                "website-link-title": "Our Model Platform",
                 "partners-title-1": "ELEVATE", "partners-title-2": "YOUR BRAND",
                 "partners-sub": "Promote your products with our viral raffles and ambassador models.",
                 "partner-1": "Viral Raffles", "partner-1-desc": "Your products as prizes that generate massive buzz.",
@@ -1160,11 +1079,11 @@
                 "partner-4": "Curated Selection", "partner-4-desc": "Only a few select models are chosen for your business.",
                 "packages-title": "CHOOSE YOUR PARTNERSHIP PLAN",
                 "pack-1-name": "LAUNCH PARTNER", "pack-1-tag": "Ideal to Start",
-                "pack-1-li-1": "Single product campaign", "pack-1-li-2": "Social media promotion", "pack-1-li-3": "1 ambassador model", "pack-1-btn": "CHOOSE",
+                "pack-1-li-1": "Single product campaign", "pack-1-li-2": "Social media promotion", "pack-1-li-3": "1 ambassador model", "pack-1-btn": "Contact",
                 "pack-2-name": "GROWTH PARTNER", "pack-2-tag": "More Reach",
-                "pack-2-li-1": "Multiple models", "pack-2-li-2": "Professional reels", "pack-2-li-3": "Expanded audience", "pack-2-btn": "CHOOSE",
+                "pack-2-li-1": "Multiple models", "pack-2-li-2": "Professional reels", "pack-2-li-3": "Expanded audience", "pack-2-btn": "Contact",
                 "pack-3-name": "PREMIER ELITE", "pack-3-tag": "Annual Partnership",
-                "pack-3-li-1": "Monthly campaigns", "pack-3-li-2": "Priority scheduling", "pack-3-li-3": "Category exclusivity", "pack-3-btn": "CHOOSE",
+                "pack-3-li-1": "Monthly campaigns", "pack-3-li-2": "Priority scheduling", "pack-3-li-3": "Category exclusivity", "pack-3-btn": "Contact",
                 "contact-title-1": "CONTACT", "contact-title-2": "US",
                 "contact-sub": "Buy tickets or request a business partnership. We'll respond within 24 hours.",
                 "form-name": "Your Name", "form-phone": "WhatsApp / Phone",
