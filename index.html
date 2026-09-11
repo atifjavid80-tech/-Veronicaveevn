@@ -28,7 +28,6 @@
             --text-light: #a8bbd4;
             --border-blue: #1a3a6b;
 
-            /* NEW — for white background */
             --page-bg: #ffffff;
             --page-text: #1a1a1a;
             --page-muted: #666666;
@@ -40,7 +39,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
         html { scroll-behavior: smooth; }
 
-        /* ===== PAGE BACKGROUND: WHITE ===== */
         body {
             font-family: 'Lato', sans-serif;
             background-color: var(--page-bg);
@@ -54,14 +52,11 @@
         a:hover { text-decoration: none; }
         .container { max-width: 1200px; }
 
-        /* Hide stars on white background */
-        .stars-bg { display: none; }
-
         header, section, footer { position: relative; z-index: 1; }
 
-        /* ===== HEADER (KEEP DARK - bordered box) ===== */
+        /* ===== HEADER (DARK) ===== */
         #header {
-            background: rgba(6, 16, 41, 0.95);
+            background: rgba(6, 16, 41, 0.98);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-blue);
             padding: 15px 0; position: sticky; top: 0; z-index: 1000;
@@ -91,13 +86,26 @@
         .lang-switch a:hover { border-color: var(--cyan); color: var(--cyan); }
         .lang-switch a.active-lang { background: var(--cyan); border-color: var(--cyan); color: #000; }
 
-        /* ===== HERO (DARK BACKGROUND — circled area) ===== */
+        /* ===== HERO SECTION — Dark Card on White Background ===== */
+        .hero-section-wrap {
+            padding: 40px 20px 30px;
+            background: var(--page-bg);
+        }
+
         .hero {
-            padding: 70px 0 60px; text-align: center; position: relative;
-            background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.15) 0%, transparent 60%),
-                        radial-gradient(ellipse at 80% 80%, rgba(255,0,110,0.1) 0%, transparent 50%),
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 40px 50px;
+            text-align: center;
+            position: relative;
+            background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.18) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 80%, rgba(255,0,110,0.12) 0%, transparent 50%),
                         var(--navy);
-            border-bottom: 1px solid var(--border-blue);
+            border-radius: 28px;
+            border: 1px solid var(--border-blue);
+            box-shadow: 0 20px 60px rgba(6, 16, 41, 0.25),
+                        0 0 0 1px rgba(0,229,255,0.1);
+            overflow: hidden;
         }
 
         .hero .top-ribbon {
@@ -108,14 +116,14 @@
         }
 
         .hero .headline-mini {
-            font-family: 'Oswald', sans-serif; font-size: clamp(1rem, 2.5vw, 1.4rem);
+            font-family: 'Oswald', sans-serif; font-size: clamp(1rem, 2.5vw, 1.3rem);
             font-weight: 500; color: #fff;
             text-transform: uppercase; letter-spacing: 3px; margin-bottom: 5px;
         }
 
         .hero h1 {
-            font-family: 'Oswald', sans-serif; font-size: clamp(2.8rem, 9vw, 6rem);
-            font-weight: 900; text-transform: uppercase; line-height: 0.95;
+            font-family: 'Oswald', sans-serif; font-size: clamp(2.2rem, 7vw, 4.5rem);
+            font-weight: 900; text-transform: uppercase; line-height: 0.98;
             margin-bottom: 25px; letter-spacing: -2px;
         }
 
@@ -126,7 +134,7 @@
         .banner-strip {
             display: inline-block; padding: 12px 30px; border-radius: 8px;
             font-family: 'Oswald', sans-serif; font-weight: 700;
-            font-size: clamp(0.85rem, 1.8vw, 1.1rem); text-transform: uppercase;
+            font-size: clamp(0.8rem, 1.6vw, 1rem); text-transform: uppercase;
             letter-spacing: 2px; margin: 6px 0; transform: skewX(-5deg);
         }
         .banner-strip.cyan { background: var(--cyan); color: #000; box-shadow: 0 0 30px rgba(0,229,255,0.5); }
@@ -176,6 +184,7 @@
             background: var(--cyan); color: #000; box-shadow: 0 0 30px rgba(0,229,255,0.5);
         }
 
+        /* Stats inside hero */
         .stats-row {
             display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;
             padding-top: 40px; border-top: 1px solid var(--border-blue); margin-top: 20px;
@@ -191,7 +200,7 @@
             letter-spacing: 2px; font-weight: 700; margin: 0;
         }
 
-        section { padding: 80px 0; }
+        section { padding: 60px 0; }
 
         /* ===== SECTION TITLES (on white background) ===== */
         .section-title {
@@ -206,22 +215,44 @@
 
         .section-sub {
             text-align: center; color: var(--page-muted); max-width: 600px;
-            margin: 0 auto 50px; font-size: 1rem;
+            margin: 0 auto 40px; font-size: 1rem;
         }
 
-        /* Light grey for alternating sections (was dark navy) */
         .section-navy-light { background: #f8f9fa; }
 
-        /* ===== RAFFLE SECTION HEADER (DARK BACKGROUND — circled area) ===== */
+        /* ===== OFFICIAL TICKET HEADER — Dark Card on White ===== */
         #raffle {
-            background: var(--navy);
-            border-bottom: 1px solid var(--border-blue);
+            background: var(--page-bg);
+            padding: 40px 0 60px;
         }
-        #raffle .section-title .cyan { color: var(--cyan); text-shadow: 0 0 25px rgba(0,229,255,0.4); }
-        #raffle .section-title .yellow { color: var(--yellow); text-shadow: 0 0 25px rgba(255,214,10,0.4); }
-        #raffle .section-sub { color: var(--text-light); }
 
-        /* ===== TICKET CARD (KEEP AS IS — white bg + cyan glow) ===== */
+        .raffle-header-box {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            padding: 40px 30px 35px;
+            text-align: center;
+            background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.12) 0%, transparent 60%),
+                        var(--navy);
+            border-radius: 24px;
+            border: 1px solid var(--border-blue);
+            box-shadow: 0 15px 45px rgba(6, 16, 41, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .raffle-header-box .section-title {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .raffle-header-box .section-title .cyan { color: var(--cyan); text-shadow: 0 0 25px rgba(0,229,255,0.5); }
+        .raffle-header-box .section-title .yellow { color: var(--yellow); text-shadow: 0 0 25px rgba(255,214,10,0.5); }
+
+        .raffle-header-box .section-sub {
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        /* ===== TICKET CARD (KEPT AS IS) ===== */
         .ticket-wrapper { max-width: 950px; margin: 0 auto; perspective: 1000px; }
 
         .ticket-card {
@@ -357,8 +388,8 @@
             color: var(--yellow); line-height: 1;
         }
 
-        /* ===== MODEL CARDS (KEEP DARK — encircled) ===== */
-        .models-section { padding: 70px 0; }
+        /* ===== MODEL CARDS (KEPT DARK) ===== */
+        .models-section { padding: 60px 0; }
         .model-card {
             background: var(--navy-card); border-radius: 16px; overflow: hidden;
             transition: 0.4s; border: 1px solid var(--border-blue);
@@ -397,7 +428,7 @@
         }
         .model-card .btn-view:hover { background: var(--cyan); color: #000; }
 
-        /* ===== FEATURE CARDS (KEEP DARK — encircled) ===== */
+        /* ===== FEATURE CARDS (KEPT DARK) ===== */
         .feature-card {
             background: var(--navy-card); border: 1px solid var(--border-blue);
             border-radius: 20px; padding: 30px 25px; text-align: center;
@@ -423,7 +454,7 @@
         }
         .feature-card p { color: var(--text-light); font-size: 0.9rem; margin: 0; }
 
-        /* ===== PACKAGE CARDS (KEEP DARK — encircled) ===== */
+        /* ===== PACKAGE CARDS (KEPT DARK) ===== */
         .package-card {
             background: var(--navy-card); border: 1px solid var(--border-blue);
             border-radius: 20px; padding: 40px 28px; height: 100%;
@@ -470,7 +501,7 @@
         }
         .package-card ul li i { color: var(--cyan); margin-right: 12px; }
 
-        /* ===== CONTACT FORM (KEEP DARK — encircled) ===== */
+        /* ===== CONTACT FORM (KEPT DARK) ===== */
         .contact-form {
             background: var(--navy-card); border: 1px solid var(--border-blue);
             border-radius: 24px; padding: 50px 40px; max-width: 600px;
@@ -491,7 +522,7 @@
         .contact-form textarea.form-control { border-radius: 20px; }
         .contact-form .form-select option { background: var(--navy-2); color: #fff; }
 
-        /* ===== FOOTER (KEEP DARK — bordered section) ===== */
+        /* ===== FOOTER (DARK) ===== */
         footer {
             background: var(--navy); border-top: 1px solid var(--border-blue);
             padding: 40px 0 25px; text-align: center; position: relative;
@@ -530,9 +561,9 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-6px); }
         }
-        .floating-btn:hover { background: #fff; color: #000; animation: none; transform: scale(1.08); }
+        .floating-btn:hover { background: var(--navy); color: #fff; animation: none; transform: scale(1.08); }
 
-        /* ===== OFF CANVAS (KEEP DARK) ===== */
+        /* ===== OFF CANVAS ===== */
         .offcanvas { background: var(--navy) !important; }
         .offcanvas .nav-link {
             color: #ccc !important; font-weight: 600; text-transform: uppercase;
@@ -545,24 +576,27 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 900px) {
+            .hero { padding: 45px 25px 40px; border-radius: 22px; }
             .ticket-card .ticket-body { grid-template-columns: 1fr; text-align: center; padding: 30px 25px; }
             .ticket-card .ticket-number-box { margin: 0 auto; }
             .ticket-card .ticket-info .prize-list { justify-content: center; text-align: left; max-width: 320px; margin: 0 auto; }
             .ticket-card .ticket-image svg.ac-svg { max-width: 260px; }
         }
         @media (max-width: 768px) {
-            .hero { padding: 50px 0 40px; }
-            .hero h1 { font-size: 2.2rem; letter-spacing: -1px; }
+            .hero-section-wrap { padding: 20px 12px 20px; }
+            .hero { padding: 40px 20px 35px; border-radius: 20px; }
+            .hero h1 { font-size: 2rem; letter-spacing: -1px; }
             .stat-item h3 { font-size: 2.2rem; }
             .stats-row { gap: 30px; }
             .model-card .card-img-wrap img { height: 250px; }
-            .models-section { padding: 50px 0; }
-            section { padding: 55px 0; }
+            .models-section { padding: 40px 0; }
+            section { padding: 40px 0; }
             .contact-form { padding: 35px 25px; }
             .ticket-card .ticket-top h3 { font-size: 0.9rem; letter-spacing: 2px; }
             .ticket-card .ticket-info h4 { font-size: 1.3rem; }
             .ticket-card .ticket-number-box .num { font-size: 2.5rem; }
             .ticket-card .ticket-image { min-height: 200px; }
+            .raffle-header-box { padding: 30px 20px 25px; border-radius: 18px; }
         }
         @media (max-width: 576px) {
             .logo-text { font-size: 1.2rem; }
@@ -632,9 +666,9 @@
         </div>
     </div>
 
-    <!-- ===== HERO (DARK BACKGROUND — circled area) ===== -->
-    <section class="hero">
-        <div class="container">
+    <!-- ===== HERO — DARK CARD on WHITE background ===== -->
+    <div class="hero-section-wrap">
+        <section class="hero">
             <div class="top-ribbon">
                 <i class="bi bi-fire me-2"></i> <span data-i18n="hero-ribbon">Rifa Beta · Maracaibo</span>
             </div>
@@ -675,17 +709,19 @@
                     <p data-i18n="stat-3">Premio Principal</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <!-- ===== RAFFLE TICKET (DARK SECTION — circled area) ===== -->
+    <!-- ===== RAFFLE — "OFFICIAL TICKET" in DARK CARD on WHITE ===== -->
     <section id="raffle">
         <div class="container">
-            <h2 class="section-title">
-                <span class="cyan" data-i18n="raffle-title-1">BOLETO</span>
-                <span class="yellow" data-i18n="raffle-title-2">OFICIAL</span>
-            </h2>
-            <p class="section-sub" data-i18n="raffle-sub">Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.</p>
+            <div class="raffle-header-box">
+                <h2 class="section-title">
+                    <span class="cyan" data-i18n="raffle-title-1">BOLETO</span>
+                    <span class="yellow" data-i18n="raffle-title-2">OFICIAL</span>
+                </h2>
+                <p class="section-sub" data-i18n="raffle-sub">Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.</p>
+            </div>
 
             <div class="ticket-wrapper">
                 <div class="ticket-card">
@@ -764,7 +800,7 @@
         </div>
     </section>
 
-    <!-- ===== MODELS (KEEP DARK CARDS) ===== -->
+    <!-- ===== MODELS ===== -->
     <section class="models-section" id="models">
         <div class="container">
             <h2 class="section-title">
@@ -830,7 +866,7 @@
         </div>
     </section>
 
-    <!-- ===== PARTNERS (KEEP DARK CARDS) ===== -->
+    <!-- ===== PARTNERS ===== -->
     <section class="section-navy-light" id="partners">
         <div class="container">
             <h2 class="section-title">
@@ -924,7 +960,7 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT (KEEP DARK FORM) ===== -->
+    <!-- ===== CONTACT ===== -->
     <section id="contact">
         <div class="container">
             <h2 class="section-title">
@@ -959,7 +995,7 @@
         </div>
     </section>
 
-    <!-- ===== FOOTER (KEEP DARK) ===== -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             <a href="#" class="logo-text"><i class="bi bi-snow"></i> VERÓNICA <span>RAFFLES</span></a>
