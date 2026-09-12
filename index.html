@@ -184,7 +184,6 @@
             overflow: hidden;
         }
 
-        /* RAFFLE TICKET BADGE */
         .raffle-ticket-badge {
             position: relative;
             display: inline-block;
@@ -880,7 +879,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#raffle" data-i18n="nav-raffle">Rifa</a></li>
                 <li class="nav-item"><a class="nav-link" href="#models" data-i18n="nav-models">Modelos</a></li>
-                <li class="nav-item"><a href="#partners" class="nav-link nav-link-custom" data-i18n="nav-what">¿Qué Hacemos?</a></li>
+                <li class="nav-item"><a class="nav-link" href="#partners" data-i18n="nav-what">¿Qué Hacemos?</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav-contact">Contacto</a></li>
             </ul>
         </div>
@@ -950,9 +949,9 @@
     <section id="raffle">
         <div class="container">
             <div class="raffle-header-box">
-                <h2 class="section-title">
-                    <span class="cyan" data-i18n="raffle-title-1">BOLETO</span>
-                    <span class="yellow" data-i18n="raffle-title-2">OFICIAL</span>
+                <h2 class="section-title" data-i18n-html="raffle-title-html">
+                    <span class="cyan">BOLETO</span>
+                    <span class="yellow">OFICIAL</span>
                 </h2>
                 <p class="section-sub" data-i18n="raffle-sub">Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.</p>
             </div>
@@ -975,12 +974,12 @@
         </div>
     </section>
 
-    <!-- MODELS -->
+    <!-- MODELS — FIXED: Full HTML translation -->
     <section class="models-section" id="models">
         <div class="container">
-            <h2 class="section-title">
-                <span class="pink" data-i18n="models-title-1">AMBASSADOR</span>
-                <span class="cyan" data-i18n="models-title-2">MODELS</span>
+            <h2 class="section-title" data-i18n-html="models-title-html">
+                <span class="pink">AMBASSADOR</span>
+                <span class="cyan">MODELS</span>
             </h2>
             <p class="section-sub" data-i18n="models-sub">Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.</p>
 
@@ -1062,12 +1061,12 @@
         </div>
     </section>
 
-    <!-- PARTNERS -->
+    <!-- PARTNERS — FIXED: Full HTML translation -->
     <section class="section-navy-light" id="partners">
         <div class="container">
-            <h2 class="section-title">
-                <span class="yellow" data-i18n="partners-title-1">ELEVATE</span>
-                <span class="cyan" data-i18n="partners-title-2">YOUR BRAND</span>
+            <h2 class="section-title" data-i18n-html="partners-title-html">
+                <span class="yellow">ELEVATE</span>
+                <span class="cyan">YOUR BRAND</span>
             </h2>
             <p class="section-sub" data-i18n="partners-sub">Promociona tus productos con nuestras rifas virales y modelos embajadoras.</p>
 
@@ -1102,9 +1101,8 @@
                 </div>
             </div>
 
-            <h2 class="section-title mt-5" style="font-size: 2rem;">
-                <span class="cyan" data-i18n="packages-title">CHOOSE YOUR PARTNERSHIP PLAN</span>
-            </h2>
+            <!-- Packages Section Title — FIXED -->
+            <h2 class="section-title mt-5" style="font-size: 2rem;" data-i18n="packages-title">CHOOSE YOUR PARTNERSHIP PLAN</h2>
 
             <div class="row g-4 mt-4">
                 <div class="col-md-4">
@@ -1168,9 +1166,9 @@
     <!-- CONTACT -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">
-                <span class="yellow" data-i18n="contact-title-1">CONTÁC</span>
-                <span class="cyan" data-i18n="contact-title-2">TANOS</span>
+            <h2 class="section-title" data-i18n-html="contact-title-html">
+                <span class="yellow">CONTÁC</span>
+                <span class="cyan">TANOS</span>
             </h2>
             <p class="section-sub" data-i18n="contact-sub">Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.</p>
 
@@ -1289,20 +1287,14 @@
                 "stat-2": "Por Boleto",
                 "stat-3": "Premio Principal",
                 // Raffle Section
-                "raffle-title-1": "BOLETO",
-                "raffle-title-2": "OFICIAL",
                 "raffle-sub": "Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.",
                 "buy-ticket-cta": "COMPRAR BOLETO",
                 // Models Section
-                "models-title-1": "AMBASSADOR",
-                "models-title-2": "MODELS",
                 "models-sub": "Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.",
                 "badge-verified": "Embajadora",
                 "view-profile": "Contactar",
                 "website-link-title": "Nuestra Plataforma de Modelos",
                 // Partners Section
-                "partners-title-1": "ELEVATE",
-                "partners-title-2": "YOUR BRAND",
                 "partners-sub": "Promociona tus productos con nuestras rifas virales y modelos embajadoras.",
                 "partner-1": "Rifas Virales",
                 "partner-1-desc": "Tus productos como premios que generan buzz masivo.",
@@ -1313,7 +1305,7 @@
                 "partner-4": "Selección Curada",
                 "partner-4-desc": "Solo unas pocas modelos son elegidas para tu negocio.",
                 // Packages
-                "packages-title": "CHOOSE YOUR PARTNERSHIP PLAN",
+                "packages-title": "ELIGE TU PLAN DE ALIANZA",
                 "pack-1-name": "LAUNCH PARTNER",
                 "pack-1-tag": "Ideal para empezar",
                 "pack-1-li-1": "Campaña de un producto",
@@ -1333,8 +1325,6 @@
                 "pack-3-li-3": "Exclusividad por categoría",
                 "pack-3-btn": "Contactar",
                 // Contact
-                "contact-title-1": "CONTÁC",
-                "contact-title-2": "TANOS",
                 "contact-sub": "Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.",
                 "form-name": "Tu Nombre",
                 "form-phone": "WhatsApp / Teléfono",
@@ -1368,20 +1358,14 @@
                 "stat-2": "Per Ticket",
                 "stat-3": "Main Prize",
                 // Raffle Section
-                "raffle-title-1": "OFFICIAL",
-                "raffle-title-2": "TICKET",
                 "raffle-sub": "Buy your ticket before they sell out. The draw happens when all 75 are sold.",
                 "buy-ticket-cta": "BUY TICKET",
                 // Models Section
-                "models-title-1": "AMBASSADOR",
-                "models-title-2": "MODELS",
                 "models-sub": "The faces behind our campaigns. Only a few are selected as ambassadors.",
                 "badge-verified": "Ambassador",
                 "view-profile": "Contact",
                 "website-link-title": "Our Model Platform",
                 // Partners Section
-                "partners-title-1": "ELEVATE",
-                "partners-title-2": "YOUR BRAND",
                 "partners-sub": "Promote your products with our viral raffles and ambassador models.",
                 "partner-1": "Viral Raffles",
                 "partner-1-desc": "Your products as prizes that generate massive buzz.",
@@ -1412,8 +1396,6 @@
                 "pack-3-li-3": "Category exclusivity",
                 "pack-3-btn": "Contact",
                 // Contact
-                "contact-title-1": "CONTACT",
-                "contact-title-2": "US",
                 "contact-sub": "Buy tickets or request a business partnership. We'll respond within 24 hours.",
                 "form-name": "Your Name",
                 "form-phone": "WhatsApp / Phone",
@@ -1427,16 +1409,41 @@
             }
         };
 
+        // ===== NEW: HTML translations (for titles with spans) =====
+        const htmlTranslations = {
+            es: {
+                "raffle-title-html": '<span class="cyan">BOLETO</span> <span class="yellow">OFICIAL</span>',
+                "models-title-html": '<span class="pink">AMBASSADOR</span> <span class="cyan">MODELS</span>',
+                "partners-title-html": '<span class="yellow">ELEVATE</span> <span class="cyan">YOUR BRAND</span>',
+                "contact-title-html": '<span class="yellow">CONTÁC</span> <span class="cyan">TANOS</span>'
+            },
+            en: {
+                "raffle-title-html": '<span class="cyan">OFFICIAL</span> <span class="yellow">TICKET</span>',
+                "models-title-html": '<span class="pink">AMBASSADOR</span> <span class="cyan">MODELS</span>',
+                "partners-title-html": '<span class="yellow">ELEVATE</span> <span class="cyan">YOUR BRAND</span>',
+                "contact-title-html": '<span class="yellow">CONTACT</span> <span class="cyan">US</span>'
+            }
+        };
+
         let currentLang = 'es';
 
         function setLanguage(lang) {
             currentLang = lang;
+            
             // Update active language button
             document.querySelectorAll('.lang-switch a').forEach(link => {
                 link.classList.toggle('active-lang', link.dataset.lang === lang);
             });
             
-            // Update all elements with data-i18n
+            // ===== Update HTML translations FIRST (for titles with spans) =====
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                const key = el.getAttribute('data-i18n-html');
+                if (htmlTranslations[lang] && htmlTranslations[lang][key]) {
+                    el.innerHTML = htmlTranslations[lang][key];
+                }
+            });
+            
+            // ===== Update text translations =====
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
@@ -1447,12 +1454,11 @@
                                 node.textContent = translations[lang][key];
                             }
                         });
-                        // Handle span wrapper
                         const span = el.querySelector('span[data-i18n], span:not([data-i18n])');
                         if (span && !span.querySelector('i')) {
                             span.textContent = translations[lang][key];
                         }
-                    } else if (el.querySelector('span')) {
+                    } else if (el.querySelector('span') && !el.querySelector('span').querySelector('span')) {
                         el.querySelector('span').textContent = translations[lang][key];
                     } else {
                         el.textContent = translations[lang][key];
@@ -1460,7 +1466,7 @@
                 }
             });
             
-            // Update ALL placeholders with data-i18n-placeholder
+            // ===== Update placeholders =====
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-i18n-placeholder');
                 if (translations[lang] && translations[lang][key]) {
@@ -1468,7 +1474,7 @@
                 }
             });
             
-            // Update select options with data-i18n
+            // ===== Update select options =====
             document.querySelectorAll('select option[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
