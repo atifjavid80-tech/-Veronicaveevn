@@ -184,16 +184,11 @@
             overflow: hidden;
         }
 
-        /* ===== RAFFLE TICKET BADGE (25% LARGER) =====
-           - Dark blue border (outer)
-           - Light blue fill (inner)
-           - Red text
-        ============================================= */
+        /* RAFFLE TICKET BADGE */
         .raffle-ticket-badge {
             position: relative;
             display: inline-block;
             margin-bottom: 38px;
-            /* Outer border layer = DARK BLUE */
             background: var(--blue-dark);
             padding: 5px;
             clip-path: polygon(
@@ -222,7 +217,6 @@
         }
 
         .raffle-ticket-badge-inner {
-            /* Inner layer = LIGHT BLUE fill */
             background: linear-gradient(135deg, #6ec1ff 0%, #4da6ff 50%, #6ec1ff 100%);
             clip-path: polygon(
                 0% 15%, 4% 15%, 4% 0%, 96% 0%, 96% 15%, 100% 15%,
@@ -230,7 +224,6 @@
                 100% 85%, 96% 85%, 96% 100%, 4% 100%, 4% 85%, 0% 85%,
                 0% 60%, 4% 50%, 0% 40%
             );
-            /* 25% larger padding */
             padding: 18px 62px;
             display: flex;
             align-items: center;
@@ -240,19 +233,15 @@
             box-shadow: inset 0 0 30px rgba(255,255,255,0.25);
         }
 
-        /* RED icon */
         .raffle-ticket-badge-inner i {
             color: var(--red);
-            /* 25% larger */
             font-size: 1.65rem;
             filter: drop-shadow(0 0 6px rgba(230,57,70,0.8));
         }
 
-        /* RED text */
         .raffle-ticket-badge-inner span {
             font-family: 'Oswald', sans-serif;
             font-weight: 900;
-            /* 25% larger */
             font-size: clamp(1.2rem, 2.5vw, 1.45rem);
             color: var(--red);
             text-transform: uppercase;
@@ -891,7 +880,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#raffle" data-i18n="nav-raffle">Rifa</a></li>
                 <li class="nav-item"><a class="nav-link" href="#models" data-i18n="nav-models">Modelos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#partners" data-i18n="nav-what">¿Qué Hacemos?</a></li>
+                <li class="nav-item"><a href="#partners" class="nav-link nav-link-custom" data-i18n="nav-what">¿Qué Hacemos?</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav-contact">Contacto</a></li>
             </ul>
         </div>
@@ -901,12 +890,6 @@
     <div class="hero-section-wrap">
         <section class="hero">
 
-            <!-- RAFFLE TICKET BADGE:
-                 - Dark blue outer border
-                 - Light blue inner fill
-                 - Red text
-                 - 25% larger
-            -->
             <div class="raffle-ticket-badge">
                 <div class="raffle-ticket-badge-inner">
                     <i class="bi bi-ticket-perforated-fill"></i>
@@ -1285,11 +1268,13 @@
 
         const translations = {
             es: {
+                // Nav
                 "floating-btn": "Comprar Boleto",
                 "nav-raffle": "Rifa",
                 "nav-models": "Modelos",
                 "nav-what": "¿Qué Hacemos?",
                 "nav-contact": "Contacto",
+                // Hero
                 "hero-ribbon": "RAFFLE TICKET",
                 "hero-mini": "¡GANA CON VERÓNICA RAFFLES!",
                 "hero-title-1": "GANA UN",
@@ -1303,16 +1288,19 @@
                 "stat-1": "Boletos Totales",
                 "stat-2": "Por Boleto",
                 "stat-3": "Premio Principal",
+                // Raffle Section
                 "raffle-title-1": "BOLETO",
                 "raffle-title-2": "OFICIAL",
                 "raffle-sub": "Compra tu boleto antes de que se agoten. El sorteo se realiza cuando se vendan los 75.",
                 "buy-ticket-cta": "COMPRAR BOLETO",
+                // Models Section
                 "models-title-1": "AMBASSADOR",
                 "models-title-2": "MODELS",
                 "models-sub": "Las caras detrás de nuestras campañas. Solo unas pocas son seleccionadas como embajadoras.",
                 "badge-verified": "Embajadora",
                 "view-profile": "Contactar",
                 "website-link-title": "Nuestra Plataforma de Modelos",
+                // Partners Section
                 "partners-title-1": "ELEVATE",
                 "partners-title-2": "YOUR BRAND",
                 "partners-sub": "Promociona tus productos con nuestras rifas virales y modelos embajadoras.",
@@ -1324,6 +1312,7 @@
                 "partner-3-desc": "Instagram, TikTok y Facebook – alcance masivo.",
                 "partner-4": "Selección Curada",
                 "partner-4-desc": "Solo unas pocas modelos son elegidas para tu negocio.",
+                // Packages
                 "packages-title": "CHOOSE YOUR PARTNERSHIP PLAN",
                 "pack-1-name": "LAUNCH PARTNER",
                 "pack-1-tag": "Ideal para empezar",
@@ -1343,6 +1332,7 @@
                 "pack-3-li-2": "Programación prioritaria",
                 "pack-3-li-3": "Exclusividad por categoría",
                 "pack-3-btn": "Contactar",
+                // Contact
                 "contact-title-1": "CONTÁC",
                 "contact-title-2": "TANOS",
                 "contact-sub": "Compra boletos o solicita una alianza comercial. Te contactamos en 24 horas.",
@@ -1353,14 +1343,17 @@
                 "form-select-2": "Alianza comercial para mi negocio",
                 "form-message": "Mensaje (opcional)",
                 "form-submit": "ENVIAR",
+                // Footer
                 "footer-text": "© 2026 Verónica Raffles · Plataforma de talento y rifas."
             },
             en: {
+                // Nav
                 "floating-btn": "Buy Ticket",
                 "nav-raffle": "Raffle",
                 "nav-models": "Models",
                 "nav-what": "What We Do",
                 "nav-contact": "Contact",
+                // Hero
                 "hero-ribbon": "RAFFLE TICKET",
                 "hero-mini": "WIN WITH VERÓNICA RAFFLES!",
                 "hero-title-1": "WIN A",
@@ -1374,16 +1367,19 @@
                 "stat-1": "Total Tickets",
                 "stat-2": "Per Ticket",
                 "stat-3": "Main Prize",
+                // Raffle Section
                 "raffle-title-1": "OFFICIAL",
                 "raffle-title-2": "TICKET",
                 "raffle-sub": "Buy your ticket before they sell out. The draw happens when all 75 are sold.",
                 "buy-ticket-cta": "BUY TICKET",
+                // Models Section
                 "models-title-1": "AMBASSADOR",
                 "models-title-2": "MODELS",
                 "models-sub": "The faces behind our campaigns. Only a few are selected as ambassadors.",
                 "badge-verified": "Ambassador",
                 "view-profile": "Contact",
                 "website-link-title": "Our Model Platform",
+                // Partners Section
                 "partners-title-1": "ELEVATE",
                 "partners-title-2": "YOUR BRAND",
                 "partners-sub": "Promote your products with our viral raffles and ambassador models.",
@@ -1395,6 +1391,7 @@
                 "partner-3-desc": "Instagram, TikTok & Facebook – massive reach.",
                 "partner-4": "Curated Selection",
                 "partner-4-desc": "Only a few select models are chosen for your business.",
+                // Packages
                 "packages-title": "CHOOSE YOUR PARTNERSHIP PLAN",
                 "pack-1-name": "LAUNCH PARTNER",
                 "pack-1-tag": "Ideal to Start",
@@ -1414,6 +1411,7 @@
                 "pack-3-li-2": "Priority scheduling",
                 "pack-3-li-3": "Category exclusivity",
                 "pack-3-btn": "Contact",
+                // Contact
                 "contact-title-1": "CONTACT",
                 "contact-title-2": "US",
                 "contact-sub": "Buy tickets or request a business partnership. We'll respond within 24 hours.",
@@ -1424,6 +1422,7 @@
                 "form-select-2": "Business partnership",
                 "form-message": "Message (optional)",
                 "form-submit": "SUBMIT",
+                // Footer
                 "footer-text": "© 2026 Verónica Raffles · Talent & raffle platform."
             }
         };
@@ -1432,18 +1431,23 @@
 
         function setLanguage(lang) {
             currentLang = lang;
+            // Update active language button
             document.querySelectorAll('.lang-switch a').forEach(link => {
                 link.classList.toggle('active-lang', link.dataset.lang === lang);
             });
+            
+            // Update all elements with data-i18n
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
+                    // If element has icon, only change text nodes (preserve icon)
                     if (el.querySelector('i')) {
                         el.childNodes.forEach(node => {
                             if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
                                 node.textContent = translations[lang][key];
                             }
                         });
+                        // Handle span wrapper
                         const span = el.querySelector('span[data-i18n], span:not([data-i18n])');
                         if (span && !span.querySelector('i')) {
                             span.textContent = translations[lang][key];
@@ -1455,13 +1459,27 @@
                     }
                 }
             });
+            
+            // Update ALL placeholders with data-i18n-placeholder
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-i18n-placeholder');
                 if (translations[lang] && translations[lang][key]) {
                     el.setAttribute('placeholder', translations[lang][key]);
                 }
             });
+            
+            // Update select options with data-i18n
+            document.querySelectorAll('select option[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update WhatsApp links
             updateWhatsAppLinks();
+            
+            // Save preference
             localStorage.setItem('preferred-lang', lang);
         }
 
